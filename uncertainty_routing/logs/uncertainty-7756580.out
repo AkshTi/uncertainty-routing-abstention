@@ -1,0 +1,89 @@
+
+================================================================================
+ STARTING PIPELINE: QUICK MODE
+ Model: Qwen/Qwen2.5-1.5B-Instruct
+ Time: 2026-01-06 20:54:32.244275
+================================================================================
+
+CUDA available: True
+GPU: NVIDIA L40S
+GPU Memory: 47.67 GB
+
+[1/6] Preparing datasets...
+  Ambiguous: 10
+  Answerable: 5
+  Unanswerable: 5
+
+[2/6] Loading model...
+Loading model Qwen/Qwen2.5-1.5B-Instruct...
+Model loaded successfully!
+  Loaded in 4.1s
+
+[5/6] Running Experiment 3: Steering Control...
+
+============================================================
+EXPERIMENT 3: Steering Control (FIXED)
+============================================================
+
+Computing steering directions...
+  Computing steering direction for layer 24...
+    Direction norm before normalization: 79.3125
+    POS activation norm: 144.6250
+    NEG activation norm: 149.7500
+  Layer 24: direction shape = torch.Size([1, 1536])
+  Computing steering direction for layer 25...
+    Direction norm before normalization: 90.3750
+    POS activation norm: 178.2500
+    NEG activation norm: 197.3750
+  Layer 25: direction shape = torch.Size([1, 1536])
+  Computing steering direction for layer 26...
+    Direction norm before normalization: 95.3750
+    POS activation norm: 256.2500
+    NEG activation norm: 254.5000
+  Layer 26: direction shape = torch.Size([1, 1536])
+  Computing steering direction for layer 27...
+    Direction norm before normalization: 115.1250
+    POS activation norm: 162.3750
+    NEG activation norm: 190.3750
+  Layer 27: direction shape = torch.Size([1, 1536])
+
+Testing steering effects...
+
+=== STEERING DIAGNOSTIC ===
+Total tests: 120
+Non-zero deltas: 0
+Flips: 0
+Answer changes: 35
+
+Example of steering effect:
+  Layer: 24, Epsilon: 0.5
+  Question: Should you exercise daily?
+  Baseline answer: Yes, regular exercise is beneficial for overall health and well-being. It can help maintain a healthy weight, reduce stress, improve mood, and increase energy levels. However, it's important to listen to your body and not overdo it. A moderate
+  Steered answer: Yes, regular exercise is beneficial for overall health and well-being. It can help maintain a healthy weight, reduce stress, improve mood, increase energy levels, and enhance cognitive function. However, it's important to consult with a healthcare provider before starting any
+  Delta margin: 0.000
+
+Results saved to results/exp3_raw_results.csv
+
+============================================================
+EXPERIMENT 3: ANALYSIS
+============================================================
+
+✓ Steering is working: 35 answer changes detected
+
+Answer Change Rates by Layer and Epsilon:
+epsilon  0.5  1.0  2.0  4.0  8.0
+layer                           
+24       0.2  0.2  0.2  0.4  0.8
+25       0.0  0.0  0.2  0.6  0.6
+26       0.2  0.0  0.4  0.4  0.6
+27       0.2  0.2  0.2  0.8  0.8
+
+Most effective layer: 24 (change rate=80.0% at ε=8.0)
+
+Epsilon-effect correlations by layer:
+  Layer 24: r = 0.991
+  Layer 25: r = 0.980
+  Layer 26: r = 0.610
+  Layer 27: r = 0.991
+
+❌ ERROR: Experiment3.plot_results() missing 1 required positional argument: 'shift_summary'

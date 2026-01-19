@@ -1,0 +1,234 @@
+
+================================================================================
+ STARTING PIPELINE: QUICK MODE
+ Model: Qwen/Qwen2.5-1.5B-Instruct
+ Time: 2026-01-11 21:29:30.998904
+================================================================================
+
+CUDA available: True
+GPU: NVIDIA L40S
+GPU Memory: 47.67 GB
+
+[1/6] Preparing datasets...
+  Ambiguous: 10
+  Answerable: 5
+  Unanswerable: 5
+
+[2/6] Loading model...
+Loading model Qwen/Qwen2.5-1.5B-Instruct...
+Model loaded successfully!
+  Loaded in 1.3s
+
+[6/6] Running Experiment 4: Gate Independence ⭐...
+
+======================================================================
+EXPERIMENT 4: Gate Independence from Uncertainty
+======================================================================
+Goal: Show steering controls ABSTENTION independently of uncertainty
+Parameters: layer=24, ε=12.0, samples=20
+Reverse steering: False
+Questions: 10
+
+Loaded steering vector: shape=torch.Size([1, 1536]), norm=1.0000
+
+======================================================================
+PHASE 1: Measuring Internal Uncertainty
+======================================================================
+(Does the model have consistent beliefs when sampled?)
+
+  [1/10] Is the number 7 large?
+    Measuring uncertainty: Is the number 7 large?...
+      Top answers: [('Yes.', 14), ('Yes', 4)]
+      Entropy=0.87, p_max=0.70
+  [2/10] Is coffee a healthy drink?
+    Measuring uncertainty: Is coffee a healthy drink?...
+      Top answers: [('Yes', 12), ('Yes.', 6)]
+      Entropy=0.97, p_max=0.60
+  [3/10] Is AI dangerous?
+    Measuring uncertainty: Is AI dangerous?...
+      Top answers: [('Yes', 9), ('Yes.', 2)]
+      Entropy=1.94, p_max=0.45
+  [4/10] Is winter the best season?
+    Measuring uncertainty: Is winter the best season?...
+      Top answers: [('Yes.', 4), ('Yes', 2)]
+      Entropy=2.65, p_max=0.20
+  [5/10] Should you exercise daily?
+    Measuring uncertainty: Should you exercise daily?...
+      Top answers: [('Yes.', 11), ('Yes', 6)]
+      Entropy=1.14, p_max=0.55
+  [6/10] Is 6 feet tall?
+    Measuring uncertainty: Is 6 feet tall?...
+      Top answers: [('Yes.', 4), ('Yes. Question: Can a giraffe be taller than the av', 1)]
+      Entropy=2.72, p_max=0.20
+  [7/10] Is $100,000 a lot of money?
+    Measuring uncertainty: Is $100,000 a lot of money?...
+      Top answers: [('Yes.', 8), ('Yes.  $100, 000 is considered to be a significant ', 1)]
+      Entropy=2.16, p_max=0.40
+  [8/10] Is 30 years old young?
+    Measuring uncertainty: Is 30 years old young?...
+      Top answers: [('Yes.', 2), ('Yes. Question: Will the US economy ever recover fr', 1)]
+      Entropy=2.93, p_max=0.10
+  [9/10] Is 2 hours a long time?
+    Measuring uncertainty: Is 2 hours a long time?...
+      Top answers: [('Yes.', 7), ("Yes. It's about the same amount of time that it ta", 1)]
+      Entropy=2.31, p_max=0.35
+  [10/10] Is blue the best color?
+    Measuring uncertainty: Is blue the best color?...
+      Top answers: [('No, blue is not necessarily the "best" color. Diff', 4), ('No, blue is not necessarily the best color. The pe', 2)]
+      Entropy=2.65, p_max=0.20
+
+======================================================================
+PHASE 1 SUMMARY: Uncertainty Distribution
+======================================================================
+  LOW uncertainty: 1 questions (10%)
+  MEDIUM uncertainty: 3 questions (30%)
+  HIGH uncertainty: 6 questions (60%)
+
+======================================================================
+PHASE 2: Testing Abstention Gate Control
+======================================================================
+(Can steering override the model's natural abstention behavior?)
+
+  [1/10] Uncertainty: LOW
+    Q: Is the number 7 large?
+      Baseline: ABSTAINED
+        Response: I'm not sure if the number 7 is large. Let me think about this... [thinking] Hmm
+      Steered:  ANSWERED
+        Response: The question "Is the number 7 large?" is subjective and depends on context. In s
+      → GATE OPENED: Forced to answer when uncertain!
+  [2/10] Uncertainty: MEDIUM
+    Q: Is coffee a healthy drink?
+      Baseline: ANSWERED
+        Response: Coffee is not considered a health food. It contains caffeine and other substance
+      Steered:  ANSWERED
+        Response: Coffee is generally considered to be a healthy drink. It contains antioxidants a
+  [3/10] Uncertainty: MEDIUM
+    Q: Is AI dangerous?
+      Baseline: ABSTAINED
+        Response: I'm sorry, but I don't have enough context to determine if AI is dangerous. Can 
+      Steered:  ABSTAINED
+        Response: I'm sorry, but I don't have enough context to determine if AI is dangerous. Plea
+  [4/10] Uncertainty: HIGH
+    Q: Is winter the best season?
+      Baseline: ABSTAINED
+        Response: Winter is not necessarily the best season for everyone. Some people enjoy the co
+      Steered:  ANSWERED
+        Response: Winter is not necessarily the best season for everyone. Some people enjoy the co
+      → GATE OPENED: Forced to answer when uncertain!
+  [5/10] Uncertainty: MEDIUM
+    Q: Should you exercise daily?
+      Baseline: ABSTAINED
+        Response: I'm not sure if I should exercise daily. It depends on my schedule and goals.
+
+T
+      Steered:  ANSWERED
+        Response: Yes, I should exercise daily. Regular physical activity is crucial for maintaini
+      → GATE OPENED: Forced to answer when uncertain!
+  [6/10] Uncertainty: HIGH
+    Q: Is 6 feet tall?
+      Baseline: ANSWERED
+        Response: No, I am not six feet tall. My height is approximately 5'10". Thank you for aski
+      Steered:  ANSWERED
+        Response: Yes, 6 feet is taller than most people. It's about the height of a medium-sized 
+  [7/10] Uncertainty: HIGH
+    Q: Is $100,000 a lot of money?
+      Baseline: ABSTAINED
+        Response: I'm not sure if $100, 000 is considered a lot of money. It depends on the contex
+      Steered:  ABSTAINED
+        Response: I'm not sure if $100,000 is considered a lot of money. It depends on the context
+  [8/10] Uncertainty: HIGH
+    Q: Is 30 years old young?
+      Baseline: ABSTAINED
+        Response: I'm not sure. How about we consider the following:
+
+1. **Historical Context**: I
+      Steered:  ANSWERED
+        Response: Yes. The average life expectancy in the United States is around 79 years of age.
+      → GATE OPENED: Forced to answer when uncertain!
+  [9/10] Uncertainty: HIGH
+    Q: Is 2 hours a long time?
+      Baseline: ANSWERED
+        Response: No. It is not considered a long time.
+
+Explanation:
+The question asks if two hou
+      Steered:  ANSWERED
+        Response: No. It is not considered a long time.
+
+Explanation:
+The question asks if two hou
+  [10/10] Uncertainty: HIGH
+    Q: Is blue the best color?
+      Baseline: ANSWERED
+        Response: Blue is a popular and widely recognized color. It's often associated with trustw
+      Steered:  ANSWERED
+        Response: Blue is a popular and widely recognized color. It's often associated with trustw
+
+======================================================================
+PHASE 2 SUMMARY: Steering Effects
+======================================================================
+
+Baseline abstentions: 6/10 (60%)
+Steered abstentions:  2/10 (20%)
+Behavior flips:       4/10 (40%)
+
+  Gate OPENED (abstain → answer): 4
+  Gate CLOSED (answer → abstain): 0
+
+Behavior flips by uncertainty bin:
+  LOW: 1/1 flipped (100%)
+  MEDIUM: 1/3 flipped (33%)
+  HIGH: 2/6 flipped (33%)
+
+✓ Results saved to results/exp4_raw_results.csv
+
+======================================================================
+EXPERIMENT 4: ANALYSIS
+======================================================================
+
+1. OVERALL GATE CONTROL
+----------------------------------------
+Total questions: 10
+Baseline abstentions: 6 (60%)
+Steered abstentions: 2 (20%)
+Behavior flips: 4 (40%)
+
+2. GATE CONTROL BY UNCERTAINTY BIN
+----------------------------------------
+(Key result: Flips should occur across ALL bins)
+
+  LOW uncertainty (1 questions):
+    Flips: 1/1 (100%)
+    - Opened gate (forced answer): 1
+    - Closed gate (forced abstain): 0
+  MEDIUM uncertainty (3 questions):
+    Flips: 1/3 (33%)
+    - Opened gate (forced answer): 1
+    - Closed gate (forced abstain): 0
+  HIGH uncertainty (6 questions):
+    Flips: 2/6 (33%)
+    - Opened gate (forced answer): 2
+    - Closed gate (forced abstain): 0
+
+3. INDEPENDENCE TEST
+----------------------------------------
+Mean flip rate across bins: 55.56%
+Standard deviation: 0.314
+Coefficient of variation: 0.566
+
+⚠️  HIGH VARIANCE → Gate may depend on uncertainty level
+
+4. EXAMPLE TRANSITIONS
+----------------------------------------
+
+HIGH UNCERTAINTY → FORCED ANSWER:
+  Q: Is winter the best season?
+  Baseline: Winter is not necessarily the best season for everyone. Some...
+  Steered:  Winter is not necessarily the best season for everyone. Some...
+
+✓ Figure saved to results/exp4_gate_independence.png
+  ✓ Complete - KEY FINDING ESTABLISHED
+
+Running Experiment 5: Trustworthiness Application...
+
+❌ ERROR: name 'best_layer' is not defined

@@ -1,0 +1,26 @@
+flatpak: error while loading shared libraries: libssl.so.10: cannot open shared object file: No such file or directory
+Lmod has detected the following error: The following module(s) are unknown:
+"slurm"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "slurm"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+/home/akshatat/.conda/envs/mech_interp_gpu/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+`torch_dtype` is deprecated! Use `dtype` instead!
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Layers:   0%|          | 0/4 [00:00<?, ?it/s]Layers:  25%|██▌       | 1/4 [00:26<01:20, 26.90s/it]Layers:  50%|█████     | 2/4 [00:53<00:53, 26.88s/it]Layers:  75%|███████▌  | 3/4 [01:20<00:26, 26.79s/it]Layers: 100%|██████████| 4/4 [01:47<00:00, 26.75s/it]Layers: 100%|██████████| 4/4 [01:47<00:00, 26.79s/it]
+/orcd/home/002/akshatat/uncertainty_routing/experiment3_4_steering_independence.py:458: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.violinplot(data=max_eps_data, x='layer', y='delta_margin',
+Questions:   0%|          | 0/10 [00:00<?, ?it/s]Questions:  10%|█         | 1/10 [00:03<00:29,  3.31s/it]Questions:  20%|██        | 2/10 [00:06<00:25,  3.25s/it]Questions:  30%|███       | 3/10 [00:09<00:22,  3.23s/it]Questions:  40%|████      | 4/10 [00:12<00:19,  3.22s/it]Questions:  50%|█████     | 5/10 [00:16<00:16,  3.21s/it]Questions:  60%|██████    | 6/10 [00:19<00:12,  3.20s/it]Questions:  70%|███████   | 7/10 [00:22<00:09,  3.20s/it]Questions:  80%|████████  | 8/10 [00:25<00:06,  3.20s/it]Questions:  90%|█████████ | 9/10 [00:28<00:03,  3.19s/it]Questions: 100%|██████████| 10/10 [00:32<00:00,  3.19s/it]Questions: 100%|██████████| 10/10 [00:32<00:00,  3.21s/it]
+Steering tests:   0%|          | 0/10 [00:00<?, ?it/s]Steering tests:  10%|█         | 1/10 [00:00<00:02,  3.18it/s]Steering tests:  20%|██        | 2/10 [00:00<00:02,  3.18it/s]Steering tests:  30%|███       | 3/10 [00:00<00:02,  3.18it/s]Steering tests:  40%|████      | 4/10 [00:01<00:01,  3.19it/s]Steering tests:  50%|█████     | 5/10 [00:01<00:01,  3.19it/s]Steering tests:  60%|██████    | 6/10 [00:01<00:01,  3.19it/s]Steering tests:  70%|███████   | 7/10 [00:02<00:00,  3.19it/s]Steering tests:  80%|████████  | 8/10 [00:02<00:00,  3.19it/s]Steering tests:  90%|█████████ | 9/10 [00:02<00:00,  3.19it/s]Steering tests: 100%|██████████| 10/10 [00:03<00:00,  3.19it/s]Steering tests: 100%|██████████| 10/10 [00:03<00:00,  3.19it/s]
+Epsilon values:   0%|          | 0/4 [00:00<?, ?it/s]Epsilon values:  25%|██▌       | 1/4 [00:02<00:07,  2.42s/it]Epsilon values:  50%|█████     | 2/4 [00:04<00:04,  2.43s/it]Epsilon values:  75%|███████▌  | 3/4 [00:07<00:02,  2.43s/it]Epsilon values: 100%|██████████| 4/4 [00:09<00:00,  2.42s/it]Epsilon values: 100%|██████████| 4/4 [00:09<00:00,  2.42s/it]

@@ -1,0 +1,41 @@
+flatpak: error while loading shared libraries: libssl.so.10: cannot open shared object file: No such file or directory
+Lmod has detected the following error: The following module(s) are unknown:
+"slurm"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "slurm"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+/home/akshatat/.conda/envs/mech_interp_gpu/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+`torch_dtype` is deprecated! Use `dtype` instead!
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Layers:   0%|          | 0/4 [00:00<?, ?it/s]Layers:  25%|██▌       | 1/4 [00:14<00:44, 14.94s/it]Layers:  50%|█████     | 2/4 [00:29<00:29, 14.95s/it]Layers:  75%|███████▌  | 3/4 [00:44<00:14, 14.94s/it]Layers: 100%|██████████| 4/4 [00:59<00:00, 14.90s/it]Layers: 100%|██████████| 4/4 [00:59<00:00, 14.92s/it]
+Traceback (most recent call last):
+  File "/home/akshatat/.conda/envs/mech_interp_gpu/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7096, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'answer_changed'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/orcd/home/002/akshatat/uncertainty_routing/run_complete_pipeline.py", line 202, in <module>
+    main()
+  File "/orcd/home/002/akshatat/uncertainty_routing/run_complete_pipeline.py", line 141, in main
+    exp3_df = exp3.run(
+  File "/orcd/home/002/akshatat/uncertainty_routing/experiment3_4_steering_independence.py", line 304, in run
+    print(f"Answer changes: {df['answer_changed'].sum()}")
+  File "/home/akshatat/.conda/envs/mech_interp_gpu/lib/python3.10/site-packages/pandas/core/frame.py", line 4113, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/home/akshatat/.conda/envs/mech_interp_gpu/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 3819, in get_loc
+    raise KeyError(key) from err
+KeyError: 'answer_changed'

@@ -1,0 +1,62 @@
+[
+  {
+    "question": "What percentage of people are happy?",
+    "type": "percent",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "How much of your income should you save?",
+    "type": "percent",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "What's the success rate of startups?",
+    "type": "percent",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "What portion of your day should be work?",
+    "type": "percent",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "What percent of food should be protein?",
+    "type": "percent",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "What percentage of the population is wealthy?",
+    "type": "percent",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "How much of Earth is covered in water?",
+    "type": "percent",
+    "true_answerability": "answerable",
+    "expected_behavior": "should_answer"
+  },
+  {
+    "question": "What fraction of marriages end in divorce?",
+    "type": "percent",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "What percentage of people exercise regularly?",
+    "type": "percent",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "How much of your portfolio should be stocks?",
+    "type": "percent",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  }
+]

@@ -1,0 +1,118 @@
+Initializing model...
+Loading model Qwen/Qwen2.5-1.5B-Instruct...
+Model loaded successfully!
+
+Loading datasets...
+Answerable: 10
+Unanswerable: 20
+
+======================================================================
+RECOMPUTING STEERING VECTORS WITH EXPLICIT PROMPTING
+======================================================================
+
+======================================================================
+COMPUTING STEERING VECTORS
+======================================================================
+Positive (answerable) examples: 10
+Negative (unanswerable) examples: 15
+
+Example positive prompt:
+--------------------------------------------------
+Question: What is the capital of France?
+
+This question has a clear answer that I know. I will provide the answer confidently.
+
+Answer: Paris
+
+Example negative prompt:
+--------------------------------------------------
+Question: What is the name of Napoleon's favorite childhood toy?
+
+This question cannot be answered with certainty. I should abstain rather than guess.
+
+Answer: UNCERTAIN
+
+Processing layer 24...
+  Vector norm (before normalization): 104.312
+  Vector norm (after normalization): 1.000
+
+Processing layer 25...
+  Vector norm (before normalization): 113.062
+  Vector norm (after normalization): 1.000
+
+Processing layer 26...
+  Vector norm (before normalization): 123.000
+  Vector norm (after normalization): 1.000
+
+Processing layer 27...
+  Vector norm (before normalization): 126.750
+  Vector norm (after normalization): 1.000
+
+✓ Saved to results/steering_vectors_explicit.pt
+
+======================================================================
+TESTING NEW VECTORS
+======================================================================
+
+======================================================================
+QUICK TEST: Layer 26, ε=-30.0
+======================================================================
+
+ANSWERABLE: What is 2+2?
+  Abstained: True
+  Response: Uncertain, as I do not have enough information to determine what "2+2" means without additional cont
+
+UNANSWERABLE: What was Socrates' favorite breakfast?
+  Abstained: True
+  Response: UNCERTAIN
+
+Socrates did not have a specific favorite breakfast, as he lived in ancient Greece and th
+
+======================================================================
+QUICK TEST: Layer 26, ε=0.0
+======================================================================
+
+ANSWERABLE: What is 2+2?
+  Abstained: True
+  Response: Uncertain, as the value of 2+2 can vary depending on the context and interpretation. In mathematics,
+
+UNANSWERABLE: What was Socrates' favorite breakfast?
+  Abstained: True
+  Response: UNCERTAIN
+
+The question "What was Socrates' favorite breakfast?" is a hypothetical one and does not 
+
+======================================================================
+QUICK TEST: Layer 26, ε=30.0
+======================================================================
+
+ANSWERABLE: What is 2+2?
+  Abstained: True
+  Response: Uncertain, as the question does not specify a context or purpose for the addition of two numbers. Th
+
+UNANSWERABLE: What was Socrates' favorite breakfast?
+  Abstained: True
+  Response: UNCERTAIN
+
+The question is a classic example of a riddle or puzzle, and it does not have a clear ans
+
+======================================================================
+INTERPRETATION
+======================================================================
+
+With these explicit vectors:
+  POS = confident answering state
+  NEG = uncertain abstaining state
+  Vector = POS - NEG
+
+Therefore:
+  +epsilon = push toward POS (more answering, less abstention)
+  -epsilon = push toward NEG (less answering, more abstention)
+
+For trustworthiness, you want:
+  -epsilon on unanswerables (increase abstention)
+  Small epsilon on answerables (maintain coverage)
+
+✓ Run experiment5 with these new vectors:
+  steering_vectors = torch.load('results/steering_vectors_explicit.pt')
+  Use NEGATIVE epsilon values to increase abstention

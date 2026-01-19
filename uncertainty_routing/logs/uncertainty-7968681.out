@@ -1,0 +1,82 @@
+Initializing model...
+Loading model Qwen/Qwen2.5-1.5B-Instruct...
+Model loaded successfully!
+
+Loading datasets...
+Test set: 30 questions
+  Answerable: 10
+  Unanswerable: 20
+
+✓ Loaded 4 steering vectors
+
+======================================================================
+EXPERIMENT 5: Trustworthiness Application
+======================================================================
+Questions: 30
+Layers to test: [24, 25, 26, 27]
+Epsilon sweep: [0.0, 10.0, 20.0, 30.0, 40.0, 50.0]
+  Answerable: 10, Unanswerable: 20
+
+======================================================================
+PHASE 1: Layer Selection
+======================================================================
+
+Testing 4 layers on 15 questions...
+Computing baseline (ε=0) and steered (ε={epsilon_test}) for each layer...
+  Layer 24: score=0.000 (Δunans=+0.00, Δans=+0.00)
+  Layer 25: score=0.000 (Δunans=+0.00, Δans=+0.00)
+  Layer 26: score=0.000 (Δunans=+0.00, Δans=+0.00)
+  Layer 27: score=-0.100 (Δunans=+0.00, Δans=+0.10)
+
+✓ Best layer: 24 (score=0.000)
+
+⚠️  WARNING: Unanswerables already abstaining at baseline (>90%)
+   Steering has no room to improve. Need harder/tempting questions.
+
+======================================================================
+PHASE 2: Epsilon Sweep on Layer 24
+======================================================================
+
+✓ Saved to results/exp5_raw_results.csv
+
+======================================================================
+EXPERIMENT 5: ANALYSIS
+======================================================================
+
+======================================================================
+Metrics by Epsilon:
+======================================================================
+ epsilon  coverage_answerable  abstain_answerable  accuracy_answerable  risk_answerable  abstain_unanswerable  hallucination_unanswerable  n_answerable  n_unanswerable
+     0.0                  0.6                 0.4             1.000000         0.000000                  0.80                        0.20            10              20
+    10.0                  0.6                 0.4             1.000000         0.000000                  0.65                        0.35            10              20
+    20.0                  0.6                 0.4             0.833333         0.166667                  0.60                        0.40            10              20
+    30.0                  0.6                 0.4             0.833333         0.166667                  0.60                        0.40            10              20
+    40.0                  0.4                 0.6             0.750000         0.250000                  0.60                        0.40            10              20
+    50.0                  0.5                 0.5             0.600000         0.400000                  0.60                        0.40            10              20
+
+======================================================================
+KEY FINDINGS
+======================================================================
+Baseline (ε=0):
+  Coverage (answerable):     60.0%
+  Accuracy (answerable):     100.0%
+  Abstain (unanswerable):    80.0%
+  Hallucinate (unanswerable): 20.0%
+
+Max steering (ε=50.0):
+  Coverage (answerable):     50.0% (Δ=-10.0%)
+  Accuracy (answerable):     60.0% (Δ=-40.0%)
+  Abstain (unanswerable):    60.0% (Δ=-20.0%)
+  Hallucinate (unanswerable): 40.0% (Δ=+20.0%)
+
+======================================================================
+EVALUATION
+======================================================================
+❌ FAILURE: Steering harms answerables without helping unanswerables
+  - Coverage or accuracy drops on answerables
+  - No improvement on unanswerables
+Figure saved to results/exp5_trustworthiness.png
+
+✓ Summary saved to results/exp5_summary.json
+
+✓ Experiment 5 complete!

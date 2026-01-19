@@ -1,0 +1,16 @@
+flatpak: error while loading shared libraries: libssl.so.10: cannot open shared object file: No such file or directory
+Lmod has detected the following error: The following module(s) are unknown:
+"slurm"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "slurm"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+`torch_dtype` is deprecated! Use `dtype` instead!
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Epsilon values:   0%|          | 0/11 [00:00<?, ?it/s]Epsilon values:   9%|▉         | 1/11 [00:35<05:56, 35.63s/it]Epsilon values:  18%|█▊        | 2/11 [01:10<05:13, 34.89s/it]Epsilon values:  27%|██▋       | 3/11 [01:42<04:29, 33.69s/it]Epsilon values:  36%|███▋      | 4/11 [02:11<03:43, 31.95s/it]Epsilon values:  45%|████▌     | 5/11 [02:41<03:06, 31.06s/it]Epsilon values:  55%|█████▍    | 6/11 [03:10<02:32, 30.53s/it]Epsilon values:  64%|██████▎   | 7/11 [03:38<01:58, 29.70s/it]Epsilon values:  73%|███████▎  | 8/11 [04:06<01:27, 29.17s/it]Epsilon values:  82%|████████▏ | 9/11 [04:30<00:55, 27.63s/it]Epsilon values:  91%|█████████ | 10/11 [04:52<00:25, 25.86s/it]Epsilon values: 100%|██████████| 11/11 [05:12<00:00, 23.95s/it]Epsilon values: 100%|██████████| 11/11 [05:12<00:00, 28.39s/it]

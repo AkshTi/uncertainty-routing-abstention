@@ -1,0 +1,47 @@
+flatpak: error while loading shared libraries: libssl.so.10: cannot open shared object file: No such file or directory
+Lmod has detected the following error: The following module(s) are unknown:
+"slurm"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "slurm"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+/home/akshatat/.conda/envs/mech_interp_gpu/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+`torch_dtype` is deprecated! Use `dtype` instead!
+Layers:   0%|          | 0/14 [00:00<?, ?it/s]The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Layers:   7%|▋         | 1/14 [00:08<01:50,  8.53s/it]Layers:  14%|█▍        | 2/14 [00:15<01:33,  7.76s/it]Layers:  21%|██▏       | 3/14 [00:22<01:22,  7.49s/it]Layers:  29%|██▊       | 4/14 [00:30<01:13,  7.40s/it]Layers:  36%|███▌      | 5/14 [00:37<01:06,  7.35s/it]Layers:  43%|████▎     | 6/14 [00:44<00:58,  7.31s/it]Layers:  50%|█████     | 7/14 [00:51<00:50,  7.28s/it]Layers:  57%|█████▋    | 8/14 [00:59<00:43,  7.26s/it]Layers:  64%|██████▍   | 9/14 [01:06<00:36,  7.25s/it]Layers:  71%|███████▏  | 10/14 [01:13<00:29,  7.26s/it]Layers:  79%|███████▊  | 11/14 [01:20<00:21,  7.27s/it]Layers:  86%|████████▌ | 12/14 [01:28<00:14,  7.21s/it]Layers:  93%|█████████▎| 13/14 [01:35<00:07,  7.23s/it]Layers: 100%|██████████| 14/14 [01:42<00:00,  7.25s/it]Layers: 100%|██████████| 14/14 [01:42<00:00,  7.33s/it]
+/orcd/home/002/akshatat/uncertainty_routing/experiment2_localization.py:290: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.boxplot(data=df, x='layer_group', y='delta_margin', ax=axes[1, 0],
+Layers:   0%|          | 0/1 [00:00<?, ?it/s]Layers: 100%|██████████| 1/1 [00:14<00:00, 14.65s/it]Layers: 100%|██████████| 1/1 [00:14<00:00, 14.65s/it]
+Traceback (most recent call last):
+  File "/home/akshatat/.conda/envs/mech_interp_gpu/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7096, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'answer_changed'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/orcd/home/002/akshatat/uncertainty_routing/run_complete_pipeline.py", line 202, in <module>
+    main()
+  File "/orcd/home/002/akshatat/uncertainty_routing/run_complete_pipeline.py", line 141, in main
+    exp3_df = exp3.run(
+  File "/orcd/home/002/akshatat/uncertainty_routing/experiment3_4_steering_independence.py", line 237, in run
+    print(f"Answer changes: {df['answer_changed'].sum()}")
+  File "/home/akshatat/.conda/envs/mech_interp_gpu/lib/python3.10/site-packages/pandas/core/frame.py", line 4113, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/home/akshatat/.conda/envs/mech_interp_gpu/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 3819, in get_loc
+    raise KeyError(key) from err
+KeyError: 'answer_changed'

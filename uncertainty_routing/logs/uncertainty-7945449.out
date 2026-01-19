@@ -1,0 +1,24 @@
+
+================================================================================
+ STARTING PIPELINE: QUICK MODE
+ Model: Qwen/Qwen2.5-1.5B-Instruct
+ Time: 2026-01-11 21:24:42.467243
+================================================================================
+
+CUDA available: True
+GPU: NVIDIA L40S
+GPU Memory: 47.67 GB
+
+[1/6] Preparing datasets...
+  Ambiguous: 10
+  Answerable: 5
+  Unanswerable: 5
+
+[2/6] Loading model...
+Loading model Qwen/Qwen2.5-1.5B-Instruct...
+Model loaded successfully!
+  Loaded in 1.3s
+
+[6/6] Running Experiment 4: Gate Independence ⭐...
+
+❌ ERROR: name 'all_questions' is not defined

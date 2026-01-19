@@ -1,0 +1,48 @@
+flatpak: error while loading shared libraries: libssl.so.10: cannot open shared object file: No such file or directory
+Lmod has detected the following error: The following module(s) are unknown:
+"slurm"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "slurm"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+/home/akshatat/.conda/envs/mech_interp_gpu/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+`torch_dtype` is deprecated! Use `dtype` instead!
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Layers:   0%|          | 0/4 [00:00<?, ?it/s]Layers:  25%|██▌       | 1/4 [00:26<01:20, 26.74s/it]Layers:  50%|█████     | 2/4 [00:53<00:53, 26.68s/it]Layers:  75%|███████▌  | 3/4 [01:20<00:26, 26.67s/it]Layers: 100%|██████████| 4/4 [01:46<00:00, 26.65s/it]Layers: 100%|██████████| 4/4 [01:46<00:00, 26.66s/it]
+Traceback (most recent call last):
+  File "/orcd/home/002/akshatat/uncertainty_routing/run_complete_pipeline.py", line 202, in <module>
+    main()
+  File "/orcd/home/002/akshatat/uncertainty_routing/run_complete_pipeline.py", line 146, in main
+    exp3_summary = exp3.analyze(exp3_df)
+  File "/orcd/home/002/akshatat/uncertainty_routing/experiment3_4_steering_independence.py", line 377, in analyze
+    self.plot_results_fixed(df, change_summary)
+  File "/orcd/home/002/akshatat/uncertainty_routing/experiment3_4_steering_independence.py", line 427, in plot_results_fixed
+    sns.heatmap(change_summary, annot=True, fmt='.2f', cmap='YlOrRd',
+  File "/home/akshatat/.conda/envs/mech_interp_gpu/lib/python3.10/site-packages/seaborn/matrix.py", line 459, in heatmap
+    plotter.plot(ax, cbar_ax, kwargs)
+  File "/home/akshatat/.conda/envs/mech_interp_gpu/lib/python3.10/site-packages/seaborn/matrix.py", line 306, in plot
+    mesh = ax.pcolormesh(self.plot_data, cmap=self.cmap, **kws)
+  File "/home/akshatat/.conda/envs/mech_interp_gpu/lib/python3.10/site-packages/matplotlib/__init__.py", line 1524, in inner
+    return func(
+  File "/home/akshatat/.conda/envs/mech_interp_gpu/lib/python3.10/site-packages/matplotlib/axes/_axes.py", line 6534, in pcolormesh
+    collection = mcoll.QuadMesh(
+  File "/home/akshatat/.conda/envs/mech_interp_gpu/lib/python3.10/site-packages/matplotlib/collections.py", line 2390, in __init__
+    Collection.__init__(self, **kwargs)
+  File "/home/akshatat/.conda/envs/mech_interp_gpu/lib/python3.10/site-packages/matplotlib/collections.py", line 209, in __init__
+    self._internal_update(kwargs)
+  File "/home/akshatat/.conda/envs/mech_interp_gpu/lib/python3.10/site-packages/matplotlib/artist.py", line 1233, in _internal_update
+    return self._update_props(
+  File "/home/akshatat/.conda/envs/mech_interp_gpu/lib/python3.10/site-packages/matplotlib/artist.py", line 1209, in _update_props
+    ret.append(func(v))
+  File "/home/akshatat/.conda/envs/mech_interp_gpu/lib/python3.10/site-packages/matplotlib/collections.py", line 2264, in set_array
+    return super().set_array(A)
+  File "/home/akshatat/.conda/envs/mech_interp_gpu/lib/python3.10/site-packages/matplotlib/colorizer.py", line 568, in set_array
+    raise TypeError(f"Image data of dtype {A.dtype} cannot be "
+TypeError: Image data of dtype object cannot be converted to float

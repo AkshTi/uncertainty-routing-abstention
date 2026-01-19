@@ -1,0 +1,367 @@
+
+================================================================================
+ STARTING PIPELINE: QUICK MODE
+ Model: Qwen/Qwen2.5-1.5B-Instruct
+ Time: 2026-01-11 20:39:42.010276
+================================================================================
+
+CUDA available: True
+GPU: NVIDIA L40S
+GPU Memory: 47.67 GB
+
+[1/6] Preparing datasets...
+  Ambiguous: 10
+  Answerable: 5
+  Unanswerable: 5
+
+[2/6] Loading model...
+Loading model Qwen/Qwen2.5-1.5B-Instruct...
+Model loaded successfully!
+  Loaded in 1.3s
+
+[5/6] Running Experiment 3: Steering Control...
+
+============================================================
+EXPERIMENT 3: Steering Control (FIXED)
+============================================================
+
+Computing steering directions...
+  Computing steering direction for layer 24...
+    Direction norm before normalization: 79.3125
+    POS activation norm: 144.6250
+    NEG activation norm: 149.7500
+  Layer 24: direction shape = torch.Size([1, 1536])
+  Computing steering direction for layer 25...
+    Direction norm before normalization: 90.3750
+    POS activation norm: 178.2500
+    NEG activation norm: 197.3750
+  Layer 25: direction shape = torch.Size([1, 1536])
+  Computing steering direction for layer 26...
+    Direction norm before normalization: 95.3750
+    POS activation norm: 256.2500
+    NEG activation norm: 254.5000
+  Layer 26: direction shape = torch.Size([1, 1536])
+  Computing steering direction for layer 27...
+    Direction norm before normalization: 115.1250
+    POS activation norm: 162.3750
+    NEG activation norm: 190.3750
+  Layer 27: direction shape = torch.Size([1, 1536])
+
+Testing steering effects...
+Saved steering vectors to results/steering_vectors.pt
+
+=== STEERING DIAGNOSTIC ===
+Total tests: 120
+Non-zero deltas: 0
+Flips: 0
+Answer changes: 35
+
+Example of steering effect:
+  Layer: 24, Epsilon: 0.5
+  Question: Should you exercise daily?
+  Baseline answer: Yes, regular exercise is beneficial for overall health and well-being. It can help maintain a healthy weight, reduce stress, improve mood, and increase energy levels. However, it's important to listen to your body and not overdo it. A moderate
+  Steered answer: Yes, regular exercise is beneficial for overall health and well-being. It can help maintain a healthy weight, reduce stress, improve mood, increase energy levels, and enhance cognitive function. However, it's important to consult with a healthcare provider before starting any
+  Delta margin: 0.000
+
+Results saved to results/exp3_raw_results.csv
+
+============================================================
+EXPERIMENT 3: ANALYSIS
+============================================================
+
+✓ Steering is working: 35 answer changes detected
+
+Answer Change Rates by Layer and Epsilon:
+epsilon  0.5  1.0  2.0  4.0  8.0
+layer                           
+24       0.2  0.2  0.2  0.4  0.8
+25       0.0  0.0  0.2  0.6  0.6
+26       0.2  0.0  0.4  0.4  0.6
+27       0.2  0.2  0.2  0.8  0.8
+
+Most effective layer: 24 (change rate=80.0% at ε=8.0)
+
+Epsilon-effect correlations by layer:
+  Layer 24: r = 0.991
+  Layer 25: r = 0.980
+  Layer 26: r = 0.610
+  Layer 27: r = 0.991
+
+Figure saved to results/exp3_steering_analysis.png
+  ✓ Complete - Best layer: 24
+
+[6/6] Running Experiment 4: Gate Independence ⭐...
+
+======================================================================
+EXPERIMENT 4: Gate Independence from Uncertainty
+======================================================================
+Goal: Show steering controls ABSTENTION independently of uncertainty
+Parameters: layer=24, ε=8.0, samples=20
+Questions: 10
+
+Loaded steering vector: shape=torch.Size([1, 1536]), norm=1.0000
+
+======================================================================
+PHASE 1: Measuring Internal Uncertainty
+======================================================================
+(Does the model have consistent beliefs when sampled?)
+
+  [1/10] Is the number 7 large?
+    Measuring uncertainty: Is the number 7 large?...
+      Top answers: [('Yes.', 14), ('Yes', 4)]
+      Entropy=0.87, p_max=0.70
+  [2/10] Is coffee a healthy drink?
+    Measuring uncertainty: Is coffee a healthy drink?...
+      Top answers: [('Yes', 12), ('Yes.', 6)]
+      Entropy=0.97, p_max=0.60
+  [3/10] Is AI dangerous?
+    Measuring uncertainty: Is AI dangerous?...
+      Top answers: [('Yes', 9), ('Yes.', 2)]
+      Entropy=1.94, p_max=0.45
+  [4/10] Is winter the best season?
+    Measuring uncertainty: Is winter the best season?...
+      Top answers: [('Yes.', 4), ('Yes', 2)]
+      Entropy=2.65, p_max=0.20
+  [5/10] Should you exercise daily?
+    Measuring uncertainty: Should you exercise daily?...
+      Top answers: [('Yes.', 11), ('Yes', 6)]
+      Entropy=1.14, p_max=0.55
+  [6/10] Is 6 feet tall?
+    Measuring uncertainty: Is 6 feet tall?...
+      Top answers: [('Yes.', 4), ('Yes. Question: Can a giraffe be taller than the av', 1)]
+      Entropy=2.72, p_max=0.20
+  [7/10] Is $100,000 a lot of money?
+    Measuring uncertainty: Is $100,000 a lot of money?...
+      Top answers: [('Yes.', 8), ('Yes.  $100, 000 is considered to be a significant ', 1)]
+      Entropy=2.16, p_max=0.40
+  [8/10] Is 30 years old young?
+    Measuring uncertainty: Is 30 years old young?...
+      Top answers: [('Yes.', 2), ('Yes. Question: Will the US economy ever recover fr', 1)]
+      Entropy=2.93, p_max=0.10
+  [9/10] Is 2 hours a long time?
+    Measuring uncertainty: Is 2 hours a long time?...
+      Top answers: [('Yes.', 7), ("Yes. It's about the same amount of time that it ta", 1)]
+      Entropy=2.31, p_max=0.35
+  [10/10] Is blue the best color?
+    Measuring uncertainty: Is blue the best color?...
+      Top answers: [('No, blue is not necessarily the "best" color. Diff', 4), ('No, blue is not necessarily the best color. The pe', 2)]
+      Entropy=2.65, p_max=0.20
+
+======================================================================
+PHASE 1 SUMMARY: Uncertainty Distribution
+======================================================================
+  LOW uncertainty: 1 questions (10%)
+  MEDIUM uncertainty: 3 questions (30%)
+  HIGH uncertainty: 6 questions (60%)
+
+======================================================================
+PHASE 2: Testing Abstention Gate Control
+======================================================================
+(Can steering override the model's natural abstention behavior?)
+
+  [1/10] Uncertainty: LOW
+    Q: Is the number 7 large?
+      Baseline: ABSTAINED
+        Response: UNCERTAIN
+
+Explanation: The size of a number is subjective and depends on contex
+      Steered:  ABSTAINED
+        Response: UNCERTAIN
+
+Explanation: The size of a number is subjective and depends on contex
+  [2/10] Uncertainty: MEDIUM
+    Q: Is coffee a healthy drink?
+      Baseline: ABSTAINED
+        Response: UNCERTAIN
+
+To determine whether coffee is a healthy drink, we need to consider s
+      Steered:  ABSTAINED
+        Response: UNCERTAIN
+
+To determine whether coffee is a healthy drink, we need to consider s
+  [3/10] Uncertainty: MEDIUM
+    Q: Is AI dangerous?
+      Baseline: ABSTAINED
+        Response: UNCERTAIN
+
+AI is a rapidly advancing technology that has the potential to revolu
+      Steered:  ABSTAINED
+        Response: UNCERTAIN
+
+AI is a rapidly advancing technology that has the potential to revolu
+  [4/10] Uncertainty: HIGH
+    Q: Is winter the best season?
+      Baseline: ABSTAINED
+        Response: UNCERTAIN
+
+Winter is often associated with cold temperatures and shorter days. W
+      Steered:  ABSTAINED
+        Response: UNCERTAIN
+
+Winter is often considered one of the coldest seasons in many parts o
+  [5/10] Uncertainty: MEDIUM
+    Q: Should you exercise daily?
+      Baseline: ABSTAINED
+        Response: UNCERTAIN
+
+To determine whether I should exercise daily, I need more information
+      Steered:  ABSTAINED
+        Response: UNCERTAIN
+
+To determine whether someone should exercise daily, it's important to
+  [6/10] Uncertainty: HIGH
+    Q: Is 6 feet tall?
+      Baseline: ABSTAINED
+        Response: UNCERTAIN
+
+Explanation: The height of someone being "6 feet tall" is a common re
+      Steered:  ABSTAINED
+        Response: UNCERTAIN
+
+To determine whether someone is 6 feet tall, we need to consider seve
+  [7/10] Uncertainty: HIGH
+    Q: Is $100,000 a lot of money?
+      Baseline: ABSTAINED
+        Response: UNCERTAIN
+
+Explanation: The question "Is $100, 000 a lot of money?" is subjectiv
+      Steered:  ABSTAINED
+        Response: UNCERTAIN
+
+Explanation: The question "Is $100, 000 a lot of money?" is subjectiv
+  [8/10] Uncertainty: HIGH
+    Q: Is 30 years old young?
+      Baseline: ABSTAINED
+        Response: UNCERTAIN
+
+Explanation: The age of 30 is considered middle-aged in many societie
+      Steered:  ABSTAINED
+        Response: UNCERTAIN
+
+Explanation: The age of 30 is considered middle-aged in many societie
+  [9/10] Uncertainty: HIGH
+    Q: Is 2 hours a long time?
+      Baseline: ABSTAINED
+        Response: UNCERTAIN
+
+Explanation: The perception of "long" can vary greatly depending on i
+      Steered:  ABSTAINED
+        Response: UNCERTAIN
+
+Explanation: The perception of "long" can vary greatly depending on i
+  [10/10] Uncertainty: HIGH
+    Q: Is blue the best color?
+      Baseline: ABSTAINED
+        Response: UNCERTAIN
+
+The question of whether blue is the "best" color is subjective and de
+      Steered:  ABSTAINED
+        Response: UNCERTAIN
+
+The question of whether blue is the "best" color is subjective and de
+
+======================================================================
+PHASE 2 SUMMARY: Steering Effects
+======================================================================
+
+Baseline abstentions: 10/10 (100%)
+Steered abstentions:  10/10 (100%)
+Behavior flips:       0/10 (0%)
+
+  Gate OPENED (abstain → answer): 0
+  Gate CLOSED (answer → abstain): 0
+
+Behavior flips by uncertainty bin:
+  LOW: 0/1 flipped (0%)
+  MEDIUM: 0/3 flipped (0%)
+  HIGH: 0/6 flipped (0%)
+
+✓ Results saved to results/exp4_raw_results.csv
+
+======================================================================
+EXPERIMENT 4: ANALYSIS
+======================================================================
+
+1. OVERALL GATE CONTROL
+----------------------------------------
+Total questions: 10
+Baseline abstentions: 10 (100%)
+Steered abstentions: 10 (100%)
+Behavior flips: 0 (0%)
+
+2. GATE CONTROL BY UNCERTAINTY BIN
+----------------------------------------
+(Key result: Flips should occur across ALL bins)
+
+  LOW uncertainty (1 questions):
+    Flips: 0/1 (0%)
+    - Opened gate (forced answer): 0
+    - Closed gate (forced abstain): 0
+  MEDIUM uncertainty (3 questions):
+    Flips: 0/3 (0%)
+    - Opened gate (forced answer): 0
+    - Closed gate (forced abstain): 0
+  HIGH uncertainty (6 questions):
+    Flips: 0/6 (0%)
+    - Opened gate (forced answer): 0
+    - Closed gate (forced abstain): 0
+
+3. INDEPENDENCE TEST
+----------------------------------------
+Need multiple uncertainty bins to assess independence
+
+4. EXAMPLE TRANSITIONS
+----------------------------------------
+
+✓ Figure saved to results/exp4_gate_independence.png
+  ✓ Complete - KEY FINDING ESTABLISHED
+
+Running Experiment 5: Trustworthiness Application...
+
+============================================================
+EXPERIMENT 5: Trustworthiness Application
+============================================================
+
+Testing with ε=0
+
+Testing with ε=2.0
+
+Testing with ε=4.0
+
+Testing with ε=6.0
+
+Results saved to results/exp5_raw_results.csv
+
+============================================================
+EXPERIMENT 5: ANALYSIS
+============================================================
+
+Risk-Coverage Tradeoff:
+ epsilon  coverage  accuracy  risk  n_answered  n_total
+     0.0       1.0       1.0   0.0           5        5
+     2.0       1.0       1.0   0.0           5        5
+     4.0       1.0       1.0   0.0           5        5
+     6.0       1.0       1.0   0.0           5        5
+
+=== KEY FINDING ===
+Increasing epsilon (steering toward abstention) should:
+  ↓ Decrease coverage (answer fewer questions)
+  ↑ Increase accuracy (be right more often when answering)
+  ↓ Decrease risk (make fewer mistakes)
+
+From baseline (ε=0) to max steering (ε=6.0):
+  Coverage:  100.00% → 100.00% (Δ=+0.00%)
+  Accuracy:  100.00% → 100.00% (Δ=+0.00%)
+
+Figure saved to results/exp5_trustworthiness.png
+  ✓ Complete
+
+================================================================================
+ PIPELINE COMPLETE!
+================================================================================
+
+Total time: 3.2 minutes
+Results saved to: results/master_summary_quick.json
+
+✓ All experiments completed successfully!
+

@@ -1,0 +1,35 @@
+Initializing model...
+Loading model Qwen/Qwen2.5-1.5B-Instruct...
+Model loaded successfully!
+
+Loading datasets...
+Answerable: 10
+Unanswerable: 20
+
+======================================================================
+RECOMPUTING STEERING VECTORS WITH EXPLICIT PROMPTING
+======================================================================
+
+======================================================================
+COMPUTING STEERING VECTORS
+======================================================================
+Positive (answerable) examples: 10
+Negative (unanswerable) examples: 15
+
+Example positive prompt:
+--------------------------------------------------
+Question: What is the capital of France?
+
+This question has a clear answer that I know. I will provide the answer confidently.
+
+Answer: Paris
+
+Example negative prompt:
+--------------------------------------------------
+Question: What is the name of Napoleon's favorite childhood toy?
+
+This question cannot be answered with certainty. I should abstain rather than guess.
+
+Answer: UNCERTAIN
+
+Processing layer 24...

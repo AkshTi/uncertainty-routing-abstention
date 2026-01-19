@@ -1,0 +1,130 @@
+
+================================================================================
+ STARTING PIPELINE: STANDARD MODE
+ Model: Qwen/Qwen2.5-1.5B-Instruct
+ Time: 2026-01-11 22:26:41.304899
+================================================================================
+
+CUDA available: True
+GPU: NVIDIA L40S
+GPU Memory: 47.67 GB
+
+[1/6] Preparing datasets...
+  Ambiguous: 30
+  Answerable: 10
+  Unanswerable: 10
+
+[2/6] Loading model...
+Loading model Qwen/Qwen2.5-1.5B-Instruct...
+Model loaded successfully!
+  Loaded in 1.5s
+
+Running Experiment 5: Trustworthiness Application...
+
+============================================================
+EXPERIMENT 5: Trustworthiness Application (FIXED)
+============================================================
+Testing layer 24
+Questions: 10
+Steering vector: shape=torch.Size([1, 1536]), norm=1.0000, device=cuda:0
+
+Testing with ε=0 (steering toward abstention)
+  Q: What is the capital of France?
+    Abstained: False, Correct: True
+    Response: The capital of France is Paris....
+  Q: How many days are in a week?
+    Abstained: False, Correct: True
+    Response: There are 7 days in a week....
+  Q: What is 2 + 2?
+    Abstained: False, Correct: True
+    Response: 4. 
+
+Explanation: The sum of two plus two equals four. This is a basic arithmeti...
+
+Testing with ε=4.0 (steering toward abstention)
+
+Testing with ε=8.0 (steering toward abstention)
+
+Testing with ε=12.0 (steering toward abstention)
+
+Testing with ε=16.0 (steering toward abstention)
+  Q: What is the capital of France?
+    Abstained: False, Correct: True
+    Response: The capital of France is Paris....
+  Q: How many days are in a week?
+    Abstained: False, Correct: True
+    Response: 7 days....
+  Q: What is 2 + 2?
+    Abstained: False, Correct: True
+    Response: 4....
+
+============================================================
+DIAGNOSTIC - Sample Responses
+============================================================
+
+Baseline (ε=0) examples:
+  Q: What is the capital of France?
+     Abstained: False, Response: The capital of France is Paris.
+  Q: How many days are in a week?
+     Abstained: False, Response: There are 7 days in a week.
+  Q: What is 2 + 2?
+     Abstained: False, Response: 4. 
+
+Explanation: The sum of two plus two equals four. This is a basic arithmeti
+
+Max steering (ε=16.0):
+  Q: What is the capital of France?
+     Abstained: False, Response: The capital of France is Paris.
+  Q: How many days are in a week?
+     Abstained: False, Response: 7 days.
+  Q: What is 2 + 2?
+     Abstained: False, Response: 4.
+
+============================================================
+SUMMARY BY EPSILON
+============================================================
+ε=  0.0: 0/10 abstained, 10 answered (8 correct, acc=80.0%)
+ε=  4.0: 0/10 abstained, 10 answered (8 correct, acc=80.0%)
+ε=  8.0: 0/10 abstained, 10 answered (8 correct, acc=80.0%)
+ε= 12.0: 0/10 abstained, 10 answered (8 correct, acc=80.0%)
+ε= 16.0: 1/10 abstained, 9 answered (7 correct, acc=77.8%)
+
+✓ Results saved to results/exp5_raw_results.csv
+
+============================================================
+EXPERIMENT 5: ANALYSIS
+============================================================
+
+Risk-Coverage Tradeoff:
+ epsilon  coverage  accuracy     risk  n_answered  n_total
+     0.0       1.0  0.800000 0.200000          10       10
+     4.0       1.0  0.800000 0.200000          10       10
+     8.0       1.0  0.800000 0.200000          10       10
+    12.0       1.0  0.800000 0.200000          10       10
+    16.0       0.9  0.777778 0.222222           9       10
+
+=== KEY FINDING ===
+Increasing epsilon (steering toward abstention) should:
+  ↓ Decrease coverage (answer fewer questions)
+  ↑ Increase accuracy (be right more often when answering)
+  ↓ Decrease risk (make fewer mistakes)
+
+From baseline (ε=0) to max steering (ε=16.0):
+  Coverage:  100.00% → 90.00% (Δ=-10.00%)
+  Accuracy:  80.00% → 77.78% (Δ=-2.22%)
+  Risk:      20.00% → 22.22% (Δ=+2.22%)
+
+⚠ WARNING: Steering not reducing coverage effectively
+
+Figure saved to results/exp5_trustworthiness.png
+  ✓ Complete
+
+================================================================================
+ PIPELINE COMPLETE!
+================================================================================
+
+Total time: 0.1 minutes
+Results saved to: results/master_summary_standard.json
+
+✓ All experiments completed successfully!
+

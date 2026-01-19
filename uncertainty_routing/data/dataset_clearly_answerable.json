@@ -1,0 +1,62 @@
+[
+  {
+    "question": "What is the capital of France?",
+    "answer": "Paris",
+    "context": null,
+    "answerability": "answerable"
+  },
+  {
+    "question": "How many days are in a week?",
+    "answer": "7",
+    "context": null,
+    "answerability": "answerable"
+  },
+  {
+    "question": "What is 2 + 2?",
+    "answer": "4",
+    "context": null,
+    "answerability": "answerable"
+  },
+  {
+    "question": "What year did World War II end?",
+    "answer": "1945",
+    "context": null,
+    "answerability": "answerable"
+  },
+  {
+    "question": "Who wrote Romeo and Juliet?",
+    "answer": "William Shakespeare",
+    "context": null,
+    "answerability": "answerable"
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "answer": "H2O",
+    "context": null,
+    "answerability": "answerable"
+  },
+  {
+    "question": "How many continents are there?",
+    "answer": "7",
+    "context": null,
+    "answerability": "answerable"
+  },
+  {
+    "question": "What is the boiling point of water in Celsius?",
+    "answer": "100",
+    "context": null,
+    "answerability": "answerable"
+  },
+  {
+    "question": "What planet is closest to the Sun?",
+    "answer": "Mercury",
+    "context": null,
+    "answerability": "answerable"
+  },
+  {
+    "question": "How many legs does a spider have?",
+    "answer": "8",
+    "context": null,
+    "answerability": "answerable"
+  }
+]

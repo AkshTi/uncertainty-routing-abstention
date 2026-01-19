@@ -1,0 +1,74 @@
+Initializing model...
+Loading model Qwen/Qwen2.5-1.5B-Instruct...
+Model loaded successfully!
+
+Loading datasets...
+Answerable with answers: 10
+Unanswerable: 10
+
+Test set size: 20 (answerable=10, unanswerable=10)
+
+======================================================================
+LOADING STEERING VECTORS
+======================================================================
+✓ Loaded 4 steering vectors
+  Layers: [24, 25, 26, 27]
+
+======================================================================
+EXPERIMENT 5: Trustworthiness Application (DEFENSIBLE)
+======================================================================
+Questions total: 20
+Layers tested: [24, 25, 26, 27]
+Epsilon sweep: [0.0, -5.0, -10.0, -20.0, -30.0, -40.0]
+
+======================================================================
+PHASE 1: Selecting Best Layer (Selective Abstention Score)
+======================================================================
+
+Layer selection (higher score better):
+ layer  score  abstain_answerable  abstain_unanswerable  invalid_rate  n_probe
+    24   -0.5                 0.0                   0.0           1.0       20
+    25   -0.5                 0.0                   0.0           1.0       20
+    26   -0.5                 0.0                   0.0           1.0       20
+    27   -0.5                 0.0                   0.0           1.0       20
+
+✓ Best layer: 24 (epsilon_test=-10.0)
+
+======================================================================
+PHASE 2: Epsilon Sweep on Best Layer 24
+======================================================================
+
+✓ Saved raw results to results/exp5_raw_results.csv
+✓ Saved layer scores to results/exp5_layer_scores.csv
+
+======================================================================
+EXPERIMENT 5: ANALYSIS (Selective Prediction Metrics)
+======================================================================
+
+Metrics by epsilon:
+ epsilon  invalid_rate  coverage_answerable  abstain_answerable  accuracy_answerable  risk_answerable  abstain_unanswerable  hallucination_unanswerable  n_answerable  n_unanswerable
+   -40.0           1.0                  0.0                 0.0                  0.0              0.0                   0.0                         0.0            10              10
+   -30.0           1.0                  0.0                 0.0                  0.0              0.0                   0.0                         0.0            10              10
+   -20.0           1.0                  0.0                 0.0                  0.0              0.0                   0.0                         0.0            10              10
+   -10.0           1.0                  0.0                 0.0                  0.0              0.0                   0.0                         0.0            10              10
+    -5.0           1.0                  0.0                 0.0                  0.0              0.0                   0.0                         0.0            10              10
+     0.0           1.0                  0.0                 0.0                  0.0              0.0                   0.0                         0.0            10              10
+
+✓ Saved summary to results/exp5_summary.json
+
+Figure saved to results/exp5_trustworthiness.png
+
+Headline deltas (min_eps -> max_eps):
+  delta_coverage_answerable: +0.000
+  delta_accuracy_answerable: +0.000
+  delta_abstain_unanswerable: +0.000
+  delta_hallucination_unanswerable: +0.000
+  delta_invalid_rate: +0.000
+
+✓ Experiment 5 complete.
+Key deltas (min_eps -> max_eps):
+  delta_coverage_answerable: 0.0
+  delta_accuracy_answerable: 0.0
+  delta_abstain_unanswerable: 0.0
+  delta_hallucination_unanswerable: 0.0
+  delta_invalid_rate: 0.0

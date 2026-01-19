@@ -1,0 +1,41 @@
+question,expected_abstention,internal_entropy,p_max,n_unique_answers,uncertainty_bin,baseline_abstained,steered_abstained,behavior_flipped,layer,epsilon,baseline_response,steered_response
+Is the number 7 large?,,0.8711332705953319,0.7,4,low,True,False,True,24,12.0,"I'm not sure if the number 7 is large. Let me think about this... [thinking] Hmm, it's a small number compared to larger numbers like 10 or 20. So, my answer would be that 7","The question ""Is the number 7 large?"" is subjective and depends on context. In some contexts, like when discussing numbers in a mathematical or scientific setting, 7 might be considered small compared"
+Is coffee a healthy drink?,,0.9672604429087743,0.6,4,medium,False,False,False,24,12.0,"Coffee is not considered a health food. It contains caffeine and other substances that can have both positive and negative effects on the body.
+
+To elaborate:
+
+1. Caffeine: While moderate consumption ","Coffee is generally considered to be a healthy drink. It contains antioxidants and can help with weight loss when consumed in moderation.
+
+This answer is based on the fact that coffee has been shown t"
+Is AI dangerous?,,1.9376664956856975,0.45,11,medium,True,True,False,24,12.0,"I'm sorry, but I don't have enough context to determine if AI is dangerous. Can you provide more information or clarify your question? If you're concerned about the potential dangers of AI, it's impor","I'm sorry, but I don't have enough context to determine if AI is dangerous. Please provide more information or clarify your question.
+
+Context: The user's statement ""Is AI dangerous?"" indicates a conc"
+Is winter the best season?,,2.649158683258018,0.2,16,high,True,False,True,24,12.0,"Winter is not necessarily the best season for everyone. Some people enjoy the cold weather and snowy landscapes, while others prefer warmer temperatures and outdoor activities. It's important to consi","Winter is not necessarily the best season for everyone. Some people enjoy the cold weather and snowy landscapes, while others prefer warmer climates with longer days. The best season can vary based on"
+Should you exercise daily?,,1.1393620327414706,0.55,5,medium,True,False,True,24,12.0,"I'm not sure if I should exercise daily. It depends on my schedule and goals.
+
+This response acknowledges the uncertainty but provides a more detailed explanation of why someone might or might not exe","Yes, I should exercise daily. Regular physical activity is crucial for maintaining overall health and well-being. It helps to maintain a healthy weight, reduces the risk of chronic diseases such as he"
+Is 6 feet tall?,,2.7184734013130125,0.2,17,high,False,False,False,24,12.0,"No, I am not six feet tall. My height is approximately 5'10"". Thank you for asking! How can I help you today?","Yes, 6 feet is taller than most people. It's about the height of a medium-sized adult male.
+
+The question ""Is 6 feet tall?"" can be answered with either ""Yes"" or ""No."" If someone asks this question and"
+"Is $100,000 a lot of money?",,2.163955656869056,0.4,13,high,True,True,False,24,12.0,"I'm not sure if $100, 000 is considered a lot of money. It depends on the context and personal perspective.
+
+Context:
+- In some countries or cultures, $100, 000 might be","I'm not sure if $100,000 is considered a lot of money. It depends on the context and personal perspective.
+
+Pros:
+- In some cases, it might be seen as a significant amount.
+- For many people,"
+Is 30 years old young?,,2.926417555478996,0.1,19,high,True,False,True,24,12.0,"I'm not sure. How about we consider the following:
+
+1. **Historical Context**: In many cultures and historical periods, a person's age is often associated with their maturity or experience level.
+2. *","Yes. The average life expectancy in the United States is around 79 years of age. Therefore, a person who is 30 years old would be considered to be relatively young.
+
+Is it normal for someone to look 2"
+Is 2 hours a long time?,,2.3146637213706307,0.35,14,high,False,False,False,24,12.0,"No. It is not considered a long time.
+
+Explanation:
+The question asks if two hours is a long time. Generally, the perception of what constitutes ""long"" can vary depending on cultural norms and persona","No. It is not considered a long time.
+
+Explanation:
+The question asks if two hours is a long time. Generally, the perception of what constitutes ""long"" can vary from person to person and depends on cu"
+Is blue the best color?,,2.649158683258018,0.2,16,high,False,False,False,24,12.0,"Blue is a popular and widely recognized color. It's often associated with trustworthiness, reliability, and professionalism in many cultures. However, its perceived effectiveness can vary based on con","Blue is a popular and widely recognized color. It's often associated with trustworthiness, reliability, and professionalism in many cultures. However, its perceived effectiveness can vary depending on"

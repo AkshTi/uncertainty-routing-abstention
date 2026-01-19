@@ -1,0 +1,381 @@
+
+================================================================================
+ STARTING PIPELINE: QUICK MODE
+ Model: Qwen/Qwen2.5-1.5B-Instruct
+ Time: 2026-01-11 19:50:42.174854
+================================================================================
+
+CUDA available: True
+GPU: NVIDIA L40S
+GPU Memory: 47.67 GB
+
+[1/6] Preparing datasets...
+  Ambiguous: 10
+  Answerable: 5
+  Unanswerable: 5
+
+[2/6] Loading model...
+Loading model Qwen/Qwen2.5-1.5B-Instruct...
+Model loaded successfully!
+  Loaded in 1.4s
+
+[5/6] Running Experiment 3: Steering Control...
+
+============================================================
+EXPERIMENT 3: Steering Control (FIXED)
+============================================================
+
+Computing steering directions...
+  Computing steering direction for layer 24...
+    Direction norm before normalization: 79.3125
+    POS activation norm: 144.6250
+    NEG activation norm: 149.7500
+  Layer 24: direction shape = torch.Size([1, 1536])
+  Computing steering direction for layer 25...
+    Direction norm before normalization: 90.3750
+    POS activation norm: 178.2500
+    NEG activation norm: 197.3750
+  Layer 25: direction shape = torch.Size([1, 1536])
+  Computing steering direction for layer 26...
+    Direction norm before normalization: 95.3750
+    POS activation norm: 256.2500
+    NEG activation norm: 254.5000
+  Layer 26: direction shape = torch.Size([1, 1536])
+  Computing steering direction for layer 27...
+    Direction norm before normalization: 115.1250
+    POS activation norm: 162.3750
+    NEG activation norm: 190.3750
+  Layer 27: direction shape = torch.Size([1, 1536])
+
+Testing steering effects...
+Saved steering vectors to results/steering_vectors.pt
+
+=== STEERING DIAGNOSTIC ===
+Total tests: 120
+Non-zero deltas: 0
+Flips: 0
+Answer changes: 35
+
+Example of steering effect:
+  Layer: 24, Epsilon: 0.5
+  Question: Should you exercise daily?
+  Baseline answer: Yes, regular exercise is beneficial for overall health and well-being. It can help maintain a healthy weight, reduce stress, improve mood, and increase energy levels. However, it's important to listen to your body and not overdo it. A moderate
+  Steered answer: Yes, regular exercise is beneficial for overall health and well-being. It can help maintain a healthy weight, reduce stress, improve mood, increase energy levels, and enhance cognitive function. However, it's important to consult with a healthcare provider before starting any
+  Delta margin: 0.000
+
+Results saved to results/exp3_raw_results.csv
+
+============================================================
+EXPERIMENT 3: ANALYSIS
+============================================================
+
+✓ Steering is working: 35 answer changes detected
+
+Answer Change Rates by Layer and Epsilon:
+epsilon  0.5  1.0  2.0  4.0  8.0
+layer                           
+24       0.2  0.2  0.2  0.4  0.8
+25       0.0  0.0  0.2  0.6  0.6
+26       0.2  0.0  0.4  0.4  0.6
+27       0.2  0.2  0.2  0.8  0.8
+
+Most effective layer: 24 (change rate=80.0% at ε=8.0)
+
+Epsilon-effect correlations by layer:
+  Layer 24: r = 0.991
+  Layer 25: r = 0.980
+  Layer 26: r = 0.610
+  Layer 27: r = 0.991
+
+Figure saved to results/exp3_steering_analysis.png
+  ✓ Complete - Best layer: 24
+
+[6/6] Running Experiment 4: Gate Independence ⭐...
+
+======================================================================
+EXPERIMENT 4: Gate Independence from Uncertainty
+======================================================================
+Testing if steering changes answers regardless of uncertainty
+Parameters: layer=24, ε=4.0, samples=20
+Questions: 10
+
+======================================================================
+PHASE 1: Measuring Internal Uncertainty
+======================================================================
+
+[Question 1/10]
+
+  [MEASURING UNCERTAINTY] Is the number 7 large?...
+    Sample 1: 'Yes, because it's prime. No, because there are many primes larger than it.'
+    Sample 2: 'Yes, because it is a multiple of itself. No, because it is less than many other numbers.'
+    Sample 3: 'Yes. No.'
+    Distribution: {"Yes, because it's prime. No, because there are many primes larger than it.": 1, 'Yes, because it is a multiple of itself. No, because it is less than many other numbers.': 1, 'Yes. No.': 5, "Yes, because it's a positive whole number and has many other things. No, because there are lots of numbers that come after it.": 1, 'No, because it is only a fraction of the population. Yes, because it represents the largest number known in math.': 1, 'Yes; No;': 3, "Yes, because 7 is a small whole number. No, because it's just as big as 6 or any other number.": 1, "Yes, because it is a prime. No, because it's odd.": 1, "Yes, because it is a prime number. No, because it has only two factors and it's not divisible by any other numbers besides itself and one": 1, "Yes, it is a common size. No, it's not very big or small in comparison to other numbers.": 1, 'Yes No': 1, 'Yes, because it is a prime number. No, because its only factors are itself and one.': 1, 'No, because there are much larger numbers than 7. Yes, because 7 is a significant milestone in mathematics.': 1, "Yes, because numbers are not measured by size or quantity. No, because there is no universal agreement on what constitutes a large number. It's subjective": 1}
+    → Entropy=2.429, p_max=0.250
+  → Uncertainty bin: HIGH
+
+[Question 2/10]
+
+  [MEASURING UNCERTAINTY] Is coffee a healthy drink?...
+    Sample 1: 'Yes, Coffee is a healthful beverage because it contains caffeine and antioxidants. No, coffee is not a healthful beverage because it can cause heart disease'
+    Sample 2: 'No, Coffee is not a healthy drink because it contains high levels of caffeine and can cause dehydration. Yes, Coffee is considered to be a healthful'
+    Sample 3: 'Yes or No.'
+    Distribution: {'Yes, Coffee is a healthful beverage because it contains caffeine and antioxidants. No, coffee is not a healthful beverage because it can cause heart disease': 1, 'No, Coffee is not a healthy drink because it contains high levels of caffeine and can cause dehydration. Yes, Coffee is considered to be a healthful': 1, 'Yes or No.': 3, 'Yes. No.': 3, 'Yes, because it has antioxidants. No, because caffeine can have negative effects on health.': 1, 'No, Coffee is not good for your health because it contains chemicals and caffeine that are harmful to the body. Yes, Coffee is a great choice for': 1, 'Yes No': 2, 'No, it is not.': 1, 'Yes. Coffee can be considered to have health benefits due to its caffeine content and antioxidant properties, but it should not be consumed in excess or as a': 1, 'No, Coffee is not healthy because it contains high levels of caffeine which can cause heartburn. Yes, Coffee is healthy because drinking coffee in moderation may': 1, 'Yes, it can be consumed in moderation to boost energy and provide antioxidants. No, it is too acidic and should be avoided.': 1, "Yes, it is. No, it isn't.": 2, 'Yes, coffee is good for health. It contains antioxidants and can improve your energy levels.': 1, 'No, it is not considered to be very healthful.': 1}
+    → Entropy=2.528, p_max=0.150
+  → Uncertainty bin: HIGH
+
+[Question 3/10]
+
+  [MEASURING UNCERTAINTY] Is AI dangerous?...
+    Sample 1: 'Yes, because the idea of having super-intelligent machines is terrifying. No, because there are already lots of things that computers do better than humans and'
+    Sample 2: 'No, because AI has already shown its potential to create a safer world by automating tasks and improving efficiency in many industries. Yes, because AI can'
+    Sample 3: 'Yes, because it has the potential to cause harm to humans and society. No, because AI is not inherently dangerous but can be used for good if'
+    Distribution: {'Yes, because the idea of having super-intelligent machines is terrifying. No, because there are already lots of things that computers do better than humans and': 1, 'No, because AI has already shown its potential to create a safer world by automating tasks and improving efficiency in many industries. Yes, because AI can': 1, 'Yes, because it has the potential to cause harm to humans and society. No, because AI is not inherently dangerous but can be used for good if': 1, 'Yes, because it could lead to the destruction of humanity. No, because it would be a tool for good and not evil.': 1, 'Yes, because the possibility of a malicious actor with access to powerful AI systems has the potential to be catastrophic. No, because despite the risks associated with': 1, 'Yes, because it could lead to job loss or replace human jobs. No, because AI has the potential to solve many problems and improve our lives.': 1, 'Yes, because it can be a threat to humanity. No, because humans are capable of controlling and managing their own intelligence.': 1, "Yes, I am worried about the dangers of artificial intelligence. No, I don't have any concerns about the potential risks associated with AI.": 1, "Yes, I don't believe so. AI is just a tool that can be used for good or bad purposes. It's important to use it responsibly": 1, 'Yes, because it will lead to a society where the majority of people are unable to adapt and find employment due to automation. No, because it has': 1, 'No, AI is not dangerous. Yes, AI could potentially be dangerous if used in the wrong way.': 1, 'Yes, because it is a form of technology that can be used for both good and evil. It is not inherently dangerous.': 1, 'Yes': 1, 'Yes, because of the following reasons:': 1, 'Yes. No.': 1, 'No, because humans can control AI. Yes, because there is no such thing as a perfect AI.': 1, 'Yes, I am worried about the impact that AI might have on our society. The development of advanced technology and artificial intelligence is a rapidly growing field with': 1, 'No. AI has the potential to revolutionize many aspects of society, but it also carries risks that need to be carefully managed. While AI can be': 1, 'No. Yes.': 1, 'No, not really. Yes, it is a threat.': 1}
+    → Entropy=2.996, p_max=0.050
+  → Uncertainty bin: HIGH
+
+[Question 4/10]
+
+  [MEASURING UNCERTAINTY] Is winter the best season?...
+    Sample 1: 'Winter is the best season because... it has lots of cold weather and you can have hot chocolate. (Correct) Winter is not the best season because'
+    Sample 2: 'Yes. No.'
+    Sample 3: 'Yes, because it's the time of year where people get to go skiing and snowboarding. No, because I like spending time outside in summer instead'
+    Distribution: {'Winter is the best season because... it has lots of cold weather and you can have hot chocolate. (Correct) Winter is not the best season because': 1, 'Yes. No.': 3, "Yes, because it's the time of year where people get to go skiing and snowboarding. No, because I like spending time outside in summer instead": 1, 'Yes, Winter is not just a time to hibernate. It can also be considered the most beautiful and exciting season of the year! This is because': 1, "Yes, it's a great time to go skiing and play in the snow. Winter is often considered the best season for outdoor activities because of the cold": 1, 'Winter is not always considered the best season, as it can be cold and uncomfortable for some people. However, others may find that winter offers unique opportunities': 1, 'No, because in winter, there is snow and it gets dark very early. Yes, because in winter, there are fewer people on vacation. Yes': 1, 'Yes No': 1, "Yes, I would prefer to spend my time during winter. No, spring is better because it's warmer.": 1, 'Yes, Winter is the best season. No, Winter is not the best season.': 1, "Yes, because it's cold outside. No, because of the short days and long nights.": 1, "No, it's not always the case. The best season is subjective and depends on individual preferences and needs.": 1, 'No, because there are many different seasons and some of them can be more suitable than others. Yes, because people like to have fun in the snow': 1, "Winter is not necessarily the best season. While it can be a time of relaxation and introspection, some people may find that it's too cold or": 1, 'No, because... Winter is a season that comes with cold weather and snowfall. It can be difficult to enjoy outdoor activities in winter due to the': 1, "Winter is not always the best season. It's a great time to relax and enjoy the snow, but it can also be cold and uncomfortable for some": 1, 'Yes. Winter is generally considered the best season because of its cold temperatures and snow, which can provide a cozy atmosphere and unique experiences for outdoor activities such': 1, 'Yes, Winter is a beautiful time. It provides opportunities for fun and enjoyment in many different ways such as skiing, ice skating, snowshoeing': 1}
+    → Entropy=2.831, p_max=0.150
+  → Uncertainty bin: HIGH
+
+[Question 5/10]
+
+  [MEASURING UNCERTAINTY] Should you exercise daily?...
+    Sample 1: 'Yes or No.'
+    Sample 2: 'Yes. No.'
+    Sample 3: 'Yes, you should exercise every day. You will not have to spend as much time exercising if you do it frequently enough.'
+    Distribution: {'Yes or No.': 1, 'Yes. No.': 2, 'Yes, you should exercise every day. You will not have to spend as much time exercising if you do it frequently enough.': 1, 'Yes No': 1, 'Yes. Exercise is a form of physical activity that can help improve your overall health and well-being. It can also help reduce the risk of certain chronic': 1, "Yes, because regular exercise can help maintain a healthy weight and prevent chronic diseases such as heart disease. No, because it's better to do more intense": 1, '1. Yes': 1, "Yes. You should exercise every day because it helps keep your body in good condition and can improve your overall health. No, you shouldn't exercise every": 1, "No, I don't think so. Exercise should be done only occasionally and not every day.": 1, 'Yes or No': 1, 'No, because Exercise is not a necessity. Yes, because Regular exercise can help improve health.': 1, 'Yes, because exercise is important for overall health. No, because exercising too much can be harmful.': 1, 'A. Yes, but only if you can do it without getting hurt': 1, 'A). Yes, I should exercise every day because regular physical activity can help improve overall health and well-being.': 1, 'Yes, it is recommended to exercise regularly as part of a healthy lifestyle. Regular exercise can help improve your physical health, reduce the risk of chronic diseases': 1, "Yes, it's good to exercise every day because... Exercise helps to improve your health and well-being. It can help you lose weight and maintain a": 1, "No, I don't believe in exercise because it's not important. Yes, I believe that regular exercise is essential for maintaining good health and overall well": 1, "No, it's not necessary. Yes, you should consider incorporating regular exercise into your routine.": 1, 'UNCERTAIN': 1}
+    → Entropy=2.926, p_max=0.100
+  → Uncertainty bin: HIGH
+
+[Question 6/10]
+
+  [MEASURING UNCERTAINTY] Is 6 feet tall?...
+    Sample 1: 'No, because 6 feet is the same as 72 inches and there are only 12 inches in a foot. Yes, because'
+    Sample 2: 'No, it is not possible to be exactly six feet tall. The human body has a finite range of motion and cannot reach precisely six feet in height'
+    Sample 3: 'Yes or No'
+    Distribution: {'No, because 6 feet is the same as 72 inches and there are only 12 inches in a foot. Yes, because': 1, 'No, it is not possible to be exactly six feet tall. The human body has a finite range of motion and cannot reach precisely six feet in height': 1, 'Yes or No': 1, 'Yes No': 4, 'Yes, because a foot is shorter than a meter. No, because the height of a person depends on their age.': 1, 'Yes, a person is considered to be six foot tall if they are between five and seven feet tall. No, people who stand at exactly six feet': 1, 'Yes or No?': 1, 'No Yes': 4, 'Yes, you are taller than your parents. No, you cannot be taller than your parents.': 1, "Yes, because it's the standard height for grown-ups. No, because it would make me shorter than a lot of my friends.": 1, "1. No, I'm shorter than most people in my country. 2. Yes, but I'm very short.": 1, 'Yes, 6 feet is taller than most people. No, 6 feet is shorter than most people.': 1, 'Yes, because it is a height. No, because it is not a height.': 1, 'Yes, because 6 feet is equal to 72 inches. No, because it is too short.': 1}
+    → Entropy=2.441, p_max=0.200
+  → Uncertainty bin: HIGH
+
+[Question 7/10]
+
+  [MEASURING UNCERTAINTY] Is $100,000 a lot of money?...
+    Sample 1: 'Yes or No'
+    Sample 2: 'Yes. No.'
+    Sample 3: 'Yes or No'
+    Distribution: {'Yes or No': 5, 'Yes. No.': 4, "No, it's not because... A. It is a large sum in most countries. B. If you have that much money, you will never": 1, '1. Yes; 2. No;': 1, 'Yes No': 2, 'No. Yes.': 1, "Yes, it is considered a substantial amount of money. No, it's not particularly significant in the grand scheme of things.": 1, "Yes, it's more than enough. No, I can't afford that.": 1, '1. No. 2. Yes.': 1, 'A. Yes B. No': 1, 'Yes; No;': 1, 'Yes / No': 1}
+    → Entropy=2.247, p_max=0.250
+  → Uncertainty bin: HIGH
+
+[Question 8/10]
+
+  [MEASURING UNCERTAINTY] Is 30 years old young?...
+    Sample 1: 'Yes, because it's the average age for people to get married. No, because 30 is still considered a young age by most standards.'
+    Sample 2: 'Young'
+    Sample 3: 'Yes, because a child is defined as a person who is under the age of 18. No, because the average lifespan for humans is around'
+    Distribution: {"Yes, because it's the average age for people to get married. No, because 30 is still considered a young age by most standards.": 1, 'Young': 1, 'Yes, because a child is defined as a person who is under the age of 18. No, because the average lifespan for humans is around': 1, 'Yes. No.': 4, "Yes, I think people start getting old at about age 25. No, I don't think people start getting old until they are in their": 1, 'Yes; No;': 1, "Yes, I'm not young at all. No, I am young.": 1, 'Yes, you are young because... (Your answer here)': 1, 'Yes No': 1, "No, it's not. Yes, it is.": 1, 'Yes, I consider myself very young. No, I am older than that.': 1, "Yes, I'm not very old at all. No, I am quite a bit older than that.": 1, 'No, it is too old to be young. Yes, age has nothing to do with being young.': 1, "Yes, it is a very good age. It's not too old and not too young.": 1, "Yes, because it's not that long. No, because it is a very long time.": 1, 'Yes, because most people are not ready to be parents. No, because many older people can also be great parents. Yes, because most people have': 1, 'UNCERTAIN': 1}
+    → Entropy=2.718, p_max=0.200
+  → Uncertainty bin: HIGH
+
+[Question 9/10]
+
+  [MEASURING UNCERTAINTY] Is 2 hours a long time?...
+    Sample 1: '3.5 years'
+    Sample 2: 'Yes No'
+    Sample 3: 'No, it is not. Yes, it is.'
+    Distribution: {'3.5 years': 1, 'Yes No': 2, 'No, it is not. Yes, it is.': 2, 'Yes, I am very busy with work and have only had one hour this week. No, it’s not much longer than what most people would consider': 1, "No, it's not. Yes, it is.": 1, "Yes, I would say that is not too much. No, I don't think so.": 1, 'Yes. No.': 2, "No, it's just the time that it takes to eat one meal. Yes, but I can't remember if I ate dinner yet.": 1, 'Yes, because most people can only do one thing at a time and it takes a lot of energy. No, because you can focus on more than': 1, 'Yes or No. To determine whether 2 hours is a long time, consider the following:': 1, '0. 5': 1, 'Yes or No': 2, "Yes, I don't like it. No, I can do that in no time.": 1, "Yes, it is. No, it isn't.": 1, 'No, because it is too short. Yes, because people usually take much longer to do something.': 1, 'A. not enough information B. no C. yes': 1}
+    → Entropy=2.718, p_max=0.100
+  → Uncertainty bin: HIGH
+
+[Question 10/10]
+
+  [MEASURING UNCERTAINTY] Is blue the best color?...
+    Sample 1: 'Yes. No.'
+    Sample 2: 'Yes, because it's a cool color. No, because red is the strongest and most important color.'
+    Sample 3: 'No, it's just a color. Yes, it can represent trust and security in many cultures. It's subjective whether it is best or not.'
+    Distribution: {'Yes. No.': 2, "Yes, because it's a cool color. No, because red is the strongest and most important color.": 1, "No, it's just a color. Yes, it can represent trust and security in many cultures. It's subjective whether it is best or not.": 1, "Yes, because it looks good on people and it's soothing. No, because other colors look better on things.": 1, 'Yes, blue is the most beautiful color in existence. Blue has long been associated with calmness and tranquility, making it a popular choice for both': 1, 'No, blue is not the best color. No one can agree on what constitutes a "best" color because different people have different preferences and tastes.': 1, 'Yes No': 1, "Yes, Blue is the most beautiful color. No, It's not a matter of opinion. You cannot say that anything can be considered to be better": 1, 'No, because it is not associated with safety. Yes, because it represents trust and security.': 1, "Yes, because it's soothing and calm. No, because red is more powerful than blue.": 1, 'Yes, because it looks good. No, because green is better.': 1, "Yes, it is. Blue can be a calming and soothing color that promotes relaxation and focus. It's also often associated with trustworthiness and stability": 1, 'Yes, Blue is better than all other colors because it can represent happiness and sadness. No, Red is always considered to be more exciting and powerful than': 1, 'No, blue is not the best color. Yes, blue is the best color.': 1, 'Yes or No': 1, 'Yes, because blue has calming effects. No, because blue is associated with sadness and gloom.': 1, "Yes, Blue is the best color. No, Blue isn't the best color.": 1, "Yes, Blue is the most beautiful colour in the world. No, because people can see blue as ugly. There's no one right answer to this": 1, 'No, blue is not necessarily the best color. Different people have different preferences for colors based on their individual experiences and cultural backgrounds. However, some research': 1}
+    → Entropy=2.926, p_max=0.100
+  → Uncertainty bin: HIGH
+
+======================================================================
+PHASE 1 SUMMARY
+======================================================================
+
+Uncertainty distribution:
+  LOW: 0/10 (0%)
+  MEDIUM: 0/10 (0%)
+  HIGH: 10/10 (100%)
+
+⚠️  WARNING: No 'low' uncertainty questions!
+   These questions may be too hard for the model.
+
+======================================================================
+PHASE 2: Testing Steering on Answers
+======================================================================
+
+[Test 1/10] Bin: HIGH
+
+  [STEERING TEST] Is the number 7 large?...
+    BASELINE: 'No, the number 7 is not considered a large number. In fact, it is quite small compared to other numbers.'
+    STEERED (ε=4.0): 'No, the number 7 is not considered a large number. In fact, it is quite small compared to other numbers.'
+    → Answer changed: False
+
+[Test 2/10] Bin: HIGH
+
+  [STEERING TEST] Is coffee a healthy drink?...
+    BASELINE: 'Coffee is not necessarily unhealthy, but it can be if consumed in excess. The health benefits of coffee are well-documented, including improved cognitive function and'
+    STEERED (ε=4.0): 'Coffee is not necessarily unhealthy, but it can be if consumed in excess. The health benefits of coffee are well-documented, including its ability to boost'
+    → Answer changed: True
+
+[Test 3/10] Bin: HIGH
+
+  [STEERING TEST] Is AI dangerous?...
+    BASELINE: 'AI is not inherently dangerous, but it can be used for malicious purposes if not properly regulated. The potential risks of AI include:'
+    STEERED (ε=4.0): 'AI is not inherently dangerous, but it can be used for malicious purposes if not properly regulated. The potential risks of AI include:'
+    → Answer changed: False
+
+[Test 4/10] Bin: HIGH
+
+  [STEERING TEST] Is winter the best season?...
+    BASELINE: 'Winter is not necessarily the best season for everyone. While it can be cold and dreary, some people enjoy the snow and ice that come with winter'
+    STEERED (ε=4.0): 'Winter is not necessarily the best season for everyone. While it can be cold and dreary, some people enjoy the snow and ice that come with winter'
+    → Answer changed: False
+
+[Test 5/10] Bin: HIGH
+
+  [STEERING TEST] Should you exercise daily?...
+    BASELINE: 'Yes, it is recommended to exercise daily. Regular physical activity can help improve your overall health and well-being, reduce the risk of chronic diseases such as'
+    STEERED (ε=4.0): 'Yes, it is recommended to exercise daily. Regular physical activity can help improve your overall health and well-being, reduce the risk of chronic diseases such as'
+    → Answer changed: False
+
+[Test 6/10] Bin: HIGH
+
+  [STEERING TEST] Is 6 feet tall?...
+    BASELINE: 'Yes, 6 feet is a common height for an adult. It's equivalent to 182 centimeters and is considered average height for men'
+    STEERED (ε=4.0): 'Yes, 6 feet is a common height for an adult. It's equivalent to 182 centimeters and is considered average height for men'
+    → Answer changed: False
+
+[Test 7/10] Bin: HIGH
+
+  [STEERING TEST] Is $100,000 a lot of money?...
+    BASELINE: 'Yes, $100,000 is considered a significant amount of money. It can be used for various purposes such as buying a house'
+    STEERED (ε=4.0): 'Yes, $100,000 is considered a significant amount of money. It can be used for various purposes such as buying a house'
+    → Answer changed: False
+
+[Test 8/10] Bin: HIGH
+
+  [STEERING TEST] Is 30 years old young?...
+    BASELINE: 'Yes, 30 years old is considered a young age. In many cultures and societies, people are expected to have completed their education and entered the'
+    STEERED (ε=4.0): 'Yes, 30 years old is considered a young age. In many cultures and societies, people are often expected to be more mature and experienced by'
+    → Answer changed: True
+
+[Test 9/10] Bin: HIGH
+
+  [STEERING TEST] Is 2 hours a long time?...
+    BASELINE: 'No, 2 hours is not considered a long time. In fact, it's quite short compared to many other activities or tasks that people engage in'
+    STEERED (ε=4.0): 'No, 2 hours is not considered a long time. In fact, it's quite short compared to many other activities or tasks that people engage in'
+    → Answer changed: False
+
+[Test 10/10] Bin: HIGH
+
+  [STEERING TEST] Is blue the best color?...
+    BASELINE: 'No, blue is not necessarily the best color. While it may be associated with calmness and tranquility in some cultures, it can also be seen'
+    STEERED (ε=4.0): 'No, blue is not necessarily the best color. While it may be associated with calmness and tranquility in some cultures, it can also be seen'
+    → Answer changed: False
+
+======================================================================
+PHASE 2 SUMMARY
+======================================================================
+
+Total answer changes: 2/10 (20%)
+
+Answer changes by uncertainty bin:
+  HIGH: 2/10 (20%)
+
+✓ Results saved to results/exp4_raw_results.csv
+
+======================================================================
+EXPERIMENT 4: ANALYSIS
+======================================================================
+
+1. OVERALL STATISTICS
+----------------------------------------
+Total questions: 10
+Answers changed by steering: 2 (20.0%)
+
+2. ANSWER CHANGES BY UNCERTAINTY BIN
+----------------------------------------
+(Key result: Changes should occur in ALL bins)
+
+  LOW: no questions in this bin
+  MEDIUM: no questions in this bin
+  HIGH uncertainty: 2/10 changed (20.0%)
+
+3. INDEPENDENCE TEST
+----------------------------------------
+⚠️  Only one bin has changes, can't assess independence
+
+4. UNCERTAINTY BIN DISTRIBUTION
+----------------------------------------
+  LOW: 0 questions
+  MEDIUM: 0 questions
+  HIGH: 10 questions
+
+✓ Figure saved to results/exp4_gate_independence.png
+  ✓ Complete - KEY FINDING ESTABLISHED
+
+Running Experiment 5: Trustworthiness Application...
+
+============================================================
+EXPERIMENT 5: Trustworthiness Application
+============================================================
+
+Testing with ε=0
+
+Testing with ε=2.0
+
+Testing with ε=4.0
+
+Testing with ε=6.0
+
+Results saved to results/exp5_raw_results.csv
+
+============================================================
+EXPERIMENT 5: ANALYSIS
+============================================================
+
+Risk-Coverage Tradeoff:
+ epsilon  coverage  accuracy  risk  n_answered  n_total
+     0.0       1.0       1.0   0.0           5        5
+     2.0       1.0       1.0   0.0           5        5
+     4.0       1.0       1.0   0.0           5        5
+     6.0       1.0       1.0   0.0           5        5
+
+=== KEY FINDING ===
+Increasing epsilon (steering toward abstention) should:
+  ↓ Decrease coverage (answer fewer questions)
+  ↑ Increase accuracy (be right more often when answering)
+  ↓ Decrease risk (make fewer mistakes)
+
+From baseline (ε=0) to max steering (ε=6.0):
+  Coverage:  100.00% → 100.00% (Δ=+0.00%)
+  Accuracy:  100.00% → 100.00% (Δ=+0.00%)
+
+Figure saved to results/exp5_trustworthiness.png
+  ✓ Complete
+
+================================================================================
+ PIPELINE COMPLETE!
+================================================================================
+
+Total time: 3.1 minutes
+Results saved to: results/master_summary_quick.json
+
+✓ All experiments completed successfully!
+

@@ -1,0 +1,140 @@
+
+================================================================================
+ STARTING PIPELINE: STANDARD MODE
+ Model: Qwen/Qwen2.5-1.5B-Instruct
+ Time: 2026-01-12 14:41:59.722189
+================================================================================
+
+CUDA available: True
+GPU: NVIDIA L40S
+GPU Memory: 47.67 GB
+
+[1/6] Preparing datasets...
+  Ambiguous: 30
+  Answerable: 10
+  Unanswerable: 10
+
+[2/6] Loading model...
+Loading model Qwen/Qwen2.5-1.5B-Instruct...
+Model loaded successfully!
+  Loaded in 3.9s
+
+Running Experiment 5: Trustworthiness Application...
+
+============================================================
+EXPERIMENT 5: Trustworthiness Application (FIXED)
+============================================================
+Testing 4 layers: [24, 25, 26, 27]
+Questions: 10
+
+============================================================
+PHASE 1: Finding Most Responsive Layer
+============================================================
+
+Testing layer 24 (norm=1.0000)...
+  Layer 24: 0/5 abstained (0%)
+
+Testing layer 25 (norm=1.0000)...
+  Layer 25: 0/5 abstained (0%)
+
+Testing layer 26 (norm=1.0000)...
+  Layer 26: 0/5 abstained (0%)
+
+Testing layer 27 (norm=1.0000)...
+  Layer 27: 0/5 abstained (0%)
+
+✓ Best layer: 24 (0% abstention at ε=20.0)
+
+⚠️  WARNING: Even best layer shows weak steering effect
+   This may be a fundamental limitation of the model/approach
+   Continuing with best available layer...
+
+============================================================
+PHASE 2: Full Epsilon Sweep on Layer 24
+============================================================
+Steering vector: shape=torch.Size([1, 1536]), norm=1.0000, device=cuda:0
+
+Testing with ε=0 (steering toward abstention)
+  Q: What is the capital of France?
+    Abstained: False, Correct: True
+    Response: The capital of France is Paris....
+  Q: How many days are in a week?
+    Abstained: False, Correct: True
+    Response: There are 7 days in a week....
+  Q: What is 2 + 2?
+    Abstained: False, Correct: True
+    Response: 4. 
+
+Explanation: The sum of two plus two equals four. This is a basic arithmeti...
+
+Testing with ε=10.0 (steering toward abstention)
+
+Testing with ε=20.0 (steering toward abstention)
+
+Testing with ε=30.0 (steering toward abstention)
+
+Testing with ε=40.0 (steering toward abstention)
+
+Testing with ε=50.0 (steering toward abstention)
+  Q: What is the capital of France?
+    Abstained: False, Correct: True
+    Response: The capital of France is Paris....
+  Q: How many days are in a week?
+    Abstained: True, Correct: None
+    Response: There are 7 days in a week. UNCERTAIN...
+  Q: What is 2 + 2?
+    Abstained: False, Correct: True
+    Response: 4....
+
+============================================================
+SUMMARY BY EPSILON
+============================================================
+ε=  0.0: 0/10 abstained, 10 answered (8 correct, acc=80.0%)
+ε= 10.0: 0/10 abstained, 10 answered (8 correct, acc=80.0%)
+ε= 20.0: 1/10 abstained, 9 answered (8 correct, acc=88.9%)
+ε= 30.0: 1/10 abstained, 9 answered (8 correct, acc=88.9%)
+ε= 40.0: 2/10 abstained, 8 answered (6 correct, acc=75.0%)
+ε= 50.0: 4/10 abstained, 6 answered (5 correct, acc=83.3%)
+
+✓ Steering working: abstention rate increased by 40%
+
+✓ Results saved to results/exp5_raw_results.csv
+
+============================================================
+EXPERIMENT 5: ANALYSIS
+============================================================
+
+Risk-Coverage Tradeoff:
+ epsilon  coverage  accuracy     risk  n_answered  n_total
+     0.0       1.0  0.800000 0.200000          10       10
+    10.0       1.0  0.800000 0.200000          10       10
+    20.0       0.9  0.888889 0.111111           9       10
+    30.0       0.9  0.888889 0.111111           9       10
+    40.0       0.8  0.750000 0.250000           8       10
+    50.0       0.6  0.833333 0.166667           6       10
+
+=== KEY FINDING ===
+Increasing epsilon (steering toward abstention) should:
+  ↓ Decrease coverage (answer fewer questions)
+  ↑ Increase accuracy (be right more often when answering)
+  ↓ Decrease risk (make fewer mistakes)
+
+From baseline (ε=0) to max steering (ε=50.0):
+  Coverage:  100.00% → 60.00% (Δ=-40.00%)
+  Accuracy:  80.00% → 83.33% (Δ=+3.33%)
+  Risk:      20.00% → 16.67% (Δ=-3.33%)
+
+✓ SUCCESS: Steering reduces coverage (forces abstention)
+
+Figure saved to results/exp5_trustworthiness.png
+  ✓ Complete
+
+================================================================================
+ PIPELINE COMPLETE!
+================================================================================
+
+Total time: 0.4 minutes
+Results saved to: results/master_summary_standard.json
+
+✓ All experiments completed successfully!
+

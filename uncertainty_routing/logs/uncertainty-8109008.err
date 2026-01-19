@@ -1,0 +1,38 @@
+flatpak: error while loading shared libraries: libssl.so.10: cannot open shared object file: No such file or directory
+Lmod has detected the following error: The following module(s) are unknown:
+"slurm"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "slurm"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+/home/akshatat/.conda/envs/mech_interp_gpu/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+`torch_dtype` is deprecated! Use `dtype` instead!
+Questions:   0%|          | 0/30 [00:00<?, ?it/s]The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Questions:   3%|▎         | 1/30 [00:12<05:49, 12.07s/it]Questions:   7%|▋         | 2/30 [00:23<05:28, 11.74s/it]Questions:  10%|█         | 3/30 [00:35<05:14, 11.64s/it]Questions:  13%|█▎        | 4/30 [00:46<05:01, 11.59s/it]Questions:  17%|█▋        | 5/30 [00:58<04:48, 11.56s/it]Questions:  20%|██        | 6/30 [01:09<04:36, 11.54s/it]Questions:  23%|██▎       | 7/30 [01:21<04:24, 11.51s/it]Questions:  27%|██▋       | 8/30 [01:32<04:12, 11.50s/it]Questions:  30%|███       | 9/30 [01:43<04:01, 11.48s/it]Questions:  33%|███▎      | 10/30 [01:55<03:50, 11.50s/it]Questions:  37%|███▋      | 11/30 [02:07<03:38, 11.52s/it]Questions:  40%|████      | 12/30 [02:18<03:27, 11.53s/it]Questions:  43%|████▎     | 13/30 [02:30<03:16, 11.53s/it]Questions:  47%|████▋     | 14/30 [02:41<03:04, 11.54s/it]Questions:  50%|█████     | 15/30 [02:53<02:53, 11.54s/it]Questions:  53%|█████▎    | 16/30 [03:04<02:41, 11.54s/it]Questions:  57%|█████▋    | 17/30 [03:16<02:30, 11.54s/it]Questions:  60%|██████    | 18/30 [03:27<02:18, 11.54s/it]Questions:  63%|██████▎   | 19/30 [03:39<02:07, 11.55s/it]Questions:  67%|██████▋   | 20/30 [03:51<01:55, 11.55s/it]Questions:  70%|███████   | 21/30 [04:02<01:43, 11.55s/it]Questions:  73%|███████▎  | 22/30 [04:14<01:32, 11.54s/it]Questions:  77%|███████▋  | 23/30 [04:25<01:20, 11.54s/it]Questions:  80%|████████  | 24/30 [04:37<01:09, 11.54s/it]Questions:  83%|████████▎ | 25/30 [04:48<00:57, 11.54s/it]Questions:  87%|████████▋ | 26/30 [04:59<00:45, 11.41s/it]Questions:  90%|█████████ | 27/30 [05:10<00:33, 11.18s/it]Questions:  93%|█████████▎| 28/30 [05:22<00:22, 11.29s/it]Questions:  97%|█████████▋| 29/30 [05:33<00:11, 11.37s/it]Questions: 100%|██████████| 30/30 [05:45<00:00, 11.42s/it]Questions: 100%|██████████| 30/30 [05:45<00:00, 11.50s/it]
+/orcd/home/002/akshatat/uncertainty_routing/experiment1_behavior_belief.py:380: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Layers:   0%|          | 0/28 [00:00<?, ?it/s]Layers:   4%|▎         | 1/28 [00:14<06:39, 14.81s/it]Layers:   7%|▋         | 2/28 [00:29<06:24, 14.80s/it]Layers:  11%|█         | 3/28 [00:44<06:09, 14.79s/it]Layers:  14%|█▍        | 4/28 [00:59<05:54, 14.79s/it]Layers:  18%|█▊        | 5/28 [01:13<05:39, 14.77s/it]Layers:  21%|██▏       | 6/28 [01:28<05:24, 14.74s/it]Layers:  25%|██▌       | 7/28 [01:43<05:09, 14.75s/it]Layers:  29%|██▊       | 8/28 [01:58<04:55, 14.75s/it]Layers:  32%|███▏      | 9/28 [02:12<04:40, 14.75s/it]Layers:  36%|███▌      | 10/28 [02:27<04:25, 14.75s/it]Layers:  39%|███▉      | 11/28 [02:42<04:11, 14.79s/it]Layers:  43%|████▎     | 12/28 [02:57<03:57, 14.84s/it]Layers:  46%|████▋     | 13/28 [03:12<03:42, 14.86s/it]Layers:  50%|█████     | 14/28 [03:27<03:28, 14.87s/it]Layers:  54%|█████▎    | 15/28 [03:42<03:13, 14.88s/it]Layers:  57%|█████▋    | 16/28 [03:57<02:58, 14.89s/it]Layers:  61%|██████    | 17/28 [04:11<02:43, 14.89s/it]Layers:  64%|██████▍   | 18/28 [04:26<02:28, 14.85s/it]Layers:  68%|██████▊   | 19/28 [04:41<02:13, 14.85s/it]Layers:  71%|███████▏  | 20/28 [04:56<01:58, 14.80s/it]Layers:  75%|███████▌  | 21/28 [05:11<01:43, 14.79s/it]Layers:  79%|███████▊  | 22/28 [05:25<01:28, 14.72s/it]Layers:  82%|████████▏ | 23/28 [05:40<01:13, 14.68s/it]Layers:  86%|████████▌ | 24/28 [05:54<00:58, 14.64s/it]Layers:  89%|████████▉ | 25/28 [06:09<00:44, 14.72s/it]Layers:  93%|█████████▎| 26/28 [06:24<00:29, 14.78s/it]Layers:  96%|█████████▋| 27/28 [06:39<00:14, 14.81s/it]Layers: 100%|██████████| 28/28 [06:54<00:00, 14.84s/it]Layers: 100%|██████████| 28/28 [06:54<00:00, 14.80s/it]
+/orcd/home/002/akshatat/uncertainty_routing/experiment2_localization.py:290: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.boxplot(data=df, x='layer_group', y='delta_margin', ax=axes[1, 0],
+Layers:   0%|          | 0/4 [00:00<?, ?it/s]Layers:  25%|██▌       | 1/4 [01:21<04:05, 81.76s/it]Layers:  50%|█████     | 2/4 [02:43<02:43, 81.78s/it]Layers:  75%|███████▌  | 3/4 [04:05<01:22, 82.05s/it]Layers: 100%|██████████| 4/4 [05:27<00:00, 81.95s/it]Layers: 100%|██████████| 4/4 [05:27<00:00, 81.93s/it]
+/orcd/home/002/akshatat/uncertainty_routing/experiment3_4_steering_independence.py:458: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.violinplot(data=max_eps_data, x='layer', y='delta_margin',
+Traceback (most recent call last):
+  File "/orcd/home/002/akshatat/uncertainty_routing/run_complete_pipeline.py", line 236, in <module>
+    main()
+  File "/orcd/home/002/akshatat/uncertainty_routing/run_complete_pipeline.py", line 166, in main
+    exp4_df = exp4.run(
+NameError: name 'exp4' is not defined. Did you mean: 'exp1'?

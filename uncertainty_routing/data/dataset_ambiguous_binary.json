@@ -1,0 +1,62 @@
+[
+  {
+    "question": "Is the number 7 large?",
+    "type": "binary",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "Is coffee a healthy drink?",
+    "type": "binary",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "Is AI dangerous?",
+    "type": "binary",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "Is winter the best season?",
+    "type": "binary",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "Should you exercise daily?",
+    "type": "binary",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "Is 6 feet tall?",
+    "type": "binary",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "Is $100,000 a lot of money?",
+    "type": "binary",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "Is 30 years old young?",
+    "type": "binary",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "Is 2 hours a long time?",
+    "type": "binary",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "Is blue the best color?",
+    "type": "binary",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  }
+]

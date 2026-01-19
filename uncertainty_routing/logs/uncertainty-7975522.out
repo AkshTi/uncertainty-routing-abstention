@@ -1,0 +1,63 @@
+================================================================================
+FINDING OPTIMAL EPSILON
+================================================================================
+
+Baseline (ε=0):
+  Coverage: 60.0%
+  Hallucination: 36.7%
+
+================================================================================
+CANDIDATES (negative epsilon only):
+================================================================================
+
+ε = -50:
+  Coverage: 30.0% (Δ=-30.0%)
+  Accuracy: 100.0%
+  Abstain unans: 90.0%
+  Hallucinate: 10.0% (Δ=-26.7%)
+  Score: 0.217
+
+ε = -40:
+  Coverage: 30.0% (Δ=-30.0%)
+  Accuracy: 100.0%
+  Abstain unans: 86.7%
+  Hallucinate: 13.3% (Δ=-23.3%)
+  Score: 0.183
+
+ε = -30:
+  Coverage: 50.0% (Δ=-10.0%)
+  Accuracy: 100.0%
+  Abstain unans: 83.3%
+  Hallucinate: 16.7% (Δ=-20.0%)
+  Score: 0.200
+
+ε = -20:
+  Coverage: 60.0% (Δ=+0.0%)
+  Accuracy: 100.0%
+  Abstain unans: 80.0%
+  Hallucinate: 20.0% (Δ=-16.7%)
+  Score: 0.167
+
+ε = -10:
+  Coverage: 60.0% (Δ=+0.0%)
+  Accuracy: 100.0%
+  Abstain unans: 70.0%
+  Hallucinate: 30.0% (Δ=-6.7%)
+  Score: 0.067
+
+================================================================================
+RECOMMENDATION
+================================================================================
+
+🎯 Optimal epsilon: -50
+
+   Coverage: 30.0% (Δ=-30.0% from baseline)
+   Accuracy: 100.0%
+   Hallucination: 10.0% (Δ=-26.7% from baseline)
+   Abstain on unanswerables: 90.0%
+
+📊 Tradeoff summary:
+   ✓ Reduces hallucination by 73%
+   ⚠ Costs 50% of coverage on answerables
+
+📈 Visualization saved to results/exp5_optimal_epsilon.png

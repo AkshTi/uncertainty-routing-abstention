@@ -1,0 +1,122 @@
+[
+  {
+    "question": "What is the capital of France?",
+    "answer": "Paris",
+    "context": null,
+    "answerability": "answerable"
+  },
+  {
+    "question": "How many days are in a week?",
+    "answer": "7",
+    "context": null,
+    "answerability": "answerable"
+  },
+  {
+    "question": "What is 2 + 2?",
+    "answer": "4",
+    "context": null,
+    "answerability": "answerable"
+  },
+  {
+    "question": "What year did World War II end?",
+    "answer": "1945",
+    "context": null,
+    "answerability": "answerable"
+  },
+  {
+    "question": "Who wrote Romeo and Juliet?",
+    "answer": "William Shakespeare",
+    "context": null,
+    "answerability": "answerable"
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "answer": "H2O",
+    "context": null,
+    "answerability": "answerable"
+  },
+  {
+    "question": "How many continents are there?",
+    "answer": "7",
+    "context": null,
+    "answerability": "answerable"
+  },
+  {
+    "question": "What is the boiling point of water in Celsius?",
+    "answer": "100",
+    "context": null,
+    "answerability": "answerable"
+  },
+  {
+    "question": "What planet is closest to the Sun?",
+    "answer": "Mercury",
+    "context": null,
+    "answerability": "answerable"
+  },
+  {
+    "question": "How many legs does a spider have?",
+    "answer": "8",
+    "context": null,
+    "answerability": "answerable"
+  },
+  {
+    "question": "What is the name of Napoleon's favorite childhood toy?",
+    "answer": null,
+    "context": "Napoleon Bonaparte was a French military leader.",
+    "answerability": "unanswerable"
+  },
+  {
+    "question": "What color was Einstein's first bicycle?",
+    "answer": null,
+    "context": "Albert Einstein was a theoretical physicist.",
+    "answerability": "unanswerable"
+  },
+  {
+    "question": "How many siblings did Shakespeare's grandmother have?",
+    "answer": null,
+    "context": "William Shakespeare was an English playwright.",
+    "answerability": "unanswerable"
+  },
+  {
+    "question": "What was the temperature in Paris on January 15, 1823?",
+    "answer": null,
+    "context": "Paris is the capital of France.",
+    "answerability": "unanswerable"
+  },
+  {
+    "question": "What did Socrates have for breakfast on his 30th birthday?",
+    "answer": null,
+    "context": "Socrates was a Greek philosopher.",
+    "answerability": "unanswerable"
+  },
+  {
+    "question": "How many trees were in Central Park on opening day?",
+    "answer": null,
+    "context": "Central Park opened in 1858 in New York City.",
+    "answerability": "unanswerable"
+  },
+  {
+    "question": "What was Cleopatra's favorite number?",
+    "answer": null,
+    "context": "Cleopatra was the last pharaoh of Egypt.",
+    "answerability": "unanswerable"
+  },
+  {
+    "question": "What time did Mozart wake up on March 12, 1785?",
+    "answer": null,
+    "context": "Mozart was an Austrian composer.",
+    "answerability": "unanswerable"
+  },
+  {
+    "question": "How many words did Lincoln's father speak in his lifetime?",
+    "answer": null,
+    "context": "Abraham Lincoln was the 16th President of the United States.",
+    "answerability": "unanswerable"
+  },
+  {
+    "question": "What was the exact weight of the first wheel ever invented?",
+    "answer": null,
+    "context": "The wheel was invented in ancient Mesopotamia.",
+    "answerability": "unanswerable"
+  }
+]

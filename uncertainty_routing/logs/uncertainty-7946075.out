@@ -1,0 +1,115 @@
+
+================================================================================
+ STARTING PIPELINE: QUICK MODE
+ Model: Qwen/Qwen2.5-1.5B-Instruct
+ Time: 2026-01-11 22:00:05.438361
+================================================================================
+
+CUDA available: True
+GPU: NVIDIA L40S
+GPU Memory: 47.67 GB
+
+[1/6] Preparing datasets...
+  Ambiguous: 10
+  Answerable: 5
+  Unanswerable: 5
+
+[2/6] Loading model...
+Loading model Qwen/Qwen2.5-1.5B-Instruct...
+Model loaded successfully!
+  Loaded in 1.3s
+
+Running Experiment 5: Trustworthiness Application...
+
+============================================================
+EXPERIMENT 5: Trustworthiness Application (FIXED)
+============================================================
+Testing layer 24
+Questions: 5
+
+Testing with ε=0 (steering toward abstention)
+  Q: What is the capital of France?
+    Abstained: False, Correct: True
+    Response: Paris
+
+The capital of France is Paris, located in the northwestern part of the c...
+  Q: How many days are in a week?
+    Abstained: True, Correct: None
+    Response: UNCERTAIN
+
+Explanation: The number of days in a week is not fixed and can vary d...
+  Q: What is 2 + 2?
+    Abstained: True, Correct: None
+    Response: UNCERTAIN
+
+Explanation: The question "What is 2 + 2?" is a simple arithmetic pro...
+
+Testing with ε=4.0 (steering toward abstention)
+
+Testing with ε=8.0 (steering toward abstention)
+
+Testing with ε=12.0 (steering toward abstention)
+
+Testing with ε=16.0 (steering toward abstention)
+  Q: What is the capital of France?
+    Abstained: False, Correct: True
+    Response: The capital of France is Paris....
+  Q: How many days are in a week?
+    Abstained: True, Correct: None
+    Response: UNCERTAIN
+
+Explanation: The number of days in a week is not fixed and can vary d...
+  Q: What is 2 + 2?
+    Abstained: True, Correct: None
+    Response: UNCERTAIN
+
+I do not have enough information to determine the sum of two plus two...
+
+============================================================
+DIAGNOSTIC
+============================================================
+ε=  0.0: 4/5 abstained, 1 answered (True correct, acc=100.0%)
+ε=  4.0: 4/5 abstained, 1 answered (True correct, acc=100.0%)
+ε=  8.0: 4/5 abstained, 1 answered (True correct, acc=100.0%)
+ε= 12.0: 4/5 abstained, 1 answered (True correct, acc=100.0%)
+ε= 16.0: 4/5 abstained, 1 answered (True correct, acc=100.0%)
+
+✓ Results saved to results/exp5_raw_results.csv
+
+============================================================
+EXPERIMENT 5: ANALYSIS
+============================================================
+
+Risk-Coverage Tradeoff:
+ epsilon  coverage  accuracy  risk  n_answered  n_total
+     0.0       0.2       1.0   0.0           1        5
+     4.0       0.2       1.0   0.0           1        5
+     8.0       0.2       1.0   0.0           1        5
+    12.0       0.2       1.0   0.0           1        5
+    16.0       0.2       1.0   0.0           1        5
+
+=== KEY FINDING ===
+Increasing epsilon (steering toward abstention) should:
+  ↓ Decrease coverage (answer fewer questions)
+  ↑ Increase accuracy (be right more often when answering)
+  ↓ Decrease risk (make fewer mistakes)
+
+From baseline (ε=0) to max steering (ε=16.0):
+  Coverage:  20.00% → 20.00% (Δ=+0.00%)
+  Accuracy:  100.00% → 100.00% (Δ=+0.00%)
+  Risk:      0.00% → 0.00% (Δ=+0.00%)
+
+⚠ WARNING: Steering not reducing coverage effectively
+
+Figure saved to results/exp5_trustworthiness.png
+  ✓ Complete
+
+================================================================================
+ PIPELINE COMPLETE!
+================================================================================
+
+Total time: 0.2 minutes
+Results saved to: results/master_summary_quick.json
+
+✓ All experiments completed successfully!
+

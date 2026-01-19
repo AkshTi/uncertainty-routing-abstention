@@ -1,0 +1,108 @@
+Initializing model...
+Loading model Qwen/Qwen2.5-1.5B-Instruct...
+Model loaded successfully!
+
+Loading datasets...
+Test set: 40 questions
+  Answerable: 10
+  Unanswerable: 30
+
+✓ Loaded 4 steering vectors
+
+======================================================================
+EXPERIMENT 5: Trustworthiness Application (FIXED VERSION)
+======================================================================
+Questions: 40
+Layers to test: [24, 25, 26, 27]
+Epsilon sweep: [-50.0, -40.0, -30.0, -20.0, -10.0, 0.0, 10.0, 20.0, 30.0, 40.0, 50.0]
+  Answerable: 10, Unanswerable: 30
+
+======================================================================
+PHASE 1: Layer Selection
+======================================================================
+
+Testing 4 layers on 15 questions...
+Computing baseline (ε=0) and steered (ε=20.0) for each layer...
+  Layer 24: score=0.300 (Δunans=+0.00, Δans=-0.30)
+  Layer 25: score=0.100 (Δunans=-0.20, Δans=-0.30)
+  Layer 26: score=0.000 (Δunans=-0.20, Δans=-0.20)
+  Layer 27: score=0.300 (Δunans=+0.00, Δans=-0.30)
+
+✓ Best layer: 24 (score=0.300)
+
+⚠️  WARNING: Unanswerables already abstaining at baseline (>90%)
+   Steering has no room to improve. Need harder/tempting questions.
+
+======================================================================
+PHASE 2: Epsilon Sweep on Layer 24
+======================================================================
+
+✓ Saved to results/exp5_raw_results.csv
+
+======================================================================
+EXPERIMENT 5: ANALYSIS
+======================================================================
+
+======================================================================
+Metrics by Epsilon:
+======================================================================
+ epsilon  coverage_answerable  abstain_answerable  accuracy_answerable  risk_answerable  abstain_unanswerable  hallucination_unanswerable  n_answerable  n_unanswerable
+   -50.0                  0.5                 0.5             0.600000         0.400000              0.433333                    0.566667            10              30
+   -40.0                  0.4                 0.6             0.750000         0.250000              0.466667                    0.533333            10              30
+   -30.0                  0.6                 0.4             0.833333         0.166667              0.500000                    0.500000            10              30
+   -20.0                  0.6                 0.4             0.833333         0.166667              0.533333                    0.466667            10              30
+   -10.0                  0.6                 0.4             1.000000         0.000000              0.566667                    0.433333            10              30
+     0.0                  0.6                 0.4             1.000000         0.000000              0.633333                    0.366667            10              30
+    10.0                  0.6                 0.4             1.000000         0.000000              0.600000                    0.400000            10              30
+    20.0                  0.9                 0.1             1.000000         0.000000              0.600000                    0.400000            10              30
+    30.0                  0.9                 0.1             1.000000         0.000000              0.466667                    0.533333            10              30
+    40.0                  0.9                 0.1             1.000000         0.000000              0.433333                    0.566667            10              30
+    50.0                  1.0                 0.0             1.000000         0.000000              0.333333                    0.666667            10              30
+
+======================================================================
+SIGN VERIFICATION
+======================================================================
+Most negative ε=-50.0:
+  Abstain unanswerable: 43.3%
+  Hallucinate unanswerable: 56.7%
+
+Baseline ε=0:
+  Abstain unanswerable: 63.3%
+  Hallucinate unanswerable: 36.7%
+
+Most positive ε=50.0:
+  Abstain unanswerable: 33.3%
+  Hallucinate unanswerable: 66.7%
+
+Δ Abstention from baseline:
+  Negative ε: -20.0%
+  Positive ε: -30.0%
+
+✓ Negative epsilon increases abstention (use negative values)
+
+======================================================================
+KEY FINDINGS
+======================================================================
+Baseline (ε=0):
+  Coverage (answerable):     60.0%
+  Accuracy (answerable):     100.0%
+  Abstain (unanswerable):    63.3%
+  Hallucinate (unanswerable): 36.7%
+
+Best steering (ε=-50.0):
+  Coverage (answerable):     50.0% (Δ=-10.0%)
+  Accuracy (answerable):     60.0% (Δ=-40.0%)
+  Abstain (unanswerable):    43.3% (Δ=-20.0%)
+  Hallucinate (unanswerable): 56.7% (Δ=+20.0%)
+
+======================================================================
+EVALUATION
+======================================================================
+❌ FAILURE: Steering harms answerables without helping unanswerables
+  - Coverage or accuracy drops on answerables
+  - No improvement on unanswerables
+Figure saved to results/exp5_trustworthiness.png
+
+✓ Summary saved to results/exp5_summary.json
+
+✓ Experiment 5 complete!

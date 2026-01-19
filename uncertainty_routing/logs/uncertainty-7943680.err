@@ -1,0 +1,24 @@
+flatpak: error while loading shared libraries: libssl.so.10: cannot open shared object file: No such file or directory
+Lmod has detected the following error: The following module(s) are unknown:
+"slurm"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "slurm"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+/home/akshatat/.conda/envs/mech_interp_gpu/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+`torch_dtype` is deprecated! Use `dtype` instead!
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Layers:   0%|          | 0/4 [00:00<?, ?it/s]Layers:  25%|██▌       | 1/4 [00:26<01:20, 26.75s/it]Layers:  50%|█████     | 2/4 [00:53<00:53, 26.71s/it]Layers:  75%|███████▌  | 3/4 [01:20<00:26, 26.72s/it]Layers: 100%|██████████| 4/4 [01:46<00:00, 26.73s/it]Layers: 100%|██████████| 4/4 [01:46<00:00, 26.73s/it]
+/orcd/home/002/akshatat/uncertainty_routing/experiment3_4_steering_independence.py:458: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.violinplot(data=max_eps_data, x='layer', y='delta_margin',
+Epsilon values:   0%|          | 0/4 [00:00<?, ?it/s]Epsilon values:  25%|██▌       | 1/4 [00:02<00:07,  2.44s/it]Epsilon values:  50%|█████     | 2/4 [00:04<00:04,  2.44s/it]Epsilon values:  75%|███████▌  | 3/4 [00:07<00:02,  2.44s/it]Epsilon values: 100%|██████████| 4/4 [00:09<00:00,  2.43s/it]Epsilon values: 100%|██████████| 4/4 [00:09<00:00,  2.43s/it]

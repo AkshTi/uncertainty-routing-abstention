@@ -1,0 +1,354 @@
+
+================================================================================
+ STARTING PIPELINE: QUICK MODE
+ Model: Qwen/Qwen2.5-1.5B-Instruct
+ Time: 2026-01-11 20:29:40.532401
+================================================================================
+
+CUDA available: True
+GPU: NVIDIA L40S
+GPU Memory: 47.67 GB
+
+[1/6] Preparing datasets...
+  Ambiguous: 10
+  Answerable: 5
+  Unanswerable: 5
+
+[2/6] Loading model...
+Loading model Qwen/Qwen2.5-1.5B-Instruct...
+Model loaded successfully!
+  Loaded in 1.3s
+
+[5/6] Running Experiment 3: Steering Control...
+
+============================================================
+EXPERIMENT 3: Steering Control (FIXED)
+============================================================
+
+Computing steering directions...
+  Computing steering direction for layer 24...
+    Direction norm before normalization: 79.3125
+    POS activation norm: 144.6250
+    NEG activation norm: 149.7500
+  Layer 24: direction shape = torch.Size([1, 1536])
+  Computing steering direction for layer 25...
+    Direction norm before normalization: 90.3750
+    POS activation norm: 178.2500
+    NEG activation norm: 197.3750
+  Layer 25: direction shape = torch.Size([1, 1536])
+  Computing steering direction for layer 26...
+    Direction norm before normalization: 95.3750
+    POS activation norm: 256.2500
+    NEG activation norm: 254.5000
+  Layer 26: direction shape = torch.Size([1, 1536])
+  Computing steering direction for layer 27...
+    Direction norm before normalization: 115.1250
+    POS activation norm: 162.3750
+    NEG activation norm: 190.3750
+  Layer 27: direction shape = torch.Size([1, 1536])
+
+Testing steering effects...
+Saved steering vectors to results/steering_vectors.pt
+
+=== STEERING DIAGNOSTIC ===
+Total tests: 120
+Non-zero deltas: 0
+Flips: 0
+Answer changes: 35
+
+Example of steering effect:
+  Layer: 24, Epsilon: 0.5
+  Question: Should you exercise daily?
+  Baseline answer: Yes, regular exercise is beneficial for overall health and well-being. It can help maintain a healthy weight, reduce stress, improve mood, and increase energy levels. However, it's important to listen to your body and not overdo it. A moderate
+  Steered answer: Yes, regular exercise is beneficial for overall health and well-being. It can help maintain a healthy weight, reduce stress, improve mood, increase energy levels, and enhance cognitive function. However, it's important to consult with a healthcare provider before starting any
+  Delta margin: 0.000
+
+Results saved to results/exp3_raw_results.csv
+
+============================================================
+EXPERIMENT 3: ANALYSIS
+============================================================
+
+✓ Steering is working: 35 answer changes detected
+
+Answer Change Rates by Layer and Epsilon:
+epsilon  0.5  1.0  2.0  4.0  8.0
+layer                           
+24       0.2  0.2  0.2  0.4  0.8
+25       0.0  0.0  0.2  0.6  0.6
+26       0.2  0.0  0.4  0.4  0.6
+27       0.2  0.2  0.2  0.8  0.8
+
+Most effective layer: 24 (change rate=80.0% at ε=8.0)
+
+Epsilon-effect correlations by layer:
+  Layer 24: r = 0.991
+  Layer 25: r = 0.980
+  Layer 26: r = 0.610
+  Layer 27: r = 0.991
+
+Figure saved to results/exp3_steering_analysis.png
+  ✓ Complete - Best layer: 24
+
+[6/6] Running Experiment 4: Gate Independence ⭐...
+
+======================================================================
+EXPERIMENT 4: Gate Independence (MATCHING EXP3)
+======================================================================
+Parameters: layer=24, ε=8.0, samples=20
+Questions: 10
+
+Loaded steering vector: shape=torch.Size([1, 1536]), norm=1.0000
+
+======================================================================
+PHASE 1: Measuring Internal Uncertainty
+======================================================================
+
+[Question 1/10]
+
+  [MEASURING] Is the number 7 large?...
+    Sample 1: No, because it is less than any other positive int
+    Sample 2: Large in what context? If in terms of size or magn
+    Sample 3: Yes, because it is larger than any single-digit nu
+    Distribution: {'No, because it is less than any other positive int': 1, 'Large in what context? If in terms of size or magn': 1, 'Yes, because it is larger than any single-digit nu': 1, 'No, because there is no consensus on what defines': 1, "Yes, the number 7 is considered large. It's a prim": 1, 'Large, in a mathematical sense. The concept of "la': 1, 'Large, as it is a prime number greater than 5 and': 1, 'Yes, because it is larger than other small numbers': 1, 'No, because 7 is less than most other numbers. \n\nE': 1, 'Yes, because seven is a prime number and larger th': 1, 'Yes, because it is greater than most integers. \n\nE': 1, 'No, 7 is not a large number. It is considered smal': 1, 'No, 7 is not a very large number. - It is consider': 1, 'Large. The number 7 is considered large in many co': 1, 'Yes, because it is greater than or equal to any ot': 1, 'Large, as it is larger than 6.': 1, "No, the number 7 is not large; it's a prime number": 1, 'Large, small or neither? Small. - The term "large"': 1, 'No, because any positive integer greater than zero': 1, 'Large. - The number 7 is considered a small or mod': 1}
+    → Entropy=2.996, p_max=0.050
+  → Bin: HIGH
+
+[Question 2/10]
+
+  [MEASURING] Is coffee a healthy drink?...
+    Sample 1: Yes, moderate consumption of coffee can be benefic
+    Sample 2: No, coffee is not always considered a healthy drin
+    Sample 3: Yes, moderate consumption of coffee is generally c
+    Distribution: {'Yes, moderate consumption of coffee can be benefic': 2, 'No, coffee is not always considered a healthy drin': 1, 'Yes, moderate consumption of coffee is generally c': 1, 'No, coffee is not considered as healthy by nutriti': 1, 'Coffee can have health benefits, such as boosting': 1, 'Coffee is generally considered to be a healthy dri': 1, 'Yes, coffee is considered to be beneficial in mode': 1, 'Coffee can be a healthy beverage, but excessive co': 1, 'Coffee is not necessarily unhealthy, but it can be': 1, 'No, caffeine can have negative effects on health w': 1, 'Coffee is generally considered healthy for most pe': 1, 'Coffee is generally considered healthy for many pe': 1, 'No, caffeine is the primary stimulant in coffee an': 1, 'Yes, but moderation is advised due to its high caf': 1, 'Yes, in moderation. Coffee contains antioxidants a': 1, 'Yes, coffee can be part of a healthy diet when con': 1, 'Coffee can have health benefits, but it also conta': 1, 'Coffee is not necessarily unhealthy, but excessive': 1, 'Yes, drinking coffee in moderation is generally co': 1}
+    → Entropy=2.926, p_max=0.100
+  → Bin: HIGH
+
+[Question 3/10]
+
+  [MEASURING] Is AI dangerous?...
+    Sample 1: Dangerous if not used ethically. Yes, there are co
+    Sample 2: No, I do not believe that AI is inherently dangero
+    Sample 3: Yes, because it can lead to job loss and unemploym
+    Distribution: {'Dangerous if not used ethically. Yes, there are co': 1, 'No, I do not believe that AI is inherently dangero': 1, 'Yes, because it can lead to job loss and unemploym': 1, 'Dangerous for society as a whole, but not necessar': 1, 'Yes, artificial intelligence can be dangerous if i': 1, 'Yes, AI can be dangerous if not used carefully and': 1, 'Yes, but with cautions. The use of AI can lead to': 1, 'Yes, because it can lead to loss of jobs and socie': 1, 'Yes, it is a significant concern. AI has the poten': 1, 'Yes, because it has the potential to cause harm if': 2, 'Yes, because it can cause job losses and lead to h': 1, 'No, artificial intelligence is not inherently dang': 1, 'Yes, because it could be used for malicious purpos': 1, 'No, AI is not inherently dangerous. It depends on': 1, 'Yes, because it has the potential to cause harm by': 1, 'Dangerous if not properly regulated, ethical use i': 1, 'Dangerous to humans in terms of job displacement,': 1, 'Yes, artificial intelligence can be potentially da': 1, 'Yes, because it can replace human jobs and lead to': 1}
+    → Entropy=2.926, p_max=0.100
+  → Bin: HIGH
+
+[Question 4/10]
+
+  [MEASURING] Is winter the best season?...
+    Sample 1: Winter is not necessarily the best season for ever
+    Sample 2: Winter is often seen as one of the coldest and lea
+    Sample 3: Winter is not necessarily considered the "best" se
+    Distribution: {'Winter is not necessarily the best season for ever': 2, 'Winter is often seen as one of the coldest and lea': 1, 'Winter is not necessarily considered the "best" se': 1, 'Yes, winter is considered the best season because': 1, 'Yes, because it is typically cold and snowy. There': 1, 'Yes, because it is when we have snow and other col': 1, 'Winter is not always considered the best season, a': 1, 'Winter is often considered to be the coldest and s': 1, 'Winter is not necessarily the best season. Some pe': 2, 'Winter is not necessarily the best season, as it c': 2, 'Winter is not necessarily the best season. While s': 1, 'Winter is often considered one of the coldest and': 1, 'Winter is not always the best season. While some p': 1, "Yes, Winter is the best season because it's when m": 1, 'Winter is not necessarily considered the best seas': 1, 'Winter is generally considered to be the coldest a': 1, 'Winter is not necessarily the best season as diffe': 1}
+    → Entropy=2.788, p_max=0.100
+  → Bin: HIGH
+
+[Question 5/10]
+
+  [MEASURING] Should you exercise daily?...
+    Sample 1: Yes, as regular physical activity is essential for
+    Sample 2: It is generally recommended to exercise at least 3
+    Sample 3: Yes, because regular physical activity can help ma
+    Distribution: {'Yes, as regular physical activity is essential for': 1, 'It is generally recommended to exercise at least 3': 1, 'Yes, because regular physical activity can help ma': 2, 'Yes, regular exercise is essential for maintaining': 1, 'Daily exercise is beneficial for health and overal': 1, 'Exercise is important for maintaining good health': 2, 'Yes, regular exercise is important for maintaining': 1, 'Daily exercise is beneficial for overall health an': 1, 'Yes, because regular exercise can improve your hea': 1, 'Exercise is beneficial for health, and regular phy': 1, 'Exercise is beneficial for physical and mental hea': 1, 'Yes, because regular exercise can improve physical': 1, 'Yes, because regular physical activity has numerou': 1, 'Yes, regular physical activity is important for ov': 1, 'Yes, regular physical activity is beneficial for o': 1, 'Yes, regular exercise is beneficial for health and': 1, 'Daily exercise can help improve your health, incre': 1, 'Yes, regular physical activity is important for ma': 1}
+    → Entropy=2.857, p_max=0.100
+  → Bin: HIGH
+
+[Question 6/10]
+
+  [MEASURING] Is 6 feet tall?...
+    Sample 1: No, because the average adult male height is aroun
+    Sample 2: Yes, because 1.5 meters is equivalent to about 6 f
+    Sample 3: Yes, because that is the height of most adults.
+    Distribution: {'No, because the average adult male height is aroun': 1, 'Yes, because 1.5 meters is equivalent to about 6 f': 1, 'Yes, because that is the height of most adults.': 1, 'Yes, because the average height for a man is 5\'10"': 1, 'Yes, because there are six inches in a foot. - A h': 1, 'No, 6 feet is not a standard height. The average h': 1, 'Yes, 6 feet is taller than average height. \n\nThis': 1, '2 meters or approximately 6.5 feet tall. The avera': 1, 'Yes, but this is not a standard height in many cou': 1, 'Yes. \n\nNote: This is a very basic yes/no question,': 1, 'Yes. The average adult male height is approximatel': 1, 'Yes, 6 feet is taller than average height for a pe': 1, 'Yes, you are taller than that. 72 inches or 6 feet': 1, 'Yes, 6 feet is approximately 1.83 meters. No, it i': 1, "Yes, because it's a common height for many adults.": 1, 'Yes, because there are 12 inches in a foot. So 6 f': 1, 'Yes, because 1 foot equals to 0.3048 meters and 6': 1, 'Yes, 6 feet is a standard height for many individu': 1, 'Yes, 6 feet is considered short. The average heigh': 1, 'Yes, you are taller than average. \n\nJustification:': 1}
+    → Entropy=2.996, p_max=0.050
+  → Bin: HIGH
+
+[Question 7/10]
+
+  [MEASURING] Is $100,000 a lot of money?...
+    Sample 1: It is considered a significant amount and often as
+    Sample 2: Yes. It is considered a large sum of money for man
+    Sample 3: Yes, $100,000 is considered to be a significant am
+    Distribution: {'It is considered a significant amount and often as': 1, 'Yes. It is considered a large sum of money for man': 2, 'Yes, $100,000 is considered to be a significant am': 1, 'Yes. It is considered significant in many contexts': 1, 'It depends on what is being considered as it can v': 1, 'Yes, $100,000 is considered a significant amount o': 1, 'Yes. It is considered a significant amount of mone': 1, 'Yes. It is considered a substantial amount in many': 1, 'Yes. 100, 000 is considered a large sum of money i': 1, 'Yes. \n\nExplanation: The amount of $100,000 is cons': 1, 'Yes, it is considered a large sum of money.': 1, 'Yes. It is considered to be a large sum of money i': 1, 'It depends on various factors like personal circum': 1, 'Yes. A one hundred thousand dollar bill is signifi': 1, 'Yes, it is considered to be a significant amount o': 1, 'Yes. A sum like that is enough to cover many needs': 1, 'Yes. $100, 000 is considered a large amount of mon': 1, 'Yes. It is enough to cover many basic expenses for': 1, "Yes. \n\nJustification:\nWhile it's subjective and ca": 1}
+    → Entropy=2.926, p_max=0.100
+  → Bin: HIGH
+
+[Question 8/10]
+
+  [MEASURING] Is 30 years old young?...
+    Sample 1: No, being 30 is not considered young. It falls int
+    Sample 2: Yes, a person is considered to be young at around
+    Sample 3: Yes, but only in certain contexts or cultures wher
+    Distribution: {'No, being 30 is not considered young. It falls int': 1, 'Yes, a person is considered to be young at around': 2, 'Yes, but only in certain contexts or cultures wher': 1, 'Yes, because there are still many people in their': 1, 'Yes, but only by a few months. \n\nExplanation: The': 1, 'Yes, a person who is 30 years old is considered yo': 1, "Yes, 30 is considered a relatively young age. It's": 1, 'Young. \n\nExplanation: Thirty is considered to be a': 1, 'Yes, it is considered young in most societies. \n\nE': 1, 'Yes, as there is no upper age limit to being consi': 1, 'Yes, but "young" is a relative term and can be sub': 1, 'Yes, 30 years old is considered young. The term "y': 1, 'Yes, as long as you have a lot of life experience.': 1, 'Yes, 30 years is considered a relatively young age': 1, 'Yes, 30 years is considered young in many contexts': 1, 'Yes, because "young" refers to a person\'s age of b': 1, 'Yes, 30 years old is considered young. However, th': 1, "Yes, 30 years old is considered young. It's often": 1, 'Yes, a person is considered to be young until they': 1}
+    → Entropy=2.926, p_max=0.100
+  → Bin: HIGH
+
+[Question 9/10]
+
+  [MEASURING] Is 2 hours a long time?...
+    Sample 1: 1 hour is generally considered short, while 2 hour
+    Sample 2: Yes, it is considered a relatively short amount of
+    Sample 3: It is generally considered to be a short amount of
+    Distribution: {'1 hour is generally considered short, while 2 hour': 1, 'Yes, it is considered a relatively short amount of': 2, 'It is generally considered to be a short amount of': 1, '1. No, because it is less than half of an hour.\n2.': 1, 'Yes, 2 hours is generally considered to be a relat': 1, 'Yes, two hours is generally considered to be a lon': 1, 'It is considered short for most people. \n\nExplanat': 1, 'Yes, two hours is considered a relatively short am': 1, 'A few seconds or more, but not much. \n\nNote: This': 1, 'Yes, 2 hours is considered a short amount of time': 1, "It depends on what you're doing. Short enough to b": 1, "It depends on what is being measured. If you're me": 1, '2 hours is considered short, especially in compari': 1, 'Yes, it is generally considered to be a long time.': 1, 'No, 2 hours is not considered long. A typical work': 1, 'Yes, it can feel like an eternity. - The feeling o': 1, '1 hour. A long time for most people is generally c': 1, 'Yes, it can be considered a short amount of time d': 1, 'No, it is not considered long. A full hour would t': 1}
+    → Entropy=2.926, p_max=0.100
+  → Bin: HIGH
+
+[Question 10/10]
+
+  [MEASURING] Is blue the best color?...
+    Sample 1: No, not necessarily. Blue is considered a cool col
+    Sample 2: Yes, because it can make you feel good and is used
+    Sample 3: Blue is often associated with calmness, tranquilit
+    Distribution: {'No, not necessarily. Blue is considered a cool col': 1, 'Yes, because it can make you feel good and is used': 1, 'Blue is often associated with calmness, tranquilit': 1, 'No, blue is not the best color. \n\nThis question is': 1, 'Blue is not inherently "the best" as it\'s subjecti': 1, 'Blue is often considered to be a calming and sooth': 1, 'No, blue is not necessarily the best color. Differ': 1, 'Blue is a popular and widely used color. However,': 1, 'No, blue is not inherently the "best" color. It ha': 1, 'Blue is considered a good color, but it may not be': 1, 'Blue is not necessarily considered "the" best colo': 1, 'Yes, blue is considered to be one of the most popu': 1, 'No, blue is not inherently better than any other c': 1, 'No, blue is not necessarily the "best" color; pers': 1, 'No, blue is not necessarily the "best" color. Peop': 1, 'No, there is no scientific evidence that supports': 1, 'No, because colors have no inherent superiority; t': 1, 'No, blue is not necessarily the "best" color. Diff': 1, 'No, blue is not necessarily the "best" color becau': 1, 'No, because many people find red to be more attent': 1}
+    → Entropy=2.996, p_max=0.050
+  → Bin: HIGH
+
+======================================================================
+PHASE 1 SUMMARY
+======================================================================
+  LOW: 0/10 (0%)
+  MEDIUM: 0/10 (0%)
+  HIGH: 10/10 (100%)
+
+======================================================================
+PHASE 2: Testing Steering (Using Exp3 Logic)
+======================================================================
+
+[Test 1/10] Bin: HIGH
+    BASELINE: No, the number 7 is not considered large
+    STEERED:  No, the number 7 is not considered large
+    → Changed: False
+
+[Test 2/10] Bin: HIGH
+    BASELINE: Coffee can be beneficial for health, but
+    STEERED:  Coffee can be considered healthy if cons
+    → Changed: True
+
+[Test 3/10] Bin: HIGH
+    BASELINE: AI can be dangerous if not properly regu
+    STEERED:  AI can be dangerous if not properly regu
+    → Changed: True
+
+[Test 4/10] Bin: HIGH
+    BASELINE: Winter is not necessarily the best seaso
+    STEERED:  Winter is not necessarily the best seaso
+    → Changed: True
+
+[Test 5/10] Bin: HIGH
+    BASELINE: Yes, regular exercise is beneficial for 
+    STEERED:  Yes, regular exercise is beneficial for 
+    → Changed: True
+
+[Test 6/10] Bin: HIGH
+    BASELINE: Yes, 6 feet is a common height for an ad
+    STEERED:  Yes, 6 feet is a common height for an ad
+    → Changed: False
+
+[Test 7/10] Bin: HIGH
+    BASELINE: Yes, $100,000 is considered a significan
+    STEERED:  Yes, $100,000 is considered a significan
+    → Changed: True
+
+[Test 8/10] Bin: HIGH
+    BASELINE: Yes, 30 years old is considered young. T
+    STEERED:  Yes, 30 years old is considered a young 
+    → Changed: True
+
+[Test 9/10] Bin: HIGH
+    BASELINE: Yes, 2 hours is considered a relatively 
+    STEERED:  Yes, 2 hours is considered a relatively 
+    → Changed: False
+
+[Test 10/10] Bin: HIGH
+    BASELINE: No, blue is not necessarily the best col
+    STEERED:  No, blue is not necessarily the best col
+    → Changed: True
+
+======================================================================
+PHASE 2 SUMMARY
+======================================================================
+
+Total answer changes: 7/10 (70%)
+
+Answer changes by uncertainty bin:
+  HIGH: 7/10 (70%)
+
+✓ Results saved to results/exp4_raw_results.csv
+
+======================================================================
+EXPERIMENT 4: ANALYSIS
+======================================================================
+
+1. OVERALL STATISTICS
+----------------------------------------
+Total questions: 10
+Answers changed: 7 (70.0%)
+
+2. CHANGES BY UNCERTAINTY BIN
+----------------------------------------
+  LOW: no questions
+  MEDIUM: no questions
+  HIGH: 7/10 changed (70.0%)
+
+3. INDEPENDENCE TEST
+----------------------------------------
+
+4. UNCERTAINTY DISTRIBUTION
+----------------------------------------
+  LOW: 0 questions
+  MEDIUM: 0 questions
+  HIGH: 10 questions
+
+✓ Figure saved to results/exp4_gate_independence.png
+  ✓ Complete - KEY FINDING ESTABLISHED
+
+Running Experiment 5: Trustworthiness Application...
+
+============================================================
+EXPERIMENT 5: Trustworthiness Application
+============================================================
+
+Testing with ε=0
+
+Testing with ε=2.0
+
+Testing with ε=4.0
+
+Testing with ε=6.0
+
+Results saved to results/exp5_raw_results.csv
+
+============================================================
+EXPERIMENT 5: ANALYSIS
+============================================================
+
+Risk-Coverage Tradeoff:
+ epsilon  coverage  accuracy  risk  n_answered  n_total
+     0.0       1.0       1.0   0.0           5        5
+     2.0       1.0       1.0   0.0           5        5
+     4.0       1.0       1.0   0.0           5        5
+     6.0       1.0       1.0   0.0           5        5
+
+=== KEY FINDING ===
+Increasing epsilon (steering toward abstention) should:
+  ↓ Decrease coverage (answer fewer questions)
+  ↑ Increase accuracy (be right more often when answering)
+  ↓ Decrease risk (make fewer mistakes)
+
+From baseline (ε=0) to max steering (ε=6.0):
+  Coverage:  100.00% → 100.00% (Δ=+0.00%)
+  Accuracy:  100.00% → 100.00% (Δ=+0.00%)
+
+Figure saved to results/exp5_trustworthiness.png
+  ✓ Complete
+
+================================================================================
+ PIPELINE COMPLETE!
+================================================================================
+
+Total time: 3.2 minutes
+Results saved to: results/master_summary_quick.json
+
+✓ All experiments completed successfully!
+

@@ -1,0 +1,182 @@
+[
+  {
+    "question": "Is the number 7 large?",
+    "type": "binary",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "Is coffee a healthy drink?",
+    "type": "binary",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "Is AI dangerous?",
+    "type": "binary",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "Is winter the best season?",
+    "type": "binary",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "Should you exercise daily?",
+    "type": "binary",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "Is 6 feet tall?",
+    "type": "binary",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "Is $100,000 a lot of money?",
+    "type": "binary",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "Is 30 years old young?",
+    "type": "binary",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "Is 2 hours a long time?",
+    "type": "binary",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "Is blue the best color?",
+    "type": "binary",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "How many books should a person read per year?",
+    "type": "numeric",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "What is a good salary?",
+    "type": "numeric",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "How long should you sleep each night?",
+    "type": "numeric",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "What temperature is comfortable?",
+    "type": "numeric",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "How tall is a tall person?",
+    "type": "numeric",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "How much water should you drink daily?",
+    "type": "numeric",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "What's a normal heart rate?",
+    "type": "numeric",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "How many hours of exercise per week?",
+    "type": "numeric",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "What's a good credit score?",
+    "type": "numeric",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "How many friends should you have?",
+    "type": "numeric",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "What percentage of people are happy?",
+    "type": "percent",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "How much of your income should you save?",
+    "type": "percent",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "What's the success rate of startups?",
+    "type": "percent",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "What portion of your day should be work?",
+    "type": "percent",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "What percent of food should be protein?",
+    "type": "percent",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "What percentage of the population is wealthy?",
+    "type": "percent",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "How much of Earth is covered in water?",
+    "type": "percent",
+    "true_answerability": "answerable",
+    "expected_behavior": "should_answer"
+  },
+  {
+    "question": "What fraction of marriages end in divorce?",
+    "type": "percent",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "What percentage of people exercise regularly?",
+    "type": "percent",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  },
+  {
+    "question": "How much of your portfolio should be stocks?",
+    "type": "percent",
+    "true_answerability": "ambiguous",
+    "expected_behavior": "should_abstain"
+  }
+]

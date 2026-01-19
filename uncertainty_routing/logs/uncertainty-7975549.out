@@ -1,0 +1,79 @@
+================================================================================
+FINDING OPTIMAL EPSILON
+================================================================================
+
+Baseline (ε=0):
+  Coverage: 60.0%
+  Hallucination: 36.7%
+
+================================================================================
+CANDIDATES (negative epsilon only):
+================================================================================
+
+ε = -50:
+  Coverage: 30.0% (Δ=-30.0%)
+  Accuracy: 100.0%
+  Abstain unans: 90.0%
+  Hallucinate: 10.0% (Δ=-26.7%)
+  Halluc reduction: 72.7%, Cov retention: 50.0%
+  Score: -999.000
+
+ε = -40:
+  Coverage: 30.0% (Δ=-30.0%)
+  Accuracy: 100.0%
+  Abstain unans: 86.7%
+  Hallucinate: 13.3% (Δ=-23.3%)
+  Halluc reduction: 63.6%, Cov retention: 50.0%
+  Score: -999.000
+
+ε = -30:
+  Coverage: 50.0% (Δ=-10.0%)
+  Accuracy: 100.0%
+  Abstain unans: 83.3%
+  Hallucinate: 16.7% (Δ=-20.0%)
+  Halluc reduction: 54.5%, Cov retention: 83.3%
+  Score: 0.689
+
+ε = -20:
+  Coverage: 60.0% (Δ=+0.0%)
+  Accuracy: 100.0%
+  Abstain unans: 80.0%
+  Hallucinate: 20.0% (Δ=-16.7%)
+  Halluc reduction: 45.5%, Cov retention: 100.0%
+  Score: 0.727
+
+ε = -10:
+  Coverage: 60.0% (Δ=+0.0%)
+  Accuracy: 100.0%
+  Abstain unans: 70.0%
+  Hallucinate: 30.0% (Δ=-6.7%)
+  Halluc reduction: 18.2%, Cov retention: 100.0%
+  Score: 0.591
+
+================================================================================
+RECOMMENDATION (Balanced Coverage + Hallucination Reduction)
+================================================================================
+
+🎯 Optimal epsilon: -20
+
+   Coverage: 60.0% (Δ=+0.0% from baseline)
+   Accuracy: 100.0%
+   Hallucination: 20.0% (Δ=-16.7% from baseline)
+   Abstain on unanswerables: 80.0%
+
+📊 Tradeoff summary:
+   ✓ Reduces hallucination by 45%
+   ✓ Maintains coverage on answerables
+
+💡 Alternative options:
+================================================================================
+
+ε = -30 (score: 0.689):
+   Coverage: 50.0%, Hallucination: 16.7%
+   55% halluc reduction, 17% coverage loss
+
+ε = -10 (score: 0.591):
+   Coverage: 60.0%, Hallucination: 30.0%
+   18% halluc reduction, 0% coverage loss
+
+📈 Visualization saved to results/exp5_optimal_epsilon.png

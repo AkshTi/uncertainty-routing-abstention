@@ -1,0 +1,26 @@
+Initializing model...
+Loading model Qwen/Qwen2.5-1.5B-Instruct...
+Model loaded successfully!
+
+Loading datasets...
+Answerable with answers: 10
+Unanswerable: 10
+
+Test set size: 20 (answerable=10, unanswerable=10)
+
+======================================================================
+LOADING STEERING VECTORS
+======================================================================
+✓ Loaded 4 steering vectors
+  Layers: [24, 25, 26, 27]
+
+======================================================================
+EXPERIMENT 5: Trustworthiness Application (DEFENSIBLE)
+======================================================================
+Questions total: 20
+Layers tested: [24, 25, 26, 27]
+Epsilon sweep: [0.0, -5.0, -10.0, -20.0, -30.0, -40.0]
+
+======================================================================
+PHASE 1: Selecting Best Layer (Selective Abstention Score)
+======================================================================

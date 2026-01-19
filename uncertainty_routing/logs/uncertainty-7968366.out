@@ -1,0 +1,65 @@
+Initializing model...
+Loading model Qwen/Qwen2.5-1.5B-Instruct...
+Model loaded successfully!
+
+Loading datasets...
+Test set: 20 questions
+  Answerable: 10
+  Unanswerable: 10
+
+✓ Loaded 4 steering vectors
+
+======================================================================
+EXPERIMENT 5: Trustworthiness Application
+======================================================================
+Questions: 20
+Layers to test: [24, 25, 26, 27]
+Epsilon sweep: [0.0, 10.0, 20.0, 30.0, 40.0, 50.0]
+  Answerable: 10, Unanswerable: 10
+
+======================================================================
+PHASE 1: Layer Selection
+======================================================================
+
+Testing 4 layers on 15 questions...
+  Layer 24: score=1.000 (ans_abstain=0.00, unans_abstain=1.00)
+  Layer 25: score=1.000 (ans_abstain=0.00, unans_abstain=1.00)
+  Layer 26: score=1.000 (ans_abstain=0.00, unans_abstain=1.00)
+  Layer 27: score=0.700 (ans_abstain=0.30, unans_abstain=1.00)
+
+✓ Best layer: 24 (score=1.000)
+
+======================================================================
+PHASE 2: Epsilon Sweep on Layer 24
+======================================================================
+
+✓ Saved to results/exp5_raw_results.csv
+
+======================================================================
+EXPERIMENT 5: ANALYSIS
+======================================================================
+
+======================================================================
+Metrics by Epsilon:
+======================================================================
+ epsilon  coverage_answerable  abstain_answerable  accuracy_answerable  risk_answerable  abstain_unanswerable  hallucination_unanswerable  n_answerable  n_unanswerable
+     0.0                  1.0                 0.0             1.000000         0.000000                   1.0                         0.0            10              10
+    10.0                  1.0                 0.0             1.000000         0.000000                   1.0                         0.0            10              10
+    20.0                  1.0                 0.0             1.000000         0.000000                   1.0                         0.0            10              10
+    30.0                  0.8                 0.2             1.000000         0.000000                   1.0                         0.0            10              10
+    40.0                  0.8                 0.2             1.000000         0.000000                   1.0                         0.0            10              10
+    50.0                  0.7                 0.3             0.857143         0.142857                   1.0                         0.0            10              10
+
+======================================================================
+KEY FINDINGS
+======================================================================
+Coverage (answerable):  100.0% → 70.0% (Δ=-30.0%)
+Accuracy (answerable):  100.0% → 85.7% (Δ=-14.3%)
+Abstain (unanswerable): 100.0% → 100.0% (Δ=+0.0%)
+
+✓ Steering is working! Clear effect on abstention behavior.
+Figure saved to results/exp5_trustworthiness.png
+
+✓ Summary saved to results/exp5_summary.json
+
+✓ Experiment 5 complete!

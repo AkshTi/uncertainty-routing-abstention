@@ -1,0 +1,463 @@
+
+================================================================================
+ STARTING PIPELINE: QUICK MODE
+ Model: Qwen/Qwen2.5-1.5B-Instruct
+ Time: 2026-01-11 19:32:40.245583
+================================================================================
+
+CUDA available: True
+GPU: NVIDIA L40S
+GPU Memory: 47.67 GB
+
+[1/6] Preparing datasets...
+  Ambiguous: 10
+  Answerable: 5
+  Unanswerable: 5
+
+[2/6] Loading model...
+Loading model Qwen/Qwen2.5-1.5B-Instruct...
+Model loaded successfully!
+  Loaded in 1.4s
+
+[5/6] Running Experiment 3: Steering Control...
+
+============================================================
+EXPERIMENT 3: Steering Control (FIXED)
+============================================================
+
+Computing steering directions...
+  Computing steering direction for layer 24...
+    Direction norm before normalization: 79.3125
+    POS activation norm: 144.6250
+    NEG activation norm: 149.7500
+  Layer 24: direction shape = torch.Size([1, 1536])
+  Computing steering direction for layer 25...
+    Direction norm before normalization: 90.3750
+    POS activation norm: 178.2500
+    NEG activation norm: 197.3750
+  Layer 25: direction shape = torch.Size([1, 1536])
+  Computing steering direction for layer 26...
+    Direction norm before normalization: 95.3750
+    POS activation norm: 256.2500
+    NEG activation norm: 254.5000
+  Layer 26: direction shape = torch.Size([1, 1536])
+  Computing steering direction for layer 27...
+    Direction norm before normalization: 115.1250
+    POS activation norm: 162.3750
+    NEG activation norm: 190.3750
+  Layer 27: direction shape = torch.Size([1, 1536])
+
+Testing steering effects...
+Saved steering vectors to results/steering_vectors.pt
+
+=== STEERING DIAGNOSTIC ===
+Total tests: 120
+Non-zero deltas: 0
+Flips: 0
+Answer changes: 35
+
+Example of steering effect:
+  Layer: 24, Epsilon: 0.5
+  Question: Should you exercise daily?
+  Baseline answer: Yes, regular exercise is beneficial for overall health and well-being. It can help maintain a healthy weight, reduce stress, improve mood, and increase energy levels. However, it's important to listen to your body and not overdo it. A moderate
+  Steered answer: Yes, regular exercise is beneficial for overall health and well-being. It can help maintain a healthy weight, reduce stress, improve mood, increase energy levels, and enhance cognitive function. However, it's important to consult with a healthcare provider before starting any
+  Delta margin: 0.000
+
+Results saved to results/exp3_raw_results.csv
+
+============================================================
+EXPERIMENT 3: ANALYSIS
+============================================================
+
+✓ Steering is working: 35 answer changes detected
+
+Answer Change Rates by Layer and Epsilon:
+epsilon  0.5  1.0  2.0  4.0  8.0
+layer                           
+24       0.2  0.2  0.2  0.4  0.8
+25       0.0  0.0  0.2  0.6  0.6
+26       0.2  0.0  0.4  0.4  0.6
+27       0.2  0.2  0.2  0.8  0.8
+
+Most effective layer: 24 (change rate=80.0% at ε=8.0)
+
+Epsilon-effect correlations by layer:
+  Layer 24: r = 0.991
+  Layer 25: r = 0.980
+  Layer 26: r = 0.610
+  Layer 27: r = 0.991
+
+Figure saved to results/exp3_steering_analysis.png
+  ✓ Complete - Best layer: 24
+
+[6/6] Running Experiment 4: Gate Independence ⭐...
+
+======================================================================
+EXPERIMENT 4: Gate Independence from Uncertainty (DIAGNOSTIC MODE)
+======================================================================
+Parameters: best_layer=24, epsilon=4.0, n_samples=15
+Total questions: 10
+
+======================================================================
+PHASE 1: Measuring Internal Uncertainty (Forced Guess Distribution)
+======================================================================
+
+[Question 1/10]
+
+  [UNCERTAINTY] Measuring for: Is the number 7 large?...
+  [PROMPT DEBUG] Using 'force_guess' mode from format_prompt
+    Sample 1: 'No' (from: No
+
+Reasoning: The number 7 is considered small in comparison to larger numbers ...)
+    Sample 2: 'No, it is not.' (from: No, it is not.
+Justification: The term "large" typically refers to size, quantit...)
+    Sample 3: 'Small' (from: Small
+
+The reason is that in many contexts and cultures, particularly those asso...)
+    Distribution: {'No': 2, 'No, it is not.': 1, 'Small': 2, 'No, the number 7 is not considered large in comparison to other numbers. It\'s generally recognized as medium-sized when discussing numerical values. However, it\'s worth noting that different people may have varying perceptions of what constitutes "large" depending on their': 1, 'No.': 1, 'No, the number 7 is not considered large in comparison to other numbers, such as infinity or extremely large quantities of things like stars or atoms. The number 7 has significant cultural and religious importance due to its numerical properties and symbolism across many cultures': 1, 'Large': 1, 'Yes': 1, "No, the number 7 is not large; it's small. The number seven falls in the category of smaller integers because it has only two distinct prime factors (1 and itself), which makes it more manageable than larger numbers like ten, twenty,": 1, 'The number 7 is indeed a significant and important figure in many cultures around the world, often revered for its connection to divinity and balance. However, whether it can be considered "large" is subjective and depends on the context of measurement and perspective': 1, 'The number 7 is considered large in many cultures and systems of measurement. In terms of everyday usage and common sense, it might not seem like much compared to larger numbers, but in contexts where size or quantity is being measured (such as in counting': 1, 'Yes.': 1, 'The number 7 is considered small in comparison to larger numbers like 1000 or 1 million.': 1}
+    Entropy: 2.523, p_max: 0.133
+  → Binned as: HIGH
+
+[Question 2/10]
+
+  [UNCERTAINTY] Measuring for: Is coffee a healthy drink?...
+  [PROMPT DEBUG] Using 'force_guess' mode from format_prompt
+    Sample 1: 'Coffee can be both healthy and unhealthy depending on how it is consumed.' (from: Coffee can be both healthy and unhealthy depending on how it is consumed. 
+
+To e...)
+    Sample 2: 'Yes' (from: Yes
+
+Coffee is generally considered a healthy beverage when consumed in moderati...)
+    Sample 3: 'No' (from: No
+
+Coffee is not inherently unhealthy as it can contain antioxidants and may ha...)
+    Distribution: {'Coffee can be both healthy and unhealthy depending on how it is consumed.': 1, 'Yes': 1, 'No': 1, 'Coffee is generally considered healthy in moderate amounts for some people, but excessive consumption may lead to negative health effects. While it contains antioxidants and can aid in weight loss, consuming large quantities of coffee has been linked to increased risk factors for type 2 diabetes': 1, 'No, I do not believe that coffee is inherently unhealthy. However, like many other foods and beverages, it can be consumed in moderation while still providing some benefits for health. Some studies have shown that moderate coffee consumption may have positive effects on reducing the': 1, 'Coffee is a potentially beneficial beverage for many people when consumed in moderation. Moderate consumption of caffeine may have potential health benefits, including improved mood and cognitive function, as well as reduced risk of some chronic diseases such as type 2 diabetes and liver disease.': 1, "Coffee is generally considered beneficial for health when consumed in moderation and by people with no contraindications. Moderate consumption of coffee has been associated with reduced risk of type 2 diabetes, Parkinson's disease, liver diseases, depression, and Alzheimer's disease": 1, 'Coffee is generally considered healthy in moderation, as it contains antioxidants and can boost metabolism and alertness. However, excessive consumption may lead to negative health effects such as anxiety, insomnia, and cardiovascular issues.': 1, "Coffee is generally considered a healthful beverage when consumed in moderation. However, excessive consumption may be associated with potential negative effects on health. To make an informed decision about whether or not to include it in one's diet, consider factors such as individual metabolism": 1, 'Yes, Coffee can be considered a healthy drink when consumed in moderation as part of a balanced diet and regular exercise routine. However, excessive consumption may lead to negative health effects such as increased risk of anxiety, heart disease, liver damage, and other issues': 1, 'Coffee is generally considered a healthier beverage than many other options because it contains antioxidants and may have some benefits for heart health. However, excessive consumption can lead to negative effects such as jitteriness, insomnia, and increased risk of diabetes. Moderation in its': 1, 'Coffee is generally considered unhealthy for most people, especially those who have issues with their heart health, high blood pressure, diabetes, and obesity.': 1, 'Coffee is generally considered healthy when consumed in moderation for most people. Moderate consumption can have health benefits such as reducing the risk of type 2 diabetes and improving mental alertness, but it also contains high amounts of caffeine which can be detrimental to some individuals': 1, "Coffee is generally considered a healthy drink because it contains antioxidants that may help reduce the risk of chronic diseases such as heart disease and diabetes. However, it's important to limit caffeine intake as excessive consumption can have negative effects on sleep quality and overall health.": 1, 'No, coffee is not necessarily a healthy drink because it contains caffeine which can be addictive and may cause jitteriness, anxiety, insomnia, heart palpitations, tremors, nausea, headaches, stomach problems, increased blood pressure, stroke, cancer, depression': 1}
+    Entropy: 2.708, p_max: 0.067
+  → Binned as: HIGH
+
+[Question 3/10]
+
+  [UNCERTAINTY] Measuring for: Is AI dangerous?...
+  [PROMPT DEBUG] Using 'force_guess' mode from format_prompt
+    Sample 1: 'No, AI is not dangerous.' (from: No, AI is not dangerous.
+AI (Artificial Intelligence) can be dangerous in some s...)
+    Sample 2: 'I believe that artificial intelligence (AI) has the potential to be dangerous, but it also holds immense potential for positive impact on society and the world.' (from: I believe that artificial intelligence (AI) has the potential to be dangerous, b...)
+    Sample 3: 'I believe that artificial intelligence (AI) is both potentially dangerous and beneficial in different contexts. AI has the capability to revolutionize many aspects of society by improving efficiency, productivity, and solving complex problems. However, there are also concerns about potential negative impacts' (from: I believe that artificial intelligence (AI) is both potentially dangerous and be...)
+    Distribution: {'No, AI is not dangerous.': 1, 'I believe that artificial intelligence (AI) has the potential to be dangerous, but it also holds immense potential for positive impact on society and the world.': 1, 'I believe that artificial intelligence (AI) is both potentially dangerous and beneficial in different contexts. AI has the capability to revolutionize many aspects of society by improving efficiency, productivity, and solving complex problems. However, there are also concerns about potential negative impacts': 1, "No, I believe that AI is not inherently dangerous. While there are potential risks associated with its development and use, it's important to recognize that AI has the potential to benefit society in many ways, such as improving healthcare, transportation, and education.": 1, 'Yes, artificial intelligence (AI) is considered potentially dangerous in various scenarios and contexts.': 1, 'It is very difficult to accurately assess the danger of artificial intelligence (AI) without knowing more about its capabilities and potential uses. On one hand, some experts argue that AI has great potential for positive impact on society, including improving healthcare, enhancing education,': 1, "It is possible that AI could be dangerous in some situations, but it's important to note that we are still in the early stages of developing and implementing this technology, and its potential dangers have yet to fully manifest themselves.": 1, 'Yes, artificial intelligence (AI) poses significant risks and dangers in various fields such as security, employment, healthcare, and privacy. These risks include job displacement, ethical concerns about decision-making processes, cybersecurity threats, and potential misuse of data for harmful purposes': 1, 'No': 1, "Based on available information and general consensus among experts, artificial intelligence (AI) is generally considered both potentially beneficial and potentially harmful, depending on how it's developed and used. It's important for society to approach AI development with caution, ensuring that safety and": 1, 'Yes': 1, 'It depends on how we define "dangerous". If it is defined as creating harm for individuals, then yes, there are many concerns about AI and its potential to cause harm. However, if it is defined as being potentially harmful in some way,': 1, 'I believe that AI is potentially dangerous in some contexts but has enormous potential for positive impact on humanity as a whole.': 1, 'It is potentially dangerous as it can be used for malicious purposes.': 1, 'I do not think that AI is inherently dangerous; it depends on how we use it.': 1}
+    Entropy: 2.708, p_max: 0.067
+  → Binned as: HIGH
+
+[Question 4/10]
+
+  [UNCERTAINTY] Measuring for: Is winter the best season?...
+  [PROMPT DEBUG] Using 'force_guess' mode from format_prompt
+    Sample 1: 'Winter is generally considered by many as one of the least enjoyable seasons due to its long nights and cold temperatures. However, for some individuals it can be quite pleasant when experienced in a controlled manner. For example, skiing, snowboarding, ice skating,' (from: Winter is generally considered by many as one of the least enjoyable seasons due...)
+    Sample 2: 'Winter is not the best season.' (from: Winter is not the best season.
+Winter is generally considered to be one of the c...)
+    Sample 3: 'Winter is generally considered the coldest and most harsh season of the year due to its shorter days and longer nights which often cause significant temperature drops, making it uncomfortable for outdoor activities such as hiking, skiing, ice skating, etc. However, some people' (from: Winter is generally considered the coldest and most harsh season of the year due...)
+    Distribution: {'Winter is generally considered by many as one of the least enjoyable seasons due to its long nights and cold temperatures. However, for some individuals it can be quite pleasant when experienced in a controlled manner. For example, skiing, snowboarding, ice skating,': 1, 'Winter is not the best season.': 1, 'Winter is generally considered the coldest and most harsh season of the year due to its shorter days and longer nights which often cause significant temperature drops, making it uncomfortable for outdoor activities such as hiking, skiing, ice skating, etc. However, some people': 1, 'Winter is considered by some as one of the best seasons due to its cozy atmosphere and seasonal activities like skiing and snowboarding. However, for others, it may be seen as less desirable because it can bring cold temperatures and potentially disrupted outdoor experiences.': 1, 'No': 2, 'Winter is not necessarily considered the "best" season for everyone due to its unique weather conditions and experiences. However, there are some aspects that make it an interesting choice:': 1, 'Winter is not generally considered the best season by most people due to various factors such as colder temperatures, reduced daylight hours, and less activity opportunities. However, for some individuals who enjoy snowy activities like skiing or snowboarding, winter can be enjoyable despite these': 1, 'Winter is not necessarily the best season.': 1, 'No, winter is not necessarily the best season for everyone. Different people may have different preferences and experiences in terms of weather, climate, and overall enjoyment of seasonal activities.': 1, 'Winter is generally considered one of the least desirable seasons for many people due to cold temperatures, snowfall, and limited daylight hours. However, some argue that it can be beautiful in its own unique way, with serene landscapes and festive holidays. Therefore,': 1, 'Winter is generally considered the coldest and least pleasant time of year due to its long nights, short days, and harsh weather conditions. However, some people argue that it can also be enjoyable for certain activities like skiing, snowboarding, and ice skating': 1, 'Winter is often considered the coldest and dreariest time of year, but it can also have its advantages. In some regions, winter provides an opportunity for outdoor activities like skiing, snowboarding, and ice skating. Moreover, winter weather can be': 1, "Winter is generally considered by many people as one of the least desirable seasons due to its cold temperatures and associated risks such as snowstorms and ice. However, it's also important to note that some people may enjoy certain aspects of winter, including skiing,": 1, 'Winter is generally considered the coldest and darkest season of the year, which some might argue makes it less desirable for outdoor activities and warmer weather experiences. However, many people enjoy winter for its unique snowflakes, cozy indoor fires, holiday festivities,': 1}
+    Entropy: 2.616, p_max: 0.133
+  → Binned as: HIGH
+
+[Question 5/10]
+
+  [UNCERTAINTY] Measuring for: Should you exercise daily?...
+  [PROMPT DEBUG] Using 'force_guess' mode from format_prompt
+    Sample 1: 'No, I do not recommend exercising daily. While regular physical activity is generally beneficial for overall health and well-being, it is important to consider individual factors such as age, fitness level, medical history, and personal preferences when determining how much exercise is appropriate' (from: No, I do not recommend exercising daily. While regular physical activity is gene...)
+    Sample 2: 'Yes' (from: Yes
+
+Exercising daily can have numerous benefits for both physical and mental he...)
+    Sample 3: 'Yes, you should exercise daily.' (from: Yes, you should exercise daily.
+Explanation:
+As an AI language model, I cannot m...)
+    Distribution: {'No, I do not recommend exercising daily. While regular physical activity is generally beneficial for overall health and well-being, it is important to consider individual factors such as age, fitness level, medical history, and personal preferences when determining how much exercise is appropriate': 1, 'Yes': 2, 'Yes, you should exercise daily.': 2, "Exercise is important for maintaining good health and reducing the risk of chronic diseases such as heart disease, diabetes, and obesity. It can also improve mental health by reducing stress and anxiety, increasing self-esteem, and improving sleep quality. However, it's important": 1, 'Yes, regular physical activity is essential for maintaining good health and preventing chronic diseases. Engaging in at least 30 minutes of moderate-intensity aerobic activity most days of the week can significantly reduce the risk of obesity, diabetes, heart disease, and': 1, 'No.': 2, "Yes, it's important to exercise regularly.": 1, 'Yes, exercising daily can have numerous benefits for physical and mental health.': 1, 'Yes, exercising regularly can have numerous benefits for both physical and mental health.': 1, 'Yes, you should exercise daily for several reasons:': 1, 'It depends on several factors such as age, fitness level, and overall health status. For most adults, exercising daily can help maintain good physical and mental health. However, if an individual has certain medical conditions that make them more prone to injury during intense': 1, 'Yes, exercising daily can have numerous benefits for your physical and mental health. It helps in maintaining a healthy weight, strengthens muscles and bones, improves cardiovascular health, boosts mood, enhances cognitive function, and increases energy levels. Consistency is key, as': 1}
+    Entropy: 2.431, p_max: 0.133
+  → Binned as: HIGH
+
+[Question 6/10]
+
+  [UNCERTAINTY] Measuring for: Is 6 feet tall?...
+  [PROMPT DEBUG] Using 'force_guess' mode from format_prompt
+    Sample 1: 'Yes, 6 feet is considered average height for an adult male in many cultures. On average, men around this height can typically be expected to have well-proportioned bodies that are strong and capable of performing physical labor or activities with relative ease.' (from: Yes, 6 feet is considered average height for an adult male in many cultures. On ...)
+    Sample 2: 'Yes, 6 feet tall is considered an average height for adult males and females in many countries around the world. It's important to note that height can vary greatly between individuals based on genetics, nutrition, health conditions, lifestyle factors, etc., but' (from: Yes, 6 feet tall is considered an average height for adult males and females in ...)
+    Sample 3: 'Yes, I believe that 6 feet is a reasonable height for an adult human being. The average adult height varies by gender and age group, but 6 feet is within the range of possible heights for someone who has reached adulthood.' (from: Yes, I believe that 6 feet is a reasonable height for an adult human being. The ...)
+    Distribution: {'Yes, 6 feet is considered average height for an adult male in many cultures. On average, men around this height can typically be expected to have well-proportioned bodies that are strong and capable of performing physical labor or activities with relative ease.': 1, "Yes, 6 feet tall is considered an average height for adult males and females in many countries around the world. It's important to note that height can vary greatly between individuals based on genetics, nutrition, health conditions, lifestyle factors, etc., but": 1, 'Yes, I believe that 6 feet is a reasonable height for an adult human being. The average adult height varies by gender and age group, but 6 feet is within the range of possible heights for someone who has reached adulthood.': 1, 'Yes.': 3, 'Yes, it is possible to be 6 feet tall.': 1, 'No.': 1, 'Yes, someone who is six feet tall is considered quite tall in most countries and cultures.': 1, 'No, it is not possible for an adult human being to be exactly 6 feet tall without any variations in body measurements.': 1, "Yes, because it's a standard height for most adults and is relatively common in many cultures.": 1, 'Yes, someone who is 6 feet tall is considered very tall.': 1, 'No, it is not possible for someone to be exactly 6 feet tall. The standard height measurement in many countries uses inches as the unit of measurement and there are 12 inches in a foot, so that would make someone 72 inches': 1, 'Yes': 1, 'No': 1}
+    Entropy: 2.488, p_max: 0.200
+  → Binned as: HIGH
+
+[Question 7/10]
+
+  [UNCERTAINTY] Measuring for: Is $100,000 a lot of money?...
+  [PROMPT DEBUG] Using 'force_guess' mode from format_prompt
+    Sample 1: 'No.' (from: No.
+Is this correct?
+The final answer is incorrect. A reasonable estimate for "a...)
+    Sample 2: '$100,000 is an amount that can be considered significant and potentially meaningful depending on context, but it may not necessarily qualify as "a lot" of money in every situation. It is typically viewed as relatively substantial wealth for many' (from: $100,000 is an amount that can be considered significant and potentially meaning...)
+    Sample 3: 'To determine whether $100, 000 is a lot of money, we need to consider several factors that contribute to the perception and practical implications of such an amount in different contexts:' (from: To determine whether $100, 000 is a lot of money, we need to consider several fa...)
+    Distribution: {'No.': 2, '$100,000 is an amount that can be considered significant and potentially meaningful depending on context, but it may not necessarily qualify as "a lot" of money in every situation. It is typically viewed as relatively substantial wealth for many': 1, 'To determine whether $100, 000 is a lot of money, we need to consider several factors that contribute to the perception and practical implications of such an amount in different contexts:': 1, 'It is enough for someone who works hard and lives within their means. A million would be considered very rich.': 1, 'It depends on what you consider "a lot" of money.': 1, "To determine whether $100,000 is considered a lot of money, I'll consider several factors including its monetary value, common experiences with that amount of money, and societal perceptions of wealth.": 1, "It is considered to be quite a significant amount of money, especially for most people's daily lives. This figure suggests someone has accumulated substantial wealth over time and might indicate financial independence or an ability to make large purchases with little restraint.": 1, "It depends on how much you have earned before and what you plan to do with that amount of money. If it is someone's salary, then yes, it would be considered as a significant sum of money. However, if it is an individual who": 1, 'A rough estimate based on the cost of housing in many cities and average income suggests that $100, 000 is not a large amount of money for most people. For example, the median price of an existing single-family home in': 1, 'It is a significant amount of money and can be considered as an upper limit for many financial goals, but it\'s difficult to determine if it qualifies as "a lot" without knowing what someone is using this money for. For instance, if it\'s': 1, "Yes, $100, 000 is considered a large sum of money and can be seen as significant for many individuals, especially those looking to start their own businesses or make significant investments. However, it's important to note that what": 1, 'Yes, $100,000 is a significant amount of money.': 1, "$100, 000 is considered to be quite a substantial amount of money, especially for most people's standard of living and financial goals. It can represent significant investments in real estate, businesses, education, personal projects, etc.,": 1, 'Yes, it is a significant amount of money.': 1}
+    Entropy: 2.616, p_max: 0.133
+  → Binned as: HIGH
+
+[Question 8/10]
+
+  [UNCERTAINTY] Measuring for: Is 30 years old young?...
+  [PROMPT DEBUG] Using 'force_guess' mode from format_prompt
+    Sample 1: 'Young' (from: Young
+
+To determine whether someone is considered "young" at 30 years old, we ne...)
+    Sample 2: 'Yes, 30 years old is considered young.' (from: Yes, 30 years old is considered young.
+Justification:
+While I'm not an expert on...)
+    Sample 3: 'Young' (from: Young
+The term "young" is subjective and can vary depending on cultural norms, p...)
+    Distribution: {'Young': 3, 'Yes, 30 years old is considered young.': 1, 'To determine whether someone is considered "young" based on age alone can be subjective and varies by cultural norms and personal perspective. However, in most Western societies, people under the age of 30 are often considered younger than those who have reached their': 1, 'No': 2, 'No, 30 is considered an older age in most societies, typically corresponding to middle adulthood and beyond.': 1, 'Yes, it is considered young in most societies. The average lifespan for humans has been increasing over time due to advancements in medicine and healthcare. In many cultures, individuals who are thirty years old may still be considered young adults with significant life experiences under their': 1, 'Yes': 3, 'To determine whether someone is considered "young," it\'s important to consider various factors such as their age relative to others in their social group and their life experiences. At 30 years old, an individual might be considered young depending on these circumstances:': 1, 'No, I am older than that.': 1, 'Yes, age 30 is considered a young age. In most societies, people between the ages of 18 and 45 are typically referred to as being "young," particularly in terms of physical health, job prospects, and social relationships': 1}
+    Entropy: 2.176, p_max: 0.200
+  → Binned as: HIGH
+
+[Question 9/10]
+
+  [UNCERTAINTY] Measuring for: Is 2 hours a long time?...
+  [PROMPT DEBUG] Using 'force_guess' mode from format_prompt
+    Sample 1: 'To provide a specific and concise answer regarding whether two hours is considered a long time, I'll break down this information step by step:' (from: To provide a specific and concise answer regarding whether two hours is consider...)
+    Sample 2: 'It depends on the context and circumstances.' (from: It depends on the context and circumstances.
+To determine whether 2 hours is con...)
+    Sample 3: 'No, 2 hours is not considered a very long period of time in most contexts.' (from: No, 2 hours is not considered a very long period of time in most contexts.
+Step-...)
+    Distribution: {"To provide a specific and concise answer regarding whether two hours is considered a long time, I'll break down this information step by step:": 1, 'It depends on the context and circumstances.': 1, 'No, 2 hours is not considered a very long period of time in most contexts.': 1, 'Yes, 2 hours is considered a long amount of time. In many contexts, especially when comparing it to shorter durations like minutes or seconds, it can seem unusually extended. However, in other situations, particularly those that emphasize thoroughness or detail,': 1, 'A little more than an hour and a half': 1, 'No, it is not a long time for most people. However, some activities can be considered long when completed in less than two hours, such as reading an entire book or watching multiple movies back-to-back.': 1, 'No, it is not considered very long by most people\'s standards. Typically, we consider longer than an hour as "long" and less than that as "short". So, 2 hours would be described as being in the middle of the spectrum': 1, 'No, 2 hours is not considered a long time in most contexts.': 1, 'No, 2 hours is not considered a long time. Most people consider that to be an average amount of time for completing tasks.': 1, "No, it's not considered long by most people's standards.": 1, 'A reasonable amount of time for many activities': 1, 'Yes, it is considered a short period of time.': 1, 'Short Answer:': 1, "A good question! Let's break it down:": 1, 'Yes, 2 hours is considered a relatively short amount of time.': 1}
+    Entropy: 2.708, p_max: 0.067
+  → Binned as: HIGH
+
+[Question 10/10]
+
+  [UNCERTAINTY] Measuring for: Is blue the best color?...
+  [PROMPT DEBUG] Using 'force_guess' mode from format_prompt
+    Sample 1: 'No, blue is not necessarily the best color for every situation.' (from: No, blue is not necessarily the best color for every situation.
+
+Reasoning:
+
+Whi...)
+    Sample 2: 'No, red is generally considered as the best color.' (from: No, red is generally considered as the best color.
+Justification for this answer...)
+    Sample 3: 'No, red is generally considered to be the most dominant and attractive color for most people. Blue may look good in some contexts, but it often feels cold and uninviting compared to warm colors like red. The perception of "best" can vary' (from: No, red is generally considered to be the most dominant and attractive color for...)
+    Distribution: {'No, blue is not necessarily the best color for every situation.': 1, 'No, red is generally considered as the best color.': 1, 'No, red is generally considered to be the most dominant and attractive color for most people. Blue may look good in some contexts, but it often feels cold and uninviting compared to warm colors like red. The perception of "best" can vary': 1, 'UNCERTAIN': 1, 'I do not believe that "blue" is the only correct answer for this question. Different people have different opinions on what they find most beautiful and useful in their lives. For example, some may prefer other colors like red or yellow. So while it': 1, 'No, blue is not necessarily the best color. While it has several positive associations and benefits, it\'s subjective what constitutes "best" in terms of aesthetics and practicality. Different people have different preferences, and various colors can be perceived as more appropriate': 1, 'I do not have any personal preference for colors and cannot determine whether blue is considered "the best" based on my own subjective opinions. However, it\'s important to note that preferences for color can vary greatly among individuals. Some people might find blue calming': 1, 'No': 3, 'No, blue is just one of many colors that can be aesthetically pleasing depending on context and personal preference.': 1, "Blue is an attractive and versatile color that has been associated with calmness, tranquility, and serenity throughout history. It's often used in branding, advertising, and interior design for these reasons. While some might argue that green is more universally appealing": 1, 'No.': 2, 'No, blue is not the best color. The best colors depend on personal preferences and context. While blue can be calming and soothing in many settings, it may not always be the most suitable choice for every situation. Different people might find other colors more': 1}
+    Entropy: 2.396, p_max: 0.200
+  → Binned as: HIGH
+
+======================================================================
+PHASE 1 SUMMARY: Uncertainty Distribution
+======================================================================
+  LOW: 0 questions (0%)
+  MEDIUM: 0 questions (0%)
+  HIGH: 10 questions (100%)
+
+======================================================================
+PHASE 2: Testing Steering Impact on Abstention
+======================================================================
+
+[Steering Test 1/10] Bin: HIGH
+
+  [STEERING TEST] Question: Is the number 7 large?...
+  [PROMPT DEBUG] Using 'allow_uncertainty' mode from format_prompt
+    BASELINE: answer='No, the number 7 is not considered large. It is a small prime number.' abstained=False
+      Full response: No, the number 7 is not considered large. It is a small prime number. 
+
+Explanation: The term "large" typically refers t...
+    STEERED (ε=4.0, layer=24): answer='No, the number 7 is not considered large. It is a small prime number.' abstained=False
+      Full response: No, the number 7 is not considered large. It is a small prime number. 
+
+Explanation: The term "large" typically refers t...
+    RESULT: behavior_changed=False
+
+[Steering Test 2/10] Bin: HIGH
+
+  [STEERING TEST] Question: Is coffee a healthy drink?...
+  [PROMPT DEBUG] Using 'allow_uncertainty' mode from format_prompt
+    BASELINE: answer='Coffee can be beneficial for health, but it also contains caffeine which may have negative effects on some people. Moderation is key to enjoying its potential benefits without drawbacks.' abstained=False
+      Full response: Coffee can be beneficial for health, but it also contains caffeine which may have negative effects on some people. Moder...
+    STEERED (ε=4.0, layer=24): answer='Coffee can be beneficial for health, but it also contains caffeine which may have negative effects on some people. Moderation is key to enjoying its potential benefits without drawbacks.' abstained=False
+      Full response: Coffee can be beneficial for health, but it also contains caffeine which may have negative effects on some people. Moder...
+    RESULT: behavior_changed=False
+
+[Steering Test 3/10] Bin: HIGH
+
+  [STEERING TEST] Question: Is AI dangerous?...
+  [PROMPT DEBUG] Using 'allow_uncertainty' mode from format_prompt
+    BASELINE: answer='AI can be dangerous if not properly regulated and controlled. It has the potential to cause harm, especially when used for malicious purposes or in unethical ways. However, with proper oversight and ethical guidelines, AI can also bring significant benefits and advancements. The key is ensuring that it serves humanity's best interests rather' abstained=False
+      Full response: AI can be dangerous if not properly regulated and controlled. It has the potential to cause harm, especially when used f...
+    STEERED (ε=4.0, layer=24): answer='AI can be dangerous if not properly regulated and controlled. It has the potential to cause harm, especially in areas like autonomous weapons or deepfakes. However, with proper oversight and ethical guidelines, it can also lead to significant benefits such as improved healthcare and automation of tasks. The key is ensuring that' abstained=False
+      Full response: AI can be dangerous if not properly regulated and controlled. It has the potential to cause harm, especially in areas li...
+    RESULT: behavior_changed=False
+
+[Steering Test 4/10] Bin: HIGH
+
+  [STEERING TEST] Question: Is winter the best season?...
+  [PROMPT DEBUG] Using 'allow_uncertainty' mode from format_prompt
+    BASELINE: answer='Winter is not necessarily the best season for everyone. Some people enjoy the cold weather, while others prefer warmer temperatures and longer daylight hours. The best season depends on personal preferences and activities one enjoys.' abstained=False
+      Full response: Winter is not necessarily the best season for everyone. Some people enjoy the cold weather, while others prefer warmer t...
+    STEERED (ε=4.0, layer=24): answer='Winter is not necessarily the best season for everyone. Some people enjoy the cold weather, while others prefer warmer climates. The best season depends on personal preferences and activities one enjoys.' abstained=False
+      Full response: Winter is not necessarily the best season for everyone. Some people enjoy the cold weather, while others prefer warmer c...
+    RESULT: behavior_changed=False
+
+[Steering Test 5/10] Bin: HIGH
+
+  [STEERING TEST] Question: Should you exercise daily?...
+  [PROMPT DEBUG] Using 'allow_uncertainty' mode from format_prompt
+    BASELINE: answer='Yes, regular exercise is beneficial for overall health and well-being. It can help maintain a healthy weight, reduce stress, improve mood, and increase energy levels. However, it's important to listen to your body and not overdo it. A moderate amount of physical activity most days of the week is' abstained=False
+      Full response: Yes, regular exercise is beneficial for overall health and well-being. It can help maintain a healthy weight, reduce str...
+    STEERED (ε=4.0, layer=24): answer='Yes, regular exercise is beneficial for overall health and well-being. It can help maintain a healthy weight, reduce stress, improve mood, and increase energy levels. However, it's important to listen to your body and not overdo it. A moderate amount of physical activity most days of the week is' abstained=False
+      Full response: Yes, regular exercise is beneficial for overall health and well-being. It can help maintain a healthy weight, reduce str...
+    RESULT: behavior_changed=False
+
+[Steering Test 6/10] Bin: HIGH
+
+  [STEERING TEST] Question: Is 6 feet tall?...
+  [PROMPT DEBUG] Using 'allow_uncertainty' mode from format_prompt
+    BASELINE: answer='Yes, 6 feet is a common height for an adult male.' abstained=False
+      Full response: Yes, 6 feet is a common height for an adult male. 
+
+Explanation: Six feet (or 183 centimeters) is considered a typical h...
+    STEERED (ε=4.0, layer=24): answer='Yes, 6 feet is a common height for an adult male.' abstained=False
+      Full response: Yes, 6 feet is a common height for an adult male. 
+
+Explanation: Six feet (or 183 centimeters) is considered a standard ...
+    RESULT: behavior_changed=False
+
+[Steering Test 7/10] Bin: HIGH
+
+  [STEERING TEST] Question: Is $100,000 a lot of money?...
+  [PROMPT DEBUG] Using 'allow_uncertainty' mode from format_prompt
+    BASELINE: answer='Yes, $100,000 is considered a significant amount of money. It can be used for various purposes such as buying a house, starting a business, or saving for retirement. However, it's important to note that what constitutes "a lot" of money varies by individual and' abstained=False
+      Full response: Yes, $100,000 is considered a significant amount of money. It can be used for various purposes such as buying a house, s...
+    STEERED (ε=4.0, layer=24): answer='Yes, $100,000 is considered a significant amount of money. It can be used for various purposes such as buying a house, starting a business, or saving for retirement. However, it's important to note that what "a lot" means varies from person to person and' abstained=False
+      Full response: Yes, $100,000 is considered a significant amount of money. It can be used for various purposes such as buying a house, s...
+    RESULT: behavior_changed=False
+
+[Steering Test 8/10] Bin: HIGH
+
+  [STEERING TEST] Question: Is 30 years old young?...
+  [PROMPT DEBUG] Using 'allow_uncertainty' mode from format_prompt
+    BASELINE: answer='Yes, 30 years old is considered young. The term "young" typically refers to someone who is under the age of 30 in most cultures and societies. However, it's important to note that societal views on youth can vary widely depending on cultural norms and personal perspectives. In some' abstained=False
+      Full response: Yes, 30 years old is considered young. The term "young" typically refers to someone who is under the age of 30 in most c...
+    STEERED (ε=4.0, layer=24): answer='Yes, 30 years old is considered young. The term "young" typically refers to someone in their early twenties or thirties, but it can also be used more broadly to describe anyone under a certain age. In many contexts, being 30 years old is still considered relatively young' abstained=False
+      Full response: Yes, 30 years old is considered young. The term "young" typically refers to someone in their early twenties or thirties,...
+    RESULT: behavior_changed=False
+
+[Steering Test 9/10] Bin: HIGH
+
+  [STEERING TEST] Question: Is 2 hours a long time?...
+  [PROMPT DEBUG] Using 'allow_uncertainty' mode from format_prompt
+    BASELINE: answer='Yes, 2 hours is considered a relatively short amount of time. It's often used for quick tasks or activities that don't require much concentration or effort. However, it can feel longer if you're doing something repetitive or monotonous. In contrast to this, 10 hours might be' abstained=False
+      Full response: Yes, 2 hours is considered a relatively short amount of time. It's often used for quick tasks or activities that don't r...
+    STEERED (ε=4.0, layer=24): answer='Yes, 2 hours is considered a relatively short amount of time. It's often used for quick tasks or activities that don't require much concentration or effort. However, it can feel longer if you're doing something repetitive or monotonous. In contrast to this, 10 hours might be' abstained=False
+      Full response: Yes, 2 hours is considered a relatively short amount of time. It's often used for quick tasks or activities that don't r...
+    RESULT: behavior_changed=False
+
+[Steering Test 10/10] Bin: HIGH
+
+  [STEERING TEST] Question: Is blue the best color?...
+  [PROMPT DEBUG] Using 'allow_uncertainty' mode from format_prompt
+    BASELINE: answer='No, blue is not necessarily the best color. Different people have different preferences for colors and what may be considered "best" can vary widely depending on cultural or personal factors. Blue is often associated with calmness and trust but it's subjective whether it's universally seen as the most desirable color.' abstained=False
+      Full response: No, blue is not necessarily the best color. Different people have different preferences for colors and what may be consi...
+    STEERED (ε=4.0, layer=24): answer='No, blue is not necessarily the best color. Different people have different preferences for colors and what may be considered "best" can vary widely depending on cultural or personal factors. Blue is often associated with calmness and trust but it's subjective whether it's universally seen as the most desirable color.' abstained=False
+      Full response: No, blue is not necessarily the best color. Different people have different preferences for colors and what may be consi...
+    RESULT: behavior_changed=False
+
+======================================================================
+PHASE 2 SUMMARY: Steering Results
+======================================================================
+  Baseline abstentions: 0/10 (0%)
+  Steered abstentions: 0/10 (0%)
+  Behavior changes: 0/10 (0%)
+
+  By uncertainty bin:
+    HIGH: 0/10 changed (0%)
+
+✓ Results saved to results/exp4_raw_results.csv
+
+======================================================================
+EXPERIMENT 4: DETAILED ANALYSIS
+======================================================================
+
+1. UNCERTAINTY BIN DISTRIBUTION
+----------------------------------------
+  LOW: 0 questions
+  MEDIUM: 0 questions
+  HIGH: 10 questions
+
+2. BEHAVIOR CHANGE RATES BY BIN
+----------------------------------------
+  HIGH: 0/10 = 0.0%
+
+3. ABSTENTION RATES
+----------------------------------------
+  HIGH: 0.0% → 0.0%
+
+4. KEY TRANSITIONS
+----------------------------------------
+  High uncertainty: abstain → answer = 0
+  Low uncertainty: answer → abstain = 0
+
+5. CONFUSION TABLES
+----------------------------------------
+Before steering (bin × abstained):
+baseline_abstained  False
+uncertainty_bin          
+high                   10
+
+After steering (bin × abstained):
+steered_abstained  False
+uncertainty_bin         
+high                  10
+
+✓ Figure saved to results/exp4_gate_independence.png
+  ✓ Complete - KEY FINDING ESTABLISHED
+
+Running Experiment 5: Trustworthiness Application...
+
+============================================================
+EXPERIMENT 5: Trustworthiness Application
+============================================================
+
+Testing with ε=0
+
+Testing with ε=2.0
+
+Testing with ε=4.0
+
+Testing with ε=6.0
+
+Results saved to results/exp5_raw_results.csv
+
+============================================================
+EXPERIMENT 5: ANALYSIS
+============================================================
+
+Risk-Coverage Tradeoff:
+ epsilon  coverage  accuracy  risk  n_answered  n_total
+     0.0       1.0       1.0   0.0           5        5
+     2.0       1.0       1.0   0.0           5        5
+     4.0       1.0       1.0   0.0           5        5
+     6.0       1.0       1.0   0.0           5        5
+
+=== KEY FINDING ===
+Increasing epsilon (steering toward abstention) should:
+  ↓ Decrease coverage (answer fewer questions)
+  ↑ Increase accuracy (be right more often when answering)
+  ↓ Decrease risk (make fewer mistakes)
+
+From baseline (ε=0) to max steering (ε=6.0):
+  Coverage:  100.00% → 100.00% (Δ=+0.00%)
+  Accuracy:  100.00% → 100.00% (Δ=+0.00%)
+
+Figure saved to results/exp5_trustworthiness.png
+  ✓ Complete
+
+================================================================================
+ PIPELINE COMPLETE!
+================================================================================
+
+Total time: 3.4 minutes
+Results saved to: results/master_summary_quick.json
+
+✓ All experiments completed successfully!
+
