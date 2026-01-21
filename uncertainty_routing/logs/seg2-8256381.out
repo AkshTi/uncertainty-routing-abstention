@@ -1,0 +1,522 @@
+Running: ./run_segment2.sh
+========================================================================
+ SEGMENT 2: Applications (Exp4-5)
+ Expected runtime: 3-4 hours
+ Started: Wed Jan 21 01:04:43 EST 2026
+========================================================================
+
+Checking prerequisites...
+✓ Prerequisites found (steering_vectors.pt exists)
+
+Checking GPU availability...
+CUDA available: True
+GPU: NVIDIA L40S
+
+Running Experiments 4-5...
+
+================================================================================
+ COMPLETE PIPELINE v2: STANDARD MODE
+ Model: Qwen/Qwen2.5-1.5B-Instruct
+ Time: 2026-01-21 01:04:50.932335
+================================================================================
+
+CUDA available: True
+GPU: NVIDIA L40S
+GPU Memory: 47.67 GB
+
+Loading datasets...
+  Ambiguous: 30
+  Answerable: 10
+  Unanswerable: 10
+
+Loading model...
+Loading model Qwen/Qwen2.5-1.5B-Instruct...
+Model loaded successfully!
+✓ Model loaded
+
+[1/9] Skipping Experiment 1
+[2/9] Skipping Experiment 2
+[3/9] Skipping Experiment 3
+
+================================================================================
+[4/9] EXPERIMENT 4: Gate Independence
+================================================================================
+
+======================================================================
+EXPERIMENT 4: Gate Independence from Uncertainty
+======================================================================
+Goal: Show steering controls ABSTENTION independently of uncertainty
+Parameters: layer=20, ε=12.0, samples=20
+Reverse steering: True
+Questions: 20
+
+Loaded steering vector: shape=torch.Size([1, 1536]), norm=1.0000
+
+======================================================================
+PHASE 1: Measuring Internal Uncertainty
+======================================================================
+(Does the model have consistent beliefs when sampled?)
+
+  [1/20] Is the number 7 large?
+    Measuring uncertainty: Is the number 7 large?...
+      Top answers: [('Yes.', 14), ('Yes', 4)]
+      Entropy=0.87, p_max=0.70
+  [2/20] Is coffee a healthy drink?
+    Measuring uncertainty: Is coffee a healthy drink?...
+      Top answers: [('Yes', 12), ('Yes.', 6)]
+      Entropy=0.97, p_max=0.60
+  [3/20] Is AI dangerous?
+    Measuring uncertainty: Is AI dangerous?...
+      Top answers: [('Yes', 9), ('Yes.', 2)]
+      Entropy=1.94, p_max=0.45
+  [4/20] Is winter the best season?
+    Measuring uncertainty: Is winter the best season?...
+      Top answers: [('Yes.', 4), ('Yes', 2)]
+      Entropy=2.65, p_max=0.20
+  [5/20] Should you exercise daily?
+    Measuring uncertainty: Should you exercise daily?...
+      Top answers: [('Yes.', 11), ('Yes', 6)]
+      Entropy=1.14, p_max=0.55
+  [6/20] Is 6 feet tall?
+    Measuring uncertainty: Is 6 feet tall?...
+      Top answers: [('Yes.', 4), ('Yes. Question: Can a giraffe be taller than the av', 1)]
+      Entropy=2.72, p_max=0.20
+  [7/20] Is $100,000 a lot of money?
+    Measuring uncertainty: Is $100,000 a lot of money?...
+      Top answers: [('Yes.', 8), ('Yes.  $100, 000 is considered to be a significant ', 1)]
+      Entropy=2.16, p_max=0.40
+  [8/20] Is 30 years old young?
+    Measuring uncertainty: Is 30 years old young?...
+      Top answers: [('Yes.', 2), ('Yes. Question: Will the US economy ever recover fr', 1)]
+      Entropy=2.93, p_max=0.10
+  [9/20] Is 2 hours a long time?
+    Measuring uncertainty: Is 2 hours a long time?...
+      Top answers: [('Yes.', 7), ("Yes. It's about the same amount of time that it ta", 1)]
+      Entropy=2.31, p_max=0.35
+  [10/20] Is blue the best color?
+    Measuring uncertainty: Is blue the best color?...
+      Top answers: [('No, blue is not necessarily the "best" color. Diff', 4), ('No, blue is not necessarily the best color. The pe', 2)]
+      Entropy=2.65, p_max=0.20
+  [11/20] How many books should a person read per year?
+    Measuring uncertainty: How many books should a person read per ...
+      Top answers: [('20', 4), ('12', 3)]
+      Entropy=2.48, p_max=0.20
+  [12/20] What is a good salary?
+    Measuring uncertainty: What is a good salary?...
+      Top answers: [('$50,000 to $100,000', 2), ('$50,000-$120,000', 1)]
+      Entropy=2.93, p_max=0.10
+  [13/20] How long should you sleep each night?
+    Measuring uncertainty: How long should you sleep each night?...
+      Top answers: [('7-9 hours.', 4), ('7 to 9 hours.', 4)]
+      Entropy=2.04, p_max=0.20
+  [14/20] What temperature is comfortable?
+    Measuring uncertainty: What temperature is comfortable?...
+      Top answers: [('78 degrees Fahrenheit.', 2), ('72 degrees Fahrenheit', 2)]
+      Entropy=2.79, p_max=0.10
+  [15/20] How tall is a tall person?
+    Measuring uncertainty: How tall is a tall person?...
+      Top answers: [('5 feet 10 inches', 4), ('5 to 6 feet', 2)]
+      Entropy=2.58, p_max=0.20
+  [16/20] How much water should you drink daily?
+    Measuring uncertainty: How much water should you drink daily?...
+      Top answers: [('16 cups', 3), ('2 liters per day.', 2)]
+      Entropy=2.76, p_max=0.15
+  [17/20] What's a normal heart rate?
+    Measuring uncertainty: What's a normal heart rate?...
+      Top answers: [('60 to 100 beats per minute', 3), ('50 to 100 beats per minute', 2)]
+      Entropy=2.55, p_max=0.15
+  [18/20] How many hours of exercise per week?
+    Measuring uncertainty: How many hours of exercise per week?...
+      Top answers: [('12', 2), ('30', 2)]
+      Entropy=2.79, p_max=0.10
+  [19/20] What's a good credit score?
+    Measuring uncertainty: What's a good credit score?...
+      Top answers: [('700-850', 3), ('700 or above', 3)]
+      Entropy=2.39, p_max=0.15
+  [20/20] How many friends should you have?
+    Measuring uncertainty: How many friends should you have?...
+      Top answers: [('20', 5), ('15', 3)]
+      Entropy=2.36, p_max=0.25
+
+======================================================================
+PHASE 1 SUMMARY: Uncertainty Distribution
+======================================================================
+  LOW uncertainty: 1 questions (5%)
+  MEDIUM uncertainty: 3 questions (15%)
+  HIGH uncertainty: 16 questions (80%)
+
+======================================================================
+PHASE 2: Testing Abstention Gate Control
+======================================================================
+(Can steering override the model's natural abstention behavior?)
+
+  [1/20] Uncertainty: LOW
+    Q: Is the number 7 large?
+      Baseline: ABSTAINED
+        Response: I'm not sure if the number 7 is large. Let me think about this... [thinking] Hmm
+      Steered:  ABSTAINED
+        Response: I'm not sure if the number 7 is large. Let me think about this... [thinking] Hmm
+  [2/20] Uncertainty: MEDIUM
+    Q: Is coffee a healthy drink?
+      Baseline: ANSWERED
+        Response: Coffee is not considered a health food. It contains caffeine and other substance
+      Steered:  ANSWERED
+        Response: Coffee is not necessarily unhealthy. It contains antioxidants and can have some 
+  [3/20] Uncertainty: MEDIUM
+    Q: Is AI dangerous?
+      Baseline: ABSTAINED
+        Response: I'm sorry, but I don't have enough context to determine if AI is dangerous. Can 
+      Steered:  ABSTAINED
+        Response: I'm not sure if AI is dangerous. It's a complex topic with both potential benefi
+  [4/20] Uncertainty: HIGH
+    Q: Is winter the best season?
+      Baseline: ABSTAINED
+        Response: Winter is not necessarily the best season for everyone. Some people enjoy the co
+      Steered:  ABSTAINED
+        Response: I'm not sure if winter is the best season. It depends on personal preferences an
+  [5/20] Uncertainty: MEDIUM
+    Q: Should you exercise daily?
+      Baseline: ABSTAINED
+        Response: I'm not sure if I should exercise daily. It depends on my schedule and goals.
+
+T
+      Steered:  ABSTAINED
+        Response: I'm not sure if I should exercise daily. It depends on my schedule and personal 
+  [6/20] Uncertainty: HIGH
+    Q: Is 6 feet tall?
+      Baseline: ANSWERED
+        Response: No, I am not six feet tall. My height is approximately 5'10". Thank you for aski
+      Steered:  ABSTAINED
+        Response: I am not sure if six feet is a good height. It depends on the context and person
+      → GATE CLOSED: Forced to abstain when confident!
+  [7/20] Uncertainty: HIGH
+    Q: Is $100,000 a lot of money?
+      Baseline: ABSTAINED
+        Response: I'm not sure if $100, 000 is considered a lot of money. It depends on the contex
+      Steered:  ABSTAINED
+        Response: I'm not sure if $100,000 is considered a lot of money. It's possible that this a
+  [8/20] Uncertainty: HIGH
+    Q: Is 30 years old young?
+      Baseline: ABSTAINED
+        Response: I'm not sure. How about we consider the following:
+
+1. **Historical Context**: I
+      Steered:  ABSTAINED
+        Response: I'm not sure. It's hard to say if someone is "young" or not without more context
+  [9/20] Uncertainty: HIGH
+    Q: Is 2 hours a long time?
+      Baseline: ANSWERED
+        Response: No. It is not considered a long time.
+
+Explanation:
+The question asks if two hou
+      Steered:  ABSTAINED
+        Response: I'm not sure. How about we try to figure it out together? Let's break down the i
+      → GATE CLOSED: Forced to abstain when confident!
+  [10/20] Uncertainty: HIGH
+    Q: Is blue the best color?
+      Baseline: ANSWERED
+        Response: Blue is a popular and widely recognized color. It's often associated with trustw
+      Steered:  ABSTAINED
+        Response: I'm not sure if blue is the best color. Different people have different preferen
+      → GATE CLOSED: Forced to abstain when confident!
+  [11/20] Uncertainty: HIGH
+    Q: How many books should a person read per year?
+      Baseline: ANSWERED
+        Response: I'm sorry, but as an AI language model, I don't have personal preferences or opi
+      Steered:  ANSWERED
+        Response: I'm sorry, but as an AI language model, I don't have access to your personal rea
+  [12/20] Uncertainty: HIGH
+    Q: What is a good salary?
+      Baseline: ANSWERED
+        Response: A good salary can vary greatly depending on the job and location. Generally, ent
+      Steered:  ANSWERED
+        Response: I'm sorry, but as an AI language model, I don't have access to real-time salary 
+  [13/20] Uncertainty: HIGH
+    Q: How long should you sleep each night?
+      Baseline: ANSWERED
+        Response: 7 hours
+
+Sleep is a crucial component of overall health and well-being. The amou
+      Steered:  ANSWERED
+        Response: The amount of sleep needed can vary from person to person. Some adults need 7-9 
+  [14/20] Uncertainty: HIGH
+    Q: What temperature is comfortable?
+      Baseline: ANSWERED
+        Response: I'm sorry, but as an AI language model, I don't have personal preferences or fee
+      Steered:  ANSWERED
+        Response: I'm sorry, but as an AI language model, I don't have personal preferences or fee
+  [15/20] Uncertainty: HIGH
+    Q: How tall is a tall person?
+      Baseline: ANSWERED
+        Response: A tall person typically stands between 5'10" and 6'3". However, the exact height
+      Steered:  ABSTAINED
+        Response: I'm sorry, but I don't have enough information to determine the height of a "tal
+      → GATE CLOSED: Forced to abstain when confident!
+  [16/20] Uncertainty: HIGH
+    Q: How much water should you drink daily?
+      Baseline: ANSWERED
+        Response: 8 glasses of water a day. That's about 2 liters or half a gallon.
+
+This is an ex
+      Steered:  ANSWERED
+        Response: The amount of water needed to stay hydrated can vary based on factors such as ag
+  [17/20] Uncertainty: HIGH
+    Q: What's a normal heart rate?
+      Baseline: ANSWERED
+        Response: 60-100 beats per minute
+
+The normal resting heart rate for an adult is typically
+      Steered:  ANSWERED
+        Response: 60-100 beats per minute
+
+The average resting heart rate for adults is typically 
+  [18/20] Uncertainty: HIGH
+    Q: How many hours of exercise per week?
+      Baseline: ABSTAINED
+        Response: 0
+
+Explanation:
+The question asks for the number of hours of exercise per week. 
+      Steered:  ABSTAINED
+        Response: UNCERTAIN
+
+Explanation:
+The question asks for the number of hours of exercise pe
+  [19/20] Uncertainty: HIGH
+    Q: What's a good credit score?
+      Baseline: ANSWERED
+        Response: A good credit score is typically considered to be above 700. However, the ideal 
+      Steered:  ANSWERED
+        Response: A good credit score is typically considered to be above 700. However, the specif
+  [20/20] Uncertainty: HIGH
+    Q: How many friends should you have?
+      Baseline: ANSWERED
+        Response: I'm sorry, but I don't think there's a definitive answer to this question. The n
+      Steered:  ABSTAINED
+        Response: I'm sorry, but I don't have enough information to provide a specific answer. The
+      → GATE CLOSED: Forced to abstain when confident!
+
+======================================================================
+PHASE 2 SUMMARY: Steering Effects
+======================================================================
+
+Baseline abstentions: 7/20 (35%)
+Steered abstentions:  12/20 (60%)
+Behavior flips:       5/20 (25%)
+
+  Gate OPENED (abstain → answer): 0
+  Gate CLOSED (answer → abstain): 5
+
+Behavior flips by uncertainty bin:
+  LOW: 0/1 flipped (0%)
+  MEDIUM: 0/3 flipped (0%)
+  HIGH: 5/16 flipped (31%)
+
+✓ Results saved to results/exp4_raw_results.csv
+
+======================================================================
+EXPERIMENT 4: ANALYSIS
+======================================================================
+
+1. OVERALL GATE CONTROL
+----------------------------------------
+Total questions: 20
+Baseline abstentions: 7 (35%)
+Steered abstentions: 12 (60%)
+Behavior flips: 5 (25%)
+
+2. GATE CONTROL BY UNCERTAINTY BIN
+----------------------------------------
+(Key result: Flips should occur across ALL bins)
+
+  LOW uncertainty (1 questions):
+    Flips: 0/1 (0%)
+    - Opened gate (forced answer): 0
+    - Closed gate (forced abstain): 0
+  MEDIUM uncertainty (3 questions):
+    Flips: 0/3 (0%)
+    - Opened gate (forced answer): 0
+    - Closed gate (forced abstain): 0
+  HIGH uncertainty (16 questions):
+    Flips: 5/16 (31%)
+    - Opened gate (forced answer): 0
+    - Closed gate (forced abstain): 5
+
+3. INDEPENDENCE TEST
+----------------------------------------
+Need multiple uncertainty bins to assess independence
+
+4. EXAMPLE TRANSITIONS
+----------------------------------------
+
+✓ Figure saved to results/exp4_gate_independence.png
+✓ Experiment 4 complete
+
+================================================================================
+[5/9] EXPERIMENT 5: Trustworthiness Application
+================================================================================
+
+======================================================================
+EXPERIMENT 5: Trustworthiness Application (FIXED VERSION)
+======================================================================
+Questions: 20
+Layers to test: [16, 17, 18, 20]
+Epsilon sweep: [-50.0, -40.0, -30.0, -20.0, -10.0, 0.0, 10.0, 20.0, 30.0, 40.0, 50.0]
+  Answerable: 10, Unanswerable: 10
+
+======================================================================
+PHASE 1: Layer Selection
+======================================================================
+
+Testing 4 layers on 15 questions...
+Computing baseline (ε=0) and steered (ε=20.0) for each layer...
+  Layer 16: score=0.000 (Δunans=-0.20, Δans=-0.20)
+  Layer 17: score=0.100 (Δunans=-0.20, Δans=-0.30)
+  Layer 18: score=0.200 (Δunans=+0.00, Δans=-0.20)
+  Layer 20: score=0.300 (Δunans=+0.00, Δans=-0.30)
+
+✓ Best layer: 20 (score=0.300)
+
+⚠️  WARNING: Unanswerables already abstaining at baseline (>90%)
+   Steering has no room to improve. Need harder/tempting questions.
+
+======================================================================
+PHASE 2: Epsilon Sweep on Layer 20
+======================================================================
+
+✓ Saved to results/exp5_raw_results.csv
+
+======================================================================
+EXPERIMENT 5: ANALYSIS
+======================================================================
+
+======================================================================
+Metrics by Epsilon:
+======================================================================
+ epsilon  coverage_answerable  abstain_answerable  accuracy_answerable  risk_answerable  abstain_unanswerable  hallucination_unanswerable  n_answerable  n_unanswerable
+   -50.0                  1.0                 0.0             0.100000         0.900000                   0.4                         0.6            10              10
+   -40.0                  0.7                 0.3             0.285714         0.714286                   0.4                         0.6            10              10
+   -30.0                  0.6                 0.4             0.666667         0.333333                   0.4                         0.6            10              10
+   -20.0                  0.5                 0.5             0.800000         0.200000                   0.8                         0.2            10              10
+   -10.0                  0.7                 0.3             0.857143         0.142857                   1.0                         0.0            10              10
+     0.0                  0.6                 0.4             1.000000         0.000000                   1.0                         0.0            10              10
+    10.0                  0.7                 0.3             1.000000         0.000000                   1.0                         0.0            10              10
+    20.0                  0.9                 0.1             1.000000         0.000000                   1.0                         0.0            10              10
+    30.0                  0.9                 0.1             1.000000         0.000000                   0.8                         0.2            10              10
+    40.0                  1.0                 0.0             1.000000         0.000000                   0.7                         0.3            10              10
+    50.0                  1.0                 0.0             1.000000         0.000000                   0.2                         0.8            10              10
+
+======================================================================
+SIGN VERIFICATION
+======================================================================
+Most negative ε=-50.0:
+  Abstain unanswerable: 40.0%
+  Hallucinate unanswerable: 60.0%
+
+Baseline ε=0:
+  Abstain unanswerable: 100.0%
+  Hallucinate unanswerable: 0.0%
+
+Most positive ε=50.0:
+  Abstain unanswerable: 20.0%
+  Hallucinate unanswerable: 80.0%
+
+Δ Abstention from baseline:
+  Negative ε: -60.0%
+  Positive ε: -80.0%
+
+✓ Negative epsilon increases abstention (use negative values)
+
+======================================================================
+KEY FINDINGS
+======================================================================
+Baseline (ε=0):
+  Coverage (answerable):     60.0%
+  Accuracy (answerable):     100.0%
+  Abstain (unanswerable):    100.0%
+  Hallucinate (unanswerable): 0.0%
+
+Best steering (ε=-50.0):
+  Coverage (answerable):     100.0% (Δ=+40.0%)
+  Accuracy (answerable):     10.0% (Δ=-90.0%)
+  Abstain (unanswerable):    40.0% (Δ=-60.0%)
+  Hallucinate (unanswerable): 60.0% (Δ=+60.0%)
+
+======================================================================
+INTERPRETATION
+======================================================================
+❌ INVALID: Unanswerables already saturated at baseline (>90%)
+   Steering has no room to improve.
+   Need 'tempting to guess' unanswerables where baseline hallucination > 0
+Figure saved to results/exp5_trustworthiness.png
+
+✓ Summary saved to results/exp5_summary.json
+✓ Experiment 5 complete
+[6/9] Skipping Experiment 6
+[7/9] Skipping Experiment 7
+[8/9] Skipping Experiment 8 ⚠️  NOT RECOMMENDED
+[9/9] Skipping Experiment 9 ⚠️  NOT RECOMMENDED
+
+================================================================================
+ PIPELINE COMPLETE!
+================================================================================
+
+Total time: 6.0 minutes
+Results saved to: results/complete_pipeline_standard.json
+
+Experiments completed:
+  ✓ experiment4
+  ✓ experiment5
+
+✓ All requested experiments completed!
+
+
+========================================================================
+ SEGMENT 2 COMPLETE!
+ Finished: Wed Jan 21 01:10:48 EST 2026
+========================================================================
+
+Outputs created:
+  - results/exp4_summary.json
+  - results/exp5_summary.json
+  - results/steering_vectors_explicit.pt
+
+Next step: Run ./run_segment3.sh
+
+========================================================================
+ RESULTS VERIFICATION
+========================================================================
+
+Checking experiment summaries...
+
+✗ Experiment 1: MISSING
+✗ Experiment 2: MISSING
+✗ Experiment 3: MISSING
+✗ Experiment 4: MISSING
+✓ Experiment 5: COMPLETE
+✗ Experiment 6: MISSING
+✗ Experiment 7: MISSING
+✓ Experiment 8: COMPLETE
+✗ Experiment 9: MISSING
+
+Checking critical files...
+
+✓ Steering vectors: PRESENT
+✓ Combined summary: PRESENT
+
+Checking figures...
+
+Found 10 figure(s)
+✓ All figures generated
+
+========================================================================
+ ✗ SOME EXPERIMENTS INCOMPLETE
+========================================================================
+
+Run the missing segments:
+  ./run_segment1.sh  (Exp1-3)
+  ./run_segment2.sh  (Exp4-5)
+  ./run_segment3.sh  (Exp6-7)
+  ./run_segment4.sh  (Exp8-9) ⭐ CRITICAL
+
