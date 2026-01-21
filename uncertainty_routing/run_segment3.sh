@@ -18,19 +18,28 @@ echo ""
 
 # Verify prerequisites
 echo "Checking prerequisites..."
+
+# Check for steering vectors (primary requirement)
 if [ ! -f "results/steering_vectors_explicit.pt" ]; then
-    echo "ERROR: steering_vectors_explicit.pt not found!"
-    echo "Please run ./run_segment2.sh first"
-    exit 1
+    # Fallback: check if regular steering vectors exist (can be used)
+    if [ ! -f "results/steering_vectors.pt" ]; then
+        echo "ERROR: No steering vectors found!"
+        echo "Please run ./run_segment1.sh and ./run_segment2.sh first"
+        exit 1
+    else
+        echo "⚠️  Using steering_vectors.pt (explicit version not found)"
+        echo "   This may work but exp5 should create steering_vectors_explicit.pt"
+    fi
 fi
 
-if [ ! -f "results/exp5_summary.json" ]; then
-    echo "ERROR: exp5_summary.json not found!"
-    echo "Please run ./run_segment2.sh first"
-    exit 1
+# Check for Exp5 results (for optimal epsilon)
+if [ ! -f "results/exp5_summary.json" ] && [ ! -f "results/exp5_raw_results.csv" ]; then
+    echo "⚠️  Warning: Exp5 results not found - will use default epsilon"
+else
+    echo "✓ Exp5 results found"
 fi
 
-echo "✓ Prerequisites found"
+echo "✓ Prerequisites satisfied"
 echo ""
 
 # Check GPU
