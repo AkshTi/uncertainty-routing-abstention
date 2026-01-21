@@ -1,0 +1,149 @@
+Running: ./run_segment4a.sh
+========================================================================
+ SEGMENT 4A: Scaling Analysis (Exp8) ⭐
+ Expected runtime: 4-5 hours
+ Started: Wed Jan 21 00:12:43 EST 2026
+========================================================================
+
+⚠️  THIS IS THE MOST CRITICAL EXPERIMENT (+30% acceptance)
+
+Checking prerequisites...
+✓ Prerequisites found
+
+Checking GPU availability...
+CUDA available: True
+GPU: NVIDIA L40S
+
+Running Experiment 8 (Scaling)...
+Loading test questions...
+Test set: 20 questions
+
+======================================================================
+EXPERIMENT 8: SCALING ANALYSIS
+======================================================================
+
+======================================================================
+Testing model: Qwen/Qwen2.5-1.5B-Instruct
+======================================================================
+Loading model Qwen/Qwen2.5-1.5B-Instruct...
+Model loaded successfully!
+Loaded: 28 layers, 1536 hidden dim
+Auto-selected layers: [22, 23, 24, 25, 26, 27]
+
+Extracting steering vectors...
+  Computing steering direction for layer 22...
+    Direction norm before normalization: 55.6562
+    POS activation norm: 96.9375
+    NEG activation norm: 107.1250
+  Computing steering direction for layer 23...
+    Direction norm before normalization: 62.9062
+    POS activation norm: 119.2500
+    NEG activation norm: 129.6250
+  Computing steering direction for layer 24...
+    Direction norm before normalization: 72.5000
+    POS activation norm: 143.8750
+    NEG activation norm: 150.7500
+
+Testing steering effect...
+
+Results for Qwen/Qwen2.5-1.5B-Instruct:
+  Baseline hallucination: 0.0%
+  Steered hallucination: 0.0%
+  Δ abstention: +0.0%
+  Δ coverage: -10.0%
+
+======================================================================
+Testing model: Qwen/Qwen2.5-3B-Instruct
+======================================================================
+Loading model Qwen/Qwen2.5-3B-Instruct...
+Model loaded successfully!
+Loaded: 36 layers, 2048 hidden dim
+Auto-selected layers: [28, 29, 30, 31, 32, 33, 34, 35]
+
+Extracting steering vectors...
+  Computing steering direction for layer 28...
+    Direction norm before normalization: 62.3438
+    POS activation norm: 105.6250
+    NEG activation norm: 112.8750
+  Computing steering direction for layer 29...
+    Direction norm before normalization: 70.7500
+    POS activation norm: 108.6250
+    NEG activation norm: 118.3125
+  Computing steering direction for layer 30...
+    Direction norm before normalization: 85.8750
+    POS activation norm: 135.0000
+    NEG activation norm: 141.2500
+
+Testing steering effect...
+
+Results for Qwen/Qwen2.5-3B-Instruct:
+  Baseline hallucination: 0.0%
+  Steered hallucination: 0.0%
+  Δ abstention: +0.0%
+  Δ coverage: +0.0%
+
+======================================================================
+EXPERIMENT 8: SCALING ANALYSIS
+======================================================================
+
+Model Comparison:
+                     model  n_layers  hidden_dim  steering_works  delta_abstain  delta_coverage  baseline_halluc  steered_halluc
+Qwen/Qwen2.5-1.5B-Instruct        28        1536           False            0.0            -0.1              0.0             0.0
+  Qwen/Qwen2.5-3B-Instruct        36        2048           False            0.0             0.0              0.0             0.0
+
+⚠️  Steering failed on: ['Qwen/Qwen2.5-1.5B-Instruct', 'Qwen/Qwen2.5-3B-Instruct']
+
+Scaling correlation (size vs effect): nan
+⚠️  Steering effectiveness may scale with model size
+
+✓ Figure saved to results/exp8_scaling_analysis.png
+
+✓ Experiment 8 complete!
+
+========================================================================
+ SEGMENT 4A COMPLETE! ⭐
+ Finished: Wed Jan 21 00:17:24 EST 2026
+========================================================================
+
+Outputs created:
+  - results/exp8_summary.json ⭐ CRITICAL
+  - results/exp8_scaling_analysis.png
+
+Next step: Run ./run_segment4b.sh
+
+========================================================================
+ RESULTS VERIFICATION
+========================================================================
+
+Checking experiment summaries...
+
+✗ Experiment 1: MISSING
+✗ Experiment 2: MISSING
+✗ Experiment 3: MISSING
+✗ Experiment 4: MISSING
+✓ Experiment 5: COMPLETE
+✗ Experiment 6: MISSING
+✗ Experiment 7: MISSING
+✓ Experiment 8: COMPLETE
+✗ Experiment 9: MISSING
+
+Checking critical files...
+
+✓ Steering vectors: PRESENT
+✓ Combined summary: PRESENT
+
+Checking figures...
+
+Found 10 figure(s)
+✓ All figures generated
+
+========================================================================
+ ✗ SOME EXPERIMENTS INCOMPLETE
+========================================================================
+
+Run the missing segments:
+  ./run_segment1.sh  (Exp1-3)
+  ./run_segment2.sh  (Exp4-5)
+  ./run_segment3.sh  (Exp6-7)
+  ./run_segment4.sh  (Exp8-9) ⭐ CRITICAL
+

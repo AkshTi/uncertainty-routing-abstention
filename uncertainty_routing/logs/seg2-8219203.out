@@ -1,0 +1,10 @@
+Running: ./run_segment2.sh
+========================================================================
+ SEGMENT 2: Applications (Exp4-5)
+ Expected runtime: 3-4 hours
+ Started: Mon Jan 19 17:25:56 EST 2026
+========================================================================
+
+Checking prerequisites...
+ERROR: exp3_summary.json not found!
+Please run ./run_segment1.sh first
