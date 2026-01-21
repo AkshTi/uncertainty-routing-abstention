@@ -1,0 +1,30 @@
+{
+  "models_tested": [
+    "Qwen/Qwen2.5-1.5B-Instruct",
+    "Qwen/Qwen2.5-3B-Instruct"
+  ],
+  "all_successful": false,
+  "scaling_correlation": NaN,
+  "summary": [
+    {
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "n_layers": 28,
+      "hidden_dim": 1536,
+      "steering_works": false,
+      "delta_abstain": 0.0,
+      "delta_coverage": -0.09999999999999998,
+      "baseline_halluc": 0.0,
+      "steered_halluc": 0.0
+    },
+    {
+      "model": "Qwen/Qwen2.5-3B-Instruct",
+      "n_layers": 36,
+      "hidden_dim": 2048,
+      "steering_works": false,
+      "delta_abstain": 0.0,
+      "delta_coverage": 0.0,
+      "baseline_halluc": 0.0,
+      "steered_halluc": 0.0
+    }
+  ]
+}
