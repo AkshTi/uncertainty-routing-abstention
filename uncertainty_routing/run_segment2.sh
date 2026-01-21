@@ -24,13 +24,14 @@ if [ ! -f "results/steering_vectors.pt" ]; then
     exit 1
 fi
 
-if [ ! -f "results/exp3_summary.json" ]; then
-    echo "ERROR: exp3_summary.json not found!"
+# Check for either exp3 raw results or steering vectors (both indicate Exp3 completed)
+if [ ! -f "results/exp3_raw_results.csv" ] && [ ! -f "results/steering_vectors.pt" ]; then
+    echo "ERROR: Experiment 3 results not found!"
     echo "Please run ./run_segment1.sh first"
     exit 1
 fi
 
-echo "✓ Prerequisites found"
+echo "✓ Prerequisites found (steering_vectors.pt exists)"
 echo ""
 
 # Check GPU
