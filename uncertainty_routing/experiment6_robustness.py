@@ -1,5 +1,10 @@
 """
-Experiment 6: Robustness & Generalization Testing
+Experiment 6: Robustness & Generalization Testing (FIXED)
+
+FIXES APPLIED:
+1. Use appropriate epsilon values (-2.0 instead of -50.0)
+2. Proper steering application during generation
+3. Better evaluation metrics
 
 CRITICAL for publication: Show steering generalizes across:
 1. Different question domains (math, science, history, current events)
@@ -126,11 +131,17 @@ class Experiment6:
 
         return test_sets
 
-    def test_cross_domain(self, best_layer: int, optimal_epsilon: float) -> pd.DataFrame:
-        """Test steering across different domains"""
+    def test_cross_domain(self, best_layer: int, optimal_epsilon: float = -2.0) -> pd.DataFrame:
+        """
+        Test steering across different domains.
+
+        FIXED: Use epsilon=-2.0 instead of -50.0
+        """
         print("\n" + "="*70)
-        print("EXPERIMENT 6A: Cross-Domain Generalization")
+        print("EXPERIMENT 6A: Cross-Domain Generalization (FIXED)")
         print("="*70)
+        print(f"Using epsilon={optimal_epsilon} (instead of -50.0)")
+        print()
 
         test_sets = self.create_domain_test_sets()
         results = []
@@ -155,11 +166,13 @@ class Experiment6:
         return df
 
     def test_prompt_variations(self, questions: List[Dict],
-                              best_layer: int, optimal_epsilon: float) -> pd.DataFrame:
-        """Test robustness to prompt phrasing variations"""
+                              best_layer: int, optimal_epsilon: float = -2.0) -> pd.DataFrame:
+        """Test robustness to prompt phrasing variations (FIXED)"""
         print("\n" + "="*70)
-        print("EXPERIMENT 6B: Prompt Variation Robustness")
+        print("EXPERIMENT 6B: Prompt Variation Robustness (FIXED)")
         print("="*70)
+        print(f"Using epsilon={optimal_epsilon}")
+        print()
 
         # Define prompt variations
         prompt_templates = {
@@ -187,11 +200,13 @@ class Experiment6:
         return df
 
     def test_adversarial_questions(self, best_layer: int,
-                                   optimal_epsilon: float) -> pd.DataFrame:
-        """Test on adversarially designed questions"""
+                                   optimal_epsilon: float = -2.0) -> pd.DataFrame:
+        """Test on adversarially designed questions (FIXED)"""
         print("\n" + "="*70)
-        print("EXPERIMENT 6C: Adversarial Question Testing")
+        print("EXPERIMENT 6C: Adversarial Question Testing (FIXED)")
         print("="*70)
+        print(f"Using epsilon={optimal_epsilon}")
+        print()
 
         # Questions designed to trick the model
         adversarial = [
@@ -225,12 +240,59 @@ class Experiment6:
         return df
 
     def _test_single(self, q_data: Dict, layer_idx: int, epsilon: float) -> Dict:
-        """Test single question with steering"""
-        from experiment5_trustworthiness import Experiment5
+        """Test single question with steering at appropriate epsilon"""
+        from data_preparation import format_prompt
 
-        # Use Exp5's testing logic
-        exp5 = Experiment5(self.model, self.config, self.steering_vectors)
-        result = exp5.test_one(q_data, layer_idx, epsilon)
+        prompt = format_prompt(q_data["question"], "neutral")
+
+        # Clear hooks
+        self.model.clear_hooks()
+
+        # Apply steering if epsilon != 0
+        if epsilon != 0.0:
+            inputs = self.model.tokenizer(prompt, return_tensors="pt").to(self.model.config.device)
+            position = inputs["input_ids"].shape[1] - 1
+
+            self.model.register_steering_hook(
+                layer_idx,
+                position,
+                self.steering_vectors[layer_idx],
+                epsilon
+            )
+
+        # Generate
+        response = self.model.generate(prompt, temperature=0.0, do_sample=False, max_new_tokens=50)
+
+        # Clear hooks
+        self.model.clear_hooks()
+
+        # Evaluate
+        answer = extract_answer(response)
+        abstained = (answer == "UNCERTAIN")
+
+        result = {
+            "question": q_data["question"],
+            "is_unanswerable": q_data.get("is_unanswerable", "answer" not in q_data),
+            "layer": layer_idx,
+            "epsilon": epsilon,
+            "abstained": abstained,
+            "hallucinated": False,
+            "correct": None,
+            "response_preview": response[:200]
+        }
+
+        # Determine if hallucinated or correct
+        if result["is_unanswerable"]:
+            result["hallucinated"] = not abstained
+            result["correct"] = ""
+        else:
+            # Check if correct
+            expected = q_data.get("answer", "").lower()
+            if expected and expected in response.lower():
+                result["correct"] = True
+            else:
+                result["correct"] = False
+
         return result
 
     def _test_single_template(self, q_data: Dict, layer_idx: int,
@@ -240,20 +302,23 @@ class Experiment6:
         question = q_data["question"]
         prompt = template.format(q=question)
 
-        # Generate response (simplified version of Exp5's test_one)
+        # Clear hooks
         self.model.clear_hooks()
 
+        # Apply steering if needed
         if epsilon != 0.0:
-            from experiment5_trustworthiness import Experiment5
-            exp5 = Experiment5(self.model, self.config, self.steering_vectors)
-            exp5._apply_steering(layer_idx, epsilon)
+            inputs = self.model.tokenizer(prompt, return_tensors="pt").to(self.model.config.device)
+            position = inputs["input_ids"].shape[1] - 1
+            self.model.register_steering_hook(layer_idx, position,
+                                             self.steering_vectors[layer_idx], epsilon)
 
-        response = self.model.generate(prompt, temperature=0.0, do_sample=False)
+        # Generate
+        response = self.model.generate(prompt, temperature=0.0, do_sample=False, max_new_tokens=50)
         self.model.clear_hooks()
 
-        # Detect abstention
-        abstained = "UNCERTAIN" in response[:100].upper() or \
-                   "cannot answer" in response.lower()[:100]
+        # Evaluate
+        answer = extract_answer(response)
+        abstained = (answer == "UNCERTAIN")
 
         return {
             "question": question[:80],
@@ -452,9 +517,10 @@ def main():
         exp5_summary = json.load(f)
 
     best_layer = 27  # Or extract from exp5_summary
-    optimal_epsilon = exp5_summary['best_eps_value']
+    # FIXED: Use -2.0 instead of -50.0 (original value was too extreme)
+    optimal_epsilon = -2.0  # exp5_summary.get('best_eps_value', -2.0)
 
-    print(f"Using layer {best_layer}, epsilon {optimal_epsilon}")
+    print(f"Using layer {best_layer}, epsilon {optimal_epsilon} (CORRECTED from -50.0)")
 
     # Run robustness tests
     exp6 = Experiment6(model, config, steering_vectors)
