@@ -99,8 +99,8 @@
     "model": "Qwen/Qwen2.5-1.5B-Instruct",
     "n_questions": 30,
     "n_pairs": 10,
-    "timestamp": "2026-01-22T15:02:08.847472",
-    "total_time_minutes": 2.4782880624135335,
+    "timestamp": "2026-01-22T15:09:06.958369",
+    "total_time_minutes": 2.47202623685201,
     "only_critical": false
   }
 }
