@@ -1,6 +1,6 @@
 {
   "experiment6": {
-    "cross_domain_consistency": 0.717157287525381,
+    "cross_domain_consistency": 0.7483388521576417,
     "domain_stats": {
       "abstained": {
         "('current_events', 'baseline', False)": 0.0,
@@ -8,17 +8,17 @@
         "('current_events', 'steered', False)": 0.0,
         "('current_events', 'steered', True)": 0.6,
         "('history', 'baseline', False)": 0.0,
-        "('history', 'baseline', True)": 0.0,
+        "('history', 'baseline', True)": 0.2,
         "('history', 'steered', False)": 0.0,
-        "('history', 'steered', True)": 0.0,
+        "('history', 'steered', True)": 0.4,
         "('mathematics', 'baseline', False)": 0.0,
         "('mathematics', 'baseline', True)": 0.0,
         "('mathematics', 'steered', False)": 0.0,
         "('mathematics', 'steered', True)": 0.0,
         "('science', 'baseline', False)": 0.0,
-        "('science', 'baseline', True)": 0.2,
+        "('science', 'baseline', True)": 0.4,
         "('science', 'steered', False)": 0.0,
-        "('science', 'steered', True)": 0.2
+        "('science', 'steered', True)": 0.4
       }
     },
     "prompt_stats": {
@@ -42,15 +42,15 @@
         "('standard', 'baseline', False)": 0.0,
         "('standard', 'baseline', True)": 0.0,
         "('standard', 'steered', False)": 0.0,
-        "('standard', 'steered', True)": 0.0
+        "('standard', 'steered', True)": 0.2
       }
     },
     "adversarial_stats": {
       "abstained": {
         "('baseline', False)": 0.0,
-        "('baseline', True)": 0.0,
+        "('baseline', True)": 0.667,
         "('steered', False)": 0.0,
-        "('steered', True)": 0.0
+        "('steered', True)": 0.667
       }
     }
   },
@@ -92,15 +92,15 @@
         "('low', 'steered_answer')": 1.0
       }
     },
-    "length_sensitivity": 0.0
+    "length_sensitivity": 0.3333333333333333
   },
   "metadata": {
     "mode": "standard",
     "model": "Qwen/Qwen2.5-1.5B-Instruct",
     "n_questions": 30,
     "n_pairs": 10,
-    "timestamp": "2026-01-22T15:09:06.958369",
-    "total_time_minutes": 2.47202623685201,
+    "timestamp": "2026-01-22T15:23:05.789336",
+    "total_time_minutes": 2.437033732732137,
     "only_critical": false
   }
 }

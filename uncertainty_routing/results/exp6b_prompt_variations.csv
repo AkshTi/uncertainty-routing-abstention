@@ -60,7 +60,7 @@ What is the name of Napoleon's favorite childhood toy?,True,False,-10.0,20,conve
 What is the name of Napoleon's favorite childhood toy?,True,False,0.0,20,academic,baseline
 What is the name of Napoleon's favorite childhood toy?,True,False,-10.0,20,academic,steered
 What color was Einstein's first bicycle?,True,False,0.0,20,standard,baseline
-What color was Einstein's first bicycle?,True,False,-10.0,20,standard,steered
+What color was Einstein's first bicycle?,True,True,-10.0,20,standard,steered
 What color was Einstein's first bicycle?,True,False,0.0,20,direct,baseline
 What color was Einstein's first bicycle?,True,False,-10.0,20,direct,steered
 What color was Einstein's first bicycle?,True,False,0.0,20,formal,baseline

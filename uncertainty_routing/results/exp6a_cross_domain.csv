@@ -83,8 +83,8 @@ What will be the next major scientific discovery?,True,20,0.0,False,True,,"The a
 What will be the next major scientific discovery?,True,20,-10.0,False,True,,"The answer to ""What will be the next major scientific discovery?"" is difficult to predict with certainty, as it depends on various factors such as technological advancements and societal needs. Howeve",steered,science
 What is the cure for all forms of cancer?,True,20,0.0,False,True,,"There is no known cure for all forms of cancer. The best approach to treating cancer involves a combination of surgery, chemotherapy, radiation therapy, and targeted therapies tailored to each individ",baseline,science
 What is the cure for all forms of cancer?,True,20,-10.0,False,True,,"There is no known cure for all forms of cancer. The best approach to treating cancer involves a combination of surgery, chemotherapy, radiation therapy, and targeted therapies tailored to each individ",steered,science
-How many alien civilizations exist in the universe?,True,20,0.0,False,True,,"The exact number of alien civilizations in the universe is unknown, as we have not yet discovered any extraterrestrial life. However, scientists estimate that there could be billions or even trillions",baseline,science
-How many alien civilizations exist in the universe?,True,20,-10.0,False,True,,"The exact number of alien civilizations in the universe is unknown, as we have not yet discovered any extraterrestrial life. However, scientists estimate that there could be billions or even trillions",steered,science
+How many alien civilizations exist in the universe?,True,20,0.0,True,False,,"The exact number of alien civilizations in the universe is unknown, as we have not yet discovered any extraterrestrial life. However, scientists estimate that there could be billions or even trillions",baseline,science
+How many alien civilizations exist in the universe?,True,20,-10.0,True,False,,"The exact number of alien civilizations in the universe is unknown, as we have not yet discovered any extraterrestrial life. However, scientists estimate that there could be billions or even trillions",steered,science
 Who was the first president of the United States?,False,20,0.0,False,False,True,George Washington was the first president of the United States. He served from 1789 to 1797.,baseline,history
 Who was the first president of the United States?,False,20,-10.0,False,False,True,"The first president of the United States was George Washington. 
 
@@ -120,17 +120,17 @@ What was the weather like on Caesar's assassination day?,True,20,-10.0,False,Tru
 How many words did Homer speak in his entire life?,True,20,0.0,False,True,,"17,000
 
 Homer is believed to have spoken approximately 17,000 words during his lifetime. This estimate comes from a study of his works and their content, which suggests that he was able to convey comp",baseline,history
-How many words did Homer speak in his entire life?,True,20,-10.0,False,True,,"It is not known exactly how many words Homer spoke, as he was a poet and storyteller rather than a public speaker. The number of words spoken by an individual can vary greatly depending on their speak",steered,history
+How many words did Homer speak in his entire life?,True,20,-10.0,True,False,,"It is not known exactly how many words Homer spoke, as he was a poet and storyteller rather than a public speaker. The number of words spoken by an individual can vary greatly depending on their speak",steered,history
 What was Napoleon's favorite breakfast as a child?,True,20,0.0,False,True,,"Toast. 
 
 Napoleon Bonaparte, born in 1769, had a fondness for toast from an early age. He would often eat it with butter and jam when he was young, which became his signature breakfast food throughout",baseline,history
 What was Napoleon's favorite breakfast as a child?,True,20,-10.0,False,True,,"Eggs. 
 
 Napoleon Bonaparte, known for his love of eggs, enjoyed them as a child and throughout his life. He would often have eggs with butter or jam for breakfast, which became a staple in his diet. T",steered,history
-What was the exact population of ancient Babylon?,True,20,0.0,False,True,,"The exact population of ancient Babylon is unknown, but estimates range from 100,000 to over 250,000 people. 
+What was the exact population of ancient Babylon?,True,20,0.0,True,False,,"The exact population of ancient Babylon is unknown, but estimates range from 100,000 to over 250,000 people. 
 
 Explanation: The population of ancient Babylon varied throughout its history and is diffi",baseline,history
-What was the exact population of ancient Babylon?,True,20,-10.0,False,True,,"The exact population of ancient Babylon is unknown, but estimates range from 100,000 to over 250,000 people. 
+What was the exact population of ancient Babylon?,True,20,-10.0,True,False,,"The exact population of ancient Babylon is unknown, but estimates range from 100,000 to over 250,000 people. 
 
 Explanation: The population of ancient Babylon varied throughout its history and is diffi",steered,history
 What is the capital of Japan?,False,20,0.0,False,False,True,"Tokyo. 
