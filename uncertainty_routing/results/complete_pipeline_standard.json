@@ -1,16 +1,16 @@
 {
   "experiment6": {
-    "cross_domain_consistency": 0.7483388521576417,
+    "cross_domain_consistency": 0.6214061102799817,
     "domain_stats": {
       "abstained": {
         "('current_events', 'baseline', False)": 0.0,
         "('current_events', 'baseline', True)": 0.6,
         "('current_events', 'steered', False)": 0.0,
-        "('current_events', 'steered', True)": 0.6,
+        "('current_events', 'steered', True)": 0.8,
         "('history', 'baseline', False)": 0.0,
         "('history', 'baseline', True)": 0.2,
         "('history', 'steered', False)": 0.0,
-        "('history', 'steered', True)": 0.4,
+        "('history', 'steered', True)": 0.8,
         "('mathematics', 'baseline', False)": 0.0,
         "('mathematics', 'baseline', True)": 0.0,
         "('mathematics', 'steered', False)": 0.0,
@@ -18,7 +18,7 @@
         "('science', 'baseline', False)": 0.0,
         "('science', 'baseline', True)": 0.4,
         "('science', 'steered', False)": 0.0,
-        "('science', 'steered', True)": 0.4
+        "('science', 'steered', True)": 0.6
       }
     },
     "prompt_stats": {
@@ -26,15 +26,15 @@
         "('academic', 'baseline', False)": 0.0,
         "('academic', 'baseline', True)": 0.0,
         "('academic', 'steered', False)": 0.0,
-        "('academic', 'steered', True)": 0.0,
+        "('academic', 'steered', True)": 0.2,
         "('conversational', 'baseline', False)": 0.0,
         "('conversational', 'baseline', True)": 0.0,
-        "('conversational', 'steered', False)": 0.0,
-        "('conversational', 'steered', True)": 0.0,
+        "('conversational', 'steered', False)": 0.8,
+        "('conversational', 'steered', True)": 0.6,
         "('direct', 'baseline', False)": 0.0,
         "('direct', 'baseline', True)": 0.2,
         "('direct', 'steered', False)": 0.0,
-        "('direct', 'steered', True)": 0.2,
+        "('direct', 'steered', True)": 0.4,
         "('formal', 'baseline', False)": 0.0,
         "('formal', 'baseline', True)": 0.0,
         "('formal', 'steered', False)": 0.0,
@@ -42,7 +42,7 @@
         "('standard', 'baseline', False)": 0.0,
         "('standard', 'baseline', True)": 0.0,
         "('standard', 'steered', False)": 0.0,
-        "('standard', 'steered', True)": 0.2
+        "('standard', 'steered', True)": 0.4
       }
     },
     "adversarial_stats": {
@@ -50,7 +50,7 @@
         "('baseline', False)": 0.0,
         "('baseline', True)": 0.667,
         "('steered', False)": 0.0,
-        "('steered', True)": 0.667
+        "('steered', True)": 0.333
       }
     }
   },
@@ -60,24 +60,24 @@
     "safety_by_condition": {
       "refused": {
         "baseline": 0.556,
-        "toward_abstain": 0.556,
-        "toward_answer": 0.556
+        "toward_abstain": 0.667,
+        "toward_answer": 0.667
       },
       "safety_violation": {
         "baseline": 0.222,
-        "toward_abstain": 0.222,
-        "toward_answer": 0.222
+        "toward_abstain": 0.0,
+        "toward_answer": 0.111
       },
       "provided_answer": {
         "baseline": 0.444,
-        "toward_abstain": 0.444,
-        "toward_answer": 0.444
+        "toward_abstain": 0.222,
+        "toward_answer": 0.333
       }
     },
     "selective_abstention": {
       "abstained": {
         "('high', 'baseline')": 0.0,
-        "('high', 'steered_abstain')": 0.0,
+        "('high', 'steered_abstain')": 0.333,
         "('high', 'steered_answer')": 0.0,
         "('low', 'baseline')": 0.0,
         "('low', 'steered_abstain')": 0.0,
@@ -85,22 +85,22 @@
       },
       "provided_answer": {
         "('high', 'baseline')": 0.667,
-        "('high', 'steered_abstain')": 0.667,
+        "('high', 'steered_abstain')": 0.333,
         "('high', 'steered_answer')": 0.667,
         "('low', 'baseline')": 1.0,
         "('low', 'steered_abstain')": 1.0,
         "('low', 'steered_answer')": 1.0
       }
     },
-    "length_sensitivity": 0.3333333333333333
+    "length_sensitivity": 0.5
   },
   "metadata": {
     "mode": "standard",
     "model": "Qwen/Qwen2.5-1.5B-Instruct",
     "n_questions": 30,
     "n_pairs": 10,
-    "timestamp": "2026-01-22T15:23:05.789336",
-    "total_time_minutes": 2.437033732732137,
+    "timestamp": "2026-01-22T15:30:09.658709",
+    "total_time_minutes": 2.4878403385480246,
     "only_critical": false
   }
 }
