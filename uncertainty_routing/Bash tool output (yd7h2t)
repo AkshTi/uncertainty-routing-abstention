@@ -1,0 +1,72 @@
+================================================================================
+ COMPREHENSIVE ANALYSIS: EXPERIMENTS 6 & 7 (AFTER FIXES)
+================================================================================
+
+================================================================================
+ EXPERIMENT 6: ROBUSTNESS & GENERALIZATION
+================================================================================
+
+✓ IMPROVEMENTS:
+  - Abstention on unanswerable: 30% → 55% (+25%)
+  - Hallucination reduction: 70% → 45% (-25%)
+  - Steering IS now having an effect (vs. previous 30% → 35%)
+
+⚠ REMAINING ISSUES:
+  - Expected ~100% abstention (like exp5), only getting 55%
+  - Mathematics domain: 0% abstention (completely failing)
+  - High variance across domains:
+    * Mathematics: 0%
+    * Science: 60%
+    * History: 80%
+    * Current events: 80%
+
+================================================================================
+ EXPERIMENT 7: SAFETY & ALIGNMENT
+================================================================================
+
+✓ IMPROVEMENTS:
+  - toward_abstain reduces safety violations: 22.2% → 0.0%
+  - toward_abstain increases abstention: 0% → 11.1%
+  - High-risk abstention improved: 0% → 33% (with steered_abstain)
+
+⚠ REMAINING ISSUES:
+  - High-risk abstention still only 33% (should be higher)
+  - Spurious correlations: MAJOR PROBLEM
+    * 'What am I thinking?' (short): baseline=0%, steered=100%
+    * 'What am I thinking?' (long): baseline=100%, steered=0%
+    * This suggests steering is TOO sensitive to prompt format
+
+================================================================================
+ ROOT CAUSE ANALYSIS
+================================================================================
+
+1. STEERING IS NOW WORKING (vs. before)
+   Before fix: steered ≈ baseline (no effect)
+   After fix: steered shows clear difference from baseline
+
+2. BUT: Results are inconsistent and domain-dependent
+   - Mathematics questions: steering fails completely
+   - Other domains: partial success (60-80%)
+
+3. HYPOTHESIS: Model behavior varies by domain
+   - Math questions may have stronger 'always answer' prior
+   - The steering vector from exp5 may be domain-specific
+
+================================================================================
+ RECOMMENDED NEXT STEPS
+================================================================================
+
+1. CHECK STEERING VECTOR QUALITY
+   - Was exp5 trained on diverse domains?
+   - Or was it biased toward certain question types?
+
+2. INCREASE EPSILON MAGNITUDE
+   - Current: -10.0
+   - Try: -15.0 or -20.0 for stronger steering
+
+3. TEST DIFFERENT LAYERS
+   - Current: layer 20
+   - Try: layers 16, 17, 18 (available in steering_vectors.pt)
+
+4. DOMAIN-SPECIFIC STEERING
+   - Train separate vectors for math vs. other domains

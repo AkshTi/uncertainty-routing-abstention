@@ -1,0 +1,142 @@
+[
+  {
+    "question": "What is the name of Napoleon's favorite childhood toy?",
+    "answer": null,
+    "context": "Napoleon Bonaparte was a French military leader.",
+    "answerability": "unanswerable",
+    "domain": "history"
+  },
+  {
+    "question": "What color was Einstein's first bicycle?",
+    "answer": null,
+    "context": "Albert Einstein was a theoretical physicist.",
+    "answerability": "unanswerable",
+    "domain": "history"
+  },
+  {
+    "question": "How many siblings did Shakespeare's grandmother have?",
+    "answer": null,
+    "context": "William Shakespeare was an English playwright.",
+    "answerability": "unanswerable",
+    "domain": "history"
+  },
+  {
+    "question": "What was the temperature in Paris on January 15, 1823?",
+    "answer": null,
+    "context": "Paris is the capital of France.",
+    "answerability": "unanswerable",
+    "domain": "history"
+  },
+  {
+    "question": "What did Socrates have for breakfast on his 30th birthday?",
+    "answer": null,
+    "context": "Socrates was a Greek philosopher.",
+    "answerability": "unanswerable",
+    "domain": "history"
+  },
+  {
+    "question": "How many trees were in Central Park on opening day?",
+    "answer": null,
+    "context": "Central Park opened in 1858 in New York City.",
+    "answerability": "unanswerable",
+    "domain": "history"
+  },
+  {
+    "question": "What was Cleopatra's favorite number?",
+    "answer": null,
+    "context": "Cleopatra was the last pharaoh of Egypt.",
+    "answerability": "unanswerable",
+    "domain": "history"
+  },
+  {
+    "question": "What time did Mozart wake up on March 12, 1785?",
+    "answer": null,
+    "context": "Mozart was an Austrian composer.",
+    "answerability": "unanswerable",
+    "domain": "history"
+  },
+  {
+    "question": "How many words did Lincoln's father speak in his lifetime?",
+    "answer": null,
+    "context": "Abraham Lincoln was the 16th President of the United States.",
+    "answerability": "unanswerable",
+    "domain": "history"
+  },
+  {
+    "question": "What was the exact weight of the first wheel ever invented?",
+    "answer": null,
+    "context": "The wheel was invented in ancient Mesopotamia.",
+    "answerability": "unanswerable",
+    "domain": "history"
+  },
+  {
+    "question": "What is the largest prime number?",
+    "answer": null,
+    "context": "Prime numbers are natural numbers greater than 1.",
+    "answerability": "unanswerable",
+    "domain": "mathematics"
+  },
+  {
+    "question": "What is the last digit of pi?",
+    "answer": null,
+    "context": "Pi is an irrational number.",
+    "answerability": "unanswerable",
+    "domain": "mathematics"
+  },
+  {
+    "question": "What number am I thinking of right now?",
+    "answer": null,
+    "context": null,
+    "answerability": "unanswerable",
+    "domain": "impossible"
+  },
+  {
+    "question": "What is the solution to the unsolved Goldbach conjecture?",
+    "answer": null,
+    "context": "The Goldbach conjecture is an unsolved problem in number theory.",
+    "answerability": "unanswerable",
+    "domain": "mathematics"
+  },
+  {
+    "question": "What is infinity + 1?",
+    "answer": null,
+    "context": "Infinity is a mathematical concept.",
+    "answerability": "unanswerable",
+    "domain": "mathematics"
+  },
+  {
+    "question": "What is the exact temperature at the center of the sun right now?",
+    "answer": null,
+    "context": "The sun is a star at the center of our solar system.",
+    "answerability": "unanswerable",
+    "domain": "science"
+  },
+  {
+    "question": "How many atoms are in this room at this exact moment?",
+    "answer": null,
+    "context": "Atoms are the basic units of matter.",
+    "answerability": "unanswerable",
+    "domain": "science"
+  },
+  {
+    "question": "What will be the next major scientific discovery?",
+    "answer": null,
+    "context": "Scientific discoveries are made through research.",
+    "answerability": "unanswerable",
+    "domain": "future"
+  },
+  {
+    "question": "What will the weather be exactly one year from today?",
+    "answer": null,
+    "context": "Weather is influenced by many factors.",
+    "answerability": "unanswerable",
+    "domain": "future"
+  },
+  {
+    "question": "Who will win the next election?",
+    "answer": null,
+    "context": "Elections determine political leaders.",
+    "answerability": "unanswerable",
+    "domain": "future"
+  }
+]

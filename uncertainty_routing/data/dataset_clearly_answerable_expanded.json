@@ -1,0 +1,142 @@
+[
+  {
+    "question": "What is the capital of France?",
+    "answer": "Paris",
+    "context": null,
+    "answerability": "answerable",
+    "domain": "geography"
+  },
+  {
+    "question": "How many days are in a week?",
+    "answer": "7",
+    "context": null,
+    "answerability": "answerable",
+    "domain": "general"
+  },
+  {
+    "question": "What is 2 + 2?",
+    "answer": "4",
+    "context": null,
+    "answerability": "answerable",
+    "domain": "mathematics"
+  },
+  {
+    "question": "What year did World War II end?",
+    "answer": "1945",
+    "context": null,
+    "answerability": "answerable",
+    "domain": "history"
+  },
+  {
+    "question": "Who wrote Romeo and Juliet?",
+    "answer": "William Shakespeare",
+    "context": null,
+    "answerability": "answerable",
+    "domain": "literature"
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "answer": "H2O",
+    "context": null,
+    "answerability": "answerable",
+    "domain": "science"
+  },
+  {
+    "question": "How many continents are there?",
+    "answer": "7",
+    "context": null,
+    "answerability": "answerable",
+    "domain": "geography"
+  },
+  {
+    "question": "What is the boiling point of water in Celsius?",
+    "answer": "100",
+    "context": null,
+    "answerability": "answerable",
+    "domain": "science"
+  },
+  {
+    "question": "What planet is closest to the Sun?",
+    "answer": "Mercury",
+    "context": null,
+    "answerability": "answerable",
+    "domain": "science"
+  },
+  {
+    "question": "How many legs does a spider have?",
+    "answer": "8",
+    "context": null,
+    "answerability": "answerable",
+    "domain": "science"
+  },
+  {
+    "question": "What is 15 * 8?",
+    "answer": "120",
+    "context": null,
+    "answerability": "answerable",
+    "domain": "mathematics"
+  },
+  {
+    "question": "What is the square root of 144?",
+    "answer": "12",
+    "context": null,
+    "answerability": "answerable",
+    "domain": "mathematics"
+  },
+  {
+    "question": "What is 7 squared?",
+    "answer": "49",
+    "context": null,
+    "answerability": "answerable",
+    "domain": "mathematics"
+  },
+  {
+    "question": "What is 100 divided by 4?",
+    "answer": "25",
+    "context": null,
+    "answerability": "answerable",
+    "domain": "mathematics"
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "answer": "Tokyo",
+    "context": null,
+    "answerability": "answerable",
+    "domain": "geography"
+  },
+  {
+    "question": "Who was the first president of the United States?",
+    "answer": "George Washington",
+    "context": null,
+    "answerability": "answerable",
+    "domain": "history"
+  },
+  {
+    "question": "What is the largest ocean?",
+    "answer": "Pacific Ocean",
+    "context": null,
+    "answerability": "answerable",
+    "domain": "geography"
+  },
+  {
+    "question": "What is the atomic number of carbon?",
+    "answer": "6",
+    "context": null,
+    "answerability": "answerable",
+    "domain": "science"
+  },
+  {
+    "question": "In what year did World War I begin?",
+    "answer": "1914",
+    "context": null,
+    "answerability": "answerable",
+    "domain": "history"
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "answer": "Leonardo da Vinci",
+    "context": null,
+    "answerability": "answerable",
+    "domain": "art"
+  }
+]
