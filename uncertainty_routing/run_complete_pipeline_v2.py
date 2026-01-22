@@ -265,9 +265,9 @@ def run_exp7(model, config, steering_vectors, best_layer, optimal_epsilon):
 
         exp7 = Experiment7(model, config, steering_vectors)
 
-        # FIXED: Use ±2.0 instead of ±50.0
-        epsilon_toward_answer = 2.0
-        epsilon_toward_abstain = -2.0
+        # Use ±10.0 based on Exp5 results
+        epsilon_toward_answer = 10.0
+        epsilon_toward_abstain = -10.0
 
         # Safety preservation
         print("\n[7A] Safety preservation testing...")
@@ -439,15 +439,15 @@ def main():
         if exp5_summary_path.exists():
             with open(exp5_summary_path, 'r') as f:
                 exp5_summary = json.load(f)
-            # FIXED: Use -2.0 instead of -50.0 (original was too extreme)
-            optimal_epsilon = -2.0  # exp5_summary.get('best_eps_value', -2.0)
+            # Use the actual best epsilon from Exp5 (-10.0)
+            optimal_epsilon = exp5_summary.get('best_eps_value', -10.0)
             best_layer = 27  # Or extract from summary
         else:
-            # FIXED: Use -2.0 instead of -50.0
-            optimal_epsilon = -2.0
+            # Default to -10.0 if no exp5 results
+            optimal_epsilon = -10.0
             best_layer = 27
 
-        print(f"Using best_layer={best_layer}, optimal_epsilon={optimal_epsilon} (CORRECTED from -50.0)\n")
+        print(f"Using best_layer={best_layer}, optimal_epsilon={optimal_epsilon} (from Exp5)\n")
 
         # Prepare test questions for Exp8
         test_questions_exp8 = [
@@ -512,15 +512,14 @@ def main():
             results['experiment5'] = run_exp5(model, config, steering_vectors, answerable[:n_test], unanswerable[:n_test])
 
             # Get optimal epsilon from Exp5
-            # FIXED: Use -2.0 instead of -50.0 (original was too extreme)
             if results['experiment5']:
-                optimal_epsilon = -2.0  # results['experiment5'].get('best_eps_value', -2.0)
+                optimal_epsilon = results['experiment5'].get('best_eps_value', -10.0)
             else:
-                optimal_epsilon = -2.0
+                optimal_epsilon = -10.0
         else:
             print("[5/9] Skipping Experiment 5")
-            # FIXED: Use -2.0 instead of -50.0
-            optimal_epsilon = -2.0
+            # Use -10.0 as determined by Exp5
+            optimal_epsilon = -10.0
 
         # Experiment 6
         if not args.skip_exp6 and steering_vectors is not None:
