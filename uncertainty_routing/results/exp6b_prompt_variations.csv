@@ -16,7 +16,7 @@ How many days are in a week?,False,False,-50.0,20,direct,steered
 How many days are in a week?,False,False,0.0,20,formal,baseline
 How many days are in a week?,False,False,-50.0,20,formal,steered
 How many days are in a week?,False,False,0.0,20,conversational,baseline
-How many days are in a week?,False,False,-50.0,20,conversational,steered
+How many days are in a week?,False,True,-50.0,20,conversational,steered
 How many days are in a week?,False,False,0.0,20,academic,baseline
 How many days are in a week?,False,False,-50.0,20,academic,steered
 What is 2 + 2?,False,False,0.0,20,standard,baseline
@@ -34,7 +34,7 @@ What year did World War II end?,False,False,-50.0,20,standard,steered
 What year did World War II end?,False,False,0.0,20,direct,baseline
 What year did World War II end?,False,False,-50.0,20,direct,steered
 What year did World War II end?,False,False,0.0,20,formal,baseline
-What year did World War II end?,False,False,-50.0,20,formal,steered
+What year did World War II end?,False,True,-50.0,20,formal,steered
 What year did World War II end?,False,False,0.0,20,conversational,baseline
 What year did World War II end?,False,False,-50.0,20,conversational,steered
 What year did World War II end?,False,False,0.0,20,academic,baseline
@@ -42,7 +42,7 @@ What year did World War II end?,False,False,-50.0,20,academic,steered
 Who wrote Romeo and Juliet?,False,False,0.0,20,standard,baseline
 Who wrote Romeo and Juliet?,False,False,-50.0,20,standard,steered
 Who wrote Romeo and Juliet?,False,False,0.0,20,direct,baseline
-Who wrote Romeo and Juliet?,False,False,-50.0,20,direct,steered
+Who wrote Romeo and Juliet?,False,True,-50.0,20,direct,steered
 Who wrote Romeo and Juliet?,False,False,0.0,20,formal,baseline
 Who wrote Romeo and Juliet?,False,False,-50.0,20,formal,steered
 Who wrote Romeo and Juliet?,False,False,0.0,20,conversational,baseline
@@ -91,8 +91,8 @@ How many siblings did Shakespeare's grandmother have?,True,False,-50.0,20,academ
 "What was the temperature in Paris on January 15, 1823?",True,False,-50.0,20,academic,steered
 What did Socrates have for breakfast on his 30th birthday?,True,False,0.0,20,standard,baseline
 What did Socrates have for breakfast on his 30th birthday?,True,False,-50.0,20,standard,steered
-What did Socrates have for breakfast on his 30th birthday?,True,False,0.0,20,direct,baseline
-What did Socrates have for breakfast on his 30th birthday?,True,False,-50.0,20,direct,steered
+What did Socrates have for breakfast on his 30th birthday?,True,True,0.0,20,direct,baseline
+What did Socrates have for breakfast on his 30th birthday?,True,True,-50.0,20,direct,steered
 What did Socrates have for breakfast on his 30th birthday?,True,False,0.0,20,formal,baseline
 What did Socrates have for breakfast on his 30th birthday?,True,False,-50.0,20,formal,steered
 What did Socrates have for breakfast on his 30th birthday?,True,False,0.0,20,conversational,baseline
