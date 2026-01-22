@@ -155,20 +155,30 @@ class ModelWrapper:
 
     def register_steering_hook(self, layer_idx: int, position: int,
                           steering_vector: torch.Tensor, epsilon: float):
-        applied = {"done": False}
-    
+        """
+        Register steering hook that applies at EVERY forward pass.
+        Uses position=-1 to apply at last token (for autoregressive generation).
+        """
         def hook_fn(module, input, output):
             hidden_states = self._get_hidden_states(output)
-    
-            seq_len = hidden_states.shape[1]
-            if applied["done"] or position >= seq_len:
+
+            if not torch.is_tensor(hidden_states):
                 return output
-    
+
             hs = hidden_states.clone()
-            hs[:, position, :] += epsilon * steering_vector.to(hs.device)
-    
-            applied["done"] = True
-    
+            sv = steering_vector.to(hs.device).to(hs.dtype)
+
+            # Squeeze if needed
+            if sv.ndim == 2 and sv.shape[0] == 1:
+                sv = sv.squeeze(0)
+
+            # Apply at last token position (-1) for every forward pass
+            # This ensures steering works during autoregressive generation
+            if hs.ndim == 3:
+                hs[:, -1, :] = hs[:, -1, :] + epsilon * sv
+            elif hs.ndim == 2:
+                hs[-1, :] = hs[-1, :] + epsilon * sv
+
             if isinstance(output, (tuple, list)):
                 return (hs,) + tuple(output[1:])
             return hs
