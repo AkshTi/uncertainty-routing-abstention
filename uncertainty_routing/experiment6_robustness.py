@@ -2,9 +2,10 @@
 Experiment 6: Robustness & Generalization Testing (FIXED)
 
 FIXES APPLIED:
-1. Use appropriate epsilon values (-2.0 instead of -50.0)
+1. Use optimal epsilon value (-10.0 based on exp5_summary.json)
 2. Proper steering application during generation
 3. Better evaluation metrics
+4. Use layer 20 for better steering effectiveness
 
 CRITICAL for publication: Show steering generalizes across:
 1. Different question domains (math, science, history, current events)
@@ -131,7 +132,7 @@ class Experiment6:
 
         return test_sets
 
-    def test_cross_domain(self, best_layer: int, optimal_epsilon: float = -2.0) -> pd.DataFrame:
+    def test_cross_domain(self, best_layer: int, optimal_epsilon: float = -10.0) -> pd.DataFrame:
         """
         Test steering across different domains.
 
@@ -140,7 +141,7 @@ class Experiment6:
         print("\n" + "="*70)
         print("EXPERIMENT 6A: Cross-Domain Generalization (FIXED)")
         print("="*70)
-        print(f"Using epsilon={optimal_epsilon} (instead of -50.0)")
+        print(f"Using epsilon={optimal_epsilon} (optimal from exp5)")
         print()
 
         test_sets = self.create_domain_test_sets()
@@ -166,7 +167,7 @@ class Experiment6:
         return df
 
     def test_prompt_variations(self, questions: List[Dict],
-                              best_layer: int, optimal_epsilon: float = -2.0) -> pd.DataFrame:
+                              best_layer: int, optimal_epsilon: float = -10.0) -> pd.DataFrame:
         """Test robustness to prompt phrasing variations (FIXED)"""
         print("\n" + "="*70)
         print("EXPERIMENT 6B: Prompt Variation Robustness (FIXED)")
@@ -200,7 +201,7 @@ class Experiment6:
         return df
 
     def test_adversarial_questions(self, best_layer: int,
-                                   optimal_epsilon: float = -2.0) -> pd.DataFrame:
+                                   optimal_epsilon: float = -10.0) -> pd.DataFrame:
         """Test on adversarially designed questions (FIXED)"""
         print("\n" + "="*70)
         print("EXPERIMENT 6C: Adversarial Question Testing (FIXED)")
@@ -516,11 +517,11 @@ def main():
     with open(config.results_dir / "exp5_summary.json", 'r') as f:
         exp5_summary = json.load(f)
 
-    best_layer = 27  # Or extract from exp5_summary
-    # FIXED: Use -2.0 instead of -50.0 (original value was too extreme)
-    optimal_epsilon = -2.0  # exp5_summary.get('best_eps_value', -2.0)
+    best_layer = 20  # Layer 20 often works better for steering
+    # FIXED: Use -10.0 based on exp5_summary.json optimal value
+    optimal_epsilon = exp5_summary.get('best_eps_value', -10.0)
 
-    print(f"Using layer {best_layer}, epsilon {optimal_epsilon} (CORRECTED from -50.0)")
+    print(f"Using layer {best_layer}, epsilon {optimal_epsilon} (from exp5_summary.json)")
 
     # Run robustness tests
     exp6 = Experiment6(model, config, steering_vectors)

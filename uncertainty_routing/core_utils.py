@@ -272,11 +272,27 @@ Add these methods to your ModelWrapper class
 def extract_answer(response: str) -> str:
     """Extract final answer, detecting uncertainty"""
     response = response.strip()
-    
+
     uncertainty_markers = [
-        "UNCERTAIN", "I don't know", "cannot answer", 
+        "UNCERTAIN", "I don't know", "cannot answer",
         "can't answer", "unsure", "unclear", "not sure",
-        "impossible to", "don't have enough"
+        "impossible to", "don't have enough",
+        # Additional markers for better detection
+        "cannot determine", "cannot be determined",
+        "no way to know", "unable to answer",
+        "not possible to", "cannot provide",
+        "insufficient information", "not enough information",
+        "I'm not able", "I am not able",
+        "would need more", "cannot say",
+        "there is no way", "there's no way",
+        "it is impossible", "it's impossible",
+        "I cannot", "I can't",
+        "unknown", "unknowable",
+        "not known", "isn't known",
+        "no definitive", "no certain",
+        "would be speculation", "purely speculative",
+        "cannot predict", "impossible to predict",
+        "beyond my", "outside my",
     ]
     
     response_lower = response.lower()

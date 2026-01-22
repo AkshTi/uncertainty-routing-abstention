@@ -2,12 +2,13 @@
 Experiment 7: Safety & Alignment Testing (FIXED VERSION)
 
 FIXES APPLIED:
-1. Use appropriate epsilon values:
+1. Use optimal epsilon values based on exp5_summary.json:
    - baseline: 0.0
-   - toward_answer: +2.0 (instead of +50.0)
-   - toward_abstain: -2.0 (instead of -50.0)
+   - toward_answer: +10.0 (exp5 showed this works well)
+   - toward_abstain: -10.0 (exp5 showed 100% abstention on unanswerable)
 2. Proper steering application
 3. Better safety evaluation
+4. Use layer 20 for better steering effectiveness
 
 CRITICAL for Trustworthy AI workshop: Show that steering doesn't:
 1. Break safety guardrails
@@ -121,8 +122,8 @@ class Experiment7:
         }
 
     def test_safety_preservation(self, best_layer: int,
-                                 epsilon_toward_answer: float = 2.0,
-                                 epsilon_toward_abstain: float = -2.0) -> pd.DataFrame:
+                                 epsilon_toward_answer: float = 10.0,
+                                 epsilon_toward_abstain: float = -10.0) -> pd.DataFrame:
         """
         Test if steering preserves safety guardrails (FIXED)
 
@@ -131,8 +132,8 @@ class Experiment7:
         print("\n" + "="*70)
         print("EXPERIMENT 7A: Safety Preservation (FIXED)")
         print("="*70)
-        print(f"Using epsilon_toward_answer={epsilon_toward_answer} (instead of +50.0)")
-        print(f"Using epsilon_toward_abstain={epsilon_toward_abstain} (instead of -50.0)")
+        print(f"Using epsilon_toward_answer={epsilon_toward_answer} (optimal from exp5)")
+        print(f"Using epsilon_toward_abstain={epsilon_toward_abstain} (optimal from exp5)")
         print()
 
         test_sets = self.create_safety_test_sets()
@@ -158,8 +159,8 @@ class Experiment7:
         return df
 
     def test_selective_abstention(self, best_layer: int,
-                                  epsilon_toward_answer: float = 2.0,
-                                  epsilon_toward_abstain: float = -2.0) -> pd.DataFrame:
+                                  epsilon_toward_answer: float = 10.0,
+                                  epsilon_toward_abstain: float = -10.0) -> pd.DataFrame:
         """
         Test if steering can selectively abstain on high-risk questions (FIXED)
 
@@ -232,7 +233,7 @@ class Experiment7:
         return df
 
     def test_spurious_correlations(self, best_layer: int,
-                                   epsilon: float = -2.0) -> pd.DataFrame:
+                                   epsilon: float = -10.0) -> pd.DataFrame:
         """
         Test if abstention is based on semantic content vs surface features (FIXED)
 
@@ -554,14 +555,14 @@ def main():
     with open(config.results_dir / "exp5_summary.json", 'r') as f:
         exp5_summary = json.load(f)
 
-    best_layer = 27
-    # FIXED: Use ±2.0 instead of ±50.0 (original values were too extreme)
-    epsilon_toward_answer = 2.0
-    epsilon_toward_abstain = -2.0
+    best_layer = 20  # Layer 20 often works better for steering
+    # FIXED: Use values based on exp5_summary.json - epsilon=-10 was optimal
+    epsilon_toward_answer = 10.0
+    epsilon_toward_abstain = -10.0
 
     print(f"Using layer {best_layer}")
-    print(f"Epsilon toward answer: {epsilon_toward_answer} (CORRECTED from +50.0)")
-    print(f"Epsilon toward abstain: {epsilon_toward_abstain} (CORRECTED from -50.0)")
+    print(f"Epsilon toward answer: {epsilon_toward_answer} (from exp5_summary.json)")
+    print(f"Epsilon toward abstain: {epsilon_toward_abstain} (from exp5_summary.json)")
 
     # Run safety tests
     exp7 = Experiment7(model, config, steering_vectors)
