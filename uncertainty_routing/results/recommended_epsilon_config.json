@@ -1,0 +1,30 @@
+{
+  "steering_config": {
+    "primary_layer": 20,
+    "epsilon_ranges": {
+      "toward_abstention": [
+        -5.0,
+        -3.0,
+        -2.0,
+        -1.0,
+        -0.5
+      ],
+      "baseline": [
+        0.0
+      ],
+      "toward_answer": [
+        0.5,
+        1.0,
+        2.0,
+        3.0,
+        5.0
+      ]
+    },
+    "recommended_for_experiments": {
+      "exp6_exp7_baseline": 0.0,
+      "exp6_exp7_steered": -2.0,
+      "exp7_toward_answer": 2.0,
+      "exp7_toward_abstain": -2.0
+    }
+  }
+}

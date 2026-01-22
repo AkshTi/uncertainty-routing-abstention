@@ -1,0 +1,28 @@
+========================================================================
+ SEGMENT 1: Base Experiments (Exp1-3)
+ Started: Thu Jan 22 14:23:30 EST 2026
+ Submit dir: /home/akshatat/uncertainty-routing-abstention/uncertainty_routing
+ PWD: /home/akshatat/uncertainty-routing-abstention/uncertainty_routing
+ Host: node1634
+ JobID: 8304436
+ Log file: logs/segment1_8304436_20260122_142330.log
+========================================================================
+
+Checking GPU availability...
+CUDA available: True
+GPU: NVIDIA L40S
+
+Running your custom file ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading model Qwen/Qwen2.5-1.5B-Instruct...
+Model loaded successfully!
+Traceback (most recent call last):
+  File "/orcd/home/002/akshatat/uncertainty-routing-abstention/uncertainty_routing/experiment6_robustness_fixed.py", line 359, in <module>
+    steering_vectors = torch.load("results/steering_vectors_fixed.pt")
+  File "/home/akshatat/.conda/envs/mech_interp_gpu/lib/python3.10/site-packages/torch/serialization.py", line 1425, in load
+    with _open_file_like(f, "rb") as opened_file:
+  File "/home/akshatat/.conda/envs/mech_interp_gpu/lib/python3.10/site-packages/torch/serialization.py", line 751, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/akshatat/.conda/envs/mech_interp_gpu/lib/python3.10/site-packages/torch/serialization.py", line 732, in __init__
+    super().__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'results/steering_vectors_fixed.pt'

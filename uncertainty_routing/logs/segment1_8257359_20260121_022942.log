@@ -1,0 +1,109 @@
+========================================================================
+ SEGMENT 1: Base Experiments (Exp1-3)
+ Started: Wed Jan 21 02:29:42 EST 2026
+ Submit dir: /home/akshatat/uncertainty-routing-abstention/uncertainty_routing
+ PWD: /home/akshatat/uncertainty-routing-abstention/uncertainty_routing
+ Host: node2804
+ JobID: 8257359
+ Log file: logs/segment1_8257359_20260121_022942.log
+========================================================================
+
+Checking GPU availability...
+CUDA available: True
+GPU: NVIDIA L40S
+
+Running diagnose_and_fix_steering.py ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+
+================================================================================
+STEERING DIAGNOSTIC & FIX PIPELINE
+================================================================================
+
+✓ Loading steering_vectors_explicit.pt
+  Loaded 4 steering vectors for layers: [16, 17, 18, 20]
+
+Loading model Qwen/Qwen2.5-1.5B-Instruct...
+Loading model Qwen/Qwen2.5-1.5B-Instruct...
+Model loaded successfully!
+✓ Model loaded
+
+================================================================================
+BASELINE BEHAVIOR (No Steering)
+================================================================================
+
+Testing baseline on 10 answerable questions...
+  Abstention: 0.0%
+  Correct: 80.0%
+
+Testing baseline on 10 unanswerable questions...
+  Abstention: 0.0%
+  Hallucination: 100.0%
+
+================================================================================
+DIAGNOSING STEERING DIRECTION (Layer 20)
+================================================================================
+
+
+Testing epsilon = -5.0...
+  Unanswerable: 0.0% abstention, 100.0% hallucination
+  Answerable: 80.0% correct, 0.0% abstention
+
+Testing epsilon = -2.0...
+  Unanswerable: 0.0% abstention, 100.0% hallucination
+  Answerable: 80.0% correct, 0.0% abstention
+
+Testing epsilon = +0.0...
+  Unanswerable: 0.0% abstention, 100.0% hallucination
+  Answerable: 80.0% correct, 0.0% abstention
+
+Testing epsilon = +2.0...
+  Unanswerable: 0.0% abstention, 100.0% hallucination
+  Answerable: 80.0% correct, 0.0% abstention
+
+Testing epsilon = +5.0...
+  Unanswerable: 0.0% abstention, 100.0% hallucination
+  Answerable: 80.0% correct, 0.0% abstention
+
+================================================================================
+ANALYSIS
+================================================================================
+
+Baseline (ε=0):  Unans abstention: 0.0%, Ans correct: 80.0%
+Negative (ε=-5.0): Unans abstention: 0.0%, Ans correct: 80.0%
+Positive (ε=+5.0): Unans abstention: 0.0%, Ans correct: 80.0%
+
+✓ Direction appears CORRECT
+
+================================================================================
+RECOMMENDED CONFIGURATION
+================================================================================
+
+Based on diagnosis, use these parameters for Experiments 6-9:
+
+Epsilon ranges:
+  - For increasing abstention: epsilon = -5.0 to -0.5
+  - For decreasing abstention: epsilon = +0.5 to +5.0
+  - Baseline: epsilon = 0.0
+
+Recommended values for experiments:
+  - Baseline: 0.0
+  - Moderate toward abstention: -2.0
+  - Strong toward abstention: -5.0
+  - Moderate toward answer: +2.0
+  - Strong toward answer: +5.0
+
+DO NOT USE: epsilon values like -50 or +50 (way too large)
+
+✓ Saved configuration to results/recommended_epsilon_config.json
+
+================================================================================
+NEXT STEPS
+================================================================================
+
+1. Update experiments 6 and 7 to use recommended epsilon values
+2. Use 'steering_vectors_fixed.pt' instead of 'steering_vectors.pt'
+3. Re-run experiments with corrected configuration
+
+
+DONE: Wed Jan 21 02:31:02 EST 2026

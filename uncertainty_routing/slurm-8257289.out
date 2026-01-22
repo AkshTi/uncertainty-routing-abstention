@@ -1,0 +1,8 @@
+========================================================================
+ SEGMENT 1: Base Experiments (Exp1-3)
+ Expected runtime: 4-5 hours
+ Started: Wed Jan 21 02:22:42 EST 2026
+========================================================================
+
+Checking GPU availability...
+/var/spool/slurmd/job8257289/slurm_script: line 22: unexpected EOF while looking for matching `"'
