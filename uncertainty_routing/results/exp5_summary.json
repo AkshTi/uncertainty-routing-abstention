@@ -2,8 +2,19 @@
   "metrics": [
     {
       "epsilon": -50.0,
-      "coverage_answerable": 1.0,
-      "abstain_answerable": 0.0,
+      "coverage_answerable": 0.30000000000000004,
+      "abstain_answerable": 0.7,
+      "accuracy_answerable": 0.0,
+      "risk_answerable": 1.0,
+      "abstain_unanswerable": 0.8,
+      "hallucination_unanswerable": 0.2,
+      "n_answerable": 10,
+      "n_unanswerable": 10
+    },
+    {
+      "epsilon": -40.0,
+      "coverage_answerable": 0.9,
+      "abstain_answerable": 0.1,
       "accuracy_answerable": 0.0,
       "risk_answerable": 1.0,
       "abstain_unanswerable": 0.7,
@@ -12,35 +23,24 @@
       "n_unanswerable": 10
     },
     {
-      "epsilon": -40.0,
-      "coverage_answerable": 1.0,
-      "abstain_answerable": 0.0,
-      "accuracy_answerable": 0.0,
-      "risk_answerable": 1.0,
-      "abstain_unanswerable": 0.6,
-      "hallucination_unanswerable": 0.4,
-      "n_answerable": 10,
-      "n_unanswerable": 10
-    },
-    {
       "epsilon": -30.0,
-      "coverage_answerable": 0.8,
-      "abstain_answerable": 0.2,
+      "coverage_answerable": 0.7,
+      "abstain_answerable": 0.3,
       "accuracy_answerable": 0.0,
       "risk_answerable": 1.0,
-      "abstain_unanswerable": 0.4,
-      "hallucination_unanswerable": 0.6,
+      "abstain_unanswerable": 0.5,
+      "hallucination_unanswerable": 0.5,
       "n_answerable": 10,
       "n_unanswerable": 10
     },
     {
       "epsilon": -20.0,
-      "coverage_answerable": 0.7,
-      "abstain_answerable": 0.3,
-      "accuracy_answerable": 0.5714285714285714,
-      "risk_answerable": 0.4285714285714286,
-      "abstain_unanswerable": 0.6,
-      "hallucination_unanswerable": 0.4,
+      "coverage_answerable": 0.6,
+      "abstain_answerable": 0.4,
+      "accuracy_answerable": 0.5,
+      "risk_answerable": 0.5,
+      "abstain_unanswerable": 0.7,
+      "hallucination_unanswerable": 0.3,
       "n_answerable": 10,
       "n_unanswerable": 10
     },
@@ -50,8 +50,8 @@
       "abstain_answerable": 0.5,
       "accuracy_answerable": 0.8,
       "risk_answerable": 0.19999999999999996,
-      "abstain_unanswerable": 0.9,
-      "hallucination_unanswerable": 0.1,
+      "abstain_unanswerable": 1.0,
+      "hallucination_unanswerable": 0.0,
       "n_answerable": 10,
       "n_unanswerable": 10
     },
@@ -128,12 +128,12 @@
   "baseline_abstain_unanswerable": 1.0,
   "baseline_hallucination_unanswerable": 0.0,
   "best_eps_value": -50.0,
-  "best_eps_coverage_answerable": 1.0,
+  "best_eps_coverage_answerable": 0.30000000000000004,
   "best_eps_accuracy_answerable": 0.0,
-  "best_eps_abstain_unanswerable": 0.7,
-  "best_eps_hallucination_unanswerable": 0.3,
-  "delta_coverage_answerable": 0.4,
+  "best_eps_abstain_unanswerable": 0.8,
+  "best_eps_hallucination_unanswerable": 0.2,
+  "delta_coverage_answerable": -0.29999999999999993,
   "delta_accuracy_answerable": -1.0,
-  "delta_abstain_unanswerable": -0.30000000000000004,
-  "delta_hallucination_unanswerable": 0.3
+  "delta_abstain_unanswerable": -0.19999999999999996,
+  "delta_hallucination_unanswerable": 0.2
 }
