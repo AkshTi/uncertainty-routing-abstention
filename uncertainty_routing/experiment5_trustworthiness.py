@@ -74,29 +74,36 @@ class Experiment5:
         )
 
     def _detect_abstention(self, response: str) -> bool:
-        """Robust abstention detection"""
+        """Robust abstention detection (matches core_utils.py)"""
         resp_lower = response.lower()[:200]
-        
+
         # Direct UNCERTAIN response
         if response.strip().upper().startswith("UNCERTAIN"):
             return True
-        
+
         # UNCERTAIN in first 50 chars
         if "uncertain" in resp_lower[:50]:
             return True
-        
-        # Common abstention phrases
+
+        # Expanded abstention phrases (matching core_utils.py)
         abstain_phrases = [
-            "cannot answer",
-            "can't answer", 
-            "don't know",
-            "do not know",
-            "not enough information",
-            "unable to answer",
-            "cannot be answered",
-            "insufficient information"
+            "cannot answer", "can't answer",
+            "don't know", "do not know",
+            "not enough information", "insufficient information",
+            "unable to answer", "unable to determine",
+            "cannot be answered", "cannot determine", "cannot be determined",
+            "no way to know", "not possible to", "cannot provide",
+            "i'm not able", "i am not able",
+            "would need more", "cannot say",
+            "there is no way", "there's no way",
+            "it is impossible", "it's impossible",
+            "i cannot", "i can't",
+            "unknown", "unknowable",
+            "not known", "isn't known",
+            "no definitive", "no certain",
+            "would be speculation", "purely speculative",
         ]
-        
+
         return any(phrase in resp_lower for phrase in abstain_phrases)
 
     def _normalize_answer(self, s: str) -> str:
