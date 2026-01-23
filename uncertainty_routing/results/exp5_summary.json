@@ -127,13 +127,13 @@
   "baseline_accuracy_answerable": 1.0,
   "baseline_abstain_unanswerable": 1.0,
   "baseline_hallucination_unanswerable": 0.0,
-  "best_eps_value": -10.0,
-  "best_eps_coverage_answerable": 0.7,
-  "best_eps_accuracy_answerable": 0.8571428571428571,
-  "best_eps_abstain_unanswerable": 1.0,
-  "best_eps_hallucination_unanswerable": 0.0,
-  "delta_coverage_answerable": 0.09999999999999998,
-  "delta_accuracy_answerable": -0.1428571428571429,
-  "delta_abstain_unanswerable": 0.0,
-  "delta_hallucination_unanswerable": 0.0
+  "best_eps_value": -50.0,
+  "best_eps_coverage_answerable": 1.0,
+  "best_eps_accuracy_answerable": 0.1,
+  "best_eps_abstain_unanswerable": 0.4,
+  "best_eps_hallucination_unanswerable": 0.6,
+  "delta_coverage_answerable": 0.4,
+  "delta_accuracy_answerable": -0.9,
+  "delta_abstain_unanswerable": -0.6,
+  "delta_hallucination_unanswerable": 0.6
 }

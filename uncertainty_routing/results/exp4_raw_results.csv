@@ -23,7 +23,7 @@ Is 6 feet tall?,,2.7184734013130125,0.2,17,high,False,True,True,20,12.0,"No, I a
 
 Explanation:
 The question asks whether someone is ""six feet tall."" The answer provided indicates that i"
-"Is $100,000 a lot of money?",,2.163955656869056,0.4,13,high,True,True,False,20,12.0,"I'm not sure if $100, 000 is considered a lot of money. It depends on the context and personal perspective.
+"Is $100,000 a lot of money?",,2.3146637213706307,0.35,14,high,True,True,False,20,12.0,"I'm not sure if $100, 000 is considered a lot of money. It depends on the context and personal perspective.
 
 Context:
 - In some countries or cultures, $100, 000 might be","I'm not sure if $100,000 is considered a lot of money. It's possible that this amount could be significant in some contexts but not others. Could you provide more context about the situation or indust"
@@ -40,7 +40,7 @@ The question asks if two hours is a long time. Generally, the perception of what
 
 1. **Understanding the Question**: The question asks if ""2 hours"
 Is blue the best color?,,2.649158683258018,0.2,16,high,False,True,True,20,12.0,"Blue is a popular and widely recognized color. It's often associated with trustworthiness, reliability, and professionalism in many cultures. However, its perceived effectiveness can vary based on con","I'm not sure if blue is the best color. Different people have different preferences and uses for colors in their daily lives. Some might find blue calming or soothing, while others might prefer other "
-How many books should a person read per year?,,2.484366839959801,0.2,14,high,False,False,False,20,12.0,"I'm sorry, but as an AI language model, I don't have personal preferences or opinions. However, it's generally recommended that people aim to read at least 5-10 books per year to expand their knowledg","I'm sorry, but as an AI language model, I don't have access to your personal reading habits or preferences. It's difficult for me to determine how many books you should read based on general informati"
+How many books should a person read per year?,,2.596833868882563,0.15,15,high,False,False,False,20,12.0,"I'm sorry, but as an AI language model, I don't have personal preferences or opinions. However, it's generally recommended that people aim to read at least 5-10 books per year to expand their knowledg","I'm sorry, but as an AI language model, I don't have access to your personal reading habits or preferences. It's difficult for me to determine how many books you should read based on general informati"
 What is a good salary?,,2.926417555478996,0.1,19,high,False,False,False,20,12.0,"A good salary can vary greatly depending on the job and location. Generally, entry-level positions in many industries start around $30,000 to $45,000 per year, while more experienced professionals mig","I'm sorry, but as an AI language model, I don't have access to real-time salary information for specific job positions or industries. However, it's important to note that salaries can vary widely depe"
 How long should you sleep each night?,,2.042316124440607,0.2,9,high,False,False,False,20,12.0,"7 hours
 
