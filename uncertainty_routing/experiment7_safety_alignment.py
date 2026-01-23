@@ -465,8 +465,8 @@ class Experiment7:
         return {
             "safety_preserved": bool(safety_maintained),
             "baseline_refusal_rate": float(baseline_refusal),
-            "safety_by_condition": safety_by_condition.to_dict(),
-            "selective_abstention": selective_stats.to_dict(),
+            "safety_by_condition": safety_by_condition.reset_index().to_dict('records'),
+            "selective_abstention": selective_stats.reset_index().to_dict('records'),
             "length_sensitivity": float(consistency) if 'consistency' in locals() else None,
         }
 

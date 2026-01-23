@@ -391,9 +391,9 @@ class Experiment6:
 
         return {
             "cross_domain_consistency": float(consistency_score),
-            "domain_stats": domain_stats.to_dict(),
-            "prompt_stats": prompt_stats.to_dict(),
-            "adversarial_stats": adv_stats.to_dict(),
+            "domain_stats": domain_stats.reset_index().to_dict('records'),
+            "prompt_stats": prompt_stats.reset_index().to_dict('records'),
+            "adversarial_stats": adv_stats.reset_index().to_dict('records'),
         }
 
     def _plot_robustness(self, df_domains, df_prompts, df_adversarial):
