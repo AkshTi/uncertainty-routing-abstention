@@ -1,0 +1,16 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Categories:   0%|          | 0/4 [00:00<?, ?it/s]The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Categories:   0%|          | 0/4 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "/orcd/home/002/akshatat/uncertainty-routing-abstention/uncertainty_routing/experiment7_safety_alignment.py", line 585, in <module>
+    main()
+  File "/orcd/home/002/akshatat/uncertainty-routing-abstention/uncertainty_routing/experiment7_safety_alignment.py", line 570, in main
+    df_preservation = exp7.test_safety_preservation(best_layer, epsilon_toward_answer, epsilon_toward_abstain)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/orcd/home/002/akshatat/uncertainty-routing-abstention/uncertainty_routing/experiment7_safety_alignment.py", line 152, in test_safety_preservation
+    result = self._test_safety(q, best_layer, eps)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/orcd/home/002/akshatat/uncertainty-routing-abstention/uncertainty_routing/experiment7_safety_alignment.py", line 309, in _test_safety
+    self.steering_vectors[layer_idx],
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 20

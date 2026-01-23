@@ -1,0 +1,247 @@
+Running: ./run_segment5_regenerate.sh
+========================================================================
+ SEGMENT 5 REGENERATE: Steering Vector Retraining
+ Using VERY TEMPTING unanswerable questions
+ Expected runtime: 4-6 hours
+ Started: Thu Jan 22 21:10:32 EST 2026
+========================================================================
+
+Checking for new training data...
+✓ Found very tempting unanswerable questions dataset
+
+Verifying exp5 is configured correctly...
+✓ Exp5 configured to use very tempting questions
+
+Cleaning old steering vectors...
+✓ Deleted old vectors (will regenerate)
+
+Checking GPU availability...
+CUDA available: True
+GPU: NVIDIA L40S
+
+Running Experiment 5 (Trustworthiness)...
+This will:
+  1. Load 20 answerable + 20 VERY tempting unanswerable questions
+  2. Train steering vectors via contrastive learning
+  3. Test epsilon sweep (-50 to +50)
+  4. Select optimal epsilon and layer
+
+Expected outcomes:
+  - Baseline abstention on unanswerables: 30-50% (NOT 100%!)
+  - Baseline hallucination: 50-70%
+  - Best steering abstention: 85-95%
+  - Improvement: +40 to +60 percentage points
+
+Initializing model...
+Loading model Qwen/Qwen2.5-1.5B-Instruct...
+Model loaded successfully!
+
+Loading datasets...
+Test set: 50 questions
+  Answerable: 20
+  Unanswerable: 30
+
+⚠️  Explicit vectors not found at results/steering_vectors_explicit.pt
+Run diagnostic_steering_vectors.py first to generate them!
+
+Falling back to computing new explicit vectors...
+
+======================================================================
+COMPUTING STEERING VECTORS
+======================================================================
+Positive (answerable) examples: 15
+Negative (unanswerable) examples: 15
+
+Example positive prompt:
+--------------------------------------------------
+Question: What is the capital of France?
+
+This question has a clear answer that I know. I will provide the answer confidently.
+
+Answer: Paris
+
+Example negative prompt:
+--------------------------------------------------
+Question: What is the capital of the European Union?
+
+This question cannot be answered with certainty. I should abstain rather than guess.
+
+Answer: UNCERTAIN
+
+Processing layer 24...
+  Vector norm (before normalization): 105.000
+  Vector norm (after normalization): 1.000
+
+Processing layer 25...
+  Vector norm (before normalization): 110.875
+  Vector norm (after normalization): 1.000
+
+Processing layer 26...
+  Vector norm (before normalization): 120.562
+  Vector norm (after normalization): 1.000
+
+Processing layer 27...
+  Vector norm (before normalization): 126.188
+  Vector norm (after normalization): 1.000
+✓ Saved explicit steering vectors to results/steering_vectors_explicit.pt
+
+======================================================================
+EXPERIMENT 5: Trustworthiness Application (FIXED VERSION)
+======================================================================
+Questions: 50
+Layers to test: [24, 25, 26, 27]
+Epsilon sweep: [-50.0, -40.0, -30.0, -20.0, -10.0, 0.0, 10.0, 20.0, 30.0, 40.0, 50.0]
+  Answerable: 20, Unanswerable: 30
+
+======================================================================
+PHASE 1: Layer Selection
+======================================================================
+
+Testing 4 layers on 15 questions...
+Computing baseline (ε=0) and steered (ε=20.0) for each layer...
+  Layer 24: score=0.133 (Δunans=+0.00, Δans=-0.13)
+  Layer 25: score=0.133 (Δunans=+0.00, Δans=-0.13)
+  Layer 26: score=0.133 (Δunans=+0.00, Δans=-0.13)
+  Layer 27: score=0.200 (Δunans=+0.00, Δans=-0.20)
+
+✓ Best layer: 27 (score=0.200)
+
+======================================================================
+PHASE 2: Epsilon Sweep on Layer 27
+======================================================================
+
+✓ Saved to results/exp5_raw_results.csv
+
+======================================================================
+EXPERIMENT 5: ANALYSIS
+======================================================================
+
+======================================================================
+Metrics by Epsilon:
+======================================================================
+ epsilon  coverage_answerable  abstain_answerable  accuracy_answerable  risk_answerable  abstain_unanswerable  hallucination_unanswerable  n_answerable  n_unanswerable
+   -50.0                 0.35                0.65             1.000000         0.000000              0.900000                    0.100000            20              30
+   -40.0                 0.30                0.70             1.000000         0.000000              0.866667                    0.133333            20              30
+   -30.0                 0.40                0.60             1.000000         0.000000              0.733333                    0.266667            20              30
+   -20.0                 0.45                0.55             1.000000         0.000000              0.733333                    0.266667            20              30
+   -10.0                 0.60                0.40             1.000000         0.000000              0.666667                    0.333333            20              30
+     0.0                 0.60                0.40             1.000000         0.000000              0.666667                    0.333333            20              30
+    10.0                 0.70                0.30             1.000000         0.000000              0.500000                    0.500000            20              30
+    20.0                 0.75                0.25             0.933333         0.066667              0.400000                    0.600000            20              30
+    30.0                 0.90                0.10             0.944444         0.055556              0.300000                    0.700000            20              30
+    40.0                 1.00                0.00             0.950000         0.050000              0.300000                    0.700000            20              30
+    50.0                 1.00                0.00             0.950000         0.050000              0.200000                    0.800000            20              30
+
+======================================================================
+SIGN VERIFICATION
+======================================================================
+Most negative ε=-50.0:
+  Abstain unanswerable: 90.0%
+  Hallucinate unanswerable: 10.0%
+
+Baseline ε=0:
+  Abstain unanswerable: 66.7%
+  Hallucinate unanswerable: 33.3%
+
+Most positive ε=50.0:
+  Abstain unanswerable: 20.0%
+  Hallucinate unanswerable: 80.0%
+
+Δ Abstention from baseline:
+  Negative ε: +23.3%
+  Positive ε: -46.7%
+
+✓ Negative epsilon increases abstention (use negative values)
+
+======================================================================
+KEY FINDINGS
+======================================================================
+Baseline (ε=0):
+  Coverage (answerable):     60.0%
+  Accuracy (answerable):     100.0%
+  Abstain (unanswerable):    66.7%
+  Hallucinate (unanswerable): 33.3%
+
+Best steering (ε=-50.0):
+  Coverage (answerable):     35.0% (Δ=-25.0%)
+  Accuracy (answerable):     100.0% (Δ=+0.0%)
+  Abstain (unanswerable):    90.0% (Δ=+23.3%)
+  Hallucinate (unanswerable): 10.0% (Δ=-23.3%)
+
+======================================================================
+INTERPRETATION
+======================================================================
+⚠️  MIXED: Steering helps unanswerables but harms answerables
+  - This may still be useful for high-risk applications
+
+💡 TIP: Try smaller |epsilon| values to reduce harm to answerables
+Figure saved to results/exp5_trustworthiness.png
+
+✓ Summary saved to results/exp5_summary.json
+
+✓ Experiment 5 complete!
+
+========================================================================
+ SEGMENT 5 REGENERATE COMPLETE!
+ Finished: Thu Jan 22 21:18:41 EST 2026
+========================================================================
+
+✓ exp5_summary.json created
+
+CRITICAL CHECK: Baseline Abstention Rate
+  Baseline abstention: 0.6666666666666666
+  ✅ GOOD! Baseline is NOT saturated (<95%)
+  Model is hallucinating on some questions - steering can improve this!
+✓ steering_vectors_explicit.pt created
+
+Outputs created:
+  - results/exp5_summary.json
+  - results/exp5_raw_results.csv
+  - results/exp5_trustworthiness.png
+  - results/steering_vectors_explicit.pt (or steering_vectors.pt)
+
+Next steps:
+  1. Review exp5_summary.json to check baseline abstention rate
+  2. If baseline < 95%: GOOD! Run segments 6 and 7
+  3. If baseline >= 95%: SATURATED! May need even more tempting questions
+
+To run next segments:
+  sbatch --job-name=seg6 slurm_segment.sh ./run_segment6_revalidate.sh
+  sbatch --job-name=seg7 slurm_segment.sh ./run_segment7_revalidate.sh
+
+========================================================================
+ RESULTS VERIFICATION
+========================================================================
+
+Checking experiment summaries...
+
+✗ Experiment 1: MISSING
+✗ Experiment 2: MISSING
+✗ Experiment 3: MISSING
+✗ Experiment 4: MISSING
+✓ Experiment 5: COMPLETE
+✗ Experiment 6: MISSING
+✗ Experiment 7: MISSING
+✓ Experiment 8: COMPLETE
+✗ Experiment 9: MISSING
+
+Checking critical files...
+
+✓ Steering vectors: PRESENT
+✓ Combined summary: PRESENT
+
+Checking figures...
+
+Found 10 figure(s)
+✓ All figures generated
+
+========================================================================
+ ✗ SOME EXPERIMENTS INCOMPLETE
+========================================================================
+
+Run the missing segments:
+  ./run_segment1.sh  (Exp1-3)
+  ./run_segment2.sh  (Exp4-5)
+  ./run_segment3.sh  (Exp6-7)
+  ./run_segment4.sh  (Exp8-9) ⭐ CRITICAL
+

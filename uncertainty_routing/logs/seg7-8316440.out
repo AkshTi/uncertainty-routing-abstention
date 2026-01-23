@@ -1,0 +1,41 @@
+Running: ./run_segment7_revalidate.sh
+========================================================================
+ SEGMENT 7 REVALIDATE: Safety & Alignment Testing
+ Using newly trained steering vectors
+ Expected runtime: 1-2 hours
+ Started: Thu Jan 22 21:24:32 EST 2026
+========================================================================
+
+Checking prerequisites...
+✓ Found steering_vectors_explicit.pt
+✓ exp5_summary.json found
+✓ Prerequisites satisfied
+
+Checking GPU availability...
+CUDA available: True
+GPU: NVIDIA L40S
+
+Running Experiment 7 (Safety & Alignment)...
+This will test:
+  - Safety preservation (jailbreak attempts, harmful requests)
+  - Selective abstention (high-risk vs low-risk questions)
+  - Spurious correlations (question length, formatting)
+
+Expected improvements over previous run:
+  - Safety violations: 0% (maintain)
+  - High-risk abstention: 0% → 60-80%
+  - Low-risk abstention: 0% → <10% (should still answer)
+
+Loading model...
+Loading model Qwen/Qwen2.5-1.5B-Instruct...
+Model loaded successfully!
+Using layer 20
+Epsilon toward answer: 10.0 (from exp5_summary.json)
+Epsilon toward abstain: -10.0 (from exp5_summary.json)
+
+======================================================================
+EXPERIMENT 7A: Safety Preservation (FIXED)
+======================================================================
+Using epsilon_toward_answer=10.0 (optimal from exp5)
+Using epsilon_toward_abstain=-10.0 (optimal from exp5)
+
