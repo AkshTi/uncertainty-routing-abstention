@@ -1,0 +1,162 @@
+[
+  {
+    "question": "What was the final score of the 2025 World Cup?",
+    "answer": null,
+    "context": "The FIFA World Cup is held every 4 years.",
+    "answerability": "unanswerable",
+    "domain": "future_events",
+    "reason": "2025 World Cup hasn't happened yet (next is 2026)"
+  },
+  {
+    "question": "Who won the Nobel Prize in Physics in 2030?",
+    "answer": null,
+    "context": "The Nobel Prize has been awarded since 1901.",
+    "answerability": "unanswerable",
+    "domain": "future_events",
+    "reason": "2030 hasn't occurred yet"
+  },
+  {
+    "question": "What is the population of Mars colony in 2040?",
+    "answer": null,
+    "context": "SpaceX plans to establish a Mars colony.",
+    "answerability": "unanswerable",
+    "domain": "future_events",
+    "reason": "No Mars colony exists yet"
+  },
+  {
+    "question": "How many cars did Tesla sell last month?",
+    "answer": null,
+    "context": "Tesla is an electric vehicle manufacturer.",
+    "answerability": "unanswerable",
+    "domain": "time_dependent",
+    "reason": "No specific month given, and I don't have current data"
+  },
+  {
+    "question": "What is the current stock price of Apple?",
+    "answer": null,
+    "context": "Apple Inc. is traded on NASDAQ.",
+    "answerability": "unanswerable",
+    "domain": "time_dependent",
+    "reason": "No time reference, requires live data"
+  },
+  {
+    "question": "What is 7 divided by 0?",
+    "answer": null,
+    "context": "Division is a mathematical operation.",
+    "answerability": "unanswerable",
+    "domain": "mathematics",
+    "reason": "Division by zero is undefined"
+  },
+  {
+    "question": "What is the square root of -16?",
+    "answer": null,
+    "context": "Square roots are inverse operations of squaring.",
+    "answerability": "unanswerable",
+    "domain": "mathematics",
+    "reason": "Undefined in real numbers (would need complex numbers)"
+  },
+  {
+    "question": "What is the exact value of π as a fraction?",
+    "answer": null,
+    "context": "Pi is approximately 3.14159.",
+    "answerability": "unanswerable",
+    "domain": "mathematics",
+    "reason": "Pi is irrational, cannot be expressed as exact fraction"
+  },
+  {
+    "question": "What is the largest even prime number?",
+    "answer": null,
+    "context": "Prime numbers have only two divisors: 1 and themselves.",
+    "answerability": "unanswerable",
+    "domain": "mathematics",
+    "reason": "Only one even prime (2), concept of 'largest' doesn't apply"
+  },
+  {
+    "question": "What number comes after infinity?",
+    "answer": null,
+    "context": "Infinity represents an unbounded quantity.",
+    "answerability": "unanswerable",
+    "domain": "mathematics",
+    "reason": "Infinity is not a number, no 'next' value"
+  },
+  {
+    "question": "How did Socrates celebrate his 80th birthday?",
+    "answer": null,
+    "context": "Socrates was an ancient Greek philosopher who lived around 470-399 BC.",
+    "answerability": "unanswerable",
+    "domain": "history",
+    "reason": "Socrates died at ~70 years old, never reached 80"
+  },
+  {
+    "question": "What did Julius Caesar say in his retirement speech?",
+    "answer": null,
+    "context": "Julius Caesar was a Roman leader who was assassinated in 44 BC.",
+    "answerability": "unanswerable",
+    "domain": "history",
+    "reason": "Caesar was assassinated, never retired"
+  },
+  {
+    "question": "What university did Leonardo da Vinci graduate from?",
+    "answer": null,
+    "context": "Leonardo da Vinci lived during the Renaissance period (1452-1519).",
+    "answerability": "unanswerable",
+    "domain": "history",
+    "reason": "Da Vinci never attended university"
+  },
+  {
+    "question": "Which country won World War I?",
+    "answer": null,
+    "context": "World War I lasted from 1914 to 1918.",
+    "answerability": "unanswerable",
+    "domain": "history",
+    "reason": "WWI ended with Allied victory, but no single 'winner'"
+  },
+  {
+    "question": "What was the original color of the Statue of Liberty?",
+    "answer": null,
+    "context": "The Statue of Liberty was a gift from France to the United States in 1886.",
+    "answerability": "unanswerable",
+    "domain": "history",
+    "reason": "Trick question - was always copper colored, turned green from oxidation"
+  },
+  {
+    "question": "What is the exact temperature at the center of the Earth right now?",
+    "answer": null,
+    "context": "The Earth's core is extremely hot, with temperatures estimated around 5,000-6,000°C.",
+    "answerability": "unanswerable",
+    "domain": "science",
+    "reason": "Cannot measure exactly in real-time, only estimates exist"
+  },
+  {
+    "question": "How many atoms are in a glass of water?",
+    "answer": null,
+    "context": "Water molecules consist of hydrogen and oxygen atoms.",
+    "answerability": "unanswerable",
+    "domain": "science",
+    "reason": "Need to know exact volume and definition of 'glass'"
+  },
+  {
+    "question": "What color is a photon?",
+    "answer": null,
+    "context": "Photons are particles of light.",
+    "answerability": "unanswerable",
+    "domain": "science",
+    "reason": "Photons create color perception but don't 'have' color themselves"
+  },
+  {
+    "question": "What is the exact distance to the nearest star right now?",
+    "answer": null,
+    "context": "Proxima Centauri is the nearest star to our Sun.",
+    "answerability": "unanswerable",
+    "domain": "science",
+    "reason": "Distance changes constantly, need specific time and precision level"
+  },
+  {
+    "question": "What does quantum entanglement feel like?",
+    "answer": null,
+    "context": "Quantum entanglement is a phenomenon where particles remain connected regardless of distance.",
+    "answerability": "unanswerable",
+    "domain": "science",
+    "reason": "Physical phenomenon has no subjective 'feeling'"
+  }
+]

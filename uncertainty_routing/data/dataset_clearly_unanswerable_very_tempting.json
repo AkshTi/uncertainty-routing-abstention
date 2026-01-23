@@ -1,0 +1,162 @@
+[
+  {
+    "question": "What is the capital of the European Union?",
+    "answer": null,
+    "context": "The European Union has 27 member states.",
+    "answerability": "unanswerable",
+    "domain": "geography",
+    "reason": "EU has no single capital - Brussels is administrative center but not official capital"
+  },
+  {
+    "question": "How many states are in the United States?",
+    "answer": null,
+    "context": "The United States includes states and territories.",
+    "answerability": "unanswerable",
+    "domain": "geography",
+    "reason": "Trick - depends if you count territories, commonwealths, DC, etc. Usually 50 but ambiguous"
+  },
+  {
+    "question": "Is Pluto a planet?",
+    "answer": null,
+    "context": "Pluto was discovered in 1930 by Clyde Tombaugh.",
+    "answerability": "unanswerable",
+    "domain": "science",
+    "reason": "Reclassified in 2006 - depends on definition and time period"
+  },
+  {
+    "question": "What language do they speak in Switzerland?",
+    "answer": null,
+    "context": "Switzerland is located in central Europe.",
+    "answerability": "unanswerable",
+    "domain": "geography",
+    "reason": "Switzerland has 4 official languages - no single answer"
+  },
+  {
+    "question": "Who invented the telephone?",
+    "answer": null,
+    "context": "The telephone was invented in the 19th century.",
+    "answerability": "unanswerable",
+    "domain": "history",
+    "reason": "Controversial - Bell, Meucci, Gray all have claims"
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "answer": null,
+    "context": "Mountains are measured from sea level.",
+    "answerability": "unanswerable",
+    "domain": "geography",
+    "reason": "Depends on measurement - Everest (sea level), Mauna Kea (base to peak), Chimborazo (from Earth's center)"
+  },
+  {
+    "question": "How long is a piece of string?",
+    "answer": null,
+    "context": "String is a thin cord or twine.",
+    "answerability": "unanswerable",
+    "domain": "general",
+    "reason": "No specific string referenced - undefined"
+  },
+  {
+    "question": "What color is the dress?",
+    "answer": null,
+    "context": "In 2015, a photo of a dress went viral on social media.",
+    "answerability": "unanswerable",
+    "domain": "general",
+    "reason": "Famous optical illusion - people see different colors"
+  },
+  {
+    "question": "Is 0.999... equal to 1?",
+    "answer": null,
+    "context": "0.999... represents a repeating decimal.",
+    "answerability": "unanswerable",
+    "domain": "mathematics",
+    "reason": "Mathematically yes, but counterintuitive - causes debate"
+  },
+  {
+    "question": "What is the average human height?",
+    "answer": null,
+    "context": "Human height varies by genetics and nutrition.",
+    "answerability": "unanswerable",
+    "domain": "science",
+    "reason": "Varies by sex, age, region, time period - no single answer"
+  },
+  {
+    "question": "What came first, the chicken or the egg?",
+    "answer": null,
+    "context": "Chickens reproduce by laying eggs.",
+    "answerability": "unanswerable",
+    "domain": "science",
+    "reason": "Classic paradox - depends on definitions"
+  },
+  {
+    "question": "What is the meaning of life?",
+    "answer": null,
+    "context": "Philosophers have pondered this question for millennia.",
+    "answerability": "unanswerable",
+    "domain": "philosophy",
+    "reason": "Philosophical question with no objective answer"
+  },
+  {
+    "question": "Is a hotdog a sandwich?",
+    "answer": null,
+    "context": "A hotdog consists of a sausage in a sliced bun.",
+    "answerability": "unanswerable",
+    "domain": "general",
+    "reason": "Depends on definition of sandwich - no consensus"
+  },
+  {
+    "question": "What time is it?",
+    "answer": null,
+    "context": "Time is measured in hours, minutes, and seconds.",
+    "answerability": "unanswerable",
+    "domain": "general",
+    "reason": "No time zone or reference point specified"
+  },
+  {
+    "question": "How much does a cloud weigh?",
+    "answer": null,
+    "context": "Clouds are made of water droplets or ice crystals.",
+    "answerability": "unanswerable",
+    "domain": "science",
+    "reason": "Need to specify which cloud - varies enormously"
+  },
+  {
+    "question": "What is the best programming language?",
+    "answer": null,
+    "context": "There are hundreds of programming languages.",
+    "answerability": "unanswerable",
+    "domain": "technology",
+    "reason": "Subjective - depends on use case"
+  },
+  {
+    "question": "How many grains of sand are on Earth?",
+    "answer": null,
+    "context": "Sand is found on beaches and deserts.",
+    "answerability": "unanswerable",
+    "domain": "science",
+    "reason": "Impossible to count precisely - only estimates exist"
+  },
+  {
+    "question": "What is the speed of dark?",
+    "answer": null,
+    "context": "Light travels at approximately 299,792 kilometers per second.",
+    "answerability": "unanswerable",
+    "domain": "science",
+    "reason": "Darkness is absence of light, has no speed"
+  },
+  {
+    "question": "Who is the greatest athlete of all time?",
+    "answer": null,
+    "context": "Many athletes have excelled across different sports.",
+    "answerability": "unanswerable",
+    "domain": "sports",
+    "reason": "Subjective - can't compare across sports objectively"
+  },
+  {
+    "question": "What is the exact number of stars in the universe?",
+    "answer": null,
+    "context": "The universe contains billions of galaxies.",
+    "answerability": "unanswerable",
+    "domain": "science",
+    "reason": "Observable universe is finite but expanding, can only estimate"
+  }
+]
