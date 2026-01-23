@@ -1,0 +1,24 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+mathematics:   0%|          | 0/10 [00:00<?, ?it/s]The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+mathematics:  10%|█         | 1/10 [00:01<00:10,  1.15s/it]mathematics:  20%|██        | 2/10 [00:02<00:08,  1.03s/it]mathematics:  30%|███       | 3/10 [00:03<00:06,  1.01it/s]mathematics:  50%|█████     | 5/10 [00:04<00:03,  1.39it/s]mathematics:  60%|██████    | 6/10 [00:04<00:03,  1.28it/s]mathematics:  70%|███████   | 7/10 [00:05<00:02,  1.21it/s]mathematics:  80%|████████  | 8/10 [00:06<00:01,  1.16it/s]mathematics:  90%|█████████ | 9/10 [00:07<00:00,  1.13it/s]mathematics: 100%|██████████| 10/10 [00:08<00:00,  1.14it/s]mathematics: 100%|██████████| 10/10 [00:08<00:00,  1.15it/s]
+science:   0%|          | 0/10 [00:00<?, ?it/s]science:  10%|█         | 1/10 [00:00<00:08,  1.08it/s]science:  20%|██        | 2/10 [00:01<00:07,  1.08it/s]science:  30%|███       | 3/10 [00:02<00:06,  1.08it/s]science:  40%|████      | 4/10 [00:03<00:05,  1.08it/s]science:  50%|█████     | 5/10 [00:04<00:04,  1.08it/s]science:  60%|██████    | 6/10 [00:05<00:03,  1.08it/s]science:  70%|███████   | 7/10 [00:06<00:02,  1.08it/s]science:  80%|████████  | 8/10 [00:07<00:01,  1.08it/s]science:  90%|█████████ | 9/10 [00:08<00:00,  1.08it/s]science: 100%|██████████| 10/10 [00:09<00:00,  1.08it/s]science: 100%|██████████| 10/10 [00:09<00:00,  1.08it/s]
+history:   0%|          | 0/10 [00:00<?, ?it/s]history:  10%|█         | 1/10 [00:00<00:04,  1.99it/s]history:  20%|██        | 2/10 [00:01<00:06,  1.32it/s]history:  30%|███       | 3/10 [00:02<00:05,  1.19it/s]history:  40%|████      | 4/10 [00:03<00:05,  1.14it/s]history:  50%|█████     | 5/10 [00:04<00:04,  1.12it/s]history:  60%|██████    | 6/10 [00:05<00:03,  1.10it/s]history:  70%|███████   | 7/10 [00:06<00:02,  1.09it/s]history:  80%|████████  | 8/10 [00:07<00:01,  1.08it/s]history:  90%|█████████ | 9/10 [00:07<00:00,  1.08it/s]history: 100%|██████████| 10/10 [00:08<00:00,  1.08it/s]history: 100%|██████████| 10/10 [00:08<00:00,  1.12it/s]
+current_events:   0%|          | 0/10 [00:00<?, ?it/s]current_events:  10%|█         | 1/10 [00:00<00:08,  1.07it/s]current_events:  20%|██        | 2/10 [00:01<00:07,  1.07it/s]current_events:  30%|███       | 3/10 [00:02<00:06,  1.07it/s]current_events:  40%|████      | 4/10 [00:03<00:05,  1.07it/s]current_events:  50%|█████     | 5/10 [00:04<00:03,  1.31it/s]current_events:  60%|██████    | 6/10 [00:05<00:03,  1.22it/s]current_events:  70%|███████   | 7/10 [00:06<00:02,  1.17it/s]current_events:  80%|████████  | 8/10 [00:07<00:01,  1.13it/s]current_events:  90%|█████████ | 9/10 [00:07<00:00,  1.11it/s]current_events: 100%|██████████| 10/10 [00:08<00:00,  1.10it/s]current_events: 100%|██████████| 10/10 [00:08<00:00,  1.13it/s]
+Questions:   0%|          | 0/10 [00:00<?, ?it/s]Questions:  10%|█         | 1/10 [00:03<00:34,  3.88s/it]Questions:  20%|██        | 2/10 [00:08<00:34,  4.33s/it]Questions:  30%|███       | 3/10 [00:12<00:30,  4.32s/it]Questions:  40%|████      | 4/10 [00:17<00:26,  4.45s/it]Questions:  50%|█████     | 5/10 [00:22<00:22,  4.51s/it]Questions:  60%|██████    | 6/10 [00:26<00:17,  4.32s/it]Questions:  70%|███████   | 7/10 [00:30<00:13,  4.41s/it]Questions:  80%|████████  | 8/10 [00:35<00:08,  4.48s/it]Questions:  90%|█████████ | 9/10 [00:39<00:04,  4.53s/it]Questions: 100%|██████████| 10/10 [00:44<00:00,  4.57s/it]Questions: 100%|██████████| 10/10 [00:44<00:00,  4.46s/it]
+Traceback (most recent call last):
+  File "/orcd/home/002/akshatat/uncertainty-routing-abstention/uncertainty_routing/experiment6_robustness.py", line 557, in <module>
+    main()
+  File "/orcd/home/002/akshatat/uncertainty-routing-abstention/uncertainty_routing/experiment6_robustness.py", line 551, in main
+    json.dump(summary, f, indent=2)
+  File "/orcd/software/core/001/pkg/miniforge/25.11.0-0/lib/python3.12/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+                 ^^^^^^^^
+  File "/orcd/software/core/001/pkg/miniforge/25.11.0-0/lib/python3.12/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/orcd/software/core/001/pkg/miniforge/25.11.0-0/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/orcd/software/core/001/pkg/miniforge/25.11.0-0/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/orcd/software/core/001/pkg/miniforge/25.11.0-0/lib/python3.12/json/encoder.py", line 377, in _iterencode_dict
+    raise TypeError(f'keys must be str, int, float, bool or None, '
+TypeError: keys must be str, int, float, bool or None, not tuple
