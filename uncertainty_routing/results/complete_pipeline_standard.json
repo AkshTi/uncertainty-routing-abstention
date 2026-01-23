@@ -1,106 +1,168 @@
 {
-  "experiment6": {
-    "cross_domain_consistency": 0.6214061102799817,
-    "domain_stats": {
-      "abstained": {
-        "('current_events', 'baseline', False)": 0.0,
-        "('current_events', 'baseline', True)": 0.6,
-        "('current_events', 'steered', False)": 0.0,
-        "('current_events', 'steered', True)": 0.8,
-        "('history', 'baseline', False)": 0.0,
-        "('history', 'baseline', True)": 0.2,
-        "('history', 'steered', False)": 0.0,
-        "('history', 'steered', True)": 0.8,
-        "('mathematics', 'baseline', False)": 0.0,
-        "('mathematics', 'baseline', True)": 0.0,
-        "('mathematics', 'steered', False)": 0.0,
-        "('mathematics', 'steered', True)": 0.0,
-        "('science', 'baseline', False)": 0.0,
-        "('science', 'baseline', True)": 0.4,
-        "('science', 'steered', False)": 0.0,
-        "('science', 'steered', True)": 0.6
-      }
+  "experiment4": {
+    "bin_counts": {
+      "high": 16,
+      "medium": 3,
+      "low": 1
     },
-    "prompt_stats": {
-      "abstained": {
-        "('academic', 'baseline', False)": 0.0,
-        "('academic', 'baseline', True)": 0.0,
-        "('academic', 'steered', False)": 0.0,
-        "('academic', 'steered', True)": 0.2,
-        "('conversational', 'baseline', False)": 0.0,
-        "('conversational', 'baseline', True)": 0.0,
-        "('conversational', 'steered', False)": 0.8,
-        "('conversational', 'steered', True)": 0.6,
-        "('direct', 'baseline', False)": 0.0,
-        "('direct', 'baseline', True)": 0.2,
-        "('direct', 'steered', False)": 0.0,
-        "('direct', 'steered', True)": 0.4,
-        "('formal', 'baseline', False)": 0.0,
-        "('formal', 'baseline', True)": 0.0,
-        "('formal', 'steered', False)": 0.0,
-        "('formal', 'steered', True)": 0.0,
-        "('standard', 'baseline', False)": 0.0,
-        "('standard', 'baseline', True)": 0.0,
-        "('standard', 'steered', False)": 0.0,
-        "('standard', 'steered', True)": 0.4
-      }
+    "flip_rate_by_bin": {
+      "low": 0.0,
+      "medium": 0.0,
+      "high": 0.375
     },
-    "adversarial_stats": {
-      "abstained": {
-        "('baseline', False)": 0.0,
-        "('baseline', True)": 0.667,
-        "('steered', False)": 0.0,
-        "('steered', True)": 0.333
-      }
-    }
+    "total_flips": 6,
+    "total_questions": 20,
+    "baseline_abstention_rate": 0.35,
+    "steered_abstention_rate": 0.65,
+    "gate_opened": 0,
+    "gate_closed": 6
   },
-  "experiment7": {
-    "safety_preserved": true,
-    "baseline_refusal_rate": 0.556,
-    "safety_by_condition": {
-      "refused": {
-        "baseline": 0.556,
-        "toward_abstain": 0.667,
-        "toward_answer": 0.667
+  "experiment5": {
+    "metrics": [
+      {
+        "epsilon": -50.0,
+        "coverage_answerable": 1.0,
+        "abstain_answerable": 0.0,
+        "accuracy_answerable": 0.0,
+        "risk_answerable": 1.0,
+        "abstain_unanswerable": 0.7,
+        "hallucination_unanswerable": 0.3,
+        "n_answerable": 10,
+        "n_unanswerable": 10
       },
-      "safety_violation": {
-        "baseline": 0.222,
-        "toward_abstain": 0.0,
-        "toward_answer": 0.111
+      {
+        "epsilon": -40.0,
+        "coverage_answerable": 1.0,
+        "abstain_answerable": 0.0,
+        "accuracy_answerable": 0.0,
+        "risk_answerable": 1.0,
+        "abstain_unanswerable": 0.6,
+        "hallucination_unanswerable": 0.4,
+        "n_answerable": 10,
+        "n_unanswerable": 10
       },
-      "provided_answer": {
-        "baseline": 0.444,
-        "toward_abstain": 0.222,
-        "toward_answer": 0.333
+      {
+        "epsilon": -30.0,
+        "coverage_answerable": 0.8,
+        "abstain_answerable": 0.2,
+        "accuracy_answerable": 0.0,
+        "risk_answerable": 1.0,
+        "abstain_unanswerable": 0.4,
+        "hallucination_unanswerable": 0.6,
+        "n_answerable": 10,
+        "n_unanswerable": 10
+      },
+      {
+        "epsilon": -20.0,
+        "coverage_answerable": 0.7,
+        "abstain_answerable": 0.3,
+        "accuracy_answerable": 0.5714285714285714,
+        "risk_answerable": 0.4285714285714286,
+        "abstain_unanswerable": 0.6,
+        "hallucination_unanswerable": 0.4,
+        "n_answerable": 10,
+        "n_unanswerable": 10
+      },
+      {
+        "epsilon": -10.0,
+        "coverage_answerable": 0.5,
+        "abstain_answerable": 0.5,
+        "accuracy_answerable": 0.8,
+        "risk_answerable": 0.19999999999999996,
+        "abstain_unanswerable": 0.9,
+        "hallucination_unanswerable": 0.1,
+        "n_answerable": 10,
+        "n_unanswerable": 10
+      },
+      {
+        "epsilon": 0.0,
+        "coverage_answerable": 0.6,
+        "abstain_answerable": 0.4,
+        "accuracy_answerable": 1.0,
+        "risk_answerable": 0.0,
+        "abstain_unanswerable": 1.0,
+        "hallucination_unanswerable": 0.0,
+        "n_answerable": 10,
+        "n_unanswerable": 10
+      },
+      {
+        "epsilon": 10.0,
+        "coverage_answerable": 0.7,
+        "abstain_answerable": 0.3,
+        "accuracy_answerable": 1.0,
+        "risk_answerable": 0.0,
+        "abstain_unanswerable": 1.0,
+        "hallucination_unanswerable": 0.0,
+        "n_answerable": 10,
+        "n_unanswerable": 10
+      },
+      {
+        "epsilon": 20.0,
+        "coverage_answerable": 0.8,
+        "abstain_answerable": 0.2,
+        "accuracy_answerable": 1.0,
+        "risk_answerable": 0.0,
+        "abstain_unanswerable": 1.0,
+        "hallucination_unanswerable": 0.0,
+        "n_answerable": 10,
+        "n_unanswerable": 10
+      },
+      {
+        "epsilon": 30.0,
+        "coverage_answerable": 0.8,
+        "abstain_answerable": 0.2,
+        "accuracy_answerable": 1.0,
+        "risk_answerable": 0.0,
+        "abstain_unanswerable": 0.8,
+        "hallucination_unanswerable": 0.2,
+        "n_answerable": 10,
+        "n_unanswerable": 10
+      },
+      {
+        "epsilon": 40.0,
+        "coverage_answerable": 0.8,
+        "abstain_answerable": 0.2,
+        "accuracy_answerable": 1.0,
+        "risk_answerable": 0.0,
+        "abstain_unanswerable": 0.1,
+        "hallucination_unanswerable": 0.9,
+        "n_answerable": 10,
+        "n_unanswerable": 10
+      },
+      {
+        "epsilon": 50.0,
+        "coverage_answerable": 0.9,
+        "abstain_answerable": 0.1,
+        "accuracy_answerable": 1.0,
+        "risk_answerable": 0.0,
+        "abstain_unanswerable": 0.0,
+        "hallucination_unanswerable": 1.0,
+        "n_answerable": 10,
+        "n_unanswerable": 10
       }
-    },
-    "selective_abstention": {
-      "abstained": {
-        "('high', 'baseline')": 0.0,
-        "('high', 'steered_abstain')": 0.333,
-        "('high', 'steered_answer')": 0.0,
-        "('low', 'baseline')": 0.0,
-        "('low', 'steered_abstain')": 0.0,
-        "('low', 'steered_answer')": 0.0
-      },
-      "provided_answer": {
-        "('high', 'baseline')": 0.667,
-        "('high', 'steered_abstain')": 0.333,
-        "('high', 'steered_answer')": 0.667,
-        "('low', 'baseline')": 1.0,
-        "('low', 'steered_abstain')": 1.0,
-        "('low', 'steered_answer')": 1.0
-      }
-    },
-    "length_sensitivity": 0.5
+    ],
+    "best_direction": "negative",
+    "baseline_coverage_answerable": 0.6,
+    "baseline_accuracy_answerable": 1.0,
+    "baseline_abstain_unanswerable": 1.0,
+    "baseline_hallucination_unanswerable": 0.0,
+    "best_eps_value": -50.0,
+    "best_eps_coverage_answerable": 1.0,
+    "best_eps_accuracy_answerable": 0.0,
+    "best_eps_abstain_unanswerable": 0.7,
+    "best_eps_hallucination_unanswerable": 0.3,
+    "delta_coverage_answerable": 0.4,
+    "delta_accuracy_answerable": -1.0,
+    "delta_abstain_unanswerable": -0.30000000000000004,
+    "delta_hallucination_unanswerable": 0.3
   },
   "metadata": {
     "mode": "standard",
     "model": "Qwen/Qwen2.5-1.5B-Instruct",
     "n_questions": 30,
     "n_pairs": 10,
-    "timestamp": "2026-01-22T19:05:12.110194",
-    "total_time_minutes": 2.5278593420982363,
+    "timestamp": "2026-01-22T19:43:12.236749",
+    "total_time_minutes": 6.535963940620422,
     "only_critical": false
   }
 }

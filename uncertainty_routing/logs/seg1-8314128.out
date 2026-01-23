@@ -1,0 +1,488 @@
+Running: ./run_segment1.sh
+========================================================================
+ SEGMENT 1: Base Experiments (Exp1-3)
+ Expected runtime: 4-5 hours
+ Started: Thu Jan 22 19:17:30 EST 2026
+========================================================================
+
+Checking GPU availability...
+CUDA available: True
+GPU: NVIDIA L40S
+
+Running Experiments 1-3...
+
+================================================================================
+ COMPLETE PIPELINE v2: STANDARD MODE
+ Model: Qwen/Qwen2.5-1.5B-Instruct
+ Time: 2026-01-22 19:17:38.501768
+================================================================================
+
+CUDA available: True
+GPU: NVIDIA L40S
+GPU Memory: 47.67 GB
+
+Loading datasets...
+  Ambiguous: 30
+  Answerable: 10
+  Unanswerable: 10
+
+Loading model...
+Loading model Qwen/Qwen2.5-1.5B-Instruct...
+Model loaded successfully!
+✓ Model loaded
+
+
+================================================================================
+[1/9] EXPERIMENT 1: Behavior-Belief Dissociation
+================================================================================
+
+============================================================
+EXPERIMENT 1: Behavior-Belief Dissociation
+============================================================
+Testing 30 questions across 3 regimes
+
+
+Question 1/30: Is the number 7 large?...
+  Measuring internal uncertainty (20 samples)...
+  Testing regime: neutral
+  Testing regime: cautious
+  Testing regime: confident
+
+Question 2/30: Is coffee a healthy drink?...
+  Measuring internal uncertainty (20 samples)...
+  Testing regime: neutral
+  Testing regime: cautious
+  Testing regime: confident
+
+Question 3/30: Is AI dangerous?...
+  Measuring internal uncertainty (20 samples)...
+  Testing regime: neutral
+  Testing regime: cautious
+  Testing regime: confident
+
+Question 4/30: Is winter the best season?...
+  Measuring internal uncertainty (20 samples)...
+  Testing regime: neutral
+  Testing regime: cautious
+  Testing regime: confident
+
+Question 5/30: Should you exercise daily?...
+  Measuring internal uncertainty (20 samples)...
+  Testing regime: neutral
+  Testing regime: cautious
+  Testing regime: confident
+
+Question 6/30: Is 6 feet tall?...
+  Measuring internal uncertainty (20 samples)...
+  Testing regime: neutral
+  Testing regime: cautious
+  Testing regime: confident
+
+Question 7/30: Is $100,000 a lot of money?...
+  Measuring internal uncertainty (20 samples)...
+  Testing regime: neutral
+  Testing regime: cautious
+  Testing regime: confident
+
+Question 8/30: Is 30 years old young?...
+  Measuring internal uncertainty (20 samples)...
+  Testing regime: neutral
+  Testing regime: cautious
+  Testing regime: confident
+
+Question 9/30: Is 2 hours a long time?...
+  Measuring internal uncertainty (20 samples)...
+  Testing regime: neutral
+  Testing regime: cautious
+  Testing regime: confident
+
+Question 10/30: Is blue the best color?...
+  Measuring internal uncertainty (20 samples)...
+  Testing regime: neutral
+  Testing regime: cautious
+  Testing regime: confident
+
+Question 11/30: How many books should a person read per year?...
+  Measuring internal uncertainty (20 samples)...
+  Testing regime: neutral
+  Testing regime: cautious
+  Testing regime: confident
+
+Question 12/30: What is a good salary?...
+  Measuring internal uncertainty (20 samples)...
+  Testing regime: neutral
+  Testing regime: cautious
+  Testing regime: confident
+
+Question 13/30: How long should you sleep each night?...
+  Measuring internal uncertainty (20 samples)...
+  Testing regime: neutral
+  Testing regime: cautious
+  Testing regime: confident
+
+Question 14/30: What temperature is comfortable?...
+  Measuring internal uncertainty (20 samples)...
+  Testing regime: neutral
+  Testing regime: cautious
+  Testing regime: confident
+
+Question 15/30: How tall is a tall person?...
+  Measuring internal uncertainty (20 samples)...
+  Testing regime: neutral
+  Testing regime: cautious
+  Testing regime: confident
+
+Question 16/30: How much water should you drink daily?...
+  Measuring internal uncertainty (20 samples)...
+  Testing regime: neutral
+  Testing regime: cautious
+  Testing regime: confident
+
+Question 17/30: What's a normal heart rate?...
+  Measuring internal uncertainty (20 samples)...
+  Testing regime: neutral
+  Testing regime: cautious
+  Testing regime: confident
+
+Question 18/30: How many hours of exercise per week?...
+  Measuring internal uncertainty (20 samples)...
+  Testing regime: neutral
+  Testing regime: cautious
+  Testing regime: confident
+
+Question 19/30: What's a good credit score?...
+  Measuring internal uncertainty (20 samples)...
+  Testing regime: neutral
+  Testing regime: cautious
+  Testing regime: confident
+
+Question 20/30: How many friends should you have?...
+  Measuring internal uncertainty (20 samples)...
+  Testing regime: neutral
+  Testing regime: cautious
+  Testing regime: confident
+
+Question 21/30: What percentage of people are happy?...
+  Measuring internal uncertainty (20 samples)...
+  Testing regime: neutral
+  Testing regime: cautious
+  Testing regime: confident
+
+Question 22/30: How much of your income should you save?...
+  Measuring internal uncertainty (20 samples)...
+  Testing regime: neutral
+  Testing regime: cautious
+  Testing regime: confident
+
+Question 23/30: What's the success rate of startups?...
+  Measuring internal uncertainty (20 samples)...
+  Testing regime: neutral
+  Testing regime: cautious
+  Testing regime: confident
+
+Question 24/30: What portion of your day should be work?...
+  Measuring internal uncertainty (20 samples)...
+  Testing regime: neutral
+  Testing regime: cautious
+  Testing regime: confident
+
+Question 25/30: What percent of food should be protein?...
+  Measuring internal uncertainty (20 samples)...
+  Testing regime: neutral
+  Testing regime: cautious
+  Testing regime: confident
+
+Question 26/30: What percentage of the population is wealthy?...
+  Measuring internal uncertainty (20 samples)...
+  Testing regime: neutral
+  Testing regime: cautious
+  Testing regime: confident
+
+Question 27/30: How much of Earth is covered in water?...
+  Measuring internal uncertainty (20 samples)...
+  Testing regime: neutral
+  Testing regime: cautious
+  Testing regime: confident
+
+Question 28/30: What fraction of marriages end in divorce?...
+  Measuring internal uncertainty (20 samples)...
+  Testing regime: neutral
+  Testing regime: cautious
+  Testing regime: confident
+
+Question 29/30: What percentage of people exercise regularly?...
+  Measuring internal uncertainty (20 samples)...
+  Testing regime: neutral
+  Testing regime: cautious
+  Testing regime: confident
+
+Question 30/30: How much of your portfolio should be stocks?...
+  Measuring internal uncertainty (20 samples)...
+  Testing regime: neutral
+  Testing regime: cautious
+  Testing regime: confident
+
+Results saved to results/exp1_raw_results.csv
+
+============================================================
+EXPERIMENT 1: ANALYSIS
+============================================================
+
+Abstention Rates by Instruction Regime:
+           rate       std  count
+regime                          
+cautious    0.8  0.406838     30
+confident   0.0  0.000000     30
+neutral     0.0  0.000000     30
+
+Internal Uncertainty (Entropy) by Regime:
+               mean       std
+regime                       
+cautious   2.782754  0.283236
+confident  2.782754  0.283236
+neutral    2.782754  0.283236
+
+============================================================
+KEY FINDING: Behavior ≠ Belief
+============================================================
+Abstention rate (cautious):   0.800
+Abstention rate (neutral):    0.000
+Abstention rate (confident):  0.000
+
+Behavior gap (cautious - confident): 0.800
+Belief gap (entropy difference):     0.000
+
+Behavior/Belief ratio: 800000.0x
+
+Example questions where behavior changes but entropy doesn't:
+
+  Q: How many books should a person read per year?
+     Entropy variance: 0.000
+     Abstain variance: 0.577
+
+  Q: How many friends should you have?
+     Entropy variance: 0.000
+     Abstain variance: 0.577
+
+  Q: How many hours of exercise per week?
+     Entropy variance: 0.000
+     Abstain variance: 0.577
+
+  Q: How much of your income should you save?
+     Entropy variance: 0.000
+     Abstain variance: 0.577
+
+  Q: How much of your portfolio should be stocks?
+     Entropy variance: 0.000
+     Abstain variance: 0.577
+
+Figure saved to results/exp1_behavior_belief_dissociation.png
+Paper figure saved to results/exp1_paper_figure.png
+✓ Experiment 1 complete
+
+================================================================================
+[2/9] EXPERIMENT 2: Gate Localization
+================================================================================
+
+============================================================
+EXPERIMENT 2: Gate Localization
+============================================================
+Testing 10 example pairs
+Across 28 layers (stride=1)
+
+
+Results saved to results/exp2_raw_results.csv
+
+============================================================
+EXPERIMENT 2: ANALYSIS
+============================================================
+
+Layer-wise Patching Effects:
+      delta_margin              flipped
+              mean    std count    mean
+layer                                  
+0              0.0  0.000    10     0.0
+1              0.0  0.000    10     0.0
+2              0.2  0.632    10     0.1
+3              0.0  0.000    10     0.0
+4              0.2  0.632    10     0.1
+5              0.2  0.632    10     0.1
+6              0.0  0.000    10     0.0
+7              0.0  0.943    10     0.1
+8              0.2  1.135    10     0.2
+9             -0.2  0.632    10     0.0
+10             0.4  1.265    10     0.3
+11            -0.2  0.632    10     0.0
+12            -0.2  0.632    10     0.0
+13            -0.2  0.632    10     0.0
+14             0.2  1.135    10     0.2
+15             0.2  1.135    10     0.2
+16             0.4  0.843    10     0.2
+17             0.4  0.843    10     0.2
+18             0.8  1.033    10     0.4
+19             0.2  0.632    10     0.1
+20             0.2  0.632    10     0.1
+21             0.0  0.000    10     0.0
+22             0.0  0.000    10     0.0
+23             0.0  0.000    10     0.0
+24             0.0  0.000    10     0.0
+25             0.0  0.000    10     0.0
+26             0.0  0.000    10     0.0
+27             0.0  0.000    10     0.0
+
+Critical Layers (delta > 0.200):
+[10, 16, 17, 18]
+
+Late-layer concentration:
+  Critical layers after layer 16: 3/4
+  Proportion: 75.0%
+
+Maximum effect at layer 18: Δ=0.800
+Maximum flip rate at layer 18: 40.0%
+
+Figure saved to results/exp2_localization_analysis.png
+✓ Experiment 2 complete - Target layers: [10, 16, 17, 18]
+
+================================================================================
+[3/9] EXPERIMENT 3: Steering Control
+================================================================================
+
+============================================================
+EXPERIMENT 3: Steering Control (FIXED)
+============================================================
+
+Computing steering directions...
+  Computing steering direction for layer 10...
+    Direction norm before normalization: 7.5078
+    POS activation norm: 41.1250
+    NEG activation norm: 39.0625
+  Layer 10: direction shape = torch.Size([1, 1536])
+  Computing steering direction for layer 16...
+    Direction norm before normalization: 16.0938
+    POS activation norm: 52.1250
+    NEG activation norm: 52.4062
+  Layer 16: direction shape = torch.Size([1, 1536])
+  Computing steering direction for layer 17...
+    Direction norm before normalization: 21.1406
+    POS activation norm: 53.1562
+    NEG activation norm: 55.0625
+  Layer 17: direction shape = torch.Size([1, 1536])
+  Computing steering direction for layer 18...
+    Direction norm before normalization: 25.0938
+    POS activation norm: 56.9375
+    NEG activation norm: 58.5312
+  Layer 18: direction shape = torch.Size([1, 1536])
+
+Testing steering effects...
+Saved steering vectors to results/steering_vectors.pt
+
+=== STEERING DIAGNOSTIC ===
+Total tests: 360
+Non-zero deltas: 0
+Flips: 0
+Answer changes: 153
+
+Example of steering effect:
+  Layer: 10, Epsilon: 0.5
+  Question: Is AI dangerous?
+  Baseline answer: AI can be dangerous if not properly regulated and controlled. It has the potential to cause harm, especially when used for malicious purposes or in unethical ways. However, with proper oversight and ethical guidelines, AI can also bring significant benefits and advancements. The key
+  Steered answer: AI can be dangerous if not properly regulated and controlled. It has the potential to cause harm, especially in areas like autonomous weapons or deepfakes. However, with proper oversight and ethical guidelines, it can also bring significant benefits such as improved healthcare and
+  Delta margin: 0.000
+
+Results saved to results/exp3_raw_results.csv
+
+============================================================
+EXPERIMENT 3: ANALYSIS
+============================================================
+
+✓ Steering is working: 153 answer changes detected
+
+Answer Change Rates by Layer and Epsilon:
+epsilon       0.5       1.0       2.0       4.0       8.0
+layer                                                    
+10            0.4       0.4  0.466667       0.6  0.933333
+16            0.2  0.333333  0.333333  0.733333  0.866667
+17       0.266667       0.4       0.4  0.666667       0.8
+18            0.2  0.333333  0.466667  0.666667  0.733333
+
+Most effective layer: 10 (change rate=93.3% at ε=8.0)
+
+Epsilon-effect correlations by layer:
+  Layer 10: r = 0.980
+  Layer 16: r = 0.991
+  Layer 17: r = 0.991
+  Layer 18: r = 0.962
+
+Figure saved to results/exp3_steering_analysis.png
+✓ Experiment 3 complete - Best layer: 10
+[4/9] Skipping Experiment 4
+[5/9] Skipping Experiment 5
+[6/9] Skipping Experiment 6
+[7/9] Skipping Experiment 7
+[8/9] Skipping Experiment 8 ⚠️  NOT RECOMMENDED
+[9/9] Skipping Experiment 9 ⚠️  NOT RECOMMENDED
+
+================================================================================
+ PIPELINE COMPLETE!
+================================================================================
+
+Total time: 17.5 minutes
+Results saved to: results/complete_pipeline_standard.json
+
+Experiments completed:
+  ✓ experiment1
+  ✓ experiment2
+  ✓ experiment3
+
+✓ All requested experiments completed!
+
+
+========================================================================
+ SEGMENT 1 COMPLETE!
+ Finished: Thu Jan 22 19:35:08 EST 2026
+========================================================================
+
+Outputs created:
+  - results/exp1_summary.json
+  - results/exp2_summary.json
+  - results/exp3_summary.json
+  - results/steering_vectors.pt
+
+Next step: Run ./run_segment2.sh
+
+========================================================================
+ RESULTS VERIFICATION
+========================================================================
+
+Checking experiment summaries...
+
+✗ Experiment 1: MISSING
+✗ Experiment 2: MISSING
+✗ Experiment 3: MISSING
+✗ Experiment 4: MISSING
+✓ Experiment 5: COMPLETE
+✗ Experiment 6: MISSING
+✗ Experiment 7: MISSING
+✓ Experiment 8: COMPLETE
+✗ Experiment 9: MISSING
+
+Checking critical files...
+
+✗ Steering vectors: MISSING
+✓ Combined summary: PRESENT
+
+Checking figures...
+
+Found 10 figure(s)
+✓ All figures generated
+
+========================================================================
+ ✗ SOME EXPERIMENTS INCOMPLETE
+========================================================================
+
+Run the missing segments:
+  ./run_segment1.sh  (Exp1-3)
+  ./run_segment2.sh  (Exp4-5)
+  ./run_segment3.sh  (Exp6-7)
+  ./run_segment4.sh  (Exp8-9) ⭐ CRITICAL
+
