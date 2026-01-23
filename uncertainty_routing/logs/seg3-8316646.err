@@ -1,0 +1,16 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+mathematics:   0%|          | 0/10 [00:00<?, ?it/s]The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+mathematics:   0%|          | 0/10 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/orcd/home/002/akshatat/uncertainty-routing-abstention/uncertainty_routing/experiment6_robustness.py", line 554, in <module>
+    main()
+  File "/orcd/home/002/akshatat/uncertainty-routing-abstention/uncertainty_routing/experiment6_robustness.py", line 529, in main
+    df_domains = exp6.test_cross_domain(best_layer, optimal_epsilon)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/orcd/home/002/akshatat/uncertainty-routing-abstention/uncertainty_routing/experiment6_robustness.py", line 160, in test_cross_domain
+    result_steered = self._test_single(q, best_layer, optimal_epsilon)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/orcd/home/002/akshatat/uncertainty-routing-abstention/uncertainty_routing/experiment6_robustness.py", line 260, in _test_single
+    self.steering_vectors[layer_idx],
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 20

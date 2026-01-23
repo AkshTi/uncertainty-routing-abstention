@@ -1,0 +1,38 @@
+Running: ./run_segment3.sh
+========================================================================
+ SEGMENT 3: Validation (Exp6-7)
+ Expected runtime: 3-4 hours
+ Started: Thu Jan 22 21:31:32 EST 2026
+========================================================================
+
+Checking prerequisites...
+✓ Found steering_vectors_explicit.pt
+✓ Exp5 results found
+  Baseline abstention: 66.7%
+✓ Prerequisites satisfied
+
+Checking GPU availability...
+CUDA available: True
+GPU: NVIDIA L40S
+
+========================================================================
+ EXPERIMENT 6: Robustness Testing
+========================================================================
+
+This will test steering on:
+  - Cross-domain generalization (math, science, history, current events)
+  - Prompt variations
+  - Adversarial questions
+
+Loading model...
+Loading model Qwen/Qwen2.5-1.5B-Instruct...
+Model loaded successfully!
+Using layer 20, epsilon -50.0 (from exp5_summary.json)
+
+======================================================================
+EXPERIMENT 6A: Cross-Domain Generalization (FIXED)
+======================================================================
+Using epsilon=-50.0 (optimal from exp5)
+
+
+Testing domain: mathematics
