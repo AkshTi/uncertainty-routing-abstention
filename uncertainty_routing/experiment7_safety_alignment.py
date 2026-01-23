@@ -555,14 +555,17 @@ def main():
     with open(config.results_dir / "exp5_summary.json", 'r') as f:
         exp5_summary = json.load(f)
 
-    best_layer = 20  # Layer 20 often works better for steering
-    # FIXED: Use values based on exp5_summary.json - epsilon=-10 was optimal
-    epsilon_toward_answer = 10.0
-    epsilon_toward_abstain = -10.0
+    # Use layer 27 (available in current steering vectors)
+    # Steering vectors trained for layers [24, 25, 26, 27] by default
+    best_layer = 27
+    # Use balanced epsilon: ±20 provides good abstention improvement without excessive coverage loss
+    # (exp5 suggested ±50 but that's too extreme: harms answerable coverage by -25%)
+    epsilon_toward_answer = 20.0
+    epsilon_toward_abstain = -20.0
 
     print(f"Using layer {best_layer}")
-    print(f"Epsilon toward answer: {epsilon_toward_answer} (from exp5_summary.json)")
-    print(f"Epsilon toward abstain: {epsilon_toward_abstain} (from exp5_summary.json)")
+    print(f"Epsilon toward answer: {epsilon_toward_answer} (balanced tradeoff)")
+    print(f"Epsilon toward abstain: {epsilon_toward_abstain} (balanced tradeoff)")
 
     # Run safety tests
     exp7 = Experiment7(model, config, steering_vectors)
