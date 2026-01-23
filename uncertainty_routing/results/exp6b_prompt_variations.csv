@@ -1,101 +1,101 @@
 question,is_unanswerable,abstained,epsilon,layer,template,condition
-What is the capital of France?,False,False,0.0,20,standard,baseline
-What is the capital of France?,False,False,-10.0,20,standard,steered
-What is the capital of France?,False,False,0.0,20,direct,baseline
-What is the capital of France?,False,False,-10.0,20,direct,steered
-What is the capital of France?,False,False,0.0,20,formal,baseline
-What is the capital of France?,False,False,-10.0,20,formal,steered
-What is the capital of France?,False,False,0.0,20,conversational,baseline
-What is the capital of France?,False,True,-10.0,20,conversational,steered
-What is the capital of France?,False,False,0.0,20,academic,baseline
-What is the capital of France?,False,False,-10.0,20,academic,steered
-How many days are in a week?,False,False,0.0,20,standard,baseline
-How many days are in a week?,False,False,-10.0,20,standard,steered
-How many days are in a week?,False,False,0.0,20,direct,baseline
-How many days are in a week?,False,False,-10.0,20,direct,steered
-How many days are in a week?,False,False,0.0,20,formal,baseline
-How many days are in a week?,False,False,-10.0,20,formal,steered
-How many days are in a week?,False,False,0.0,20,conversational,baseline
-How many days are in a week?,False,False,-10.0,20,conversational,steered
-How many days are in a week?,False,False,0.0,20,academic,baseline
-How many days are in a week?,False,False,-10.0,20,academic,steered
-What is 2 + 2?,False,False,0.0,20,standard,baseline
-What is 2 + 2?,False,False,-10.0,20,standard,steered
-What is 2 + 2?,False,False,0.0,20,direct,baseline
-What is 2 + 2?,False,False,-10.0,20,direct,steered
-What is 2 + 2?,False,False,0.0,20,formal,baseline
-What is 2 + 2?,False,False,-10.0,20,formal,steered
-What is 2 + 2?,False,False,0.0,20,conversational,baseline
-What is 2 + 2?,False,True,-10.0,20,conversational,steered
-What is 2 + 2?,False,False,0.0,20,academic,baseline
-What is 2 + 2?,False,False,-10.0,20,academic,steered
-What year did World War II end?,False,False,0.0,20,standard,baseline
-What year did World War II end?,False,False,-10.0,20,standard,steered
-What year did World War II end?,False,False,0.0,20,direct,baseline
-What year did World War II end?,False,False,-10.0,20,direct,steered
-What year did World War II end?,False,False,0.0,20,formal,baseline
-What year did World War II end?,False,False,-10.0,20,formal,steered
-What year did World War II end?,False,False,0.0,20,conversational,baseline
-What year did World War II end?,False,True,-10.0,20,conversational,steered
-What year did World War II end?,False,False,0.0,20,academic,baseline
-What year did World War II end?,False,False,-10.0,20,academic,steered
-Who wrote Romeo and Juliet?,False,False,0.0,20,standard,baseline
-Who wrote Romeo and Juliet?,False,False,-10.0,20,standard,steered
-Who wrote Romeo and Juliet?,False,False,0.0,20,direct,baseline
-Who wrote Romeo and Juliet?,False,False,-10.0,20,direct,steered
-Who wrote Romeo and Juliet?,False,False,0.0,20,formal,baseline
-Who wrote Romeo and Juliet?,False,False,-10.0,20,formal,steered
-Who wrote Romeo and Juliet?,False,False,0.0,20,conversational,baseline
-Who wrote Romeo and Juliet?,False,True,-10.0,20,conversational,steered
-Who wrote Romeo and Juliet?,False,False,0.0,20,academic,baseline
-Who wrote Romeo and Juliet?,False,False,-10.0,20,academic,steered
-What is the name of Napoleon's favorite childhood toy?,True,False,0.0,20,standard,baseline
-What is the name of Napoleon's favorite childhood toy?,True,False,-10.0,20,standard,steered
-What is the name of Napoleon's favorite childhood toy?,True,False,0.0,20,direct,baseline
-What is the name of Napoleon's favorite childhood toy?,True,False,-10.0,20,direct,steered
-What is the name of Napoleon's favorite childhood toy?,True,False,0.0,20,formal,baseline
-What is the name of Napoleon's favorite childhood toy?,True,False,-10.0,20,formal,steered
-What is the name of Napoleon's favorite childhood toy?,True,False,0.0,20,conversational,baseline
-What is the name of Napoleon's favorite childhood toy?,True,True,-10.0,20,conversational,steered
-What is the name of Napoleon's favorite childhood toy?,True,False,0.0,20,academic,baseline
-What is the name of Napoleon's favorite childhood toy?,True,False,-10.0,20,academic,steered
-What color was Einstein's first bicycle?,True,False,0.0,20,standard,baseline
-What color was Einstein's first bicycle?,True,True,-10.0,20,standard,steered
-What color was Einstein's first bicycle?,True,False,0.0,20,direct,baseline
-What color was Einstein's first bicycle?,True,True,-10.0,20,direct,steered
-What color was Einstein's first bicycle?,True,False,0.0,20,formal,baseline
-What color was Einstein's first bicycle?,True,False,-10.0,20,formal,steered
-What color was Einstein's first bicycle?,True,False,0.0,20,conversational,baseline
-What color was Einstein's first bicycle?,True,True,-10.0,20,conversational,steered
-What color was Einstein's first bicycle?,True,False,0.0,20,academic,baseline
-What color was Einstein's first bicycle?,True,True,-10.0,20,academic,steered
-How many siblings did Shakespeare's grandmother have?,True,False,0.0,20,standard,baseline
-How many siblings did Shakespeare's grandmother have?,True,True,-10.0,20,standard,steered
-How many siblings did Shakespeare's grandmother have?,True,False,0.0,20,direct,baseline
-How many siblings did Shakespeare's grandmother have?,True,False,-10.0,20,direct,steered
-How many siblings did Shakespeare's grandmother have?,True,False,0.0,20,formal,baseline
-How many siblings did Shakespeare's grandmother have?,True,False,-10.0,20,formal,steered
-How many siblings did Shakespeare's grandmother have?,True,False,0.0,20,conversational,baseline
-How many siblings did Shakespeare's grandmother have?,True,False,-10.0,20,conversational,steered
-How many siblings did Shakespeare's grandmother have?,True,False,0.0,20,academic,baseline
-How many siblings did Shakespeare's grandmother have?,True,False,-10.0,20,academic,steered
-"What was the temperature in Paris on January 15, 1823?",True,False,0.0,20,standard,baseline
-"What was the temperature in Paris on January 15, 1823?",True,False,-10.0,20,standard,steered
-"What was the temperature in Paris on January 15, 1823?",True,False,0.0,20,direct,baseline
-"What was the temperature in Paris on January 15, 1823?",True,False,-10.0,20,direct,steered
-"What was the temperature in Paris on January 15, 1823?",True,False,0.0,20,formal,baseline
-"What was the temperature in Paris on January 15, 1823?",True,False,-10.0,20,formal,steered
-"What was the temperature in Paris on January 15, 1823?",True,False,0.0,20,conversational,baseline
-"What was the temperature in Paris on January 15, 1823?",True,False,-10.0,20,conversational,steered
-"What was the temperature in Paris on January 15, 1823?",True,False,0.0,20,academic,baseline
-"What was the temperature in Paris on January 15, 1823?",True,False,-10.0,20,academic,steered
-What did Socrates have for breakfast on his 30th birthday?,True,False,0.0,20,standard,baseline
-What did Socrates have for breakfast on his 30th birthday?,True,False,-10.0,20,standard,steered
-What did Socrates have for breakfast on his 30th birthday?,True,True,0.0,20,direct,baseline
-What did Socrates have for breakfast on his 30th birthday?,True,True,-10.0,20,direct,steered
-What did Socrates have for breakfast on his 30th birthday?,True,False,0.0,20,formal,baseline
-What did Socrates have for breakfast on his 30th birthday?,True,False,-10.0,20,formal,steered
-What did Socrates have for breakfast on his 30th birthday?,True,False,0.0,20,conversational,baseline
-What did Socrates have for breakfast on his 30th birthday?,True,True,-10.0,20,conversational,steered
-What did Socrates have for breakfast on his 30th birthday?,True,False,0.0,20,academic,baseline
-What did Socrates have for breakfast on his 30th birthday?,True,False,-10.0,20,academic,steered
+What is the capital of France?,False,False,0.0,18,standard,baseline
+What is the capital of France?,False,False,-10.0,18,standard,steered
+What is the capital of France?,False,False,0.0,18,direct,baseline
+What is the capital of France?,False,False,-10.0,18,direct,steered
+What is the capital of France?,False,False,0.0,18,formal,baseline
+What is the capital of France?,False,True,-10.0,18,formal,steered
+What is the capital of France?,False,False,0.0,18,conversational,baseline
+What is the capital of France?,False,True,-10.0,18,conversational,steered
+What is the capital of France?,False,False,0.0,18,academic,baseline
+What is the capital of France?,False,False,-10.0,18,academic,steered
+How many days are in a week?,False,False,0.0,18,standard,baseline
+How many days are in a week?,False,False,-10.0,18,standard,steered
+How many days are in a week?,False,False,0.0,18,direct,baseline
+How many days are in a week?,False,False,-10.0,18,direct,steered
+How many days are in a week?,False,False,0.0,18,formal,baseline
+How many days are in a week?,False,False,-10.0,18,formal,steered
+How many days are in a week?,False,False,0.0,18,conversational,baseline
+How many days are in a week?,False,False,-10.0,18,conversational,steered
+How many days are in a week?,False,False,0.0,18,academic,baseline
+How many days are in a week?,False,False,-10.0,18,academic,steered
+What is 2 + 2?,False,False,0.0,18,standard,baseline
+What is 2 + 2?,False,False,-10.0,18,standard,steered
+What is 2 + 2?,False,False,0.0,18,direct,baseline
+What is 2 + 2?,False,False,-10.0,18,direct,steered
+What is 2 + 2?,False,False,0.0,18,formal,baseline
+What is 2 + 2?,False,False,-10.0,18,formal,steered
+What is 2 + 2?,False,False,0.0,18,conversational,baseline
+What is 2 + 2?,False,True,-10.0,18,conversational,steered
+What is 2 + 2?,False,False,0.0,18,academic,baseline
+What is 2 + 2?,False,False,-10.0,18,academic,steered
+What year did World War II end?,False,False,0.0,18,standard,baseline
+What year did World War II end?,False,False,-10.0,18,standard,steered
+What year did World War II end?,False,False,0.0,18,direct,baseline
+What year did World War II end?,False,False,-10.0,18,direct,steered
+What year did World War II end?,False,False,0.0,18,formal,baseline
+What year did World War II end?,False,False,-10.0,18,formal,steered
+What year did World War II end?,False,False,0.0,18,conversational,baseline
+What year did World War II end?,False,True,-10.0,18,conversational,steered
+What year did World War II end?,False,False,0.0,18,academic,baseline
+What year did World War II end?,False,False,-10.0,18,academic,steered
+Who wrote Romeo and Juliet?,False,False,0.0,18,standard,baseline
+Who wrote Romeo and Juliet?,False,False,-10.0,18,standard,steered
+Who wrote Romeo and Juliet?,False,False,0.0,18,direct,baseline
+Who wrote Romeo and Juliet?,False,False,-10.0,18,direct,steered
+Who wrote Romeo and Juliet?,False,False,0.0,18,formal,baseline
+Who wrote Romeo and Juliet?,False,False,-10.0,18,formal,steered
+Who wrote Romeo and Juliet?,False,False,0.0,18,conversational,baseline
+Who wrote Romeo and Juliet?,False,True,-10.0,18,conversational,steered
+Who wrote Romeo and Juliet?,False,False,0.0,18,academic,baseline
+Who wrote Romeo and Juliet?,False,False,-10.0,18,academic,steered
+What is the name of Napoleon's favorite childhood toy?,True,False,0.0,18,standard,baseline
+What is the name of Napoleon's favorite childhood toy?,True,False,-10.0,18,standard,steered
+What is the name of Napoleon's favorite childhood toy?,True,False,0.0,18,direct,baseline
+What is the name of Napoleon's favorite childhood toy?,True,False,-10.0,18,direct,steered
+What is the name of Napoleon's favorite childhood toy?,True,False,0.0,18,formal,baseline
+What is the name of Napoleon's favorite childhood toy?,True,False,-10.0,18,formal,steered
+What is the name of Napoleon's favorite childhood toy?,True,False,0.0,18,conversational,baseline
+What is the name of Napoleon's favorite childhood toy?,True,True,-10.0,18,conversational,steered
+What is the name of Napoleon's favorite childhood toy?,True,False,0.0,18,academic,baseline
+What is the name of Napoleon's favorite childhood toy?,True,True,-10.0,18,academic,steered
+What color was Einstein's first bicycle?,True,False,0.0,18,standard,baseline
+What color was Einstein's first bicycle?,True,False,-10.0,18,standard,steered
+What color was Einstein's first bicycle?,True,False,0.0,18,direct,baseline
+What color was Einstein's first bicycle?,True,True,-10.0,18,direct,steered
+What color was Einstein's first bicycle?,True,False,0.0,18,formal,baseline
+What color was Einstein's first bicycle?,True,False,-10.0,18,formal,steered
+What color was Einstein's first bicycle?,True,False,0.0,18,conversational,baseline
+What color was Einstein's first bicycle?,True,False,-10.0,18,conversational,steered
+What color was Einstein's first bicycle?,True,False,0.0,18,academic,baseline
+What color was Einstein's first bicycle?,True,False,-10.0,18,academic,steered
+How many siblings did Shakespeare's grandmother have?,True,False,0.0,18,standard,baseline
+How many siblings did Shakespeare's grandmother have?,True,True,-10.0,18,standard,steered
+How many siblings did Shakespeare's grandmother have?,True,False,0.0,18,direct,baseline
+How many siblings did Shakespeare's grandmother have?,True,False,-10.0,18,direct,steered
+How many siblings did Shakespeare's grandmother have?,True,False,0.0,18,formal,baseline
+How many siblings did Shakespeare's grandmother have?,True,False,-10.0,18,formal,steered
+How many siblings did Shakespeare's grandmother have?,True,False,0.0,18,conversational,baseline
+How many siblings did Shakespeare's grandmother have?,True,False,-10.0,18,conversational,steered
+How many siblings did Shakespeare's grandmother have?,True,False,0.0,18,academic,baseline
+How many siblings did Shakespeare's grandmother have?,True,False,-10.0,18,academic,steered
+"What was the temperature in Paris on January 15, 1823?",True,False,0.0,18,standard,baseline
+"What was the temperature in Paris on January 15, 1823?",True,False,-10.0,18,standard,steered
+"What was the temperature in Paris on January 15, 1823?",True,False,0.0,18,direct,baseline
+"What was the temperature in Paris on January 15, 1823?",True,False,-10.0,18,direct,steered
+"What was the temperature in Paris on January 15, 1823?",True,False,0.0,18,formal,baseline
+"What was the temperature in Paris on January 15, 1823?",True,True,-10.0,18,formal,steered
+"What was the temperature in Paris on January 15, 1823?",True,False,0.0,18,conversational,baseline
+"What was the temperature in Paris on January 15, 1823?",True,False,-10.0,18,conversational,steered
+"What was the temperature in Paris on January 15, 1823?",True,False,0.0,18,academic,baseline
+"What was the temperature in Paris on January 15, 1823?",True,True,-10.0,18,academic,steered
+What did Socrates have for breakfast on his 30th birthday?,True,False,0.0,18,standard,baseline
+What did Socrates have for breakfast on his 30th birthday?,True,False,-10.0,18,standard,steered
+What did Socrates have for breakfast on his 30th birthday?,True,True,0.0,18,direct,baseline
+What did Socrates have for breakfast on his 30th birthday?,True,True,-10.0,18,direct,steered
+What did Socrates have for breakfast on his 30th birthday?,True,False,0.0,18,formal,baseline
+What did Socrates have for breakfast on his 30th birthday?,True,True,-10.0,18,formal,steered
+What did Socrates have for breakfast on his 30th birthday?,True,False,0.0,18,conversational,baseline
+What did Socrates have for breakfast on his 30th birthday?,True,True,-10.0,18,conversational,steered
+What did Socrates have for breakfast on his 30th birthday?,True,False,0.0,18,academic,baseline
+What did Socrates have for breakfast on his 30th birthday?,True,False,-10.0,18,academic,steered
