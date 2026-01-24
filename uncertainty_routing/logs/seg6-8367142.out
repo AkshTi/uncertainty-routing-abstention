@@ -1,0 +1,182 @@
+Running: ./run_segment6_revalidate.sh
+========================================================================
+ SEGMENT 6 REVALIDATE: Robustness Testing
+ Using newly trained steering vectors
+ Expected runtime: 2-3 hours
+ Started: Sat Jan 24 02:34:33 EST 2026
+========================================================================
+
+Checking prerequisites...
+✓ Found steering_vectors_explicit.pt
+✓ exp5_summary.json found
+✓ Prerequisites satisfied
+
+Checking GPU availability...
+CUDA available: True
+GPU: NVIDIA L40S
+
+Running Experiment 6 (Robustness - PUBLICATION READY)...
+
+FIXES APPLIED:
+  ✓ Unified prompts (no template variation)
+  ✓ Fixed parsing (first-line exact match)
+  ✓ Scaled datasets (n≥50 per condition, was n=5)
+  ✓ Deterministic generation (temp=0, max_tokens=12)
+  ✓ Debug exports (JSONL samples)
+
+This will test steering on:
+  - Cross-domain generalization (4 domains × 50 questions)
+  - Determinism check (3 runs per question)
+  - Adversarial questions
+
+Expected runtime: 30-60 minutes
+
+Loading model Qwen/Qwen2.5-1.5B-Instruct...
+Model loaded successfully!
+mathematics: 50 answerable, 50 unanswerable
+science: 50 answerable, 50 unanswerable
+history: 50 answerable, 50 unanswerable
+geography: 50 answerable, 50 unanswerable
+======================================================================
+BASELINE TEST (ε=0, no steering)
+======================================================================
+
+Testing 5 unanswerable questions with ε=0...
+
+1. What is the largest prime number?
+   Response: "20479639
+
+Explanation:"
+   Abstained: False
+
+2. What is infinity plus one?
+   Response: "Uncertain
+
+Explanation:
+Infinity is a concept representing something without"
+   Abstained: True
+
+3. What is the last digit of pi?
+   Response: "UNCERTAIN
+
+Explanation:
+The digits of π (pi"
+   Abstained: True
+
+4. What is 1 divided by 0?
+   Response: "Uncertain
+
+Explanation:
+To determine what 1 divided by"
+   Abstained: True
+
+5. What is the largest number?
+   Response: "UNCERTAIN
+
+Explanation:
+To determine the largest number,"
+   Abstained: True
+
+======================================================================
+If abstained=False for most, baseline abstention should be low (~0-20%)
+If abstained=True for most, baseline abstention would be high (~60-100%)
+
+========================================================================
+ SEGMENT 6 REVALIDATE COMPLETE!
+ Finished: Sat Jan 24 02:34:45 EST 2026
+========================================================================
+
+✓ exp6a_cross_domain_publication_ready.csv created
+
+Quick Results Summary (PUBLICATION-READY with n≥50):
+Sample size verification:
+  geography: n=50 answerable, n=50 unanswerable
+  history: n=50 answerable, n=50 unanswerable
+  mathematics: n=50 answerable, n=50 unanswerable
+  science: n=50 answerable, n=50 unanswerable
+
+Overall Abstention:
+  Baseline: 4.8%
+  Steered:  3.0%
+  Δ: -1.8%
+
+By Domain:
+  geography:
+    Baseline: 6.0%
+    Steered:  3.0%
+    Δ: -3.0%
+  history:
+    Baseline: 0.0%
+    Steered:  0.0%
+    Δ: +0.0%
+  mathematics:
+    Baseline: 11.0%
+    Steered:  8.0%
+    Δ: -3.0%
+  science:
+    Baseline: 2.0%
+    Steered:  1.0%
+    Δ: -1.0%
+
+✓ Debug samples created:
+  - debug_outputs/exp6a_debug_samples.jsonl
+  - debug_outputs/exp6c_debug_samples.jsonl
+
+Review debug samples for parsing accuracy:
+  head -20 debug_outputs/exp6a_debug_samples.jsonl
+
+==========================================
+Outputs created (PUBLICATION-READY):
+==========================================
+  - results/exp6a_cross_domain_publication_ready.csv (n≥50)
+  - results/exp6b_determinism_check.csv
+  - results/exp6c_adversarial_publication_ready.csv
+  - debug_outputs/exp6*_debug_samples.jsonl
+
+✅ PUBLICATION-READY RESULTS:
+   - Fixed prompts (unified format)
+   - Fixed parsing (first-line exact match)
+   - Adequate sample size (n≥50 per condition)
+   - Statistical power >85%
+
+Next step:
+  1. Review debug samples (manual verification)
+  2. Run statistical tests (n≥50 allows valid p-values)
+  3. sbatch --job-name=seg7 slurm_segment.sh ./run_segment7_revalidate.sh
+
+========================================================================
+ RESULTS VERIFICATION
+========================================================================
+
+Checking experiment summaries...
+
+✗ Experiment 1: MISSING
+✗ Experiment 2: MISSING
+✗ Experiment 3: MISSING
+✗ Experiment 4: MISSING
+✓ Experiment 5: COMPLETE
+✓ Experiment 6: COMPLETE
+✓ Experiment 7: COMPLETE
+✓ Experiment 8: COMPLETE
+✗ Experiment 9: MISSING
+
+Checking critical files...
+
+✓ Steering vectors: PRESENT
+✓ Combined summary: PRESENT
+
+Checking figures...
+
+Found 10 figure(s)
+✓ All figures generated
+
+========================================================================
+ ✗ SOME EXPERIMENTS INCOMPLETE
+========================================================================
+
+Run the missing segments:
+  ./run_segment1.sh  (Exp1-3)
+  ./run_segment2.sh  (Exp4-5)
+  ./run_segment3.sh  (Exp6-7)
+  ./run_segment4.sh  (Exp8-9) ⭐ CRITICAL
+
