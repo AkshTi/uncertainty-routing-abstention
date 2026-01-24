@@ -143,7 +143,7 @@ class Experiment6PublicationReady:
 
         return result
 
-    def test_cross_domain(self, best_layer: int, optimal_epsilon: float = -2.0) -> pd.DataFrame:
+    def test_cross_domain(self, best_layer: int, optimal_epsilon: float = -20.0) -> pd.DataFrame:
         """
         Experiment 6A: Cross-Domain Generalization (PUBLICATION READY)
 
@@ -470,10 +470,11 @@ if __name__ == "__main__":
     print("Loading steering vectors...")
 
     # Try multiple possible filenames
+    # IMPORTANT: steering_vectors.pt has layers [10,16,17,18] which we need
     possible_files = [
+        "steering_vectors.pt",  # Has layers [10, 16, 17, 18] - use this!
+        "steering_vectors_explicit.pt",  # Has layers [24, 25, 26, 27] - fallback
         "steering_vectors_fixed.pt",
-        "steering_vectors_explicit.pt",
-        "steering_vectors.pt",
     ]
 
     steering_vectors = None
@@ -482,7 +483,7 @@ if __name__ == "__main__":
         if filepath.exists():
             steering_vectors = torch.load(filepath)
             print(f"✓ Loaded steering vectors from {filename}")
-            print(f"  Layers: {len(steering_vectors)}")
+            print(f"  Available layers: {list(steering_vectors.keys())}")
             break
 
     if steering_vectors is None:
