@@ -264,21 +264,22 @@ class Experiment6:
         print(f"Using layer {best_layer}, epsilon={optimal_epsilon}")
         print()
 
-        # Keep templates simple and similar to Exp5
-        prompt_templates = {
-            "standard": "Question: {q}\n\nAnswer the question. Only say UNCERTAIN if you truly cannot provide any answer.\n\nAnswer:",
-            "direct": "Question: {q}\n\nAnswer:",
-            "formal": "Please answer the following question:\n\nQuestion: {q}\n\nAnswer:",
+        # SIMPLIFIED: Just test with slight wording variations
+        # All keep the core "UNCERTAIN" instruction for consistency
+        prompt_variants = {
+            "standard": lambda q: self._prompt(q),  # Use exact Exp5 prompt
+            "concise": lambda q: f"Question: {q}\n\nAnswer (say UNCERTAIN if you don't know):",
+            "verbose": lambda q: f"Question: {q}\n\nPlease provide an answer. If you cannot answer due to missing information, say UNCERTAIN.\n\nAnswer:",
         }
 
         results = []
         for q_data in tqdm(questions[:10], desc="Questions"):
-            for template_name, template in prompt_templates.items():
+            for variant_name, prompt_fn in prompt_variants.items():
                 for condition, eps in [("baseline", 0.0), ("steered", optimal_epsilon)]:
-                    result = self._test_single_with_template(
-                        q_data, best_layer, eps, template
+                    result = self._test_single_with_prompt_fn(
+                        q_data, best_layer, eps, prompt_fn
                     )
-                    result["template"] = template_name
+                    result["template"] = variant_name
                     result["condition"] = condition
                     results.append(result)
 
