@@ -63,7 +63,7 @@ echo "  - Science: 30% → 50-70%"
 echo "  - History: 20% → 60-80%"
 echo ""
 
-python experiment6_robustness.py
+python experiment6_publication_ready.py
 
 echo ""
 echo "========================================================================"
