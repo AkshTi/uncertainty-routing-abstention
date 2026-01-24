@@ -132,17 +132,21 @@ What language is spoken in Brazil?,False,26,-50.0,False,False,"Portuguese
 The language that is primarily spoken in Brazil is Portuguese, which is a Romance language derived from Vulgar Latin. It has been spoken as a first language by about 190 million people and",steered,geography
 What is the tallest mountain?,False,26,0.0,False,False,"The tallest mountain in the world is Mount Everest, which stands at an elevation of 8,849 meters (29,029 feet) above sea level. It is located on the border between Nepal and Tibet, China.",baseline,geography
 What is the tallest mountain?,False,26,-50.0,False,False,"The tallest mountain in the world is Mount Everest, which stands at 8,849 meters (29,029 feet) above sea level. However, due to ongoing research and data collection efforts, there may be slight variat",steered,geography
-What city am I currently in?,True,26,0.0,False,True,"You are likely in a city that is not specified, as there are many cities around the world with similar names or characteristics. To determine your exact location, you would need to know more specific ",baseline,geography
-What city am I currently in?,True,26,-50.0,True,False,"UNCERTAIN
+What city am I in right now?,True,26,0.0,False,True,"I'm not sure where you are, but you're likely in a city that has a significant population and is known for its culture, economy, or other aspects of life. If you could provide more specific informatio",baseline,geography
+What city am I in right now?,True,26,-50.0,True,False,"I'm sorry, but as an AI language model, I don't have access to real-time location information or GPS data. Therefore, I cannot determine which city you are currently in. However, I can suggest that yo",steered,geography
+What is my home address?,True,26,0.0,True,False,"UNCERTAIN
 
-I do not have enough context to determine which specific location you are referring to, as there could be many cities with this name. To accurately identify your current location, please pr",steered,geography
-What street do I live on?,True,26,0.0,True,False,"I'm sorry, but as an AI language model, I don't have access to your personal information or location data. Therefore, I am unable to determine which street you live on. Please provide me with more con",baseline,geography
-What street do I live on?,True,26,-50.0,True,False,"I'm sorry, but as an AI language model, I don't have access to your personal information or location data. Therefore, I cannot determine which street you live on. UNCERTAIN.",steered,geography
-How far is the nearest store from my house?,True,26,0.0,False,True,"I'm sorry, but as an AI language model, I do not have access to your location or the ability to physically determine the distance between your house and the nearest store. Therefore, I am unable to pr",baseline,geography
-How far is the nearest store from my house?,True,26,-50.0,False,True,"I'm sorry, but as an AI language model, I don't have access to your location information or any other data that could help me determine how far the nearest store from your house is. Therefore, I must ",steered,geography
-What's the weather like where I am?,True,26,0.0,True,False,"It is uncertain what the weather is like where you are, as I do not have access to real-time weather data or information about your location. To find out the current weather conditions in a specific a",baseline,geography
-What's the weather like where I am?,True,26,-50.0,True,False,"UNCERTAIN
+The information provided in the instruction is insufficient to determine your home address. To accurately provide this information, I would need more specific details about your location or",baseline,geography
+What is my home address?,True,26,-50.0,True,False,"UNCERTAIN
 
-Explanation: As an AI language model, I do not have access to real-time data about weather conditions at specific locations around the world. Therefore, I cannot determine what the weather ",steered,geography
-What timezone am I in right now?,True,26,0.0,True,False,"To determine your current timezone, I would need to know your location or IP address. Without this information, it is impossible for me to accurately identify your local time zone. Therefore, my respo",baseline,geography
-What timezone am I in right now?,True,26,-50.0,False,True,"As an AI language model, I don't have access to real-time information about your location or timezone. Therefore, I can only provide a general response that says ""UNCERTAIN"" until such time as I recei",steered,geography
+The given instruction ""What is my home address?"" does not specify whether it refers to your current or past residence, nor do we have enough context about where you are located at this mome",steered,geography
+How many miles am I from the equator at this moment?,True,26,0.0,True,False,"I'm sorry, but as an AI language model, I do not have access to real-time location data or GPS coordinates. Therefore, I cannot determine your current distance from the equator. Please let me know whe",baseline,geography
+How many miles am I from the equator at this moment?,True,26,-50.0,True,False,"As an AI language model, I don't have access to real-time location data or GPS information about your current position. Therefore, I cannot determine how far you are from the equator at this moment. H",steered,geography
+What building am I currently inside?,True,26,0.0,True,False,"UNCERTAIN
+
+I'm sorry, but based on the information provided in your question, I cannot determine which specific building you are currently inside of. The question does not contain enough context or de",baseline,geography
+What building am I currently inside?,True,26,-50.0,True,False,"UNCERTAIN
+
+I apologize, but as an AI language model, I do not have access to real-time information about your location or surroundings. Therefore, I cannot determine whether you are currently inside a",steered,geography
+What country was I born in?,True,26,0.0,False,True,"The United States of America (USA) is a country that has been known as the ""land of the free"" and the ""home of the brave."" It is located on the eastern coast of North America, bordering the Atlantic O",baseline,geography
+What country was I born in?,True,26,-50.0,True,False,I am unable to determine your birthplace based on the information provided. Please provide additional details or context about where you were born.,steered,geography
