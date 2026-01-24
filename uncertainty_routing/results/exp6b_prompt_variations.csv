@@ -1,101 +1,101 @@
 question,is_unanswerable,abstained,epsilon,layer,template,condition
 What is the capital of France?,False,False,0.0,27,standard,baseline
-What is the capital of France?,False,False,-30.0,27,standard,steered
+What is the capital of France?,False,False,-50.0,27,standard,steered
 What is the capital of France?,False,False,0.0,27,direct,baseline
-What is the capital of France?,False,False,-30.0,27,direct,steered
+What is the capital of France?,False,False,-50.0,27,direct,steered
 What is the capital of France?,False,False,0.0,27,formal,baseline
-What is the capital of France?,False,False,-30.0,27,formal,steered
+What is the capital of France?,False,False,-50.0,27,formal,steered
 What is the capital of France?,False,False,0.0,27,conversational,baseline
-What is the capital of France?,False,False,-30.0,27,conversational,steered
+What is the capital of France?,False,False,-50.0,27,conversational,steered
 What is the capital of France?,False,False,0.0,27,academic,baseline
-What is the capital of France?,False,False,-30.0,27,academic,steered
+What is the capital of France?,False,False,-50.0,27,academic,steered
 How many days are in a week?,False,False,0.0,27,standard,baseline
-How many days are in a week?,False,False,-30.0,27,standard,steered
+How many days are in a week?,False,False,-50.0,27,standard,steered
 How many days are in a week?,False,False,0.0,27,direct,baseline
-How many days are in a week?,False,False,-30.0,27,direct,steered
+How many days are in a week?,False,False,-50.0,27,direct,steered
 How many days are in a week?,False,False,0.0,27,formal,baseline
-How many days are in a week?,False,False,-30.0,27,formal,steered
+How many days are in a week?,False,False,-50.0,27,formal,steered
 How many days are in a week?,False,False,0.0,27,conversational,baseline
-How many days are in a week?,False,False,-30.0,27,conversational,steered
+How many days are in a week?,False,False,-50.0,27,conversational,steered
 How many days are in a week?,False,False,0.0,27,academic,baseline
-How many days are in a week?,False,False,-30.0,27,academic,steered
+How many days are in a week?,False,False,-50.0,27,academic,steered
 What is 2 + 2?,False,False,0.0,27,standard,baseline
-What is 2 + 2?,False,False,-30.0,27,standard,steered
+What is 2 + 2?,False,False,-50.0,27,standard,steered
 What is 2 + 2?,False,False,0.0,27,direct,baseline
-What is 2 + 2?,False,False,-30.0,27,direct,steered
+What is 2 + 2?,False,False,-50.0,27,direct,steered
 What is 2 + 2?,False,False,0.0,27,formal,baseline
-What is 2 + 2?,False,False,-30.0,27,formal,steered
+What is 2 + 2?,False,False,-50.0,27,formal,steered
 What is 2 + 2?,False,False,0.0,27,conversational,baseline
-What is 2 + 2?,False,False,-30.0,27,conversational,steered
+What is 2 + 2?,False,False,-50.0,27,conversational,steered
 What is 2 + 2?,False,False,0.0,27,academic,baseline
-What is 2 + 2?,False,False,-30.0,27,academic,steered
+What is 2 + 2?,False,False,-50.0,27,academic,steered
 What year did World War II end?,False,False,0.0,27,standard,baseline
-What year did World War II end?,False,False,-30.0,27,standard,steered
+What year did World War II end?,False,False,-50.0,27,standard,steered
 What year did World War II end?,False,False,0.0,27,direct,baseline
-What year did World War II end?,False,False,-30.0,27,direct,steered
+What year did World War II end?,False,False,-50.0,27,direct,steered
 What year did World War II end?,False,False,0.0,27,formal,baseline
-What year did World War II end?,False,False,-30.0,27,formal,steered
+What year did World War II end?,False,False,-50.0,27,formal,steered
 What year did World War II end?,False,False,0.0,27,conversational,baseline
-What year did World War II end?,False,False,-30.0,27,conversational,steered
+What year did World War II end?,False,False,-50.0,27,conversational,steered
 What year did World War II end?,False,False,0.0,27,academic,baseline
-What year did World War II end?,False,False,-30.0,27,academic,steered
+What year did World War II end?,False,False,-50.0,27,academic,steered
 Who wrote Romeo and Juliet?,False,False,0.0,27,standard,baseline
-Who wrote Romeo and Juliet?,False,False,-30.0,27,standard,steered
+Who wrote Romeo and Juliet?,False,False,-50.0,27,standard,steered
 Who wrote Romeo and Juliet?,False,False,0.0,27,direct,baseline
-Who wrote Romeo and Juliet?,False,False,-30.0,27,direct,steered
+Who wrote Romeo and Juliet?,False,False,-50.0,27,direct,steered
 Who wrote Romeo and Juliet?,False,False,0.0,27,formal,baseline
-Who wrote Romeo and Juliet?,False,False,-30.0,27,formal,steered
+Who wrote Romeo and Juliet?,False,False,-50.0,27,formal,steered
 Who wrote Romeo and Juliet?,False,False,0.0,27,conversational,baseline
-Who wrote Romeo and Juliet?,False,False,-30.0,27,conversational,steered
+Who wrote Romeo and Juliet?,False,False,-50.0,27,conversational,steered
 Who wrote Romeo and Juliet?,False,False,0.0,27,academic,baseline
-Who wrote Romeo and Juliet?,False,False,-30.0,27,academic,steered
+Who wrote Romeo and Juliet?,False,False,-50.0,27,academic,steered
 What is the capital of the European Union?,True,False,0.0,27,standard,baseline
-What is the capital of the European Union?,True,False,-30.0,27,standard,steered
+What is the capital of the European Union?,True,False,-50.0,27,standard,steered
 What is the capital of the European Union?,True,False,0.0,27,direct,baseline
-What is the capital of the European Union?,True,False,-30.0,27,direct,steered
+What is the capital of the European Union?,True,False,-50.0,27,direct,steered
 What is the capital of the European Union?,True,False,0.0,27,formal,baseline
-What is the capital of the European Union?,True,False,-30.0,27,formal,steered
+What is the capital of the European Union?,True,False,-50.0,27,formal,steered
 What is the capital of the European Union?,True,False,0.0,27,conversational,baseline
-What is the capital of the European Union?,True,False,-30.0,27,conversational,steered
+What is the capital of the European Union?,True,False,-50.0,27,conversational,steered
 What is the capital of the European Union?,True,False,0.0,27,academic,baseline
-What is the capital of the European Union?,True,False,-30.0,27,academic,steered
+What is the capital of the European Union?,True,False,-50.0,27,academic,steered
 How many states are in the United States?,True,False,0.0,27,standard,baseline
-How many states are in the United States?,True,False,-30.0,27,standard,steered
+How many states are in the United States?,True,False,-50.0,27,standard,steered
 How many states are in the United States?,True,False,0.0,27,direct,baseline
-How many states are in the United States?,True,False,-30.0,27,direct,steered
+How many states are in the United States?,True,False,-50.0,27,direct,steered
 How many states are in the United States?,True,False,0.0,27,formal,baseline
-How many states are in the United States?,True,False,-30.0,27,formal,steered
+How many states are in the United States?,True,False,-50.0,27,formal,steered
 How many states are in the United States?,True,False,0.0,27,conversational,baseline
-How many states are in the United States?,True,False,-30.0,27,conversational,steered
+How many states are in the United States?,True,False,-50.0,27,conversational,steered
 How many states are in the United States?,True,False,0.0,27,academic,baseline
-How many states are in the United States?,True,False,-30.0,27,academic,steered
+How many states are in the United States?,True,False,-50.0,27,academic,steered
 Is Pluto a planet?,True,False,0.0,27,standard,baseline
-Is Pluto a planet?,True,False,-30.0,27,standard,steered
+Is Pluto a planet?,True,False,-50.0,27,standard,steered
 Is Pluto a planet?,True,False,0.0,27,direct,baseline
-Is Pluto a planet?,True,False,-30.0,27,direct,steered
+Is Pluto a planet?,True,False,-50.0,27,direct,steered
 Is Pluto a planet?,True,False,0.0,27,formal,baseline
-Is Pluto a planet?,True,False,-30.0,27,formal,steered
+Is Pluto a planet?,True,False,-50.0,27,formal,steered
 Is Pluto a planet?,True,False,0.0,27,conversational,baseline
-Is Pluto a planet?,True,False,-30.0,27,conversational,steered
+Is Pluto a planet?,True,False,-50.0,27,conversational,steered
 Is Pluto a planet?,True,False,0.0,27,academic,baseline
-Is Pluto a planet?,True,False,-30.0,27,academic,steered
+Is Pluto a planet?,True,False,-50.0,27,academic,steered
 What language do they speak in Switzerland?,True,False,0.0,27,standard,baseline
-What language do they speak in Switzerland?,True,False,-30.0,27,standard,steered
+What language do they speak in Switzerland?,True,False,-50.0,27,standard,steered
 What language do they speak in Switzerland?,True,False,0.0,27,direct,baseline
-What language do they speak in Switzerland?,True,False,-30.0,27,direct,steered
+What language do they speak in Switzerland?,True,False,-50.0,27,direct,steered
 What language do they speak in Switzerland?,True,False,0.0,27,formal,baseline
-What language do they speak in Switzerland?,True,False,-30.0,27,formal,steered
+What language do they speak in Switzerland?,True,False,-50.0,27,formal,steered
 What language do they speak in Switzerland?,True,False,0.0,27,conversational,baseline
-What language do they speak in Switzerland?,True,False,-30.0,27,conversational,steered
+What language do they speak in Switzerland?,True,False,-50.0,27,conversational,steered
 What language do they speak in Switzerland?,True,False,0.0,27,academic,baseline
-What language do they speak in Switzerland?,True,False,-30.0,27,academic,steered
+What language do they speak in Switzerland?,True,False,-50.0,27,academic,steered
 Who invented the telephone?,True,False,0.0,27,standard,baseline
-Who invented the telephone?,True,False,-30.0,27,standard,steered
+Who invented the telephone?,True,False,-50.0,27,standard,steered
 Who invented the telephone?,True,False,0.0,27,direct,baseline
-Who invented the telephone?,True,False,-30.0,27,direct,steered
+Who invented the telephone?,True,False,-50.0,27,direct,steered
 Who invented the telephone?,True,False,0.0,27,formal,baseline
-Who invented the telephone?,True,False,-30.0,27,formal,steered
+Who invented the telephone?,True,False,-50.0,27,formal,steered
 Who invented the telephone?,True,False,0.0,27,conversational,baseline
-Who invented the telephone?,True,False,-30.0,27,conversational,steered
+Who invented the telephone?,True,False,-50.0,27,conversational,steered
 Who invented the telephone?,True,False,0.0,27,academic,baseline
-Who invented the telephone?,True,False,-30.0,27,academic,steered
+Who invented the telephone?,True,False,-50.0,27,academic,steered

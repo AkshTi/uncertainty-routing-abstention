@@ -1,5 +1,5 @@
 {
-  "cross_domain_consistency": 0.8085145784487324,
+  "cross_domain_consistency": 0.8845299461620748,
   "domain_stats": [
     {
       "domain": "current_events",
@@ -71,7 +71,7 @@
       "domain": "mathematics",
       "condition": "steered",
       "is_unanswerable": true,
-      "abstained": 0.4
+      "abstained": 0.0
     },
     {
       "domain": "science",
@@ -95,7 +95,7 @@
       "domain": "science",
       "condition": "steered",
       "is_unanswerable": true,
-      "abstained": 0.0
+      "abstained": 0.2
     }
   ],
   "prompt_stats": [
@@ -234,7 +234,7 @@
     {
       "condition": "steered",
       "is_unanswerable": false,
-      "abstained": 0.0
+      "abstained": 0.333
     },
     {
       "condition": "steered",
