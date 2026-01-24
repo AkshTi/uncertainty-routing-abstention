@@ -195,12 +195,12 @@ class Experiment6:
                     {"question": "What is the tallest mountain?", "answer": "Mount Everest"},
                 ],
                 "unanswerable": [
-                    # Personal/contextual missing info
-                    {"question": "What city am I currently in?"},
-                    {"question": "What street do I live on?"},
-                    {"question": "How far is the nearest store from my house?"},
-                    {"question": "What's the weather like where I am?"},
-                    {"question": "What timezone am I in right now?"},
+                    # Personal/contextual missing info - STRONGER examples
+                    {"question": "What city am I in right now?"},
+                    {"question": "What is my home address?"},
+                    {"question": "How many miles am I from the equator at this moment?"},
+                    {"question": "What building am I currently inside?"},
+                    {"question": "What country was I born in?"},
                 ]
             }
         }
@@ -369,11 +369,16 @@ class Experiment6:
             "response_preview": response[:200]
         }
 
-    def _test_single_with_template(self, q_data: Dict, layer_idx: int,
-                                   epsilon: float, template: str) -> Dict:
-        """Test with custom template"""
+    def _test_single_with_prompt_fn(self, q_data: Dict, layer_idx: int,
+                                    epsilon: float, prompt_fn) -> Dict:
+        """Test with custom prompt function"""
         question = q_data["question"]
-        prompt = template.format(q=question)
+        context = q_data.get("context")
+        ground_truth = q_data.get("answer")
+        is_unanswerable = q_data.get("is_unanswerable", False)
+
+        # Use the prompt function
+        prompt = prompt_fn(question)
 
         # Clear hooks
         self.model.clear_hooks()
@@ -394,7 +399,6 @@ class Experiment6:
 
         # Analyze
         abstained = self._detect_abstention(response)
-        is_unanswerable = q_data.get("is_unanswerable", False)
 
         return {
             "question": question[:80],
