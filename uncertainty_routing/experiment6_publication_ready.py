@@ -497,10 +497,11 @@ if __name__ == "__main__":
     # Run experiments
     exp6 = Experiment6PublicationReady(model, config, steering_vectors)
 
-    # You can run all or individual experiments:
-    # df_6a, df_6b, df_6c = exp6.run_all(best_layer=26, optimal_epsilon=-2.0)
+    # Run all experiments (uncommented for production use)
+    print("\nRunning all Experiment 6 tests (publication-ready)...")
+    print("This will take ~30-60 minutes with n=50 per condition...")
+    df_6a, df_6b, df_6c = exp6.run_all(best_layer=26, optimal_epsilon=-2.0)
 
-    # Or run individually:
-    print("\nRunning Experiment 6A (Cross-Domain)...")
-    print("This will take ~10-20 minutes with n=50 per condition...")
-    # df_6a = exp6.test_cross_domain(best_layer=26, optimal_epsilon=-2.0)
+    print("\n" + "="*80)
+    print("SUCCESS! Publication-ready Experiment 6 complete.")
+    print("="*80)
