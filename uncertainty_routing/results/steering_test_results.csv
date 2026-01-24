@@ -1,0 +1,369 @@
+layer,epsilon,baseline_abstain,steered_abstain,delta,delta_unanswerable,df
+10,-20.0,0.0,0.1,0.1,0.2,"                             question  is_unanswerable  ...  correct  condition
+0                     What is 15 * 8?            False  ...     True   baseline
+1                     What is 15 * 8?            False  ...     True    steered
+2                   What is 144 / 12?            False  ...     True   baseline
+3                   What is 144 / 12?            False  ...     True    steered
+4                        What is 7^2?            False  ...     True   baseline
+5                        What is 7^2?            False  ...     True    steered
+6                   What is 100 - 37?            False  ...     True   baseline
+7                   What is 100 - 37?            False  ...     True    steered
+8                  What is 3 + 5 * 2?            False  ...    False   baseline
+9                  What is 3 + 5 * 2?            False  ...    False    steered
+10  What is the largest prime number?             True  ...            baseline
+11  What is the largest prime number?             True  ...             steered
+12         What is infinity plus one?             True  ...            baseline
+13         What is infinity plus one?             True  ...             steered
+14      What is the last digit of pi?             True  ...            baseline
+15      What is the last digit of pi?             True  ...             steered
+16            What is 1 divided by 0?             True  ...            baseline
+17            What is 1 divided by 0?             True  ...             steered
+18        What is the largest number?             True  ...            baseline
+19        What is the largest number?             True  ...             steered
+
+[20 rows x 11 columns]"
+17,-20.0,0.0,0.1,0.1,0.2,"                             question  is_unanswerable  ...  correct  condition
+0                     What is 15 * 8?            False  ...     True   baseline
+1                     What is 15 * 8?            False  ...    False    steered
+2                   What is 144 / 12?            False  ...     True   baseline
+3                   What is 144 / 12?            False  ...    False    steered
+4                        What is 7^2?            False  ...     True   baseline
+5                        What is 7^2?            False  ...    False    steered
+6                   What is 100 - 37?            False  ...     True   baseline
+7                   What is 100 - 37?            False  ...    False    steered
+8                  What is 3 + 5 * 2?            False  ...    False   baseline
+9                  What is 3 + 5 * 2?            False  ...    False    steered
+10  What is the largest prime number?             True  ...            baseline
+11  What is the largest prime number?             True  ...             steered
+12         What is infinity plus one?             True  ...            baseline
+13         What is infinity plus one?             True  ...             steered
+14      What is the last digit of pi?             True  ...            baseline
+15      What is the last digit of pi?             True  ...             steered
+16            What is 1 divided by 0?             True  ...            baseline
+17            What is 1 divided by 0?             True  ...             steered
+18        What is the largest number?             True  ...            baseline
+19        What is the largest number?             True  ...             steered
+
+[20 rows x 11 columns]"
+10,-2.0,0.0,0.0,0.0,0.0,"                             question  is_unanswerable  ...  correct  condition
+0                     What is 15 * 8?            False  ...     True   baseline
+1                     What is 15 * 8?            False  ...     True    steered
+2                   What is 144 / 12?            False  ...     True   baseline
+3                   What is 144 / 12?            False  ...     True    steered
+4                        What is 7^2?            False  ...     True   baseline
+5                        What is 7^2?            False  ...     True    steered
+6                   What is 100 - 37?            False  ...     True   baseline
+7                   What is 100 - 37?            False  ...     True    steered
+8                  What is 3 + 5 * 2?            False  ...    False   baseline
+9                  What is 3 + 5 * 2?            False  ...    False    steered
+10  What is the largest prime number?             True  ...            baseline
+11  What is the largest prime number?             True  ...             steered
+12         What is infinity plus one?             True  ...            baseline
+13         What is infinity plus one?             True  ...             steered
+14      What is the last digit of pi?             True  ...            baseline
+15      What is the last digit of pi?             True  ...             steered
+16            What is 1 divided by 0?             True  ...            baseline
+17            What is 1 divided by 0?             True  ...             steered
+18        What is the largest number?             True  ...            baseline
+19        What is the largest number?             True  ...             steered
+
+[20 rows x 11 columns]"
+10,-5.0,0.0,0.0,0.0,0.0,"                             question  is_unanswerable  ...  correct  condition
+0                     What is 15 * 8?            False  ...     True   baseline
+1                     What is 15 * 8?            False  ...     True    steered
+2                   What is 144 / 12?            False  ...     True   baseline
+3                   What is 144 / 12?            False  ...     True    steered
+4                        What is 7^2?            False  ...     True   baseline
+5                        What is 7^2?            False  ...     True    steered
+6                   What is 100 - 37?            False  ...     True   baseline
+7                   What is 100 - 37?            False  ...     True    steered
+8                  What is 3 + 5 * 2?            False  ...    False   baseline
+9                  What is 3 + 5 * 2?            False  ...    False    steered
+10  What is the largest prime number?             True  ...            baseline
+11  What is the largest prime number?             True  ...             steered
+12         What is infinity plus one?             True  ...            baseline
+13         What is infinity plus one?             True  ...             steered
+14      What is the last digit of pi?             True  ...            baseline
+15      What is the last digit of pi?             True  ...             steered
+16            What is 1 divided by 0?             True  ...            baseline
+17            What is 1 divided by 0?             True  ...             steered
+18        What is the largest number?             True  ...            baseline
+19        What is the largest number?             True  ...             steered
+
+[20 rows x 11 columns]"
+10,-10.0,0.0,0.0,0.0,0.0,"                             question  is_unanswerable  ...  correct  condition
+0                     What is 15 * 8?            False  ...     True   baseline
+1                     What is 15 * 8?            False  ...     True    steered
+2                   What is 144 / 12?            False  ...     True   baseline
+3                   What is 144 / 12?            False  ...     True    steered
+4                        What is 7^2?            False  ...     True   baseline
+5                        What is 7^2?            False  ...     True    steered
+6                   What is 100 - 37?            False  ...     True   baseline
+7                   What is 100 - 37?            False  ...     True    steered
+8                  What is 3 + 5 * 2?            False  ...    False   baseline
+9                  What is 3 + 5 * 2?            False  ...    False    steered
+10  What is the largest prime number?             True  ...            baseline
+11  What is the largest prime number?             True  ...             steered
+12         What is infinity plus one?             True  ...            baseline
+13         What is infinity plus one?             True  ...             steered
+14      What is the last digit of pi?             True  ...            baseline
+15      What is the last digit of pi?             True  ...             steered
+16            What is 1 divided by 0?             True  ...            baseline
+17            What is 1 divided by 0?             True  ...             steered
+18        What is the largest number?             True  ...            baseline
+19        What is the largest number?             True  ...             steered
+
+[20 rows x 11 columns]"
+16,-2.0,0.0,0.0,0.0,0.0,"                             question  is_unanswerable  ...  correct  condition
+0                     What is 15 * 8?            False  ...     True   baseline
+1                     What is 15 * 8?            False  ...     True    steered
+2                   What is 144 / 12?            False  ...     True   baseline
+3                   What is 144 / 12?            False  ...     True    steered
+4                        What is 7^2?            False  ...     True   baseline
+5                        What is 7^2?            False  ...     True    steered
+6                   What is 100 - 37?            False  ...     True   baseline
+7                   What is 100 - 37?            False  ...     True    steered
+8                  What is 3 + 5 * 2?            False  ...    False   baseline
+9                  What is 3 + 5 * 2?            False  ...    False    steered
+10  What is the largest prime number?             True  ...            baseline
+11  What is the largest prime number?             True  ...             steered
+12         What is infinity plus one?             True  ...            baseline
+13         What is infinity plus one?             True  ...             steered
+14      What is the last digit of pi?             True  ...            baseline
+15      What is the last digit of pi?             True  ...             steered
+16            What is 1 divided by 0?             True  ...            baseline
+17            What is 1 divided by 0?             True  ...             steered
+18        What is the largest number?             True  ...            baseline
+19        What is the largest number?             True  ...             steered
+
+[20 rows x 11 columns]"
+16,-5.0,0.0,0.0,0.0,0.0,"                             question  is_unanswerable  ...  correct  condition
+0                     What is 15 * 8?            False  ...     True   baseline
+1                     What is 15 * 8?            False  ...     True    steered
+2                   What is 144 / 12?            False  ...     True   baseline
+3                   What is 144 / 12?            False  ...     True    steered
+4                        What is 7^2?            False  ...     True   baseline
+5                        What is 7^2?            False  ...     True    steered
+6                   What is 100 - 37?            False  ...     True   baseline
+7                   What is 100 - 37?            False  ...     True    steered
+8                  What is 3 + 5 * 2?            False  ...    False   baseline
+9                  What is 3 + 5 * 2?            False  ...    False    steered
+10  What is the largest prime number?             True  ...            baseline
+11  What is the largest prime number?             True  ...             steered
+12         What is infinity plus one?             True  ...            baseline
+13         What is infinity plus one?             True  ...             steered
+14      What is the last digit of pi?             True  ...            baseline
+15      What is the last digit of pi?             True  ...             steered
+16            What is 1 divided by 0?             True  ...            baseline
+17            What is 1 divided by 0?             True  ...             steered
+18        What is the largest number?             True  ...            baseline
+19        What is the largest number?             True  ...             steered
+
+[20 rows x 11 columns]"
+16,-10.0,0.0,0.0,0.0,0.0,"                             question  is_unanswerable  ...  correct  condition
+0                     What is 15 * 8?            False  ...     True   baseline
+1                     What is 15 * 8?            False  ...     True    steered
+2                   What is 144 / 12?            False  ...     True   baseline
+3                   What is 144 / 12?            False  ...     True    steered
+4                        What is 7^2?            False  ...     True   baseline
+5                        What is 7^2?            False  ...     True    steered
+6                   What is 100 - 37?            False  ...     True   baseline
+7                   What is 100 - 37?            False  ...     True    steered
+8                  What is 3 + 5 * 2?            False  ...    False   baseline
+9                  What is 3 + 5 * 2?            False  ...    False    steered
+10  What is the largest prime number?             True  ...            baseline
+11  What is the largest prime number?             True  ...             steered
+12         What is infinity plus one?             True  ...            baseline
+13         What is infinity plus one?             True  ...             steered
+14      What is the last digit of pi?             True  ...            baseline
+15      What is the last digit of pi?             True  ...             steered
+16            What is 1 divided by 0?             True  ...            baseline
+17            What is 1 divided by 0?             True  ...             steered
+18        What is the largest number?             True  ...            baseline
+19        What is the largest number?             True  ...             steered
+
+[20 rows x 11 columns]"
+16,-20.0,0.0,0.0,0.0,0.0,"                             question  is_unanswerable  ...  correct  condition
+0                     What is 15 * 8?            False  ...     True   baseline
+1                     What is 15 * 8?            False  ...     True    steered
+2                   What is 144 / 12?            False  ...     True   baseline
+3                   What is 144 / 12?            False  ...     True    steered
+4                        What is 7^2?            False  ...     True   baseline
+5                        What is 7^2?            False  ...     True    steered
+6                   What is 100 - 37?            False  ...     True   baseline
+7                   What is 100 - 37?            False  ...     True    steered
+8                  What is 3 + 5 * 2?            False  ...    False   baseline
+9                  What is 3 + 5 * 2?            False  ...    False    steered
+10  What is the largest prime number?             True  ...            baseline
+11  What is the largest prime number?             True  ...             steered
+12         What is infinity plus one?             True  ...            baseline
+13         What is infinity plus one?             True  ...             steered
+14      What is the last digit of pi?             True  ...            baseline
+15      What is the last digit of pi?             True  ...             steered
+16            What is 1 divided by 0?             True  ...            baseline
+17            What is 1 divided by 0?             True  ...             steered
+18        What is the largest number?             True  ...            baseline
+19        What is the largest number?             True  ...             steered
+
+[20 rows x 11 columns]"
+17,-2.0,0.0,0.0,0.0,0.0,"                             question  is_unanswerable  ...  correct  condition
+0                     What is 15 * 8?            False  ...     True   baseline
+1                     What is 15 * 8?            False  ...     True    steered
+2                   What is 144 / 12?            False  ...     True   baseline
+3                   What is 144 / 12?            False  ...     True    steered
+4                        What is 7^2?            False  ...     True   baseline
+5                        What is 7^2?            False  ...     True    steered
+6                   What is 100 - 37?            False  ...     True   baseline
+7                   What is 100 - 37?            False  ...     True    steered
+8                  What is 3 + 5 * 2?            False  ...    False   baseline
+9                  What is 3 + 5 * 2?            False  ...    False    steered
+10  What is the largest prime number?             True  ...            baseline
+11  What is the largest prime number?             True  ...             steered
+12         What is infinity plus one?             True  ...            baseline
+13         What is infinity plus one?             True  ...             steered
+14      What is the last digit of pi?             True  ...            baseline
+15      What is the last digit of pi?             True  ...             steered
+16            What is 1 divided by 0?             True  ...            baseline
+17            What is 1 divided by 0?             True  ...             steered
+18        What is the largest number?             True  ...            baseline
+19        What is the largest number?             True  ...             steered
+
+[20 rows x 11 columns]"
+17,-5.0,0.0,0.0,0.0,0.0,"                             question  is_unanswerable  ...  correct  condition
+0                     What is 15 * 8?            False  ...     True   baseline
+1                     What is 15 * 8?            False  ...     True    steered
+2                   What is 144 / 12?            False  ...     True   baseline
+3                   What is 144 / 12?            False  ...     True    steered
+4                        What is 7^2?            False  ...     True   baseline
+5                        What is 7^2?            False  ...     True    steered
+6                   What is 100 - 37?            False  ...     True   baseline
+7                   What is 100 - 37?            False  ...     True    steered
+8                  What is 3 + 5 * 2?            False  ...    False   baseline
+9                  What is 3 + 5 * 2?            False  ...    False    steered
+10  What is the largest prime number?             True  ...            baseline
+11  What is the largest prime number?             True  ...             steered
+12         What is infinity plus one?             True  ...            baseline
+13         What is infinity plus one?             True  ...             steered
+14      What is the last digit of pi?             True  ...            baseline
+15      What is the last digit of pi?             True  ...             steered
+16            What is 1 divided by 0?             True  ...            baseline
+17            What is 1 divided by 0?             True  ...             steered
+18        What is the largest number?             True  ...            baseline
+19        What is the largest number?             True  ...             steered
+
+[20 rows x 11 columns]"
+17,-10.0,0.0,0.0,0.0,0.0,"                             question  is_unanswerable  ...  correct  condition
+0                     What is 15 * 8?            False  ...     True   baseline
+1                     What is 15 * 8?            False  ...    False    steered
+2                   What is 144 / 12?            False  ...     True   baseline
+3                   What is 144 / 12?            False  ...     True    steered
+4                        What is 7^2?            False  ...     True   baseline
+5                        What is 7^2?            False  ...     True    steered
+6                   What is 100 - 37?            False  ...     True   baseline
+7                   What is 100 - 37?            False  ...     True    steered
+8                  What is 3 + 5 * 2?            False  ...    False   baseline
+9                  What is 3 + 5 * 2?            False  ...    False    steered
+10  What is the largest prime number?             True  ...            baseline
+11  What is the largest prime number?             True  ...             steered
+12         What is infinity plus one?             True  ...            baseline
+13         What is infinity plus one?             True  ...             steered
+14      What is the last digit of pi?             True  ...            baseline
+15      What is the last digit of pi?             True  ...             steered
+16            What is 1 divided by 0?             True  ...            baseline
+17            What is 1 divided by 0?             True  ...             steered
+18        What is the largest number?             True  ...            baseline
+19        What is the largest number?             True  ...             steered
+
+[20 rows x 11 columns]"
+18,-2.0,0.0,0.0,0.0,0.0,"                             question  is_unanswerable  ...  correct  condition
+0                     What is 15 * 8?            False  ...     True   baseline
+1                     What is 15 * 8?            False  ...     True    steered
+2                   What is 144 / 12?            False  ...     True   baseline
+3                   What is 144 / 12?            False  ...     True    steered
+4                        What is 7^2?            False  ...     True   baseline
+5                        What is 7^2?            False  ...     True    steered
+6                   What is 100 - 37?            False  ...     True   baseline
+7                   What is 100 - 37?            False  ...     True    steered
+8                  What is 3 + 5 * 2?            False  ...    False   baseline
+9                  What is 3 + 5 * 2?            False  ...    False    steered
+10  What is the largest prime number?             True  ...            baseline
+11  What is the largest prime number?             True  ...             steered
+12         What is infinity plus one?             True  ...            baseline
+13         What is infinity plus one?             True  ...             steered
+14      What is the last digit of pi?             True  ...            baseline
+15      What is the last digit of pi?             True  ...             steered
+16            What is 1 divided by 0?             True  ...            baseline
+17            What is 1 divided by 0?             True  ...             steered
+18        What is the largest number?             True  ...            baseline
+19        What is the largest number?             True  ...             steered
+
+[20 rows x 11 columns]"
+18,-5.0,0.0,0.0,0.0,0.0,"                             question  is_unanswerable  ...  correct  condition
+0                     What is 15 * 8?            False  ...     True   baseline
+1                     What is 15 * 8?            False  ...     True    steered
+2                   What is 144 / 12?            False  ...     True   baseline
+3                   What is 144 / 12?            False  ...     True    steered
+4                        What is 7^2?            False  ...     True   baseline
+5                        What is 7^2?            False  ...     True    steered
+6                   What is 100 - 37?            False  ...     True   baseline
+7                   What is 100 - 37?            False  ...     True    steered
+8                  What is 3 + 5 * 2?            False  ...    False   baseline
+9                  What is 3 + 5 * 2?            False  ...    False    steered
+10  What is the largest prime number?             True  ...            baseline
+11  What is the largest prime number?             True  ...             steered
+12         What is infinity plus one?             True  ...            baseline
+13         What is infinity plus one?             True  ...             steered
+14      What is the last digit of pi?             True  ...            baseline
+15      What is the last digit of pi?             True  ...             steered
+16            What is 1 divided by 0?             True  ...            baseline
+17            What is 1 divided by 0?             True  ...             steered
+18        What is the largest number?             True  ...            baseline
+19        What is the largest number?             True  ...             steered
+
+[20 rows x 11 columns]"
+18,-10.0,0.0,0.0,0.0,0.0,"                             question  is_unanswerable  ...  correct  condition
+0                     What is 15 * 8?            False  ...     True   baseline
+1                     What is 15 * 8?            False  ...    False    steered
+2                   What is 144 / 12?            False  ...     True   baseline
+3                   What is 144 / 12?            False  ...     True    steered
+4                        What is 7^2?            False  ...     True   baseline
+5                        What is 7^2?            False  ...    False    steered
+6                   What is 100 - 37?            False  ...     True   baseline
+7                   What is 100 - 37?            False  ...     True    steered
+8                  What is 3 + 5 * 2?            False  ...    False   baseline
+9                  What is 3 + 5 * 2?            False  ...    False    steered
+10  What is the largest prime number?             True  ...            baseline
+11  What is the largest prime number?             True  ...             steered
+12         What is infinity plus one?             True  ...            baseline
+13         What is infinity plus one?             True  ...             steered
+14      What is the last digit of pi?             True  ...            baseline
+15      What is the last digit of pi?             True  ...             steered
+16            What is 1 divided by 0?             True  ...            baseline
+17            What is 1 divided by 0?             True  ...             steered
+18        What is the largest number?             True  ...            baseline
+19        What is the largest number?             True  ...             steered
+
+[20 rows x 11 columns]"
+18,-20.0,0.0,0.0,0.0,0.0,"                             question  is_unanswerable  ...  correct  condition
+0                     What is 15 * 8?            False  ...     True   baseline
+1                     What is 15 * 8?            False  ...    False    steered
+2                   What is 144 / 12?            False  ...     True   baseline
+3                   What is 144 / 12?            False  ...    False    steered
+4                        What is 7^2?            False  ...     True   baseline
+5                        What is 7^2?            False  ...    False    steered
+6                   What is 100 - 37?            False  ...     True   baseline
+7                   What is 100 - 37?            False  ...    False    steered
+8                  What is 3 + 5 * 2?            False  ...    False   baseline
+9                  What is 3 + 5 * 2?            False  ...    False    steered
+10  What is the largest prime number?             True  ...            baseline
+11  What is the largest prime number?             True  ...             steered
+12         What is infinity plus one?             True  ...            baseline
+13         What is infinity plus one?             True  ...             steered
+14      What is the last digit of pi?             True  ...            baseline
+15      What is the last digit of pi?             True  ...             steered
+16            What is 1 divided by 0?             True  ...            baseline
+17            What is 1 divided by 0?             True  ...             steered
+18        What is the largest number?             True  ...            baseline
+19        What is the largest number?             True  ...             steered
+
+[20 rows x 11 columns]"
