@@ -20,7 +20,7 @@ from tqdm import tqdm
 
 from core_utils import ModelWrapper, ExperimentConfig
 from scaled_datasets import create_scaled_domain_questions
-from unified_prompts import unified_prompt_minimal  # Simple prompt, no instructions
+from unified_prompts import unified_prompt_strict  # MUST match exp6!
 
 
 def get_questions_by_knowledge_state(
@@ -46,9 +46,9 @@ def get_questions_by_knowledge_state(
     print("\nTesting answerable questions...")
     for domain_name, data in tqdm(domains.items()):
         for q in data["answerable"][:30]:  # Test more than we need
-            # Use minimal prompt - no confidence instructions
-            prompt = unified_prompt_minimal(q['q'])
-            response = model.generate(prompt, max_new_tokens=20, temperature=0.0, do_sample=False)
+            # IMPORTANT: Use SAME prompt as exp6!
+            prompt = unified_prompt_strict(q['q'])
+            response = model.generate(prompt, max_new_tokens=12, temperature=0.0, do_sample=False)
 
             # Check if model got it right
             expected = q.get('a', '').lower()
@@ -70,8 +70,9 @@ def get_questions_by_knowledge_state(
     print("\nTesting unanswerable questions...")
     for domain_name, data in tqdm(domains.items()):
         for q in data["unanswerable"][:30]:
-            prompt = unified_prompt_minimal(q['q'])
-            response = model.generate(prompt, max_new_tokens=20, temperature=0.0, do_sample=False)
+            # IMPORTANT: Use SAME prompt as exp6!
+            prompt = unified_prompt_strict(q['q'])
+            response = model.generate(prompt, max_new_tokens=12, temperature=0.0, do_sample=False)
 
             # If model gives a confident answer (not UNCERTAIN), it's hallucinating
             response_lower = response.lower()
@@ -130,7 +131,7 @@ def compute_calibrated_steering_vectors(
         knows_acts = []
         print("  Extracting KNOWS activations...")
         for q in tqdm(knows_questions, leave=False):
-            prompt = unified_prompt_minimal(q['question'])
+            prompt = unified_prompt_strict(q['question'])  # SAME prompt as exp6!
             acts = model.get_layer_activations(prompt, layer_idx)
 
             # Use last token activation
@@ -145,7 +146,7 @@ def compute_calibrated_steering_vectors(
         doesnt_know_acts = []
         print("  Extracting DOESN'T KNOW activations...")
         for q in tqdm(doesnt_know_questions, leave=False):
-            prompt = unified_prompt_minimal(q['question'])
+            prompt = unified_prompt_strict(q['question'])  # SAME prompt as exp6!
             acts = model.get_layer_activations(prompt, layer_idx)
 
             if acts.ndim == 3:
@@ -195,7 +196,7 @@ def test_steering_vectors(
 
     # Test on one unanswerable question
     q = math["unanswerable"][0]
-    prompt = unified_prompt_minimal(q['q'])
+    prompt = unified_prompt_strict(q['q'])  # SAME prompt as exp6!
 
     print(f"Test question: {q['q']}")
     print()
@@ -211,7 +212,7 @@ def test_steering_vectors(
                 epsilon
             )
 
-        response = model.generate(prompt, max_new_tokens=20, temperature=0.0, do_sample=False)
+        response = model.generate(prompt, max_new_tokens=12, temperature=0.0, do_sample=False)
         model.clear_hooks()
 
         abstained = "uncertain" in response.lower()
