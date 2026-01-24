@@ -1,0 +1,263 @@
+Running: ./run_segment6_revalidate.sh
+========================================================================
+ SEGMENT 6 REVALIDATE: Robustness Testing
+ Using newly trained steering vectors
+ Expected runtime: 2-3 hours
+ Started: Sat Jan 24 00:40:33 EST 2026
+========================================================================
+
+Checking prerequisites...
+✓ Found steering_vectors_explicit.pt
+✓ exp5_summary.json found
+✓ Prerequisites satisfied
+
+Checking GPU availability...
+CUDA available: True
+GPU: NVIDIA L40S
+
+Running Experiment 6 (Robustness - PUBLICATION READY)...
+
+FIXES APPLIED:
+  ✓ Unified prompts (no template variation)
+  ✓ Fixed parsing (first-line exact match)
+  ✓ Scaled datasets (n≥50 per condition, was n=5)
+  ✓ Deterministic generation (temp=0, max_tokens=12)
+  ✓ Debug exports (JSONL samples)
+
+This will test steering on:
+  - Cross-domain generalization (4 domains × 50 questions)
+  - Determinism check (3 runs per question)
+  - Adversarial questions
+
+Expected runtime: 30-60 minutes
+
+======================================================================
+FIXING & TESTING STEERING
+======================================================================
+
+This will test different layers and epsilon values
+to find what works best.
+
+Loading model Qwen/Qwen2.5-1.5B-Instruct...
+Model loaded successfully!
+Loading steering vectors...
+✓ Available layers: [10, 16, 17, 18]
+
+Creating small test set (5 answerable + 5 unanswerable)...
+mathematics: 50 answerable, 50 unanswerable
+science: 50 answerable, 50 unanswerable
+history: 50 answerable, 50 unanswerable
+geography: 50 answerable, 50 unanswerable
+✓ Test set: 10 questions
+
+Testing different configurations...
+----------------------------------------------------------------------
+
+Testing layer 10, epsilon -2.0...
+  Overall: 0.0% → 0.0% (Δ +0.0%)
+  Unanswerable: Δ +0.0%
+
+Testing layer 10, epsilon -5.0...
+  Overall: 0.0% → 0.0% (Δ +0.0%)
+  Unanswerable: Δ +0.0%
+
+Testing layer 10, epsilon -10.0...
+  Overall: 0.0% → 0.0% (Δ +0.0%)
+  Unanswerable: Δ +0.0%
+
+Testing layer 10, epsilon -20.0...
+  Overall: 0.0% → 10.0% (Δ +10.0%)
+  Unanswerable: Δ +20.0%
+
+Testing layer 16, epsilon -2.0...
+  Overall: 0.0% → 0.0% (Δ +0.0%)
+  Unanswerable: Δ +0.0%
+
+Testing layer 16, epsilon -5.0...
+  Overall: 0.0% → 0.0% (Δ +0.0%)
+  Unanswerable: Δ +0.0%
+
+Testing layer 16, epsilon -10.0...
+  Overall: 0.0% → 0.0% (Δ +0.0%)
+  Unanswerable: Δ +0.0%
+
+Testing layer 16, epsilon -20.0...
+  Overall: 0.0% → 0.0% (Δ +0.0%)
+  Unanswerable: Δ +0.0%
+
+Testing layer 17, epsilon -2.0...
+  Overall: 0.0% → 0.0% (Δ +0.0%)
+  Unanswerable: Δ +0.0%
+
+Testing layer 17, epsilon -5.0...
+  Overall: 0.0% → 0.0% (Δ +0.0%)
+  Unanswerable: Δ +0.0%
+
+Testing layer 17, epsilon -10.0...
+  Overall: 0.0% → 0.0% (Δ +0.0%)
+  Unanswerable: Δ +0.0%
+
+Testing layer 17, epsilon -20.0...
+  Overall: 0.0% → 10.0% (Δ +10.0%)
+  Unanswerable: Δ +20.0%
+
+Testing layer 18, epsilon -2.0...
+  Overall: 0.0% → 0.0% (Δ +0.0%)
+  Unanswerable: Δ +0.0%
+
+Testing layer 18, epsilon -5.0...
+  Overall: 0.0% → 0.0% (Δ +0.0%)
+  Unanswerable: Δ +0.0%
+
+Testing layer 18, epsilon -10.0...
+  Overall: 0.0% → 0.0% (Δ +0.0%)
+  Unanswerable: Δ +0.0%
+
+Testing layer 18, epsilon -20.0...
+  Overall: 0.0% → 0.0% (Δ +0.0%)
+  Unanswerable: Δ +0.0%
+
+======================================================================
+RESULTS SUMMARY
+======================================================================
+
+Ranked by effect on unanswerable questions:
+
+1. Layer 10, ε= -20.0: Δ_unans=+20.0%, Δ_all=+10.0%
+2. Layer 17, ε= -20.0: Δ_unans=+20.0%, Δ_all=+10.0%
+3. Layer 10, ε=  -2.0: Δ_unans= +0.0%, Δ_all= +0.0%
+4. Layer 10, ε=  -5.0: Δ_unans= +0.0%, Δ_all= +0.0%
+5. Layer 10, ε= -10.0: Δ_unans= +0.0%, Δ_all= +0.0%
+6. Layer 16, ε=  -2.0: Δ_unans= +0.0%, Δ_all= +0.0%
+7. Layer 16, ε=  -5.0: Δ_unans= +0.0%, Δ_all= +0.0%
+8. Layer 16, ε= -10.0: Δ_unans= +0.0%, Δ_all= +0.0%
+9. Layer 16, ε= -20.0: Δ_unans= +0.0%, Δ_all= +0.0%
+10. Layer 17, ε=  -2.0: Δ_unans= +0.0%, Δ_all= +0.0%
+11. Layer 17, ε=  -5.0: Δ_unans= +0.0%, Δ_all= +0.0%
+12. Layer 17, ε= -10.0: Δ_unans= +0.0%, Δ_all= +0.0%
+13. Layer 18, ε=  -2.0: Δ_unans= +0.0%, Δ_all= +0.0%
+14. Layer 18, ε=  -5.0: Δ_unans= +0.0%, Δ_all= +0.0%
+15. Layer 18, ε= -10.0: Δ_unans= +0.0%, Δ_all= +0.0%
+16. Layer 18, ε= -20.0: Δ_unans= +0.0%, Δ_all= +0.0%
+
+======================================================================
+RECOMMENDATION
+======================================================================
+
+✅ Best configuration:
+   Layer: 10
+   Epsilon: -20.0
+   Effect on unanswerable: +20.0%
+   Effect overall: +10.0%
+
+✅ Steering is working!
+
+   To run full experiment, update experiment6_publication_ready.py:
+   df_6a, df_6b, df_6c = exp6.run_all(best_layer=10, optimal_epsilon=-20.0)
+
+   Then run:
+   ./run_segment6_revalidate.sh
+
+======================================================================
+
+✓ Test results saved to results/steering_test_results.csv
+
+========================================================================
+ SEGMENT 6 REVALIDATE COMPLETE!
+ Finished: Sat Jan 24 00:41:16 EST 2026
+========================================================================
+
+✓ exp6a_cross_domain_publication_ready.csv created
+
+Quick Results Summary (PUBLICATION-READY with n≥50):
+Sample size verification:
+  geography: n=50 answerable, n=50 unanswerable
+  history: n=50 answerable, n=50 unanswerable
+  mathematics: n=50 answerable, n=50 unanswerable
+  science: n=50 answerable, n=50 unanswerable
+
+Overall Abstention:
+  Baseline: 4.8%
+  Steered:  4.8%
+  Δ: +0.0%
+
+By Domain:
+  geography:
+    Baseline: 6.0%
+    Steered:  6.0%
+    Δ: +0.0%
+  history:
+    Baseline: 0.0%
+    Steered:  0.0%
+    Δ: +0.0%
+  mathematics:
+    Baseline: 11.0%
+    Steered:  11.0%
+    Δ: +0.0%
+  science:
+    Baseline: 2.0%
+    Steered:  2.0%
+    Δ: +0.0%
+
+✓ Debug samples created:
+  - debug_outputs/exp6a_debug_samples.jsonl
+  - debug_outputs/exp6c_debug_samples.jsonl
+
+Review debug samples for parsing accuracy:
+  head -20 debug_outputs/exp6a_debug_samples.jsonl
+
+==========================================
+Outputs created (PUBLICATION-READY):
+==========================================
+  - results/exp6a_cross_domain_publication_ready.csv (n≥50)
+  - results/exp6b_determinism_check.csv
+  - results/exp6c_adversarial_publication_ready.csv
+  - debug_outputs/exp6*_debug_samples.jsonl
+
+✅ PUBLICATION-READY RESULTS:
+   - Fixed prompts (unified format)
+   - Fixed parsing (first-line exact match)
+   - Adequate sample size (n≥50 per condition)
+   - Statistical power >85%
+
+Next step:
+  1. Review debug samples (manual verification)
+  2. Run statistical tests (n≥50 allows valid p-values)
+  3. sbatch --job-name=seg7 slurm_segment.sh ./run_segment7_revalidate.sh
+
+========================================================================
+ RESULTS VERIFICATION
+========================================================================
+
+Checking experiment summaries...
+
+✗ Experiment 1: MISSING
+✗ Experiment 2: MISSING
+✗ Experiment 3: MISSING
+✗ Experiment 4: MISSING
+✓ Experiment 5: COMPLETE
+✓ Experiment 6: COMPLETE
+✓ Experiment 7: COMPLETE
+✓ Experiment 8: COMPLETE
+✗ Experiment 9: MISSING
+
+Checking critical files...
+
+✓ Steering vectors: PRESENT
+✓ Combined summary: PRESENT
+
+Checking figures...
+
+Found 10 figure(s)
+✓ All figures generated
+
+========================================================================
+ ✗ SOME EXPERIMENTS INCOMPLETE
+========================================================================
+
+Run the missing segments:
+  ./run_segment1.sh  (Exp1-3)
+  ./run_segment2.sh  (Exp4-5)
+  ./run_segment3.sh  (Exp6-7)
+  ./run_segment4.sh  (Exp8-9) ⭐ CRITICAL
+
