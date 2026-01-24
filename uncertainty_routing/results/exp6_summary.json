@@ -1,5 +1,5 @@
 {
-  "cross_domain_consistency": 0.7483388521576417,
+  "cross_domain_consistency": 0.8085145784487324,
   "domain_stats": [
     {
       "domain": "current_events",
@@ -11,7 +11,7 @@
       "domain": "current_events",
       "condition": "baseline",
       "is_unanswerable": true,
-      "abstained": 0.6
+      "abstained": 0.0
     },
     {
       "domain": "current_events",
@@ -23,7 +23,7 @@
       "domain": "current_events",
       "condition": "steered",
       "is_unanswerable": true,
-      "abstained": 0.6
+      "abstained": 0.0
     },
     {
       "domain": "history",
@@ -47,7 +47,7 @@
       "domain": "history",
       "condition": "steered",
       "is_unanswerable": true,
-      "abstained": 0.4
+      "abstained": 0.2
     },
     {
       "domain": "mathematics",
@@ -59,7 +59,7 @@
       "domain": "mathematics",
       "condition": "baseline",
       "is_unanswerable": true,
-      "abstained": 0.0
+      "abstained": 0.2
     },
     {
       "domain": "mathematics",
@@ -69,33 +69,33 @@
     },
     {
       "domain": "mathematics",
-      "condition": "steered",
-      "is_unanswerable": true,
-      "abstained": 0.0
-    },
-    {
-      "domain": "science",
-      "condition": "baseline",
-      "is_unanswerable": false,
-      "abstained": 0.0
-    },
-    {
-      "domain": "science",
-      "condition": "baseline",
-      "is_unanswerable": true,
-      "abstained": 0.4
-    },
-    {
-      "domain": "science",
-      "condition": "steered",
-      "is_unanswerable": false,
-      "abstained": 0.0
-    },
-    {
-      "domain": "science",
       "condition": "steered",
       "is_unanswerable": true,
       "abstained": 0.4
+    },
+    {
+      "domain": "science",
+      "condition": "baseline",
+      "is_unanswerable": false,
+      "abstained": 0.0
+    },
+    {
+      "domain": "science",
+      "condition": "baseline",
+      "is_unanswerable": true,
+      "abstained": 0.0
+    },
+    {
+      "domain": "science",
+      "condition": "steered",
+      "is_unanswerable": false,
+      "abstained": 0.0
+    },
+    {
+      "domain": "science",
+      "condition": "steered",
+      "is_unanswerable": true,
+      "abstained": 0.0
     }
   ],
   "prompt_stats": [
@@ -157,7 +157,7 @@
       "template": "direct",
       "condition": "baseline",
       "is_unanswerable": true,
-      "abstained": 0.2
+      "abstained": 0.0
     },
     {
       "template": "direct",
@@ -169,7 +169,7 @@
       "template": "direct",
       "condition": "steered",
       "is_unanswerable": true,
-      "abstained": 0.2
+      "abstained": 0.0
     },
     {
       "template": "formal",
@@ -229,7 +229,7 @@
     {
       "condition": "baseline",
       "is_unanswerable": true,
-      "abstained": 0.667
+      "abstained": 0.0
     },
     {
       "condition": "steered",
@@ -239,7 +239,7 @@
     {
       "condition": "steered",
       "is_unanswerable": true,
-      "abstained": 0.333
+      "abstained": 0.0
     }
   ]
 }
