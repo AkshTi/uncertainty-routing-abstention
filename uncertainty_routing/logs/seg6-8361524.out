@@ -1,0 +1,118 @@
+Running: ./run_segment6_revalidate.sh
+========================================================================
+ SEGMENT 6 REVALIDATE: Robustness Testing
+ Using newly trained steering vectors
+ Expected runtime: 2-3 hours
+ Started: Fri Jan 23 21:16:34 EST 2026
+========================================================================
+
+Checking prerequisites...
+✓ Found steering_vectors_explicit.pt
+✓ exp5_summary.json found
+✓ Prerequisites satisfied
+
+Checking GPU availability...
+CUDA available: True
+GPU: NVIDIA L40S
+
+Running Experiment 6 (Robustness)...
+This will test steering on:
+  - Cross-domain generalization (math, science, history, current events)
+  - Prompt variations
+  - Adversarial questions
+
+Expected improvements over previous run:
+  - Overall abstention: 25% → 60-80%
+  - Mathematics: 10% → 40-60%
+  - Science: 30% → 50-70%
+  - History: 20% → 60-80%
+
+PUBLICATION-READY EXPERIMENT 6
+======================================================================
+✓ All fixed modules imported successfully
+
+Loading model...
+Loading model Qwen/Qwen2.5-1.5B-Instruct...
+Model loaded successfully!
+Loading steering vectors...
+✓ Loaded steering vectors from steering_vectors_explicit.pt
+  Layers: 4
+
+Running Experiment 6A (Cross-Domain)...
+This will take ~10-20 minutes with n=50 per condition...
+
+========================================================================
+ SEGMENT 6 REVALIDATE COMPLETE!
+ Finished: Fri Jan 23 21:16:48 EST 2026
+========================================================================
+
+✓ exp6a_cross_domain.csv created
+
+Quick Results Summary:
+Overall Abstention:
+  Baseline: 37.5%
+  Steered:  65.0%
+  Improvement: 27.5%
+
+mathematics:
+  Baseline: 80.0%
+  Steered:  100.0%
+  Improvement: 20.0%
+science:
+  Baseline: 30.0%
+  Steered:  50.0%
+  Improvement: 20.0%
+history:
+  Baseline: 10.0%
+  Steered:  50.0%
+  Improvement: 40.0%
+geography:
+  Baseline: 30.0%
+  Steered:  60.0%
+  Improvement: 30.0%
+
+Outputs created:
+  - results/exp6a_cross_domain.csv
+  - results/exp6b_prompt_variations.csv
+  - results/exp6c_adversarial.csv
+  - results/exp6_robustness_analysis.png
+
+Next step:
+  sbatch --job-name=seg7 slurm_segment.sh ./run_segment7_revalidate.sh
+
+========================================================================
+ RESULTS VERIFICATION
+========================================================================
+
+Checking experiment summaries...
+
+✗ Experiment 1: MISSING
+✗ Experiment 2: MISSING
+✗ Experiment 3: MISSING
+✗ Experiment 4: MISSING
+✓ Experiment 5: COMPLETE
+✓ Experiment 6: COMPLETE
+✓ Experiment 7: COMPLETE
+✓ Experiment 8: COMPLETE
+✗ Experiment 9: MISSING
+
+Checking critical files...
+
+✓ Steering vectors: PRESENT
+✓ Combined summary: PRESENT
+
+Checking figures...
+
+Found 10 figure(s)
+✓ All figures generated
+
+========================================================================
+ ✗ SOME EXPERIMENTS INCOMPLETE
+========================================================================
+
+Run the missing segments:
+  ./run_segment1.sh  (Exp1-3)
+  ./run_segment2.sh  (Exp4-5)
+  ./run_segment3.sh  (Exp6-7)
+  ./run_segment4.sh  (Exp8-9) ⭐ CRITICAL
+

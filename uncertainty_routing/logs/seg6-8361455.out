@@ -1,0 +1,39 @@
+Running: ./run_segment6_revalidate.sh
+========================================================================
+ SEGMENT 6 REVALIDATE: Robustness Testing
+ Using newly trained steering vectors
+ Expected runtime: 2-3 hours
+ Started: Fri Jan 23 21:09:21 EST 2026
+========================================================================
+
+Checking prerequisites...
+✓ Found steering_vectors_explicit.pt
+✓ exp5_summary.json found
+✓ Prerequisites satisfied
+
+Checking GPU availability...
+CUDA available: True
+GPU: NVIDIA L40S
+
+Running Experiment 6 (Robustness)...
+This will test steering on:
+  - Cross-domain generalization (math, science, history, current events)
+  - Prompt variations
+  - Adversarial questions
+
+Expected improvements over previous run:
+  - Overall abstention: 25% → 60-80%
+  - Mathematics: 10% → 40-60%
+  - Science: 30% → 50-70%
+  - History: 20% → 60-80%
+
+PUBLICATION-READY EXPERIMENT 6
+======================================================================
+✓ All fixed modules imported successfully
+
+Loading model...
+Loading model Qwen/Qwen2.5-1.5B-Instruct...
+Model loaded successfully!
+Loading steering vectors...
+✗ steering_vectors_fixed.pt not found
+  Run experiment 2 first to generate steering vectors

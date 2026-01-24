@@ -1,106 +1,219 @@
 {
-  "experiment6": {
-    "cross_domain_consistency": 0.7418011102528389,
-    "domain_stats": {
-      "abstained": {
-        "('current_events', 'baseline', False)": 0.0,
-        "('current_events', 'baseline', True)": 0.6,
-        "('current_events', 'steered', False)": 0.0,
-        "('current_events', 'steered', True)": 0.8,
-        "('history', 'baseline', False)": 0.0,
-        "('history', 'baseline', True)": 0.2,
-        "('history', 'steered', False)": 0.0,
-        "('history', 'steered', True)": 0.4,
-        "('mathematics', 'baseline', False)": 0.0,
-        "('mathematics', 'baseline', True)": 0.0,
-        "('mathematics', 'steered', False)": 0.0,
-        "('mathematics', 'steered', True)": 0.2,
-        "('science', 'baseline', False)": 0.0,
-        "('science', 'baseline', True)": 0.4,
-        "('science', 'steered', False)": 0.0,
-        "('science', 'steered', True)": 0.6
+  "experiment1": {
+    "abstention_by_regime": {
+      "rate": {
+        "cautious": 0.8,
+        "confident": 0.0,
+        "neutral": 0.0
+      },
+      "std": {
+        "cautious": 0.40683810217248617,
+        "confident": 0.0,
+        "neutral": 0.0
+      },
+      "count": {
+        "cautious": 30,
+        "confident": 30,
+        "neutral": 30
       }
     },
-    "prompt_stats": {
-      "abstained": {
-        "('academic', 'baseline', False)": 0.0,
-        "('academic', 'baseline', True)": 0.0,
-        "('academic', 'steered', False)": 0.0,
-        "('academic', 'steered', True)": 0.4,
-        "('conversational', 'baseline', False)": 0.0,
-        "('conversational', 'baseline', True)": 0.0,
-        "('conversational', 'steered', False)": 0.8,
-        "('conversational', 'steered', True)": 0.4,
-        "('direct', 'baseline', False)": 0.0,
-        "('direct', 'baseline', True)": 0.2,
-        "('direct', 'steered', False)": 0.0,
-        "('direct', 'steered', True)": 0.4,
-        "('formal', 'baseline', False)": 0.0,
-        "('formal', 'baseline', True)": 0.0,
-        "('formal', 'steered', False)": 0.2,
-        "('formal', 'steered', True)": 0.4,
-        "('standard', 'baseline', False)": 0.0,
-        "('standard', 'baseline', True)": 0.0,
-        "('standard', 'steered', False)": 0.0,
-        "('standard', 'steered', True)": 0.2
+    "entropy_by_regime": {
+      "mean": {
+        "cautious": 2.78275412429155,
+        "confident": 2.78275412429155,
+        "neutral": 2.78275412429155
+      },
+      "std": {
+        "cautious": 0.2832362007221652,
+        "confident": 0.2832362007221652,
+        "neutral": 0.2832362007221652
       }
     },
-    "adversarial_stats": {
-      "abstained": {
-        "('baseline', False)": 0.0,
-        "('baseline', True)": 0.667,
-        "('steered', False)": 0.0,
-        "('steered', True)": 0.333
-      }
-    }
+    "behavior_gap": 0.8,
+    "belief_gap": 0.0,
+    "behavior_belief_ratio": 800000.0000000001,
+    "n_rows": 90,
+    "n_questions": 30
   },
-  "experiment7": {
-    "safety_preserved": false,
-    "baseline_refusal_rate": 0.556,
-    "safety_by_condition": {
-      "refused": {
-        "baseline": 0.556,
-        "toward_abstain": 0.778,
-        "toward_answer": 0.444
+  "experiment2": {
+    "layer_stats": {
+      "('delta_margin', 'mean')": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.2,
+        "3": 0.0,
+        "4": 0.2,
+        "5": 0.2,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.2,
+        "9": -0.2,
+        "10": 0.4,
+        "11": -0.2,
+        "12": -0.2,
+        "13": -0.2,
+        "14": 0.2,
+        "15": 0.2,
+        "16": 0.4,
+        "17": 0.4,
+        "18": 0.8,
+        "19": 0.2,
+        "20": 0.2,
+        "21": 0.0,
+        "22": 0.0,
+        "23": 0.0,
+        "24": 0.0,
+        "25": 0.0,
+        "26": 0.0,
+        "27": 0.0
       },
-      "safety_violation": {
-        "baseline": 0.222,
-        "toward_abstain": 0.0,
-        "toward_answer": 0.0
+      "('delta_margin', 'std')": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.632,
+        "3": 0.0,
+        "4": 0.632,
+        "5": 0.632,
+        "6": 0.0,
+        "7": 0.943,
+        "8": 1.135,
+        "9": 0.632,
+        "10": 1.265,
+        "11": 0.632,
+        "12": 0.632,
+        "13": 0.632,
+        "14": 1.135,
+        "15": 1.135,
+        "16": 0.843,
+        "17": 0.843,
+        "18": 1.033,
+        "19": 0.632,
+        "20": 0.632,
+        "21": 0.0,
+        "22": 0.0,
+        "23": 0.0,
+        "24": 0.0,
+        "25": 0.0,
+        "26": 0.0,
+        "27": 0.0
       },
-      "provided_answer": {
-        "baseline": 0.444,
-        "toward_abstain": 0.222,
-        "toward_answer": 0.556
+      "('delta_margin', 'count')": {
+        "0": 10,
+        "1": 10,
+        "2": 10,
+        "3": 10,
+        "4": 10,
+        "5": 10,
+        "6": 10,
+        "7": 10,
+        "8": 10,
+        "9": 10,
+        "10": 10,
+        "11": 10,
+        "12": 10,
+        "13": 10,
+        "14": 10,
+        "15": 10,
+        "16": 10,
+        "17": 10,
+        "18": 10,
+        "19": 10,
+        "20": 10,
+        "21": 10,
+        "22": 10,
+        "23": 10,
+        "24": 10,
+        "25": 10,
+        "26": 10,
+        "27": 10
+      },
+      "('flipped', 'mean')": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.1,
+        "3": 0.0,
+        "4": 0.1,
+        "5": 0.1,
+        "6": 0.0,
+        "7": 0.1,
+        "8": 0.2,
+        "9": 0.0,
+        "10": 0.3,
+        "11": 0.0,
+        "12": 0.0,
+        "13": 0.0,
+        "14": 0.2,
+        "15": 0.2,
+        "16": 0.2,
+        "17": 0.2,
+        "18": 0.4,
+        "19": 0.1,
+        "20": 0.1,
+        "21": 0.0,
+        "22": 0.0,
+        "23": 0.0,
+        "24": 0.0,
+        "25": 0.0,
+        "26": 0.0,
+        "27": 0.0
       }
     },
-    "selective_abstention": {
-      "abstained": {
-        "('high', 'baseline')": 0.0,
-        "('high', 'steered_abstain')": 0.0,
-        "('high', 'steered_answer')": 0.0,
-        "('low', 'baseline')": 0.0,
-        "('low', 'steered_abstain')": 0.0,
-        "('low', 'steered_answer')": 0.0
+    "critical_layers": [
+      10,
+      16,
+      17,
+      18
+    ],
+    "max_effect_layer": 18,
+    "max_effect_value": 0.8,
+    "max_flip_layer": 18,
+    "max_flip_rate": 0.4,
+    "late_layer_proportion": 0.75
+  },
+  "experiment3": {
+    "change_rates": {
+      "0.5": {
+        "10": 0.4,
+        "16": 0.2,
+        "17": 0.26666666666666666,
+        "18": 0.2
       },
-      "provided_answer": {
-        "('high', 'baseline')": 0.667,
-        "('high', 'steered_abstain')": 0.333,
-        "('high', 'steered_answer')": 0.667,
-        "('low', 'baseline')": 1.0,
-        "('low', 'steered_abstain')": 1.0,
-        "('low', 'steered_answer')": 1.0
+      "1.0": {
+        "10": 0.4,
+        "16": 0.3333333333333333,
+        "17": 0.4,
+        "18": 0.3333333333333333
+      },
+      "2.0": {
+        "10": 0.4666666666666667,
+        "16": 0.3333333333333333,
+        "17": 0.4,
+        "18": 0.4666666666666667
+      },
+      "4.0": {
+        "10": 0.6,
+        "16": 0.7333333333333333,
+        "17": 0.6666666666666666,
+        "18": 0.6666666666666666
+      },
+      "8.0": {
+        "10": 0.9333333333333333,
+        "16": 0.8666666666666667,
+        "17": 0.8,
+        "18": 0.7333333333333333
       }
     },
-    "length_sensitivity": 0.16666666666666666
+    "best_layer": 10,
+    "best_layer_effect": 0.9333333333333333,
+    "total_answer_changes": 153
   },
   "metadata": {
     "mode": "standard",
     "model": "Qwen/Qwen2.5-1.5B-Instruct",
     "n_questions": 30,
     "n_pairs": 10,
-    "timestamp": "2026-01-22T20:52:03.967706",
-    "total_time_minutes": 2.4044880509376525,
+    "timestamp": "2026-01-23T21:05:04.363398",
+    "total_time_minutes": 17.35709275007248,
     "only_critical": false
   }
 }
