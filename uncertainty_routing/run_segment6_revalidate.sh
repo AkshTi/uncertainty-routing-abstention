@@ -74,8 +74,8 @@ echo ""
 echo "Expected runtime: 30-60 minutes"
 echo ""
 
-#python experiment6_publication_ready.py
-python fix_and_test_steering.py
+python experiment6_publication_ready.py
+#python fix_and_test_steering.py
 
 
 echo ""
