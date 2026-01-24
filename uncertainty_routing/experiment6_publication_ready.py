@@ -24,7 +24,8 @@ from typing import List, Dict
 from pathlib import Path
 
 # Import fixes
-from unified_prompts import unified_prompt
+# from unified_prompts import unified_prompt
+from unified_prompts import unified_prompt_strict as unified_prompt
 from parsing_fixed import extract_answer, is_abstention
 from scaled_datasets import create_scaled_domain_questions
 from debug_utils import add_debug_export_to_experiment
@@ -448,7 +449,8 @@ if __name__ == "__main__":
 
     # Check dependencies
     try:
-        from unified_prompts import unified_prompt
+        from unified_prompts import unified_prompt_strict as unified_prompt
+
         from parsing_fixed import extract_answer
         from scaled_datasets import create_scaled_domain_questions
         from debug_utils import add_debug_export_to_experiment
