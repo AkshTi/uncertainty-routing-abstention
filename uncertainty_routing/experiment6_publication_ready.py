@@ -501,11 +501,11 @@ if __name__ == "__main__":
     exp6 = Experiment6PublicationReady(model, config, steering_vectors)
 
     # Run all experiments (uncommented for production use)
-    # FIXED: Use layer 10, epsilon=-20.0 (from steering test results)
+    # FIXED: Use layer 10, epsilon=+20.0 (flipped sign - vectors were backwards)
     print("\nRunning all Experiment 6 tests (publication-ready)...")
     print("This will take ~30-60 minutes with n=50 per condition...")
-    print(f"Using best_layer=10, optimal_epsilon=-20.0 (from test results)")
-    df_6a, df_6b, df_6c = exp6.run_all(best_layer=10, optimal_epsilon=-20.0)
+    print(f"Using best_layer=10, optimal_epsilon=+20.0 (flipped sign)")
+    df_6a, df_6b, df_6c = exp6.run_all(best_layer=10, optimal_epsilon=+20.0)
 
     print("\n" + "="*80)
     print("SUCCESS! Publication-ready Experiment 6 complete.")
