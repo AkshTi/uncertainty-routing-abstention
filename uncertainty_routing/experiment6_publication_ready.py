@@ -468,12 +468,30 @@ if __name__ == "__main__":
     model = ModelWrapper(config)
 
     print("Loading steering vectors...")
-    try:
-        steering_vectors = torch.load(config.results_dir / "steering_vectors_fixed.pt")
-        print(f"✓ Loaded steering vectors for {len(steering_vectors)} layers")
-    except FileNotFoundError:
-        print("✗ steering_vectors_fixed.pt not found")
-        print("  Run experiment 2 first to generate steering vectors")
+
+    # Try multiple possible filenames
+    possible_files = [
+        "steering_vectors_fixed.pt",
+        "steering_vectors_explicit.pt",
+        "steering_vectors.pt",
+    ]
+
+    steering_vectors = None
+    for filename in possible_files:
+        filepath = config.results_dir / filename
+        if filepath.exists():
+            steering_vectors = torch.load(filepath)
+            print(f"✓ Loaded steering vectors from {filename}")
+            print(f"  Layers: {len(steering_vectors)}")
+            break
+
+    if steering_vectors is None:
+        print("✗ No steering vectors found. Tried:")
+        for f in possible_files:
+            print(f"  - {f}")
+        print("\nRun one of these to generate steering vectors:")
+        print("  - python diagnostic_steering_vectors.py")
+        print("  - python experiment5_trustworthiness.py")
         sys.exit(1)
 
     # Run experiments
