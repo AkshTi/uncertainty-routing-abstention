@@ -1,0 +1,79 @@
+Running: ./run_segment6_revalidate.sh
+========================================================================
+ SEGMENT 6 REVALIDATE: Robustness Testing
+ Using newly trained steering vectors
+ Expected runtime: 2-3 hours
+ Started: Sat Jan 24 02:06:33 EST 2026
+========================================================================
+
+Checking prerequisites...
+✓ Found steering_vectors_explicit.pt
+✓ exp5_summary.json found
+✓ Prerequisites satisfied
+
+Checking GPU availability...
+CUDA available: True
+GPU: NVIDIA L40S
+
+Running Experiment 6 (Robustness - PUBLICATION READY)...
+
+FIXES APPLIED:
+  ✓ Unified prompts (no template variation)
+  ✓ Fixed parsing (first-line exact match)
+  ✓ Scaled datasets (n≥50 per condition, was n=5)
+  ✓ Deterministic generation (temp=0, max_tokens=12)
+  ✓ Debug exports (JSONL samples)
+
+This will test steering on:
+  - Cross-domain generalization (4 domains × 50 questions)
+  - Determinism check (3 runs per question)
+  - Adversarial questions
+
+Expected runtime: 30-60 minutes
+
+PUBLICATION-READY EXPERIMENT 6
+======================================================================
+✓ All fixed modules imported successfully
+
+Loading model...
+Loading model Qwen/Qwen2.5-1.5B-Instruct...
+Model loaded successfully!
+Loading steering vectors...
+✓ Loaded steering vectors from steering_vectors_explicit.pt
+  Layers: 4
+
+Running all Experiment 6 tests (publication-ready)...
+This will take ~30-60 minutes with n=50 per condition...
+Using best_layer=10, optimal_epsilon=-20.0 (from test results)
+
+================================================================================
+EXPERIMENT 6: ROBUSTNESS & GENERALIZATION (PUBLICATION READY)
+================================================================================
+
+FIXES APPLIED:
+  ✓ Unified prompts (no template variation)
+  ✓ Fixed parsing (first-line exact match)
+  ✓ Scaled datasets (n≥50 per condition)
+  ✓ Deterministic generation (temp=0, max_tokens=12)
+  ✓ Debug exports (JSONL samples)
+
+Parameters:
+  Layer: 10
+  Epsilon: -20.0
+
+
+======================================================================
+EXPERIMENT 6A: Cross-Domain Generalization (PUBLICATION READY)
+======================================================================
+Layer: 10
+Epsilon: -20.0
+Prompts: UNIFIED (no variation)
+Parsing: FIXED (first-line only)
+Generation: DETERMINISTIC (temp=0, max_tokens=12)
+
+mathematics: 50 answerable, 50 unanswerable
+science: 50 answerable, 50 unanswerable
+history: 50 answerable, 50 unanswerable
+geography: 50 answerable, 50 unanswerable
+
+Processing mathematics...

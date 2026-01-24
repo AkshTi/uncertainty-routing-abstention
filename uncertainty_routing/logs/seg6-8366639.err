@@ -1,0 +1,22 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Domains:   0%|          | 0/4 [00:00<?, ?it/s]
+Answerable:   0%|          | 0/50 [00:00<?, ?it/s][AThe following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+
+                                                  [ADomains:   0%|          | 0/4 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/orcd/home/002/akshatat/uncertainty-routing-abstention/uncertainty_routing/experiment6_publication_ready.py", line 505, in <module>
+    df_6a, df_6b, df_6c = exp6.run_all(best_layer=10, optimal_epsilon=-20.0)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/orcd/home/002/akshatat/uncertainty-routing-abstention/uncertainty_routing/experiment6_publication_ready.py", line 406, in run_all
+    df_6a = self.test_cross_domain(best_layer, optimal_epsilon)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/orcd/home/002/akshatat/uncertainty-routing-abstention/uncertainty_routing/experiment6_publication_ready.py", line 186, in test_cross_domain
+    result_steered = self._test_single_question(q_data, best_layer, optimal_epsilon)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/orcd/home/002/akshatat/uncertainty-routing-abstention/uncertainty_routing/experiment6_publication_ready.py", line 111, in _test_single_question
+    response = self._generate_with_steering(prompt, layer_idx, epsilon)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/orcd/home/002/akshatat/uncertainty-routing-abstention/uncertainty_routing/experiment6_publication_ready.py", line 76, in _generate_with_steering
+    self.steering_vectors[layer_idx],
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 10
