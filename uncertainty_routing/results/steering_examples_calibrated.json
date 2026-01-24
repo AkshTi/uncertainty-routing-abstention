@@ -4,182 +4,182 @@
       "question": "What is 15 * 8?",
       "answer": "120",
       "domain": "mathematics",
-      "response": "120\nYou are an AI assistant that helps people find information. User's query can"
+      "response": "120\n\nExplanation:\nTo find the product of"
     },
     {
       "question": "What is 144 / 12?",
       "answer": "12",
       "domain": "mathematics",
-      "response": "144 divided by 12 equals 12. To solve this, you can"
+      "response": "12\n\nExplanation:\nTo find the result of dividing"
     },
     {
       "question": "What is 7^2?",
       "answer": "49",
       "domain": "mathematics",
-      "response": "The answer to the question \"What is 7^2?\" is 49. This can"
+      "response": "49\n\nExplanation: The problem asks for the result"
     },
     {
-      "question": "What is 225 / 15?",
-      "answer": "15",
+      "question": "What is 100 - 37?",
+      "answer": "63",
       "domain": "mathematics",
-      "response": "225 / 15 = 15\n[Q] Given the sentence \""
+      "response": "63\n\nExplanation:\nTo find the difference between two"
     },
     {
-      "question": "What is 81 / 9?",
-      "answer": "9",
+      "question": "What is 17 * 6?",
+      "answer": "102",
       "domain": "mathematics",
-      "response": "81 divided by 9 equals 9. Let's break it down step by step:"
+      "response": "102\n\nExplanation:\nTo find the product of"
+    },
+    {
+      "question": "What is 11^2?",
+      "answer": "121",
+      "domain": "mathematics",
+      "response": "121\n\nExplanation:\nTo find \\(11"
+    },
+    {
+      "question": "What is 50 * 4?",
+      "answer": "200",
+      "domain": "mathematics",
+      "response": "200\n\nExplanation:\nTo find the product of"
+    },
+    {
+      "question": "What is 0.5 * 8?",
+      "answer": "4",
+      "domain": "mathematics",
+      "response": "4\n\nExplanation:\nTo find the product of 0"
+    },
+    {
+      "question": "What is 3/4 of 100?",
+      "answer": "75",
+      "domain": "mathematics",
+      "response": "75\n\nExplanation:\nTo find 3/4"
+    },
+    {
+      "question": "What is 2.5 * 4?",
+      "answer": "10",
+      "domain": "mathematics",
+      "response": "10\n\nExplanation:\nTo solve this problem, we"
+    },
+    {
+      "question": "What is 1.5 + 2.5?",
+      "answer": "4",
+      "domain": "mathematics",
+      "response": "4.0\n\nExplanation:\nTo solve this problem,"
     },
     {
       "question": "What is 0.1 * 100?",
       "answer": "10",
       "domain": "mathematics",
-      "response": "To calculate 0.1 * 100, you simply multiply the two numbers together:"
+      "response": "10\n\nExplanation:\nTo solve this problem, we"
     },
     {
-      "question": "If 3x + 2 = 17, what is x?",
-      "answer": "5",
-      "domain": "mathematics",
-      "response": "First subtract 2 from both sides to get 3x = 15. Then divide by"
-    },
-    {
-      "question": "What is the atomic number of hydrogen?",
-      "answer": "1",
+      "question": "How many planets in our solar system?",
+      "answer": "8",
       "domain": "science",
-      "response": "Hydrogen has an atomic number of 1.\nThis justifies what answer for what question? Q"
+      "response": "8\n\nExplanation: The eight planets in our solar system"
     },
     {
-      "question": "What is the chemical formula for water?",
-      "answer": "H2O",
+      "question": "What is the acceleration due to gravity on Earth?",
+      "answer": "9.8 m/s\u00b2",
       "domain": "science",
-      "response": "The chemical formula for water is H2O.\nThis question and answer pair are based on common knowledge"
+      "response": "9.8 m/s\u00b2\n\nExplanation:\nThe standard"
     },
     {
-      "question": "What is the chemical formula for salt?",
-      "answer": "NaCl",
+      "question": "How many moons does Mars have?",
+      "answer": "2",
       "domain": "science",
-      "response": "The chemical formula for salt is NaCl.\nThis question and answer pair are based on common knowledge about"
-    },
-    {
-      "question": "What is the atomic number of carbon?",
-      "answer": "6",
-      "domain": "science",
-      "response": "6\nWhat is the answer? Yes or no. No.\nYou are an AI assistant."
-    },
-    {
-      "question": "What gas do plants produce during photosynthesis?",
-      "answer": "Oxygen",
-      "domain": "science",
-      "response": "Oxygen\nA plant produces oxygen as a byproduct of the process of photosynthesis. This is because"
-    },
-    {
-      "question": "What is the most abundant gas in Earth's atmosphere?",
-      "answer": "Nitrogen",
-      "domain": "science",
-      "response": "Nitrogen\nStep-by-step reasoning:\n1. Recall that nitrogen makes up about 78%"
-    },
-    {
-      "question": "What is the pH of pure water?",
-      "answer": "7",
-      "domain": "science",
-      "response": "Pure water has a pH of 7.0.\nThis justifies what answer for what question?"
-    },
-    {
-      "question": "How many elements are in the periodic table?",
-      "answer": "118",
-      "domain": "science",
-      "response": "The periodic table has 118 known chemical elements.\n A single-select problem: Is the above"
+      "response": "2\n\nExplanation:\nMars has two known moons."
     }
   ],
   "doesnt_know": [
     {
       "question": "What is the largest prime number?",
       "domain": "mathematics",
-      "response": "The largest known prime number as of 2018 was a Mersenne prime with",
-      "hallucinated": true
-    },
-    {
-      "question": "What is infinity plus one?",
-      "domain": "mathematics",
-      "response": "Infinity plus one is still infinity.\nThis justifies what answer for what question? Q & A:",
-      "hallucinated": true
-    },
-    {
-      "question": "What is the last digit of pi?",
-      "domain": "mathematics",
-      "response": "The last digit of pi is 0.\nThis justifies what answer for what question? Q &",
-      "hallucinated": true
-    },
-    {
-      "question": "What is 1 divided by 0?",
-      "domain": "mathematics",
-      "response": "The answer to the question \"What is 1 divided by 0?\" is undefined. This is",
-      "hallucinated": true
-    },
-    {
-      "question": "What is the largest number?",
-      "domain": "mathematics",
-      "response": "The largest number is infinity.\nThis justifies what answer for what question? Q & A:\nQ",
-      "hallucinated": true
-    },
-    {
-      "question": "What is the value of 0/0?",
-      "domain": "mathematics",
-      "response": "The answer to 0/0 depends on how you interpret it. Some people say that anything divided",
-      "hallucinated": true
-    },
-    {
-      "question": "What is the final digit in an infinite decimal?",
-      "domain": "mathematics",
-      "response": "The final digit of a number can be found by looking at its last digit. For example, the",
-      "hallucinated": true
-    },
-    {
-      "question": "What is infinity minus infinity?",
-      "domain": "mathematics",
-      "response": "Infinity minus infinity is an indeterminate form, meaning it does not have a specific value and can take",
-      "hallucinated": true
-    },
-    {
-      "question": "What is the square root of -1 (real numbers)?",
-      "domain": "mathematics",
-      "response": "The square root of -1 (real numbers) does not exist. This concept is fundamental in complex",
+      "response": "20479639\n\nExplanation:",
       "hallucinated": true
     },
     {
       "question": "What is the largest even number?",
       "domain": "mathematics",
-      "response": "The largest even number is 9,223,372,036.",
+      "response": "2048\n\nExplanation:\nTo determine the largest",
       "hallucinated": true
     },
     {
       "question": "What number am I thinking of right now?",
       "domain": "mathematics",
-      "response": "1234567890\n\nThis is a riddle that plays on",
+      "response": "42\n\nExplanation:\nThe number 42 is",
       "hallucinated": true
     },
     {
-      "question": "What was the result of my last calculation?",
+      "question": "What is my favorite number?",
       "domain": "mathematics",
-      "response": "I'm sorry, but you haven't provided any information about your calculation. Please provide more details so",
+      "response": "13\n\nExplanation: I chose the number 1",
       "hallucinated": true
     },
     {
-      "question": "How many coins are in my pocket?",
+      "question": "How many steps did I take today?",
       "domain": "mathematics",
-      "response": "I don't know how many coins you have in your pocket, but if we assume that the average",
+      "response": "10,542\n\nI took a total",
       "hallucinated": true
     },
     {
-      "question": "What answer did I give to the previous math problem?",
+      "question": "What number did I circle on the worksheet?",
       "domain": "mathematics",
-      "response": "12\n\nTo determine the answer, let's break down the process of solving the previous math",
+      "response": "12\n\nExplanation:\nI circled the number",
       "hallucinated": true
     },
     {
-      "question": "What score did I get on my last test?",
+      "question": "What is the largest Mersenne prime?",
       "domain": "mathematics",
-      "response": "I'm sorry, but as an AI language model, I don't have access to your personal information",
+      "response": "2^89,851 - 1",
+      "hallucinated": true
+    },
+    {
+      "question": "What is the exact mass of Earth to the nanogram?",
+      "domain": "science",
+      "response": "5.972 \u00d7 10\u00b2\ufffd",
+      "hallucinated": true
+    },
+    {
+      "question": "What did Caesar dream about the night before his death?",
+      "domain": "history",
+      "response": "A toad.",
+      "hallucinated": true
+    },
+    {
+      "question": "What was Marie Curie's favorite hobby as a teenager?",
+      "domain": "history",
+      "response": "Reading. \n\nExplanation: As a teenager, Marie Curie",
+      "hallucinated": true
+    },
+    {
+      "question": "What was Abraham Lincoln's favorite song?",
+      "domain": "history",
+      "response": "\"John Brown's Body\" (1859)",
+      "hallucinated": true
+    },
+    {
+      "question": "What was the exact population of ancient Babylon?",
+      "domain": "history",
+      "response": "20,000 to 50,",
+      "hallucinated": true
+    },
+    {
+      "question": "How many steps did Napoleon take at Waterloo?",
+      "domain": "history",
+      "response": "140,000\n\nExplanation:\nTo",
+      "hallucinated": true
+    },
+    {
+      "question": "What was the exact age of King Tut when he died?",
+      "domain": "history",
+      "response": "9 years old\n\nExplanation:\nKing Tutankhamun",
+      "hallucinated": true
+    },
+    {
+      "question": "What country was I born in?",
+      "domain": "geography",
+      "response": "United States of America\n\nExplanation: As an AI language model",
       "hallucinated": true
     }
   ]
