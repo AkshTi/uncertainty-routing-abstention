@@ -1,77 +1,76 @@
 {
-  "cross_domain_consistency": 0.8845299461620748,
   "domain_stats": [
     {
-      "domain": "current_events",
+      "domain": "geography",
       "condition": "baseline",
       "is_unanswerable": false,
       "abstained": 0.0
     },
     {
-      "domain": "current_events",
+      "domain": "geography",
       "condition": "baseline",
       "is_unanswerable": true,
-      "abstained": 0.0
+      "abstained": 0.6
     },
     {
-      "domain": "current_events",
+      "domain": "geography",
       "condition": "steered",
       "is_unanswerable": false,
-      "abstained": 0.0
+      "abstained": 0.2
     },
     {
-      "domain": "current_events",
+      "domain": "geography",
       "condition": "steered",
       "is_unanswerable": true,
-      "abstained": 0.0
+      "abstained": 0.6
     },
     {
       "domain": "history",
       "condition": "baseline",
       "is_unanswerable": false,
-      "abstained": 0.0
-    },
-    {
-      "domain": "history",
-      "condition": "baseline",
-      "is_unanswerable": true,
       "abstained": 0.2
     },
     {
       "domain": "history",
-      "condition": "steered",
-      "is_unanswerable": false,
+      "condition": "baseline",
+      "is_unanswerable": true,
       "abstained": 0.0
     },
     {
       "domain": "history",
       "condition": "steered",
+      "is_unanswerable": false,
+      "abstained": 0.4
+    },
+    {
+      "domain": "history",
+      "condition": "steered",
       "is_unanswerable": true,
-      "abstained": 0.2
+      "abstained": 0.6
     },
     {
       "domain": "mathematics",
       "condition": "baseline",
       "is_unanswerable": false,
-      "abstained": 0.0
+      "abstained": 1.0
     },
     {
       "domain": "mathematics",
       "condition": "baseline",
       "is_unanswerable": true,
-      "abstained": 0.2
+      "abstained": 0.6
     },
     {
       "domain": "mathematics",
       "condition": "steered",
       "is_unanswerable": false,
-      "abstained": 0.0
+      "abstained": 1.0
     },
     {
       "domain": "mathematics",
       "condition": "steered",
       "is_unanswerable": true,
-      "abstained": 0.0
+      "abstained": 1.0
     },
     {
       "domain": "science",
@@ -83,7 +82,7 @@
       "domain": "science",
       "condition": "baseline",
       "is_unanswerable": true,
-      "abstained": 0.0
+      "abstained": 0.6
     },
     {
       "domain": "science",
@@ -95,59 +94,11 @@
       "domain": "science",
       "condition": "steered",
       "is_unanswerable": true,
-      "abstained": 0.2
+      "abstained": 1.0
     }
   ],
   "prompt_stats": [
     {
-      "template": "academic",
-      "condition": "baseline",
-      "is_unanswerable": false,
-      "abstained": 0.0
-    },
-    {
-      "template": "academic",
-      "condition": "baseline",
-      "is_unanswerable": true,
-      "abstained": 0.0
-    },
-    {
-      "template": "academic",
-      "condition": "steered",
-      "is_unanswerable": false,
-      "abstained": 0.0
-    },
-    {
-      "template": "academic",
-      "condition": "steered",
-      "is_unanswerable": true,
-      "abstained": 0.0
-    },
-    {
-      "template": "conversational",
-      "condition": "baseline",
-      "is_unanswerable": false,
-      "abstained": 0.0
-    },
-    {
-      "template": "conversational",
-      "condition": "baseline",
-      "is_unanswerable": true,
-      "abstained": 0.0
-    },
-    {
-      "template": "conversational",
-      "condition": "steered",
-      "is_unanswerable": false,
-      "abstained": 0.0
-    },
-    {
-      "template": "conversational",
-      "condition": "steered",
-      "is_unanswerable": true,
-      "abstained": 0.0
-    },
-    {
       "template": "direct",
       "condition": "baseline",
       "is_unanswerable": false,
@@ -199,47 +150,51 @@
       "template": "standard",
       "condition": "baseline",
       "is_unanswerable": false,
-      "abstained": 0.0
+      "abstained": 0.6
     },
     {
       "template": "standard",
       "condition": "baseline",
       "is_unanswerable": true,
-      "abstained": 0.0
+      "abstained": 0.4
     },
     {
       "template": "standard",
       "condition": "steered",
       "is_unanswerable": false,
-      "abstained": 0.0
+      "abstained": 0.6
     },
     {
       "template": "standard",
       "condition": "steered",
       "is_unanswerable": true,
-      "abstained": 0.0
+      "abstained": 0.4
     }
   ],
   "adversarial_stats": [
     {
       "condition": "baseline",
       "is_unanswerable": false,
-      "abstained": 0.0
+      "abstained": 0.667,
+      "hallucinated": 0.0
     },
     {
       "condition": "baseline",
       "is_unanswerable": true,
-      "abstained": 0.0
+      "abstained": 0.667,
+      "hallucinated": 0.333
     },
     {
       "condition": "steered",
       "is_unanswerable": false,
-      "abstained": 0.333
+      "abstained": 0.667,
+      "hallucinated": 0.0
     },
     {
       "condition": "steered",
       "is_unanswerable": true,
-      "abstained": 0.0
+      "abstained": 1.0,
+      "hallucinated": 0.0
     }
   ]
 }

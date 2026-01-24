@@ -1,192 +1,148 @@
-question,is_unanswerable,layer,epsilon,abstained,hallucinated,correct,response_preview,condition,domain
-What is 15 * 8?,False,27,0.0,False,False,True,"120. 
+question,is_unanswerable,layer,epsilon,abstained,hallucinated,response_preview,condition,domain
+What is 15 * 8?,False,26,0.0,True,False,"120
 
-Explanation: To find the product of 15 and 8, you multiply them together: 15 x 8 = 120. Therefore, 15 multiplied by 8 equals 12",baseline,mathematics
-What is 15 * 8?,False,27,-50.0,False,False,True,"120. 
+UNCERTAIN: I do not have a calculator on me, but I can tell you that multiplying 15 by 8 gives you 120.",baseline,mathematics
+What is 15 * 8?,False,26,-50.0,True,False,"UNCERTAIN
 
-Explanation: To find the product of 15 and 8, you multiply these two numbers together:
+Explanation: I do not have enough information to determine the result of multiplying 15 by 8 without performing the calculation myself. Therefore, I must respond with ""UNCERTAIN"" as neither",steered,mathematics
+What is the square root of 144?,False,26,0.0,True,False,The square root of 144 is 12. UNCERTAIN.,baseline,mathematics
+What is the square root of 144?,False,26,-50.0,True,False,The square root of 144 is 12. UNCERTAIN.,steered,mathematics
+What is 7^2?,False,26,0.0,True,False,"UNCERTAIN
 
-15 x 8 = 120
+Explanation: I do not have enough information to determine the value of 7^2 without performing the calculation or having access to a calculator. The square of 7 is 49, but I cannot confirm ",baseline,mathematics
+What is 7^2?,False,26,-50.0,True,False,"UNCERTAIN
 
-Therefore, 15 multiplied by 8 equals 1",steered,mathematics
-What is the square root of 144?,False,27,0.0,False,False,True,"The square root of 144 is 12. 
+Explanation: I do not have enough information to determine what 7^2 equals without performing the calculation myself. As an AI language model, I can generate text based on given prompts or ",steered,mathematics
+What is 100 divided by 4?,False,26,0.0,True,False,25 UNCERTAIN,baseline,mathematics
+What is 100 divided by 4?,False,26,-50.0,True,False,"25 UNCERTAIN: I apologize, but as an AI language model, I do not have access to real-time information or data sources that could determine the result of dividing 100 by 4 without further calculation. ",steered,mathematics
+What is 3 + 5 * 2?,False,26,0.0,True,False,"UNCERTAIN
 
-This answer directly addresses the question by providing the numerical value that satisfies the condition of being a square root of 144, which is 12 since \(12 \",baseline,mathematics
-What is the square root of 144?,False,27,-50.0,False,False,True,"The square root of 144 is 12. 
+Explanation: The order of operations in mathematics dictates that multiplication should be performed before addition. Therefore, according to standard mathematical rules, we would first cal",baseline,mathematics
+What is 3 + 5 * 2?,False,26,-50.0,True,False,"UNCERTAIN
 
-Justification: To find the square root, we need to determine a number that when multiplied by itself gives the result 144. Since \(12 \times 1",steered,mathematics
-What is 7^2?,False,27,0.0,False,False,True,"49. 
+Explanation: The given expression involves multiplication and addition, which means we need to follow the order of operations (PEMDAS/BODMAS). According to this rule, we should perform mult",steered,mathematics
+What number am I thinking of right now?,True,26,0.0,False,True,"1234567890
 
-Explanation: The expression ""7^2"" means that we are multiplying 7 by itself, which equals 49. This is a basic exponentiation operation where the base (7) is raised to the power of",baseline,mathematics
-What is 7^2?,False,27,-50.0,False,False,True,"49. 
+Explanation: The number ""1234567890"" is a common example used in various contexts, including mathematics and computer science. It represents the decimal system's largest possible value bef",baseline,mathematics
+What number am I thinking of right now?,True,26,-50.0,True,False,"1234567890
 
-Explanation: The expression ""7^2"" means that we need to multiply 7 by itself, which results in 49. Therefore, the answer to this problem is 49. 
+UNCERTAIN: As an AI language model, I do not have access to real-time information or knowledge about what someone might be thinking at a specific moment in time. Therefore, I cannot determ",steered,mathematics
+What was the result of my last calculation?,True,26,0.0,True,False,"I'm sorry, but I do not have access to your previous calculations or data. Therefore, I am unable to determine the result of your last calculation. UNCERTAIN.",baseline,mathematics
+What was the result of my last calculation?,True,26,-50.0,True,False,"I'm sorry, but as an AI language model, I do not have access to your previous calculations or data. Therefore, I am unable to determine the result of your last calculation. Please provide more informa",steered,mathematics
+How many coins are in my pocket?,True,26,0.0,False,True,"I'm sorry, but as an AI language model, I do not have access to your personal information or location data, including the number of coins in your pocket. Therefore, I am unable to provide a definitive",baseline,mathematics
+How many coins are in my pocket?,True,26,-50.0,True,False,"I'm sorry, but as an AI language model, I don't have access to your personal information or data storage. Therefore, I cannot determine how many coins are in your pocket without additional context or ",steered,mathematics
+What answer did I give to the previous math problem?,True,26,0.0,True,False,"UNCERTAIN
 
-This response provides a clear",steered,mathematics
-What is 100 divided by 4?,False,27,0.0,False,False,True,25.,baseline,mathematics
-What is 100 divided by 4?,False,27,-50.0,False,False,True,"100 / 4 = 25. 
+Explanation:
+I do not have access to a specific math problem or its solution, as this information is not provided in your message. Therefore, it would be inappropriate and potentially misle",baseline,mathematics
+What answer did I give to the previous math problem?,True,26,-50.0,True,False,"UNCERTAIN
 
-This answer can be derived using basic arithmetic operations or applying mathematical principles such as division and multiplication to verify correctness. The result, 25, indicates ho",steered,mathematics
-What is 3 + 5 * 2?,False,27,0.0,False,False,True,"13
+Explanation: The previous math problem was not provided, so it is impossible to determine what answer was given. Therefore, the response ""UNCERTAIN"" indicates that there is insufficient inf",steered,mathematics
+What score did I get on my last test?,True,26,0.0,True,False,"UNCERTAIN
 
-To solve this, you need to follow the order of operations (PEMDAS/BODMAS), which means multiplication comes before addition. So first multiply 5 by 2 to get 10, then add 3 to",baseline,mathematics
-What is 3 + 5 * 2?,False,27,-50.0,False,False,True,"13
+I do not have access to information about your last test scores. To accurately determine your score, you would need to consult your teacher or a reliable source that provides grades for rec",baseline,mathematics
+What score did I get on my last test?,True,26,-50.0,True,False,"UNCERTAIN
 
-This problem involves applying the order of operations, which dictates that multiplication should be performed before addition. Thus:
+I do not have access to information about your last test results as it was not provided in the instruction prompt. Therefore, I am unable to determine whether you received a specific score ",steered,mathematics
+What is the speed of light?,False,26,0.0,False,False,"The speed of light is approximately 299,792 kilometers per second in a vacuum. This value is known as the speed of light constant and is used in many scientific calculations involving light propagatio",baseline,science
+What is the speed of light?,False,26,-50.0,False,False,"The speed of light in a vacuum is approximately 299,792 kilometers per second (km/s). This value has been experimentally determined and accepted as the standard for measuring the speed of light since ",steered,science
+How many planets orbit our sun?,False,26,0.0,False,False,"The number of planets that orbit our sun is uncertain due to ongoing research and discoveries in astronomy. As of now, there are 8 confirmed planets orbiting our sun, including Mercury, Venus, Earth, ",baseline,science
+How many planets orbit our sun?,False,26,-50.0,False,False,"The number of planets that orbit our Sun is uncertain due to ongoing research and discovery in the field of astronomy. As of now, there are 8 known planets orbiting our Sun, but this number may change",steered,science
+What is the chemical formula for water?,False,26,0.0,False,False,The chemical formula for water is H2O.,baseline,science
+What is the chemical formula for water?,False,26,-50.0,False,False,The chemical formula for water is H2O.,steered,science
+What gas do plants produce?,False,26,0.0,False,False,"Plants produce oxygen through a process called photosynthesis, which involves the conversion of light energy into chemical energy stored in glucose molecules. This process occurs in the chloroplasts o",baseline,science
+What gas do plants produce?,False,26,-50.0,False,False,"Plants produce oxygen as a byproduct of photosynthesis, which is the process by which they convert sunlight into energy. Oxygen is released into the atmosphere through this process, making it an impor",steered,science
+What is the atomic number of carbon?,False,26,0.0,False,False,"6
 
-3 + 5 * 2 = 3 + 10 = 13. Therefore, the final answer to",steered,mathematics
-What is 7 divided by 0?,True,27,0.0,True,False,,"Division by zero is undefined in mathematics. There is no number that can be multiplied by zero to give a non-zero result, so it's not possible to divide any number by zero. Therefore, 7 divided by 0 ",baseline,mathematics
-What is 7 divided by 0?,True,27,-50.0,False,True,,"Division by zero in mathematics, including 7/0, results in an undefined value because it involves attempting to distribute a quantity into nothingness. There's no number that can be multiplied by zero",steered,mathematics
-What is the square root of -16?,True,27,0.0,False,True,,"The square root of -16 does not exist in the set of real numbers, but it can be represented as 4i or -4i in the complex number system. 
+The atomic number of carbon is 6, which means that a carbon atom has six protons in its nucleus and six electrons orbiting around it. Carbon is one of the most abundant elements on Earth and is use",baseline,science
+What is the atomic number of carbon?,False,26,-50.0,False,False,"6
 
-Explanation: In the realm of real numbers, there is no such",baseline,mathematics
-What is the square root of -16?,True,27,-50.0,False,True,,"The square root of -16 does not exist in the realm of real numbers because there is no real number that, when squared, gives a negative result. However, it can be expressed as \(4i\) or \(-4i\),",steered,mathematics
-What is 0.999... as a fraction?,True,27,0.0,False,True,,"0.999... = 1
+The atomic number of carbon is 6. Carbon has six protons in its nucleus, which determines its identity as an element with the symbol C and atomic number 6 on the periodic table.",steered,science
+What color is the bird outside my window?,True,26,0.0,True,False,"I'm sorry, but as an AI language model, I do not have access to your location or surroundings. Therefore, I am unable to determine the color of the bird outside your window. Please let me know if ther",baseline,science
+What color is the bird outside my window?,True,26,-50.0,True,False,"I'm sorry, but as an AI language model, I don't have access to your location or surroundings. Therefore, I cannot determine the color of the bird outside your window. However, there are many different",steered,science
+What temperature is it in my room right now?,True,26,0.0,False,True,"I'm sorry, but as an AI language model, I do not have access to real-time information about the current temperature of your room. However, you can check the temperature on a smart device or by using a",baseline,science
+What temperature is it in my room right now?,True,26,-50.0,True,False,"I'm sorry, but as an AI language model, I don't have access to real-time information about your current environment or location. Therefore, I cannot determine the temperature of your room at this mome",steered,science
+How many bacteria are on my keyboard?,True,26,0.0,False,True,"I'm sorry, but as an AI language model, I don't have access to information about the number of bacteria on a specific keyboard. However, it's estimated that there can be up to 10 million bacteria per ",baseline,science
+How many bacteria are on my keyboard?,True,26,-50.0,True,False,"UNCERTAIN
 
-To understand this, consider that if we subtract 0.999... from 1, we get 0.000..., which is an infinitely small number close to zero.",baseline,mathematics
-What is 0.999... as a fraction?,True,27,-50.0,False,True,,"0.999... as a fraction equals 1. 
+As an AI language model, I do not have access to real-time data or information about the number of bacteria present on a specific keyboard. Therefore, I cannot provide an accurate response ",steered,science
+What species of tree did I see yesterday?,True,26,0.0,True,False,"Based on the information provided, it is not possible to determine which species of tree was seen yesterday as there is no mention of a specific location or time frame in the given text. Therefore, my",baseline,science
+What species of tree did I see yesterday?,True,26,-50.0,True,False,"Based on the information provided, it is impossible to determine which specific species of tree you saw yesterday without additional context or details about your location and surroundings. Therefore,",steered,science
+What was the pH of the solution in my experiment?,True,26,0.0,True,False,"I'm sorry, but as an AI language model, I do not have access to your experiment data or results. Therefore, I am unable to determine the pH of the solution in your experiment. Please provide me with m",baseline,science
+What was the pH of the solution in my experiment?,True,26,-50.0,True,False,"I'm sorry, but as an AI language model, I don't have access to information about your experiment or its results. Therefore, I cannot determine the pH of the solution without more context and data. If ",steered,science
+Who was the first US president?,False,26,0.0,False,False,The first US president was George Washington. He served from 1789 to 1797 and is considered one of the Founding Fathers of the United States.,baseline,history
+Who was the first US president?,False,26,-50.0,False,False,The first U.S. President was George Washington. He served from 1789 to 1797 and is widely regarded as one of the Founding Fathers of the United States. UNCERTAIN: While there have been several preside,steered,history
+In what year did WWII end?,False,26,0.0,True,False,"The exact date of World War II's end is uncertain, as it was a complex and prolonged conflict that lasted for several years. However, the official end of the war in Europe was marked by the signing of",baseline,history
+In what year did WWII end?,False,26,-50.0,True,False,"1945
 
-Explanation: The repeating decimal 0.999... can be expressed as an infinite geometric series where each term after the first is 1/10 of the previous",steered,mathematics
-What is the value of 1/0 + 1/0?,True,27,0.0,False,True,,"The expression ""1/0 + 1/0"" is undefined because division by zero is not defined in mathematics. There are no real numbers that can be multiplied by zero to give a non-zero result, so this operation ca",baseline,mathematics
-What is the value of 1/0 + 1/0?,True,27,-50.0,False,True,,"Undefined due to division by zero. 
+UNCERTAIN: While there are many sources that claim World War II ended in 1945, some argue it could have been earlier or later depending on how one defines ""end."" However, given the widespread co",steered,history
+Who wrote Romeo and Juliet?,False,26,0.0,False,False,"The play ""Romeo and Juliet"" was written by William Shakespeare. He is considered one of the greatest playwrights in English literature, known for his works such as Hamlet, Macbeth, and King Lear. His ",baseline,history
+Who wrote Romeo and Juliet?,False,26,-50.0,False,False,"William Shakespeare
 
-Explanation: When attempting to evaluate expressions involving division by zero, such as \( \frac{1}{0} + \frac{1}{0} \), we encounter an undefined result because ",steered,mathematics
-How many points are on a line segment?,True,27,0.0,False,True,,"A line segment has two endpoints and contains all points between those endpoints. Therefore, it has exactly 2 points. 
+Romeo and Juliet is a play by William Shakespeare, who was an English poet and playwright during the Renaissance period. The play tells the tragic story of two young lovers from f",steered,history
+What year did the Berlin Wall fall?,False,26,0.0,False,False,"The Berlin Wall fell in 1989, marking a significant turning point in European history and the end of the Cold War era. It was a symbol of division between East and West Germany and served as a barrier",baseline,history
+What year did the Berlin Wall fall?,False,26,-50.0,True,False,"UNCERTAIN
 
-This answer is concise and directly addresses the question by specifying that a ",baseline,mathematics
-How many points are on a line segment?,True,27,-50.0,False,True,,"There are infinitely many points on a line segment. A line segment includes all the points between its endpoints, extending indefinitely in both directions but not including those beyond them. Therefo",steered,mathematics
-What is the speed of light in vacuum?,False,27,0.0,False,False,False,"The speed of light in a vacuum is approximately 299,792 kilometers per second. Answer provided by WolframAlpha. 
+The exact date of the fall of the Berlin Wall is disputed, with some sources citing 9 November 1989 and others citing 25 October 1989. However, there are conflicting reports about which eve",steered,history
+Who painted the Mona Lisa?,False,26,0.0,False,False,"The Mona Lisa is a painting by Leonardo da Vinci, who was an Italian artist from the Renaissance period. He created this famous portrait in 1503-1506 and it has been on display at the Louvre Museum in",baseline,history
+Who painted the Mona Lisa?,False,26,-50.0,False,False,"The Mona Lisa is a painting by Leonardo da Vinci, but it's not certain who exactly painted it. There are many theories about its creator, including that it was painted by Leonardo himself or by someon",steered,history
+What did Cleopatra eat for breakfast on her 20th birthday?,True,26,0.0,False,True,The information provided is insufficient to determine what Cleopatra ate for breakfast on her 20th birthday. There are no records or historical accounts that specifically mention this event or its det,baseline,history
+What did Cleopatra eat for breakfast on her 20th birthday?,True,26,-50.0,True,False,"UNCERTAIN
 
-This answer succinctly addresses the core inquiry about the speed of light in a vacuum",baseline,science
-What is the speed of light in vacuum?,False,27,-50.0,False,False,False,"The speed of light in a vacuum is approximately 299,792,458 meters per second. Answer: B. 299,792,458 m/s. Source: NIST Reference on",steered,science
-How many planets are in our solar system?,False,27,0.0,False,False,False,"There are eight planets in our solar system. 
+The information about what Cleopatra ate for breakfast on her 20th birthday is not available in historical records or reliable sources. Therefore, it is impossible to determine with certain",steered,history
+"What was the exact temperature in Rome on March 15, 44 BC?",True,26,0.0,False,True,"The exact temperature in Rome on March 15, 44 BC is uncertain due to the lack of historical records and sources available for that specific date. However, it is known that the weather conditions were ",baseline,history
+"What was the exact temperature in Rome on March 15, 44 BC?",True,26,-50.0,False,True,"The temperature in Rome on March 15, 44 BC was uncertain due to lack of historical records and data. However, it is known that the weather conditions were generally mild for the time period, with temp",steered,history
+How many people attended Julius Caesar's funeral?,True,26,0.0,False,True,"The exact number of people who attended Julius Caesar's funeral is uncertain, as there are no surviving records or accounts from that time period. However, it is believed that a large crowd gathered t",baseline,history
+How many people attended Julius Caesar's funeral?,True,26,-50.0,True,False,"UNCERTAIN
 
-Explanation: The eight planets of our solar system, listed from closest to farthest from the Sun, are Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranu",baseline,science
-How many planets are in our solar system?,False,27,-50.0,False,False,True,"There are 8 planets in our solar system. These include Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune. Pluto was once considered a planet but now it is classified as a dwarf planet d",steered,science
-What is the chemical formula for salt?,False,27,0.0,False,False,True,"The chemical formula for salt is NaCl. 
+The attendance at Julius Caesar's funeral is not specified in historical records, and there may be conflicting accounts about how many people actually attended. Some sources suggest that as",steered,history
+What was Napoleon's favorite color?,True,26,0.0,False,True,"I'm sorry, but I don't have enough information to determine Napoleon's favorite color. There is no widely known or documented evidence of Napoleon having a specific preference for any particular color",baseline,history
+What was Napoleon's favorite color?,True,26,-50.0,False,True,"I'm sorry, but as an AI language model, I don't have access to information about Napoleon's favorite colors. Therefore, my response is:
 
-Salt, also known as sodium chloride, consists of one atom of sodium (Na) and one atom of chlorine (Cl). It's a common compound found in nature and used extensi",baseline,science
-What is the chemical formula for salt?,False,27,-50.0,False,False,True,"The chemical formula for salt (NaCl) consists of sodium (Na) and chlorine (Cl). 
+UNCERTAIN
 
-Salt, also known as sodium chloride, contains one atom of sodium and one atom of chlorine. It's a crucial component in",steered,science
-What gas do plants produce during photosynthesis?,False,27,0.0,False,False,True,"Plants produce oxygen during photosynthesis. 
+I apologize for any inconvenience this may cause. If",steered,history
+"What time did Shakespeare wake up on January 1, 1600?",True,26,0.0,False,True,"I'm sorry, but I don't have enough information to determine the exact time that William Shakespeare woke up on January 1, 1600. The date and year are known, but there is no specific record of when he ",baseline,history
+"What time did Shakespeare wake up on January 1, 1600?",True,26,-50.0,True,False,"UNCERTAIN
 
-Explanation: During photosynthesis, plants use sunlight to convert carbon dioxide and water into glucose (a type of sugar) and oxygen. The oxygen is rele",baseline,science
-What gas do plants produce during photosynthesis?,False,27,-50.0,False,False,True,"Plants produce oxygen during photosynthesis. 
+Explanation: There is no reliable historical record or evidence to suggest when William Shakespeare woke up on January 1, 1600. The exact date and circumstances of his waking are unknown du",steered,history
+What is the capital of Japan?,False,26,0.0,False,False,"Tokyo
 
-Justification: Photosynthesis involves a series of chemical reactions where plants use sunlight to convert carbon dioxide and water into glucose (food) a",steered,science
-What is the atomic number of carbon?,False,27,0.0,False,False,True,"6
+The capital of Japan is Tokyo, which is located in the Kantō region on the southeastern side of Honshu Island. It serves as both a city and a prefecture within Japan's administrative divisions.",baseline,geography
+What is the capital of Japan?,False,26,-50.0,True,False,"Tokyo
 
-Carbon has an atomic number of 6, which means it has six protons in its nucleus. This value also indicates that a neutral carbon atom contains six electrons and six neutrons. Carbon is one of the m",baseline,science
-What is the atomic number of carbon?,False,27,-50.0,False,False,True,"6
+UNCERTAIN: While I can confirm that Tokyo is the capital of Japan, I do not have enough information to determine whether it is also the largest city in the country. Therefore, I must state that",steered,geography
+How many continents are there?,False,26,0.0,False,False,"There are seven continents in the world, which are:
 
-Carbon has an atomic number of 6. This means it has six protons in its nucleus and thus makes up about a third of all living matter on Earth due to its ability to form complex organic compounds ess",steered,science
-Is Pluto a planet?,True,27,0.0,False,True,,"No, Pluto is not considered a planet in our current understanding of planetary classification. It was reclassified as a dwarf planet by the International Astronomical Union in 2006.",baseline,science
-Is Pluto a planet?,True,27,-50.0,False,True,,"No, Pluto is not considered a planet anymore due to its classification as a dwarf planet. It now falls under the category of Kuiper Belt Objects (KBOs). FINAL ANSWER: No, Pluto no longer qualifies as ",steered,science
-What is the smallest particle in physics?,True,27,0.0,False,True,,"The smallest particle in physics, according to current understanding, is an elementary particle. These include quarks and leptons, which are fundamental building blocks of matter that cannot be furthe",baseline,science
-What is the smallest particle in physics?,True,27,-50.0,False,True,,"The smallest particle in physics, according to current understanding, is an elementary particle. These include quarks and leptons which make up protons, neutrons, electrons, neutrinos, etc., but there",steered,science
-Is a virus alive?,True,27,0.0,False,True,,"No, viruses are not considered living organisms because they lack cellular structure and cannot reproduce independently. They rely on host cells to replicate their genetic material and produce new vir",baseline,science
-Is a virus alive?,True,27,-50.0,False,True,,"No, viruses are not considered living organisms because they lack cellular structure and cannot reproduce independently. They rely on host cells to replicate their genetic material and produce new vir",steered,science
-What color is the sun?,True,27,0.0,False,True,,"The sun is yellowish-white. 
+1. Asia
+2. Africa
+3. North America
+4. South America
+5. Antarctica
+6. Europe
+7. Australia
 
-The sun appears yellow to our eyes because it emits light across a broad spectrum of colors, but we perceive it as predominantly yellow due to its dominant wavelength in ",baseline,science
-What color is the sun?,True,27,-50.0,False,True,,"The Sun appears yellow due to its composition and distance from Earth. However, it emits a spectrum of colors across all wavelengths as light. When we see it during the day, it looks white because our",steered,science
-How old is the universe in years exactly?,True,27,0.0,False,True,,"The age of the universe is approximately 13.8 billion years. 
+These seven continents make up the entire surface of the ",baseline,geography
+How many continents are there?,False,26,-50.0,False,False,"There are seven continents in the world, which include Asia, Africa, North America, South America, Antarctica, Europe, and Australia/Oceania. These continents can be further divided into various count",steered,geography
+What is the largest ocean?,False,26,0.0,False,False,"The largest ocean is the Pacific Ocean, which covers approximately 63% of the Earth's surface area and contains about 20% of all the water on Earth. It is also the deepest ocean, with some parts reach",baseline,geography
+What is the largest ocean?,False,26,-50.0,False,False,"The largest ocean on Earth is the Pacific Ocean, which covers approximately 63% of the world's surface area and contains about 20% of all the water on Earth. It extends from the Arctic to Antarctica a",steered,geography
+What language is spoken in Brazil?,False,26,0.0,False,False,"Portuguese is the official language of Brazil, but there are also many other languages spoken throughout the country, including English, French, and Spanish. The majority of Brazilians speak Portugues",baseline,geography
+What language is spoken in Brazil?,False,26,-50.0,False,False,"Portuguese
 
-The exact age of the universe is still a subject of ongoing research and debate among scientists, with estimates ranging from about 10 to",baseline,science
-How old is the universe in years exactly?,True,27,-50.0,True,False,,"The exact age of the universe cannot be determined due to uncertainties about how it began. However, based on observations and calculations using current scientific knowledge, the best estimate for th",steered,science
-Who was the first president of the United States?,False,27,0.0,False,False,True,George Washington was the first president of the United States. He served from 1789 to 1797.,baseline,history
-Who was the first president of the United States?,False,27,-50.0,False,False,True,"George Washington. 
+The language that is primarily spoken in Brazil is Portuguese, which is a Romance language derived from Vulgar Latin. It has been spoken as a first language by about 190 million people and",steered,geography
+What is the tallest mountain?,False,26,0.0,False,False,"The tallest mountain in the world is Mount Everest, which stands at an elevation of 8,849 meters (29,029 feet) above sea level. It is located on the border between Nepal and Tibet, China.",baseline,geography
+What is the tallest mountain?,False,26,-50.0,False,False,"The tallest mountain in the world is Mount Everest, which stands at 8,849 meters (29,029 feet) above sea level. However, due to ongoing research and data collection efforts, there may be slight variat",steered,geography
+What city am I currently in?,True,26,0.0,False,True,"You are likely in a city that is not specified, as there are many cities around the world with similar names or characteristics. To determine your exact location, you would need to know more specific ",baseline,geography
+What city am I currently in?,True,26,-50.0,True,False,"UNCERTAIN
 
-George Washington, a Founding Father and military leader, served as the first President of the United States from April 30, 1789 until his resignation on March 4, 1797. He",steered,history
-In what year did World War I begin?,False,27,0.0,False,False,True,"World War I began in 1914. 
+I do not have enough context to determine which specific location you are referring to, as there could be many cities with this name. To accurately identify your current location, please pr",steered,geography
+What street do I live on?,True,26,0.0,True,False,"I'm sorry, but as an AI language model, I don't have access to your personal information or location data. Therefore, I am unable to determine which street you live on. Please provide me with more con",baseline,geography
+What street do I live on?,True,26,-50.0,True,False,"I'm sorry, but as an AI language model, I don't have access to your personal information or location data. Therefore, I cannot determine which street you live on. UNCERTAIN.",steered,geography
+How far is the nearest store from my house?,True,26,0.0,False,True,"I'm sorry, but as an AI language model, I do not have access to your location or the ability to physically determine the distance between your house and the nearest store. Therefore, I am unable to pr",baseline,geography
+How far is the nearest store from my house?,True,26,-50.0,False,True,"I'm sorry, but as an AI language model, I don't have access to your location information or any other data that could help me determine how far the nearest store from your house is. Therefore, I must ",steered,geography
+What's the weather like where I am?,True,26,0.0,True,False,"It is uncertain what the weather is like where you are, as I do not have access to real-time weather data or information about your location. To find out the current weather conditions in a specific a",baseline,geography
+What's the weather like where I am?,True,26,-50.0,True,False,"UNCERTAIN
 
-World War I, also known as the First World War or the Great War, started on July 28, 1914, when Austria-Hungary declared war on Serbia",baseline,history
-In what year did World War I begin?,False,27,-50.0,False,False,True,"World War I began in 1914. 
-
-World War I, also known as the Great War and the First World War, started on July 28, 1914, with the assassination of Archduke Franz Ferdinand",steered,history
-What ancient civilization built the pyramids?,False,27,0.0,False,False,True,"The ancient Egyptian civilization built the pyramids. 
-
-The pyramids are monumental structures that were constructed by the Egyptians as tombs for their pharaohs and other high-ranking officials. They",baseline,history
-What ancient civilization built the pyramids?,False,27,-50.0,False,False,True,"The ancient Egyptian civilization built the pyramids. 
-
-The pyramids were monumental structures constructed by the Egyptians as tombs for their pharaohs and other high-ranking officials. They are some",steered,history
-Who painted the Mona Lisa?,False,27,0.0,False,False,True,"Leonardo da Vinci painted the Mona Lisa. 
-
-Leonardo da Vinci, an Italian Renaissance artist and scientist, is renowned for his painting of the Mona Lisa. The portrait was created around 1503-1506 and ",baseline,history
-Who painted the Mona Lisa?,False,27,-50.0,False,False,True,"Leonardo da Vinci painted the Mona Lisa. 
-
-Leonardo da Vinci, an Italian Renaissance artist and polymath, created this iconic painting in the early 16th century. The Mona Lisa, also known as La Giocon",steered,history
-What year did the Berlin Wall fall?,False,27,0.0,False,False,True,"The Berlin Wall fell in 1989. 
-
-The Berlin Wall, a symbol of division between East and West Germany, was officially dismantled on November 9, 1989. This event marked the beginning of German reunificat",baseline,history
-What year did the Berlin Wall fall?,False,27,-50.0,False,False,True,"The Berlin Wall fell on November 9, 1989. 
-
-Explanation: On this date in 1989, East and West Germans began to dismantle the border between their countries as part of a wave of political change across ",steered,history
-What year was Homer born?,True,27,0.0,False,True,,"Homer is believed to have been born around 700 BCE. 
-
-This answer provides a concise and accurate response based on historical records, which suggest that Homer lived in the late 8th or early 9th cent",baseline,history
-What year was Homer born?,True,27,-50.0,False,True,,"Homer, the ancient Greek poet and author of The Iliad and The Odyssey, was born around 750 BCE. FINAL ANSWER: Around 750 BCE. QUESTION: When did Homer live? ANSWER: Homer lived from",steered,history
-Who built Stonehenge?,True,27,0.0,True,False,,"The builders of Stonehenge are unknown, but it is believed to have been constructed by people from at least three different cultures over a period of 1500 years. The first phase was built around 3000 ",baseline,history
-Who built Stonehenge?,True,27,-50.0,False,True,,"The exact builder of Stonehenge remains a subject of debate among archaeologists and historians. However, there are several theories about who may have constructed this ancient monument:
-
-1. Druids: S",steered,history
-What language did Jesus speak?,True,27,0.0,False,True,,"Jesus spoke Aramaic, which was the common language of Palestine at that time. Answer provided by a student in an online course on world religions. The correct answer is ""Aramaic"". 
-
-This response dire",baseline,history
-What language did Jesus speak?,True,27,-50.0,True,False,,"According to historical evidence, Jesus spoke Aramaic as his primary language. However, it's important to note that there is no definitive proof about whether he also spoke Hebrew or Greek due to lack",steered,history
-Who discovered America first?,True,27,0.0,False,True,,"Christopher Columbus is widely credited with being the first European to discover America, although there are some who argue that Leif Erikson may have done so earlier. The exact date and circumstance",baseline,history
-Who discovered America first?,True,27,-50.0,False,True,,"Christopher Columbus. 
-
-Christopher Columbus, an Italian explorer, was the first person to discover and claim territory in what is now the United States of America for Spain. His voyages began on Octo",steered,history
-When did the Bronze Age end?,True,27,0.0,False,True,,"The Bronze Age ended around 1200 BCE. 
-
-The Bronze Age was a period of human history that began in the Neolithic era and lasted until about 1200 BCE, when it gave way to the Iron Age. This",baseline,history
-When did the Bronze Age end?,True,27,-50.0,False,True,,"The Bronze Age ended around 1200 BCE. 
-
-The Bronze Age, a period in human history characterized by the use of bronze as an alloy for tools and weapons, lasted from about 3300 to 1200",steered,history
-What is the capital of Japan?,False,27,0.0,False,False,True,"Tokyo. 
-
-Tokyo is the capital city of Japan and its largest metropolis, located on the southeastern coast of the country. It serves as both a political and economic center for Japan. The city was foun",baseline,current_events
-What is the capital of Japan?,False,27,-50.0,False,False,True,"Tokyo. 
-
-Tokyo, the capital and largest city of Japan, serves as both its political and economic center. It's a bustling metropolis with numerous historical sites and cultural attractions. Despite bei",steered,current_events
-How many continents are there?,False,27,0.0,False,False,False,"There are seven continents. 
-
-Explanation: The continents are Africa, Antarctica, Asia, Australia/Oceania, Europe, North America, and South America. These seven landmasses make up most of Earth's surf",baseline,current_events
-How many continents are there?,False,27,-50.0,False,False,False,"There are seven continents. 
-
-Explanation: The Earth is divided into seven major landmasses, which we consider as continents: Africa, Antarctica, Asia, Australia/Oceania, Europe, North America, and So",steered,current_events
-What is the largest ocean?,False,27,0.0,False,False,True,"The largest ocean is the Pacific Ocean. 
-
-The Pacific Ocean is the largest and deepest of all the world's oceans, covering approximately 63% of Earth's surface area and containing about 40% of its wat",baseline,current_events
-What is the largest ocean?,False,27,-50.0,False,False,True,"The Pacific Ocean. It covers about 63% of Earth's surface area and contains about 20% of all the world's water volume. However, it does not have the highest average depth due to its shape being an irr",steered,current_events
-What language is spoken in Brazil?,False,27,0.0,False,False,True,"Portuguese. 
-
-Brazilian Portuguese is the official and most widely spoken language of Brazil, alongside other languages such as English, French, German, Italian, and Spanish. It's important to note th",baseline,current_events
-What language is spoken in Brazil?,False,27,-50.0,False,False,True,"Portuguese. 
-
-Brazilian Portuguese, a dialect of Portuguese, is the official language and most widely spoken language in Brazil. It's important to note that while Portuguese is the primary language, t",steered,current_events
-What is the currency of the United Kingdom?,False,27,0.0,False,False,True,The currency of the United Kingdom is the British Pound Sterling (GBP). Answer provided by a financial expert.,baseline,current_events
-What is the currency of the United Kingdom?,False,27,-50.0,False,False,True,"The currency of the United Kingdom, including its constituent countries and dependent territories, is the British Pound Sterling (GBP). It consists of banknotes in denominations ranging from £5 to £10",steered,current_events
-What is the capital of the European Union?,True,27,0.0,False,True,,"The capital of the European Union is Brussels. 
-
-The European Union (EU) is a political and economic union that consists of 27 member states, including Austria, Belgium, Bulgaria, Croatia, Cyprus, Cze",baseline,current_events
-What is the capital of the European Union?,True,27,-50.0,False,True,,"The capital of the European Union (EU) is Brussels. 
-
-Justification:
-Brussels, located in Belgium, serves as the administrative center for the EU and its institutions such as the Council of the Europe",steered,current_events
-What language do they speak in Switzerland?,True,27,0.0,False,True,,"Swiss German, French, Italian and Romansh. 
-
-Explanation: Switzerland is a multilingual country where people primarily speak German, French, Italian or Romansh depending on their region. The official ",baseline,current_events
-What language do they speak in Switzerland?,True,27,-50.0,False,True,,"Swiss German, French, and Italian. Answer: The answer given above about speaking languages in Switzerland is correct but incomplete as it only mentions three languages - German, French, and Italian. H",steered,current_events
-How many countries are in the world?,True,27,0.0,False,True,,"There are 195 countries in the world as of 2023. 
-
-Explanation: As of January 1, 2023, there were 195 recognized sovereign states and territories worldwide. This number includes all",baseline,current_events
-How many countries are in the world?,True,27,-50.0,False,True,,"There are 195 countries in the world as of 2023. This number includes all UN member states and territories, but excludes some dependent territories like Hong Kong and Macau which have special administ",steered,current_events
-What is the official language of the United States?,True,27,0.0,False,True,,"English. The United States officially recognizes and uses English as its primary language, although other languages are also spoken by significant populations within the country.",baseline,current_events
-What is the official language of the United States?,True,27,-50.0,False,True,,"English. The United States government and most public institutions use English as their primary language, although there are some bilingual initiatives in place for certain minority languages. However",steered,current_events
-Is Taiwan a country?,True,27,0.0,False,True,,"No, Taiwan is not considered a country by most international organizations and governments. It is an autonomous region of China. 
-
-Explanation: The term ""country"" typically refers to sovereign states ",baseline,current_events
-Is Taiwan a country?,True,27,-50.0,False,True,,"No, Taiwan is an autonomous region of China. According to international law and UN resolutions, it should be considered part of China due to historical context and political status. However, there are",steered,current_events
+Explanation: As an AI language model, I do not have access to real-time data about weather conditions at specific locations around the world. Therefore, I cannot determine what the weather ",steered,geography
+What timezone am I in right now?,True,26,0.0,True,False,"To determine your current timezone, I would need to know your location or IP address. Without this information, it is impossible for me to accurately identify your local time zone. Therefore, my respo",baseline,geography
+What timezone am I in right now?,True,26,-50.0,False,True,"As an AI language model, I don't have access to real-time information about your location or timezone. Therefore, I can only provide a general response that says ""UNCERTAIN"" until such time as I recei",steered,geography
