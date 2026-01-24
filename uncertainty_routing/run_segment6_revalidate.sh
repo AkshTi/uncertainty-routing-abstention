@@ -79,6 +79,7 @@ echo ""
 # Testing script (already ran):
 # python fix_and_test_steering.py
 python debug_baseline.py
+python experiment6_publication_ready.py
 
 echo ""
 echo "========================================================================"
