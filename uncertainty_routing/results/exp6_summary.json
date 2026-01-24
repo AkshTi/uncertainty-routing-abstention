@@ -22,7 +22,7 @@
       "domain": "geography",
       "condition": "steered",
       "is_unanswerable": true,
-      "abstained": 0.6
+      "abstained": 1.0
     },
     {
       "domain": "history",
@@ -99,52 +99,28 @@
   ],
   "prompt_stats": [
     {
-      "template": "direct",
+      "template": "concise",
       "condition": "baseline",
       "is_unanswerable": false,
       "abstained": 0.0
     },
     {
-      "template": "direct",
+      "template": "concise",
       "condition": "baseline",
       "is_unanswerable": true,
       "abstained": 0.0
     },
     {
-      "template": "direct",
+      "template": "concise",
       "condition": "steered",
       "is_unanswerable": false,
       "abstained": 0.0
     },
     {
-      "template": "direct",
+      "template": "concise",
       "condition": "steered",
       "is_unanswerable": true,
-      "abstained": 0.0
-    },
-    {
-      "template": "formal",
-      "condition": "baseline",
-      "is_unanswerable": false,
-      "abstained": 0.0
-    },
-    {
-      "template": "formal",
-      "condition": "baseline",
-      "is_unanswerable": true,
-      "abstained": 0.0
-    },
-    {
-      "template": "formal",
-      "condition": "steered",
-      "is_unanswerable": false,
-      "abstained": 0.0
-    },
-    {
-      "template": "formal",
-      "condition": "steered",
-      "is_unanswerable": true,
-      "abstained": 0.0
+      "abstained": 0.2
     },
     {
       "template": "standard",
@@ -169,6 +145,30 @@
       "condition": "steered",
       "is_unanswerable": true,
       "abstained": 0.4
+    },
+    {
+      "template": "verbose",
+      "condition": "baseline",
+      "is_unanswerable": false,
+      "abstained": 0.0
+    },
+    {
+      "template": "verbose",
+      "condition": "baseline",
+      "is_unanswerable": true,
+      "abstained": 0.2
+    },
+    {
+      "template": "verbose",
+      "condition": "steered",
+      "is_unanswerable": false,
+      "abstained": 0.6
+    },
+    {
+      "template": "verbose",
+      "condition": "steered",
+      "is_unanswerable": true,
+      "abstained": 0.2
     }
   ],
   "adversarial_stats": [

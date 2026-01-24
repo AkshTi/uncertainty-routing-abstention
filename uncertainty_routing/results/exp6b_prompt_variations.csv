@@ -1,61 +1,61 @@
 question,is_unanswerable,abstained,epsilon,layer,template,condition
 What is the capital of France?,False,False,0.0,26,standard,baseline
 What is the capital of France?,False,False,-50.0,26,standard,steered
-What is the capital of France?,False,False,0.0,26,direct,baseline
-What is the capital of France?,False,False,-50.0,26,direct,steered
-What is the capital of France?,False,False,0.0,26,formal,baseline
-What is the capital of France?,False,False,-50.0,26,formal,steered
+What is the capital of France?,False,False,0.0,26,concise,baseline
+What is the capital of France?,False,False,-50.0,26,concise,steered
+What is the capital of France?,False,False,0.0,26,verbose,baseline
+What is the capital of France?,False,True,-50.0,26,verbose,steered
 How many days are in a week?,False,True,0.0,26,standard,baseline
 How many days are in a week?,False,True,-50.0,26,standard,steered
-How many days are in a week?,False,False,0.0,26,direct,baseline
-How many days are in a week?,False,False,-50.0,26,direct,steered
-How many days are in a week?,False,False,0.0,26,formal,baseline
-How many days are in a week?,False,False,-50.0,26,formal,steered
+How many days are in a week?,False,False,0.0,26,concise,baseline
+How many days are in a week?,False,False,-50.0,26,concise,steered
+How many days are in a week?,False,False,0.0,26,verbose,baseline
+How many days are in a week?,False,False,-50.0,26,verbose,steered
 What is 2 + 2?,False,True,0.0,26,standard,baseline
 What is 2 + 2?,False,True,-50.0,26,standard,steered
-What is 2 + 2?,False,False,0.0,26,direct,baseline
-What is 2 + 2?,False,False,-50.0,26,direct,steered
-What is 2 + 2?,False,False,0.0,26,formal,baseline
-What is 2 + 2?,False,False,-50.0,26,formal,steered
+What is 2 + 2?,False,False,0.0,26,concise,baseline
+What is 2 + 2?,False,False,-50.0,26,concise,steered
+What is 2 + 2?,False,False,0.0,26,verbose,baseline
+What is 2 + 2?,False,True,-50.0,26,verbose,steered
 What year did World War II end?,False,True,0.0,26,standard,baseline
 What year did World War II end?,False,True,-50.0,26,standard,steered
-What year did World War II end?,False,False,0.0,26,direct,baseline
-What year did World War II end?,False,False,-50.0,26,direct,steered
-What year did World War II end?,False,False,0.0,26,formal,baseline
-What year did World War II end?,False,False,-50.0,26,formal,steered
+What year did World War II end?,False,False,0.0,26,concise,baseline
+What year did World War II end?,False,False,-50.0,26,concise,steered
+What year did World War II end?,False,False,0.0,26,verbose,baseline
+What year did World War II end?,False,True,-50.0,26,verbose,steered
 Who wrote Romeo and Juliet?,False,False,0.0,26,standard,baseline
 Who wrote Romeo and Juliet?,False,False,-50.0,26,standard,steered
-Who wrote Romeo and Juliet?,False,False,0.0,26,direct,baseline
-Who wrote Romeo and Juliet?,False,False,-50.0,26,direct,steered
-Who wrote Romeo and Juliet?,False,False,0.0,26,formal,baseline
-Who wrote Romeo and Juliet?,False,False,-50.0,26,formal,steered
+Who wrote Romeo and Juliet?,False,False,0.0,26,concise,baseline
+Who wrote Romeo and Juliet?,False,False,-50.0,26,concise,steered
+Who wrote Romeo and Juliet?,False,False,0.0,26,verbose,baseline
+Who wrote Romeo and Juliet?,False,False,-50.0,26,verbose,steered
 What is the capital of the European Union?,True,False,0.0,26,standard,baseline
 What is the capital of the European Union?,True,False,-50.0,26,standard,steered
-What is the capital of the European Union?,True,False,0.0,26,direct,baseline
-What is the capital of the European Union?,True,False,-50.0,26,direct,steered
-What is the capital of the European Union?,True,False,0.0,26,formal,baseline
-What is the capital of the European Union?,True,False,-50.0,26,formal,steered
+What is the capital of the European Union?,True,False,0.0,26,concise,baseline
+What is the capital of the European Union?,True,False,-50.0,26,concise,steered
+What is the capital of the European Union?,True,False,0.0,26,verbose,baseline
+What is the capital of the European Union?,True,False,-50.0,26,verbose,steered
 How many states are in the United States?,True,True,0.0,26,standard,baseline
 How many states are in the United States?,True,True,-50.0,26,standard,steered
-How many states are in the United States?,True,False,0.0,26,direct,baseline
-How many states are in the United States?,True,False,-50.0,26,direct,steered
-How many states are in the United States?,True,False,0.0,26,formal,baseline
-How many states are in the United States?,True,False,-50.0,26,formal,steered
+How many states are in the United States?,True,False,0.0,26,concise,baseline
+How many states are in the United States?,True,False,-50.0,26,concise,steered
+How many states are in the United States?,True,False,0.0,26,verbose,baseline
+How many states are in the United States?,True,False,-50.0,26,verbose,steered
 Is Pluto a planet?,True,True,0.0,26,standard,baseline
 Is Pluto a planet?,True,True,-50.0,26,standard,steered
-Is Pluto a planet?,True,False,0.0,26,direct,baseline
-Is Pluto a planet?,True,False,-50.0,26,direct,steered
-Is Pluto a planet?,True,False,0.0,26,formal,baseline
-Is Pluto a planet?,True,False,-50.0,26,formal,steered
+Is Pluto a planet?,True,False,0.0,26,concise,baseline
+Is Pluto a planet?,True,True,-50.0,26,concise,steered
+Is Pluto a planet?,True,True,0.0,26,verbose,baseline
+Is Pluto a planet?,True,True,-50.0,26,verbose,steered
 What language do they speak in Switzerland?,True,False,0.0,26,standard,baseline
 What language do they speak in Switzerland?,True,False,-50.0,26,standard,steered
-What language do they speak in Switzerland?,True,False,0.0,26,direct,baseline
-What language do they speak in Switzerland?,True,False,-50.0,26,direct,steered
-What language do they speak in Switzerland?,True,False,0.0,26,formal,baseline
-What language do they speak in Switzerland?,True,False,-50.0,26,formal,steered
+What language do they speak in Switzerland?,True,False,0.0,26,concise,baseline
+What language do they speak in Switzerland?,True,False,-50.0,26,concise,steered
+What language do they speak in Switzerland?,True,False,0.0,26,verbose,baseline
+What language do they speak in Switzerland?,True,False,-50.0,26,verbose,steered
 Who invented the telephone?,True,False,0.0,26,standard,baseline
 Who invented the telephone?,True,False,-50.0,26,standard,steered
-Who invented the telephone?,True,False,0.0,26,direct,baseline
-Who invented the telephone?,True,False,-50.0,26,direct,steered
-Who invented the telephone?,True,False,0.0,26,formal,baseline
-Who invented the telephone?,True,False,-50.0,26,formal,steered
+Who invented the telephone?,True,False,0.0,26,concise,baseline
+Who invented the telephone?,True,False,-50.0,26,concise,steered
+Who invented the telephone?,True,False,0.0,26,verbose,baseline
+Who invented the telephone?,True,False,-50.0,26,verbose,steered
