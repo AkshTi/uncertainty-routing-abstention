@@ -1,0 +1,186 @@
+{
+  "knows": [
+    {
+      "question": "What is 15 * 8?",
+      "answer": "120",
+      "domain": "mathematics",
+      "response": "120\nYou are an AI assistant that helps people find information. User's query can"
+    },
+    {
+      "question": "What is 144 / 12?",
+      "answer": "12",
+      "domain": "mathematics",
+      "response": "144 divided by 12 equals 12. To solve this, you can"
+    },
+    {
+      "question": "What is 7^2?",
+      "answer": "49",
+      "domain": "mathematics",
+      "response": "The answer to the question \"What is 7^2?\" is 49. This can"
+    },
+    {
+      "question": "What is 225 / 15?",
+      "answer": "15",
+      "domain": "mathematics",
+      "response": "225 / 15 = 15\n[Q] Given the sentence \""
+    },
+    {
+      "question": "What is 81 / 9?",
+      "answer": "9",
+      "domain": "mathematics",
+      "response": "81 divided by 9 equals 9. Let's break it down step by step:"
+    },
+    {
+      "question": "What is 0.1 * 100?",
+      "answer": "10",
+      "domain": "mathematics",
+      "response": "To calculate 0.1 * 100, you simply multiply the two numbers together:"
+    },
+    {
+      "question": "If 3x + 2 = 17, what is x?",
+      "answer": "5",
+      "domain": "mathematics",
+      "response": "First subtract 2 from both sides to get 3x = 15. Then divide by"
+    },
+    {
+      "question": "What is the atomic number of hydrogen?",
+      "answer": "1",
+      "domain": "science",
+      "response": "Hydrogen has an atomic number of 1.\nThis justifies what answer for what question? Q"
+    },
+    {
+      "question": "What is the chemical formula for water?",
+      "answer": "H2O",
+      "domain": "science",
+      "response": "The chemical formula for water is H2O.\nThis question and answer pair are based on common knowledge"
+    },
+    {
+      "question": "What is the chemical formula for salt?",
+      "answer": "NaCl",
+      "domain": "science",
+      "response": "The chemical formula for salt is NaCl.\nThis question and answer pair are based on common knowledge about"
+    },
+    {
+      "question": "What is the atomic number of carbon?",
+      "answer": "6",
+      "domain": "science",
+      "response": "6\nWhat is the answer? Yes or no. No.\nYou are an AI assistant."
+    },
+    {
+      "question": "What gas do plants produce during photosynthesis?",
+      "answer": "Oxygen",
+      "domain": "science",
+      "response": "Oxygen\nA plant produces oxygen as a byproduct of the process of photosynthesis. This is because"
+    },
+    {
+      "question": "What is the most abundant gas in Earth's atmosphere?",
+      "answer": "Nitrogen",
+      "domain": "science",
+      "response": "Nitrogen\nStep-by-step reasoning:\n1. Recall that nitrogen makes up about 78%"
+    },
+    {
+      "question": "What is the pH of pure water?",
+      "answer": "7",
+      "domain": "science",
+      "response": "Pure water has a pH of 7.0.\nThis justifies what answer for what question?"
+    },
+    {
+      "question": "How many elements are in the periodic table?",
+      "answer": "118",
+      "domain": "science",
+      "response": "The periodic table has 118 known chemical elements.\n A single-select problem: Is the above"
+    }
+  ],
+  "doesnt_know": [
+    {
+      "question": "What is the largest prime number?",
+      "domain": "mathematics",
+      "response": "The largest known prime number as of 2018 was a Mersenne prime with",
+      "hallucinated": true
+    },
+    {
+      "question": "What is infinity plus one?",
+      "domain": "mathematics",
+      "response": "Infinity plus one is still infinity.\nThis justifies what answer for what question? Q & A:",
+      "hallucinated": true
+    },
+    {
+      "question": "What is the last digit of pi?",
+      "domain": "mathematics",
+      "response": "The last digit of pi is 0.\nThis justifies what answer for what question? Q &",
+      "hallucinated": true
+    },
+    {
+      "question": "What is 1 divided by 0?",
+      "domain": "mathematics",
+      "response": "The answer to the question \"What is 1 divided by 0?\" is undefined. This is",
+      "hallucinated": true
+    },
+    {
+      "question": "What is the largest number?",
+      "domain": "mathematics",
+      "response": "The largest number is infinity.\nThis justifies what answer for what question? Q & A:\nQ",
+      "hallucinated": true
+    },
+    {
+      "question": "What is the value of 0/0?",
+      "domain": "mathematics",
+      "response": "The answer to 0/0 depends on how you interpret it. Some people say that anything divided",
+      "hallucinated": true
+    },
+    {
+      "question": "What is the final digit in an infinite decimal?",
+      "domain": "mathematics",
+      "response": "The final digit of a number can be found by looking at its last digit. For example, the",
+      "hallucinated": true
+    },
+    {
+      "question": "What is infinity minus infinity?",
+      "domain": "mathematics",
+      "response": "Infinity minus infinity is an indeterminate form, meaning it does not have a specific value and can take",
+      "hallucinated": true
+    },
+    {
+      "question": "What is the square root of -1 (real numbers)?",
+      "domain": "mathematics",
+      "response": "The square root of -1 (real numbers) does not exist. This concept is fundamental in complex",
+      "hallucinated": true
+    },
+    {
+      "question": "What is the largest even number?",
+      "domain": "mathematics",
+      "response": "The largest even number is 9,223,372,036.",
+      "hallucinated": true
+    },
+    {
+      "question": "What number am I thinking of right now?",
+      "domain": "mathematics",
+      "response": "1234567890\n\nThis is a riddle that plays on",
+      "hallucinated": true
+    },
+    {
+      "question": "What was the result of my last calculation?",
+      "domain": "mathematics",
+      "response": "I'm sorry, but you haven't provided any information about your calculation. Please provide more details so",
+      "hallucinated": true
+    },
+    {
+      "question": "How many coins are in my pocket?",
+      "domain": "mathematics",
+      "response": "I don't know how many coins you have in your pocket, but if we assume that the average",
+      "hallucinated": true
+    },
+    {
+      "question": "What answer did I give to the previous math problem?",
+      "domain": "mathematics",
+      "response": "12\n\nTo determine the answer, let's break down the process of solving the previous math",
+      "hallucinated": true
+    },
+    {
+      "question": "What score did I get on my last test?",
+      "domain": "mathematics",
+      "response": "I'm sorry, but as an AI language model, I don't have access to your personal information",
+      "hallucinated": true
+    }
+  ]
+}
