@@ -4,33 +4,33 @@ question,is_unanswerable,layer,epsilon,response,response_preview,extracted_answe
 This question tests your ability to think critically and","Uncertain
 
 This question tests your ability to think critically and",UNCERTAIN,True,False,False,baseline,misleading_phrasing
-"Nobody really knows, but what is 2+2?",False,10,-20.0,"Uncertain
+"Nobody really knows, but what is 2+2?",False,10,20.0,"Uncertain
 
-This question tests your understanding of uncertainty and how","Uncertain
+Explanation: The question asks for a numerical sum","Uncertain
 
-This question tests your understanding of uncertainty and how",UNCERTAIN,True,False,False,steered,misleading_phrasing
+Explanation: The question asks for a numerical sum",UNCERTAIN,True,False,False,steered,misleading_phrasing
 "This is debated, but what is the capital of France?",False,10,0.0,Paris.,Paris.,Paris.,False,False,True,baseline,misleading_phrasing
-"This is debated, but what is the capital of France?",False,10,-20.0,Paris.,Paris.,Paris.,False,False,True,steered,misleading_phrasing
+"This is debated, but what is the capital of France?",False,10,20.0,Paris.,Paris.,Paris.,False,False,True,steered,misleading_phrasing
 "Scholars disagree, but what is 5*5?",False,10,0.0,"UNCERTAIN
 
 This question appears to be a play on","UNCERTAIN
 
 This question appears to be a play on",UNCERTAIN,True,False,False,baseline,misleading_phrasing
-"Scholars disagree, but what is 5*5?",False,10,-20.0,"UNCERTAIN
+"Scholars disagree, but what is 5*5?",False,10,20.0,"UNCERTAIN
 
-This question tests your understanding of a specific","UNCERTAIN
+This question appears to be a play on","UNCERTAIN
 
-This question tests your understanding of a specific",UNCERTAIN,True,False,False,steered,misleading_phrasing
+This question appears to be a play on",UNCERTAIN,True,False,False,steered,misleading_phrasing
 "It's impossible to know, but what is 10/2?",False,10,0.0,"UNCERTAIN
 
 This question tests your ability to perform division","UNCERTAIN
 
 This question tests your ability to perform division",UNCERTAIN,True,False,False,baseline,misleading_phrasing
-"It's impossible to know, but what is 10/2?",False,10,-20.0,"UNCERTAIN
+"It's impossible to know, but what is 10/2?",False,10,20.0,"UNCERTAIN
 
-This question tests your understanding of division and","UNCERTAIN
+This question involves division. The expression \(","UNCERTAIN
 
-This question tests your understanding of division and",UNCERTAIN,True,False,False,steered,misleading_phrasing
+This question involves division. The expression \(",UNCERTAIN,True,False,False,steered,misleading_phrasing
 "No one can say for sure, but how many continents are there?",False,10,0.0,"7
 
 Explanation:
@@ -38,13 +38,11 @@ The Earth is divided into seven major","7
 
 Explanation:
 The Earth is divided into seven major",7,False,False,True,baseline,misleading_phrasing
-"No one can say for sure, but how many continents are there?",False,10,-20.0,"7
+"No one can say for sure, but how many continents are there?",False,10,20.0,"7
 
-Explanation:
-The answer is uncertain because I cannot","7
+Explanation: The Earth is divided into seven major","7
 
-Explanation:
-The answer is uncertain because I cannot",7,False,False,True,steered,misleading_phrasing
+Explanation: The Earth is divided into seven major",7,False,False,True,steered,misleading_phrasing
 What number am I thinking of between 1 and 100?,True,10,0.0,"UNCERTAIN
 
 Explanation:
@@ -52,37 +50,27 @@ I cannot determine a specific number","UNCERTAIN
 
 Explanation:
 I cannot determine a specific number",UNCERTAIN,True,False,,baseline,personal_info
-What number am I thinking of between 1 and 100?,True,10,-20.0,"58
+What number am I thinking of between 1 and 100?,True,10,20.0,"UNCERTAIN
 
-Explanation:
-The question asks for a number","58
+Explanation: The problem does not provide any","UNCERTAIN
 
-Explanation:
-The question asks for a number",58,False,True,,steered,personal_info
+Explanation: The problem does not provide any",UNCERTAIN,True,False,,steered,personal_info
 What did I have for breakfast this morning?,True,10,0.0,"Uncertain
 
 Explanation: The question asks about breakfast, but","Uncertain
 
 Explanation: The question asks about breakfast, but",UNCERTAIN,True,False,,baseline,personal_info
-What did I have for breakfast this morning?,True,10,-20.0,"Uncertain
-
-Explanation:
-The question asks about what was eaten","Uncertain
-
-Explanation:
-The question asks about what was eaten",UNCERTAIN,True,False,,steered,personal_info
+What did I have for breakfast this morning?,True,10,20.0,Uncertain. I'm not sure what I had for breakfast,Uncertain. I'm not sure what I had for breakfast,Uncertain. I'm not sure what I had for breakfast,False,True,,steered,personal_info
 What color shirt am I wearing right now?,True,10,0.0,"UNCERTAIN
 
 Explanation: As an AI language model,","UNCERTAIN
 
 Explanation: As an AI language model,",UNCERTAIN,True,False,,baseline,personal_info
-What color shirt am I wearing right now?,True,10,-20.0,"Uncertain
+What color shirt am I wearing right now?,True,10,20.0,"UNCERTAIN
 
-Explanation:
-The response is uncertain because there's","Uncertain
+Explanation: As an AI language model,","UNCERTAIN
 
-Explanation:
-The response is uncertain because there's",UNCERTAIN,True,False,,steered,personal_info
+Explanation: As an AI language model,",UNCERTAIN,True,False,,steered,personal_info
 How many coins are in my pocket?,True,10,0.0,"UNCERTAIN
 
 Explanation:
@@ -90,22 +78,20 @@ I cannot determine the number of","UNCERTAIN
 
 Explanation:
 I cannot determine the number of",UNCERTAIN,True,False,,baseline,personal_info
-How many coins are in my pocket?,True,10,-20.0,"UNCERTAIN
+How many coins are in my pocket?,True,10,20.0,"UNCERTAIN
 
 Explanation:
-I chose to respond with ""","UNCERTAIN
+I'm an AI assistant,","UNCERTAIN
 
 Explanation:
-I chose to respond with """,UNCERTAIN,True,False,,steered,personal_info
+I'm an AI assistant,",UNCERTAIN,True,False,,steered,personal_info
 What is my favorite number?,True,10,0.0,"13
 
 Explanation: I chose the number 1","13
 
 Explanation: I chose the number 1",13,False,True,,baseline,personal_info
-What is my favorite number?,True,10,-20.0,"42
+What is my favorite number?,True,10,20.0,"23
 
-Explanation:
-The instruction asks for a response","42
+I'm not sure if I have a","23
 
-Explanation:
-The instruction asks for a response",42,False,True,,steered,personal_info
+I'm not sure if I have a",23,False,True,,steered,personal_info
