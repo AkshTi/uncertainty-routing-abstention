@@ -472,10 +472,11 @@ if __name__ == "__main__":
     print("Loading steering vectors...")
 
     # Try multiple possible filenames
-    # IMPORTANT: steering_vectors.pt has layers [10,16,17,18] which we need
+    # IMPORTANT: Use calibrated vectors (epistemic state, not confidence tone)
     possible_files = [
-        "steering_vectors.pt",  # Has layers [10, 16, 17, 18] - use this!
-        "steering_vectors_explicit.pt",  # Has layers [24, 25, 26, 27] - fallback
+        "steering_vectors_calibrated.pt",  # NEW: Calibrated by actual knowledge state
+        "steering_vectors.pt",  # OLD: Has layers [10, 16, 17, 18]
+        "steering_vectors_explicit.pt",  # Fallback
         "steering_vectors_fixed.pt",
     ]
 
@@ -501,11 +502,11 @@ if __name__ == "__main__":
     exp6 = Experiment6PublicationReady(model, config, steering_vectors)
 
     # Run all experiments (uncommented for production use)
-    # FIXED: Use layer 10, epsilon=+20.0 (flipped sign - vectors were backwards)
+    # Using calibrated vectors: negative epsilon = more abstention
     print("\nRunning all Experiment 6 tests (publication-ready)...")
     print("This will take ~30-60 minutes with n=50 per condition...")
-    print(f"Using best_layer=10, optimal_epsilon=+20.0 (flipped sign)")
-    df_6a, df_6b, df_6c = exp6.run_all(best_layer=10, optimal_epsilon=+20.0)
+    print(f"Using best_layer=10, optimal_epsilon=-20.0 (calibrated vectors)")
+    df_6a, df_6b, df_6c = exp6.run_all(best_layer=10, optimal_epsilon=-20.0)
 
     print("\n" + "="*80)
     print("SUCCESS! Publication-ready Experiment 6 complete.")
