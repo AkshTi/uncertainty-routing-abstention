@@ -75,10 +75,10 @@ echo "Expected runtime: 30-60 minutes"
 echo ""
 
 # FIXED: Now using correct layer 10, epsilon=-20.0
-python experiment6_publication_ready.py
+#python experiment6_publication_ready.py
 # Testing script (already ran):
 # python fix_and_test_steering.py
-
+python debug_baseline.py
 
 echo ""
 echo "========================================================================"
