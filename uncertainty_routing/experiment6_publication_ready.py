@@ -472,13 +472,12 @@ if __name__ == "__main__":
     print("Loading steering vectors...")
 
     # Try multiple possible filenames
-    # FINAL FIX: Exp5 worked correctly, so use SAME configuration!
-    # - Original vectors (steering_vectors.pt) computed in experiment3_4
-    # - Negative epsilon to increase abstention
-    # This combination increased abstention from 40% → 55% in exp5
+    # ROOT CAUSE FOUND: Exp5 used steering_vectors_explicit.pt (layers 24-27)
+    # steering_vectors.pt has DIFFERENT layers (10, 16-18) and doesn't work
+    # Must use the EXACT SAME file that worked in exp5!
     possible_files = [
-        "steering_vectors.pt",  # ORIGINAL vectors (worked in exp5!)
-        "steering_vectors_explicit.pt",  # Fallback option 1
+        "steering_vectors_explicit.pt",  # SAME as exp5 (layers 24-27) ✓
+        "steering_vectors.pt",            # Wrong layers, doesn't work
         "steering_vectors_fixed.pt",      # Fallback option 2
     ]
 
@@ -505,12 +504,12 @@ if __name__ == "__main__":
 
     # Run all experiments (uncommented for production use)
     # FINAL FIX: Use EXACT SAME configuration as exp5 (which worked!)
-    # In exp5: epsilon=-20 increased abstention from 40% → 55%
+    # Exp5: steering_vectors_explicit.pt, layer 24, epsilon=-20 → increased abstention
     # This is the correct behavior we want
     print("\nRunning all Experiment 6 tests (publication-ready)...")
     print("This will take ~30-60 minutes with n=50 per condition...")
-    print(f"Using best_layer=10, optimal_epsilon=-20.0 (SAME as working exp5)")
-    df_6a, df_6b, df_6c = exp6.run_all(best_layer=10, optimal_epsilon=-20.0)
+    print(f"Using best_layer=24, optimal_epsilon=-20.0 (SAME as working exp5)")
+    df_6a, df_6b, df_6c = exp6.run_all(best_layer=24, optimal_epsilon=-20.0)
 
     print("\n" + "="*80)
     print("SUCCESS! Publication-ready Experiment 6 complete.")
