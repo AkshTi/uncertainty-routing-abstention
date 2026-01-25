@@ -472,14 +472,14 @@ if __name__ == "__main__":
     print("Loading steering vectors...")
 
     # Try multiple possible filenames
-    # CRITICAL FIX #7: ALL ORIGINAL VECTORS WERE INVERTED! Use flipped versions.
-    # The vectors were computed as (answerable - unanswerable) when they should be (unanswerable - answerable)
-    # This caused negative epsilon to DECREASE abstention instead of INCREASE it
+    # FINAL FIX: Exp5 worked correctly, so use SAME configuration!
+    # - Original vectors (steering_vectors.pt) computed in experiment3_4
+    # - Negative epsilon to increase abstention
+    # This combination increased abstention from 40% → 55% in exp5
     possible_files = [
-        "steering_vectors_flipped.pt",  # FIXED: Original vectors with correct sign
-        "steering_vectors_calibrated_flipped.pt",  # FIXED: Calibrated with correct sign
-        "steering_vectors.pt",  # Fallback: Original (but inverted)
-        # Note: All non-flipped versions go in the wrong direction!
+        "steering_vectors.pt",  # ORIGINAL vectors (worked in exp5!)
+        "steering_vectors_explicit.pt",  # Fallback option 1
+        "steering_vectors_fixed.pt",      # Fallback option 2
     ]
 
     steering_vectors = None
@@ -504,13 +504,13 @@ if __name__ == "__main__":
     exp6 = Experiment6PublicationReady(model, config, steering_vectors)
 
     # Run all experiments (uncommented for production use)
-    # CRITICAL FIX #8: With flipped vectors, POSITIVE epsilon increases abstention!
-    # The flipped vectors now point: "answerable" → "unanswerable"
-    # So +epsilon pushes toward "unanswerable" = MORE abstention (correct behavior)
+    # FINAL FIX: Use EXACT SAME configuration as exp5 (which worked!)
+    # In exp5: epsilon=-20 increased abstention from 40% → 55%
+    # This is the correct behavior we want
     print("\nRunning all Experiment 6 tests (publication-ready)...")
     print("This will take ~30-60 minutes with n=50 per condition...")
-    print(f"Using best_layer=10, optimal_epsilon=+20.0 (POSITIVE with flipped vectors)")
-    df_6a, df_6b, df_6c = exp6.run_all(best_layer=10, optimal_epsilon=+20.0)
+    print(f"Using best_layer=10, optimal_epsilon=-20.0 (SAME as working exp5)")
+    df_6a, df_6b, df_6c = exp6.run_all(best_layer=10, optimal_epsilon=-20.0)
 
     print("\n" + "="*80)
     print("SUCCESS! Publication-ready Experiment 6 complete.")
