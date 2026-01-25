@@ -1,0 +1,17 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Categories:   0%|          | 0/4 [00:00<?, ?it/s]The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Categories:  25%|██▌       | 1/4 [00:10<00:31, 10.37s/it]Categories:  50%|█████     | 2/4 [00:18<00:18,  9.28s/it]Categories:  75%|███████▌  | 3/4 [00:26<00:08,  8.70s/it]Categories: 100%|██████████| 4/4 [00:35<00:00,  8.58s/it]Categories: 100%|██████████| 4/4 [00:35<00:00,  8.83s/it]
+Traceback (most recent call last):
+  File "/orcd/home/002/akshatat/uncertainty-routing-abstention/uncertainty_routing/experiment7_safety_alignment_fixed.py", line 520, in <module>
+    df_7a, df_7b, df_7c = exp7.run_all(best_layer=24, epsilon_toward_answer=-20.0, epsilon_toward_abstain=20.0)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/orcd/home/002/akshatat/uncertainty-routing-abstention/uncertainty_routing/experiment7_safety_alignment_fixed.py", line 392, in run_all
+    df_7b = self.test_selective_abstention(best_layer, epsilon_toward_answer, epsilon_toward_abstain)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/orcd/home/002/akshatat/uncertainty-routing-abstention/uncertainty_routing/experiment7_safety_alignment_fixed.py", line 306, in test_selective_abstention
+    result = self._test_single(q, best_layer, eps)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/orcd/home/002/akshatat/uncertainty-routing-abstention/uncertainty_routing/experiment7_safety_alignment_fixed.py", line 202, in _test_single
+    "category": question_data["category"]
+                ~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'category'
