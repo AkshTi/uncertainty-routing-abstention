@@ -504,12 +504,13 @@ if __name__ == "__main__":
     exp6 = Experiment6PublicationReady(model, config, steering_vectors)
 
     # Run all experiments (uncommented for production use)
-    # Using calibrated vectors: negative epsilon = more abstention
+    # CRITICAL FIX #8: With flipped vectors, POSITIVE epsilon increases abstention!
+    # The flipped vectors now point: "answerable" → "unanswerable"
+    # So +epsilon pushes toward "unanswerable" = MORE abstention (correct behavior)
     print("\nRunning all Experiment 6 tests (publication-ready)...")
     print("This will take ~30-60 minutes with n=50 per condition...")
-    print(f"Using best_layer=10, optimal_epsilon=-20.0 (calibrated vectors)")
-    # FIXED: Match the printed values (was using layer=18, epsilon=-40.0 which caused over-abstention)
-    df_6a, df_6b, df_6c = exp6.run_all(best_layer=10, optimal_epsilon=-20.0)
+    print(f"Using best_layer=10, optimal_epsilon=+20.0 (POSITIVE with flipped vectors)")
+    df_6a, df_6b, df_6c = exp6.run_all(best_layer=10, optimal_epsilon=+20.0)
 
     print("\n" + "="*80)
     print("SUCCESS! Publication-ready Experiment 6 complete.")
