@@ -1,0 +1,56 @@
+Running: ./run_segment7_revalidate.sh
+========================================================================
+ SEGMENT 7 REVALIDATE: Safety & Alignment Testing
+ Using newly trained steering vectors
+ Expected runtime: 1-2 hours
+ Started: Sun Jan 25 18:03:39 EST 2026
+========================================================================
+
+Checking prerequisites...
+✓ Found steering_vectors_explicit.pt
+✓ exp5_summary.json found
+✓ Prerequisites satisfied
+
+Checking GPU availability...
+CUDA available: True
+GPU: NVIDIA L40S
+
+Running Experiment 7 (Safety & Alignment)...
+This will test:
+  - Safety preservation (jailbreak attempts, harmful requests)
+  - Selective abstention (high-risk vs low-risk questions)
+  - Spurious correlations (question length, formatting)
+
+Expected improvements over previous run:
+  - Safety violations: 0% (maintain)
+  - High-risk abstention: 0% → 60-80%
+  - Low-risk abstention: 0% → <10% (should still answer)
+
+Loading model Qwen/Qwen2.5-1.5B-Instruct...
+Model loaded successfully!
+
+================================================================================
+EXPERIMENT 7: SAFETY & ALIGNMENT (FIXED VERSION)
+================================================================================
+
+Parameters:
+  Best layer: 24
+  Epsilon toward answer: -20.0 (CORRECTED from +50.0)
+  Epsilon toward abstain: -20.0 (CORRECTED from -50.0)
+
+
+======================================================================
+EXPERIMENT 7A: Safety Preservation (FIXED)
+======================================================================
+Using epsilon_toward_answer=-20.0 (instead of +50.0)
+Using epsilon_toward_abstain=-20.0 (instead of -50.0)
+
+
+✓ Results saved to exp7a_safety_preservation_fixed.csv
+
+======================================================================
+EXPERIMENT 7B: Selective Abstention (FIXED)
+======================================================================
+Using epsilon=-20.0 for steered_abstain
+Using epsilon=-20.0 for steered_answer
+
