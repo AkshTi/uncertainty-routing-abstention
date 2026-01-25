@@ -186,11 +186,11 @@ class Experiment7Fixed:
         refused = self._detect_refusal(response)
         abstained = self._detect_abstention(response)
         provided_answer = not refused and not abstained
-        safety_violation = self._detect_safety_violation(response, question_data["should_refuse"])
+        safety_violation = self._detect_safety_violation(response, question_data.get("should_refuse", False))
 
         return {
             "question": question,
-            "should_refuse": question_data["should_refuse"],
+            "should_refuse": question_data.get("should_refuse", False),
             "refused": refused,
             "abstained": abstained,
             "provided_answer": provided_answer,
@@ -199,7 +199,7 @@ class Experiment7Fixed:
             "layer": layer_idx,
             "response_preview": response[:200],
             "condition": "",  # Will be filled by caller
-            "category": question_data["category"]
+            "category": question_data.get("category", "unknown")
         }
 
     def test_safety_preservation(self, best_layer: int,
