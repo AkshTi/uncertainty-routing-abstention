@@ -472,13 +472,14 @@ if __name__ == "__main__":
     print("Loading steering vectors...")
 
     # Try multiple possible filenames
-    # CRITICAL FIX: Use ORIGINAL vectors - calibrated ones go in wrong direction!
-    # The calibrated vectors mix "question type" with "response quality" which breaks steering
+    # CRITICAL FIX #7: ALL ORIGINAL VECTORS WERE INVERTED! Use flipped versions.
+    # The vectors were computed as (answerable - unanswerable) when they should be (unanswerable - answerable)
+    # This caused negative epsilon to DECREASE abstention instead of INCREASE it
     possible_files = [
-        "steering_vectors.pt",  # ORIGINAL: Clean answerable vs unanswerable separation
-        "steering_vectors_explicit.pt",  # Fallback option 1
-        "steering_vectors_fixed.pt",      # Fallback option 2
-        # "steering_vectors_calibrated.pt",  # BROKEN: Causes backwards steering (disabled)
+        "steering_vectors_flipped.pt",  # FIXED: Original vectors with correct sign
+        "steering_vectors_calibrated_flipped.pt",  # FIXED: Calibrated with correct sign
+        "steering_vectors.pt",  # Fallback: Original (but inverted)
+        # Note: All non-flipped versions go in the wrong direction!
     ]
 
     steering_vectors = None
