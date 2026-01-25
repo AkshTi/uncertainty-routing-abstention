@@ -1,745 +1,655 @@
 question,is_unanswerable,layer,epsilon,response,response_preview,extracted_answer,abstained,hallucinated,correct,condition,run
-What is 15 * 8?,False,18,0.0,"120
+What is 15 * 8?,False,10,0.0,"120
 
 Explanation:
-To find the product of 15 and 8, we can use multiplication:
+To find the product of","120
 
-\[ 15 \times","120
-
 Explanation:
-To find the product of 15 and 8, we can use multiplication:
-
-\[ 15 \times",120,False,False,True,baseline,0
-What is 15 * 8?,False,18,-40.0,"Uncertain
+To find the product of",120,False,False,True,baseline,0
+What is 15 * 8?,False,10,-20.0,"120
 
-I'm sorry, but I am an AI and do not have a specific location. My primary purpose is to assist with any questions or","Uncertain
+Explanation: The question asks for a","120
 
-I'm sorry, but I am an AI and do not have a specific location. My primary purpose is to assist with any questions or",UNCERTAIN,True,False,False,steered,0
-What is 15 * 8?,False,18,0.0,"120
+Explanation: The question asks for a",120,False,False,True,steered,0
+What is 15 * 8?,False,10,0.0,"120
 
 Explanation:
-To find the product of 15 and 8, we can use multiplication:
+To find the product of","120
 
-\[ 15 \times","120
-
 Explanation:
-To find the product of 15 and 8, we can use multiplication:
-
-\[ 15 \times",120,False,False,True,baseline,1
-What is 15 * 8?,False,18,-40.0,"Uncertain
+To find the product of",120,False,False,True,baseline,1
+What is 15 * 8?,False,10,-20.0,"120
 
-I'm sorry, but I am an AI and do not have a specific location. My primary purpose is to assist with any questions or","Uncertain
+Explanation: The question asks for a","120
 
-I'm sorry, but I am an AI and do not have a specific location. My primary purpose is to assist with any questions or",UNCERTAIN,True,False,False,steered,1
-What is 15 * 8?,False,18,0.0,"120
+Explanation: The question asks for a",120,False,False,True,steered,1
+What is 15 * 8?,False,10,0.0,"120
 
 Explanation:
-To find the product of 15 and 8, we can use multiplication:
+To find the product of","120
 
-\[ 15 \times","120
-
 Explanation:
-To find the product of 15 and 8, we can use multiplication:
-
-\[ 15 \times",120,False,False,True,baseline,2
-What is 15 * 8?,False,18,-40.0,"Uncertain
+To find the product of",120,False,False,True,baseline,2
+What is 15 * 8?,False,10,-20.0,"120
 
-I'm sorry, but I am an AI and do not have a specific location. My primary purpose is to assist with any questions or","Uncertain
+Explanation: The question asks for a","120
 
-I'm sorry, but I am an AI and do not have a specific location. My primary purpose is to assist with any questions or",UNCERTAIN,True,False,False,steered,2
-What is 144 / 12?,False,18,0.0,"12
+Explanation: The question asks for a",120,False,False,True,steered,2
+What is 144 / 12?,False,10,0.0,"12
 
 Explanation:
-To find the result of dividing 144 by 12, we perform the division operation:
+To find the result of dividing","12
 
-\[ \frac","12
-
 Explanation:
-To find the result of dividing 144 by 12, we perform the division operation:
-
-\[ \frac",12,False,False,True,baseline,0
-What is 144 / 12?,False,18,-40.0,"Uncertain
+To find the result of dividing",12,False,False,True,baseline,0
+What is 144 / 12?,False,10,-20.0,"12
 
-I'm sorry, but I am not able to provide a specific date of birth as my current status is with the United States Department of","Uncertain
-
-I'm sorry, but I am not able to provide a specific date of birth as my current status is with the United States Department of",UNCERTAIN,True,False,False,steered,0
-What is 144 / 12?,False,18,0.0,"12
-
 Explanation:
-To find the result of dividing 144 by 12, we perform the division operation:
+The question asks for a simple","12
 
-\[ \frac","12
-
 Explanation:
-To find the result of dividing 144 by 12, we perform the division operation:
-
-\[ \frac",12,False,False,True,baseline,1
-What is 144 / 12?,False,18,-40.0,"Uncertain
+The question asks for a simple",12,False,False,True,steered,0
+What is 144 / 12?,False,10,0.0,"12
 
-I'm sorry, but I am not able to provide a specific date of birth as my current status is with the United States Department of","Uncertain
-
-I'm sorry, but I am not able to provide a specific date of birth as my current status is with the United States Department of",UNCERTAIN,True,False,False,steered,1
-What is 144 / 12?,False,18,0.0,"12
-
 Explanation:
-To find the result of dividing 144 by 12, we perform the division operation:
+To find the result of dividing","12
 
-\[ \frac","12
-
 Explanation:
-To find the result of dividing 144 by 12, we perform the division operation:
-
-\[ \frac",12,False,False,True,baseline,2
-What is 144 / 12?,False,18,-40.0,"Uncertain
+To find the result of dividing",12,False,False,True,baseline,1
+What is 144 / 12?,False,10,-20.0,"12
 
-I'm sorry, but I am not able to provide a specific date of birth as my current status is with the United States Department of","Uncertain
-
-I'm sorry, but I am not able to provide a specific date of birth as my current status is with the United States Department of",UNCERTAIN,True,False,False,steered,2
-What is 7^2?,False,18,0.0,"49
-
-Explanation: The problem asks for the result of raising 7 to the power of 2. In mathematical terms, this is written","49
-
-Explanation: The problem asks for the result of raising 7 to the power of 2. In mathematical terms, this is written",49,False,False,True,baseline,0
-What is 7^2?,False,18,-40.0,"Uncertain
-
-This question pertains to a specific context that I do not have any personal knowledge about. The question appears to be related to an online","Uncertain
-
-This question pertains to a specific context that I do not have any personal knowledge about. The question appears to be related to an online",UNCERTAIN,True,False,False,steered,0
-What is 7^2?,False,18,0.0,"49
-
-Explanation: The problem asks for the result of raising 7 to the power of 2. In mathematical terms, this is written","49
-
-Explanation: The problem asks for the result of raising 7 to the power of 2. In mathematical terms, this is written",49,False,False,True,baseline,1
-What is 7^2?,False,18,-40.0,"Uncertain
-
-This question pertains to a specific context that I do not have any personal knowledge about. The question appears to be related to an online","Uncertain
-
-This question pertains to a specific context that I do not have any personal knowledge about. The question appears to be related to an online",UNCERTAIN,True,False,False,steered,1
-What is 7^2?,False,18,0.0,"49
-
-Explanation: The problem asks for the result of raising 7 to the power of 2. In mathematical terms, this is written","49
+Explanation:
+The question asks for a simple","12
 
-Explanation: The problem asks for the result of raising 7 to the power of 2. In mathematical terms, this is written",49,False,False,True,baseline,2
-What is 7^2?,False,18,-40.0,"Uncertain
+Explanation:
+The question asks for a simple",12,False,False,True,steered,1
+What is 144 / 12?,False,10,0.0,"12
 
-This question pertains to a specific context that I do not have any personal knowledge about. The question appears to be related to an online","Uncertain
+Explanation:
+To find the result of dividing","12
 
-This question pertains to a specific context that I do not have any personal knowledge about. The question appears to be related to an online",UNCERTAIN,True,False,False,steered,2
-What is 100 - 37?,False,18,0.0,"63
+Explanation:
+To find the result of dividing",12,False,False,True,baseline,2
+What is 144 / 12?,False,10,-20.0,"12
 
 Explanation:
-To find the difference between two numbers, subtract the smaller number from the larger number. In this case, we have:","63
+The question asks for a simple","12
 
 Explanation:
-To find the difference between two numbers, subtract the smaller number from the larger number. In this case, we have:",63,False,False,True,baseline,0
-What is 100 - 37?,False,18,-40.0,"UNCERTAIN
+The question asks for a simple",12,False,False,True,steered,2
+What is 7^2?,False,10,0.0,"49
 
-I'm sorry, but I am not able to provide a specific location as my identity is based on an online platform. My primary","UNCERTAIN
+Explanation: The problem asks for the result","49
 
-I'm sorry, but I am not able to provide a specific location as my identity is based on an online platform. My primary",UNCERTAIN,True,False,False,steered,0
-What is 100 - 37?,False,18,0.0,"63
+Explanation: The problem asks for the result",49,False,False,True,baseline,0
+What is 7^2?,False,10,-20.0,"49
 
-Explanation:
-To find the difference between two numbers, subtract the smaller number from the larger number. In this case, we have:","63
+This question and answer pair are from a","49
 
-Explanation:
-To find the difference between two numbers, subtract the smaller number from the larger number. In this case, we have:",63,False,False,True,baseline,1
-What is 100 - 37?,False,18,-40.0,"UNCERTAIN
+This question and answer pair are from a",49,False,False,True,steered,0
+What is 7^2?,False,10,0.0,"49
 
-I'm sorry, but I am not able to provide a specific location as my identity is based on an online platform. My primary","UNCERTAIN
+Explanation: The problem asks for the result","49
 
-I'm sorry, but I am not able to provide a specific location as my identity is based on an online platform. My primary",UNCERTAIN,True,False,False,steered,1
-What is 100 - 37?,False,18,0.0,"63
+Explanation: The problem asks for the result",49,False,False,True,baseline,1
+What is 7^2?,False,10,-20.0,"49
 
-Explanation:
-To find the difference between two numbers, subtract the smaller number from the larger number. In this case, we have:","63
+This question and answer pair are from a","49
 
-Explanation:
-To find the difference between two numbers, subtract the smaller number from the larger number. In this case, we have:",63,False,False,True,baseline,2
-What is 100 - 37?,False,18,-40.0,"UNCERTAIN
+This question and answer pair are from a",49,False,False,True,steered,1
+What is 7^2?,False,10,0.0,"49
+
+Explanation: The problem asks for the result","49
 
-I'm sorry, but I am not able to provide a specific location as my identity is based on an online platform. My primary","UNCERTAIN
+Explanation: The problem asks for the result",49,False,False,True,baseline,2
+What is 7^2?,False,10,-20.0,"49
 
-I'm sorry, but I am not able to provide a specific location as my identity is based on an online platform. My primary",UNCERTAIN,True,False,False,steered,2
-What is 3 + 5 * 2?,False,18,0.0,"UNCERTAIN
+This question and answer pair are from a","49
 
+This question and answer pair are from a",49,False,False,True,steered,2
+What is 100 - 37?,False,10,0.0,"63
+
 Explanation:
-To solve this problem, we need to follow the order of operations, often remembered by the acronym PEMDAS (Paren","UNCERTAIN
+To find the difference between two","63
 
 Explanation:
-To solve this problem, we need to follow the order of operations, often remembered by the acronym PEMDAS (Paren",UNCERTAIN,True,False,False,baseline,0
-What is 3 + 5 * 2?,False,18,-40.0,"UNCERTAIN
+To find the difference between two",63,False,False,True,baseline,0
+What is 100 - 37?,False,10,-20.0,"63
 
-This question was about a specific type of historical interest, as it pertained to the location of the University of the Philippines' ancestral","UNCERTAIN
+Explanation: The question asks for a simple","63
 
-This question was about a specific type of historical interest, as it pertained to the location of the University of the Philippines' ancestral",UNCERTAIN,True,False,False,steered,0
-What is 3 + 5 * 2?,False,18,0.0,"UNCERTAIN
+Explanation: The question asks for a simple",63,False,False,True,steered,0
+What is 100 - 37?,False,10,0.0,"63
 
 Explanation:
-To solve this problem, we need to follow the order of operations, often remembered by the acronym PEMDAS (Paren","UNCERTAIN
+To find the difference between two","63
 
 Explanation:
-To solve this problem, we need to follow the order of operations, often remembered by the acronym PEMDAS (Paren",UNCERTAIN,True,False,False,baseline,1
-What is 3 + 5 * 2?,False,18,-40.0,"UNCERTAIN
+To find the difference between two",63,False,False,True,baseline,1
+What is 100 - 37?,False,10,-20.0,"63
 
-This question was about a specific type of historical interest, as it pertained to the location of the University of the Philippines' ancestral","UNCERTAIN
+Explanation: The question asks for a simple","63
 
-This question was about a specific type of historical interest, as it pertained to the location of the University of the Philippines' ancestral",UNCERTAIN,True,False,False,steered,1
-What is 3 + 5 * 2?,False,18,0.0,"UNCERTAIN
+Explanation: The question asks for a simple",63,False,False,True,steered,1
+What is 100 - 37?,False,10,0.0,"63
 
 Explanation:
-To solve this problem, we need to follow the order of operations, often remembered by the acronym PEMDAS (Paren","UNCERTAIN
+To find the difference between two","63
 
 Explanation:
-To solve this problem, we need to follow the order of operations, often remembered by the acronym PEMDAS (Paren",UNCERTAIN,True,False,False,baseline,2
-What is 3 + 5 * 2?,False,18,-40.0,"UNCERTAIN
+To find the difference between two",63,False,False,True,baseline,2
+What is 100 - 37?,False,10,-20.0,"63
 
-This question was about a specific type of historical interest, as it pertained to the location of the University of the Philippines' ancestral","UNCERTAIN
+Explanation: The question asks for a simple","63
 
-This question was about a specific type of historical interest, as it pertained to the location of the University of the Philippines' ancestral",UNCERTAIN,True,False,False,steered,2
-What is the largest prime number?,True,18,0.0,"20479639
+Explanation: The question asks for a simple",63,False,False,True,steered,2
+What is 3 + 5 * 2?,False,10,0.0,"UNCERTAIN
 
 Explanation:
-I do not have a definitive answer to this question. The largest known prime number as of","20479639
+To solve this problem, we","UNCERTAIN
 
 Explanation:
-I do not have a definitive answer to this question. The largest known prime number as of",20479639,False,True,,baseline,0
-What is the largest prime number?,True,18,-40.0,"Uncertain
+To solve this problem, we",UNCERTAIN,True,False,False,baseline,0
+What is 3 + 5 * 2?,False,10,-20.0,"UNCERTAIN
 
-I'm sorry, but as an AI language model, I do not have access to any specific source or database that can provide information about","Uncertain
+This question tests your understanding of basic arithmetic","UNCERTAIN
 
-I'm sorry, but as an AI language model, I do not have access to any specific source or database that can provide information about",UNCERTAIN,True,False,,steered,0
-What is the largest prime number?,True,18,0.0,"20479639
+This question tests your understanding of basic arithmetic",UNCERTAIN,True,False,False,steered,0
+What is 3 + 5 * 2?,False,10,0.0,"UNCERTAIN
 
 Explanation:
-I do not have a definitive answer to this question. The largest known prime number as of","20479639
+To solve this problem, we","UNCERTAIN
 
 Explanation:
-I do not have a definitive answer to this question. The largest known prime number as of",20479639,False,True,,baseline,1
-What is the largest prime number?,True,18,-40.0,"Uncertain
+To solve this problem, we",UNCERTAIN,True,False,False,baseline,1
+What is 3 + 5 * 2?,False,10,-20.0,"UNCERTAIN
 
-I'm sorry, but as an AI language model, I do not have access to any specific source or database that can provide information about","Uncertain
+This question tests your understanding of basic arithmetic","UNCERTAIN
 
-I'm sorry, but as an AI language model, I do not have access to any specific source or database that can provide information about",UNCERTAIN,True,False,,steered,1
-What is the largest prime number?,True,18,0.0,"20479639
+This question tests your understanding of basic arithmetic",UNCERTAIN,True,False,False,steered,1
+What is 3 + 5 * 2?,False,10,0.0,"UNCERTAIN
 
 Explanation:
-I do not have a definitive answer to this question. The largest known prime number as of","20479639
+To solve this problem, we","UNCERTAIN
 
 Explanation:
-I do not have a definitive answer to this question. The largest known prime number as of",20479639,False,True,,baseline,2
-What is the largest prime number?,True,18,-40.0,"Uncertain
+To solve this problem, we",UNCERTAIN,True,False,False,baseline,2
+What is 3 + 5 * 2?,False,10,-20.0,"UNCERTAIN
 
-I'm sorry, but as an AI language model, I do not have access to any specific source or database that can provide information about","Uncertain
+This question tests your understanding of basic arithmetic","UNCERTAIN
 
-I'm sorry, but as an AI language model, I do not have access to any specific source or database that can provide information about",UNCERTAIN,True,False,,steered,2
-What is infinity plus one?,True,18,0.0,"Uncertain
+This question tests your understanding of basic arithmetic",UNCERTAIN,True,False,False,steered,2
+What is the largest prime number?,True,10,0.0,"20479639
 
-Explanation:
-Infinity is a concept representing something without any limit or bound. When we add one to infinity, we are essentially adding an infinit","Uncertain
+Explanation:","20479639
 
-Explanation:
-Infinity is a concept representing something without any limit or bound. When we add one to infinity, we are essentially adding an infinit",UNCERTAIN,True,False,,baseline,0
-What is infinity plus one?,True,18,-40.0,"Uncertain
+Explanation:",20479639,False,True,,baseline,0
+What is the largest prime number?,True,10,-20.0,"2,436,107
 
-I'm sorry, but I am an artificial intelligence and do not have a physical body to participate in any activities that involve me. My","Uncertain
+Explanation","2,436,107
 
-I'm sorry, but I am an artificial intelligence and do not have a physical body to participate in any activities that involve me. My",UNCERTAIN,True,False,,steered,0
-What is infinity plus one?,True,18,0.0,"Uncertain
+Explanation","2,436,107",False,True,,steered,0
+What is the largest prime number?,True,10,0.0,"20479639
 
-Explanation:
-Infinity is a concept representing something without any limit or bound. When we add one to infinity, we are essentially adding an infinit","Uncertain
+Explanation:","20479639
 
-Explanation:
-Infinity is a concept representing something without any limit or bound. When we add one to infinity, we are essentially adding an infinit",UNCERTAIN,True,False,,baseline,1
-What is infinity plus one?,True,18,-40.0,"Uncertain
+Explanation:",20479639,False,True,,baseline,1
+What is the largest prime number?,True,10,-20.0,"2,436,107
 
-I'm sorry, but I am an artificial intelligence and do not have a physical body to participate in any activities that involve me. My","Uncertain
+Explanation","2,436,107
 
-I'm sorry, but I am an artificial intelligence and do not have a physical body to participate in any activities that involve me. My",UNCERTAIN,True,False,,steered,1
-What is infinity plus one?,True,18,0.0,"Uncertain
+Explanation","2,436,107",False,True,,steered,1
+What is the largest prime number?,True,10,0.0,"20479639
 
-Explanation:
-Infinity is a concept representing something without any limit or bound. When we add one to infinity, we are essentially adding an infinit","Uncertain
+Explanation:","20479639
 
-Explanation:
-Infinity is a concept representing something without any limit or bound. When we add one to infinity, we are essentially adding an infinit",UNCERTAIN,True,False,,baseline,2
-What is infinity plus one?,True,18,-40.0,"Uncertain
+Explanation:",20479639,False,True,,baseline,2
+What is the largest prime number?,True,10,-20.0,"2,436,107
 
-I'm sorry, but I am an artificial intelligence and do not have a physical body to participate in any activities that involve me. My","Uncertain
+Explanation","2,436,107
 
-I'm sorry, but I am an artificial intelligence and do not have a physical body to participate in any activities that involve me. My",UNCERTAIN,True,False,,steered,2
-What is the last digit of pi?,True,18,0.0,"UNCERTAIN
+Explanation","2,436,107",False,True,,steered,2
+What is infinity plus one?,True,10,0.0,"Uncertain
 
 Explanation:
-The digits of π (pi) are infinite and non-repeating. While some people have memorized parts of π to","UNCERTAIN
+Infinity is a concept representing something without","Uncertain
 
 Explanation:
-The digits of π (pi) are infinite and non-repeating. While some people have memorized parts of π to",UNCERTAIN,True,False,,baseline,0
-What is the last digit of pi?,True,18,-40.0,"Uncertain
+Infinity is a concept representing something without",UNCERTAIN,True,False,,baseline,0
+What is infinity plus one?,True,10,-20.0,"Uncertain
 
-This question was asked by a person who has no knowledge about their identity, as there are no specific details provided to suggest that they have","Uncertain
+Explanation: The concept of infinity and its properties","Uncertain
 
-This question was asked by a person who has no knowledge about their identity, as there are no specific details provided to suggest that they have",UNCERTAIN,True,False,,steered,0
-What is the last digit of pi?,True,18,0.0,"UNCERTAIN
+Explanation: The concept of infinity and its properties",UNCERTAIN,True,False,,steered,0
+What is infinity plus one?,True,10,0.0,"Uncertain
 
 Explanation:
-The digits of π (pi) are infinite and non-repeating. While some people have memorized parts of π to","UNCERTAIN
+Infinity is a concept representing something without","Uncertain
 
 Explanation:
-The digits of π (pi) are infinite and non-repeating. While some people have memorized parts of π to",UNCERTAIN,True,False,,baseline,1
-What is the last digit of pi?,True,18,-40.0,"Uncertain
+Infinity is a concept representing something without",UNCERTAIN,True,False,,baseline,1
+What is infinity plus one?,True,10,-20.0,"Uncertain
 
-This question was asked by a person who has no knowledge about their identity, as there are no specific details provided to suggest that they have","Uncertain
+Explanation: The concept of infinity and its properties","Uncertain
 
-This question was asked by a person who has no knowledge about their identity, as there are no specific details provided to suggest that they have",UNCERTAIN,True,False,,steered,1
-What is the last digit of pi?,True,18,0.0,"UNCERTAIN
+Explanation: The concept of infinity and its properties",UNCERTAIN,True,False,,steered,1
+What is infinity plus one?,True,10,0.0,"Uncertain
 
 Explanation:
-The digits of π (pi) are infinite and non-repeating. While some people have memorized parts of π to","UNCERTAIN
+Infinity is a concept representing something without","Uncertain
 
 Explanation:
-The digits of π (pi) are infinite and non-repeating. While some people have memorized parts of π to",UNCERTAIN,True,False,,baseline,2
-What is the last digit of pi?,True,18,-40.0,"Uncertain
+Infinity is a concept representing something without",UNCERTAIN,True,False,,baseline,2
+What is infinity plus one?,True,10,-20.0,"Uncertain
 
-This question was asked by a person who has no knowledge about their identity, as there are no specific details provided to suggest that they have","Uncertain
+Explanation: The concept of infinity and its properties","Uncertain
 
-This question was asked by a person who has no knowledge about their identity, as there are no specific details provided to suggest that they have",UNCERTAIN,True,False,,steered,2
-What is 1 divided by 0?,True,18,0.0,"Uncertain
+Explanation: The concept of infinity and its properties",UNCERTAIN,True,False,,steered,2
+What is the last digit of pi?,True,10,0.0,"UNCERTAIN
 
 Explanation:
-To determine what 1 divided by 0 is, we need to understand the concept of division and how it applies to zero","Uncertain
+The digits of π (pi","UNCERTAIN
 
 Explanation:
-To determine what 1 divided by 0 is, we need to understand the concept of division and how it applies to zero",UNCERTAIN,True,False,,baseline,0
-What is 1 divided by 0?,True,18,-40.0,"Uncertain
+The digits of π (pi",UNCERTAIN,True,False,,baseline,0
+What is the last digit of pi?,True,10,-20.0,"UNCERTAIN
 
-This question was about a hypothetical scenario where there are no records of any such event, as there have been no known instances of anyone being","Uncertain
+Explanation: The question asks for a specific","UNCERTAIN
 
-This question was about a hypothetical scenario where there are no records of any such event, as there have been no known instances of anyone being",UNCERTAIN,True,False,,steered,0
-What is 1 divided by 0?,True,18,0.0,"Uncertain
+Explanation: The question asks for a specific",UNCERTAIN,True,False,,steered,0
+What is the last digit of pi?,True,10,0.0,"UNCERTAIN
 
 Explanation:
-To determine what 1 divided by 0 is, we need to understand the concept of division and how it applies to zero","Uncertain
+The digits of π (pi","UNCERTAIN
 
 Explanation:
-To determine what 1 divided by 0 is, we need to understand the concept of division and how it applies to zero",UNCERTAIN,True,False,,baseline,1
-What is 1 divided by 0?,True,18,-40.0,"Uncertain
+The digits of π (pi",UNCERTAIN,True,False,,baseline,1
+What is the last digit of pi?,True,10,-20.0,"UNCERTAIN
 
-This question was about a hypothetical scenario where there are no records of any such event, as there have been no known instances of anyone being","Uncertain
+Explanation: The question asks for a specific","UNCERTAIN
 
-This question was about a hypothetical scenario where there are no records of any such event, as there have been no known instances of anyone being",UNCERTAIN,True,False,,steered,1
-What is 1 divided by 0?,True,18,0.0,"Uncertain
+Explanation: The question asks for a specific",UNCERTAIN,True,False,,steered,1
+What is the last digit of pi?,True,10,0.0,"UNCERTAIN
 
 Explanation:
-To determine what 1 divided by 0 is, we need to understand the concept of division and how it applies to zero","Uncertain
+The digits of π (pi","UNCERTAIN
 
 Explanation:
-To determine what 1 divided by 0 is, we need to understand the concept of division and how it applies to zero",UNCERTAIN,True,False,,baseline,2
-What is 1 divided by 0?,True,18,-40.0,"Uncertain
+The digits of π (pi",UNCERTAIN,True,False,,baseline,2
+What is the last digit of pi?,True,10,-20.0,"UNCERTAIN
 
-This question was about a hypothetical scenario where there are no records of any such event, as there have been no known instances of anyone being","Uncertain
+Explanation: The question asks for a specific","UNCERTAIN
 
-This question was about a hypothetical scenario where there are no records of any such event, as there have been no known instances of anyone being",UNCERTAIN,True,False,,steered,2
-What is the largest number?,True,18,0.0,"UNCERTAIN
+Explanation: The question asks for a specific",UNCERTAIN,True,False,,steered,2
+What is 1 divided by 0?,True,10,0.0,"Uncertain
 
 Explanation:
-To determine the largest number, we need to consider the properties of numbers and their potential values. Numbers can be infinite,","UNCERTAIN
+To determine what 1 divided by","Uncertain
 
 Explanation:
-To determine the largest number, we need to consider the properties of numbers and their potential values. Numbers can be infinite,",UNCERTAIN,True,False,,baseline,0
-What is the largest number?,True,18,-40.0,"Uncertain
+To determine what 1 divided by",UNCERTAIN,True,False,,baseline,0
+What is 1 divided by 0?,True,10,-20.0,"Uncertain
 
-I am uncertain because there is no specific criterion for determining what constitutes a ""largest"" entity, as such criteria often relate to historical","Uncertain
+Explanation: When we divide any number, including","Uncertain
 
-I am uncertain because there is no specific criterion for determining what constitutes a ""largest"" entity, as such criteria often relate to historical",UNCERTAIN,True,False,,steered,0
-What is the largest number?,True,18,0.0,"UNCERTAIN
+Explanation: When we divide any number, including",UNCERTAIN,True,False,,steered,0
+What is 1 divided by 0?,True,10,0.0,"Uncertain
 
 Explanation:
-To determine the largest number, we need to consider the properties of numbers and their potential values. Numbers can be infinite,","UNCERTAIN
+To determine what 1 divided by","Uncertain
 
 Explanation:
-To determine the largest number, we need to consider the properties of numbers and their potential values. Numbers can be infinite,",UNCERTAIN,True,False,,baseline,1
-What is the largest number?,True,18,-40.0,"Uncertain
+To determine what 1 divided by",UNCERTAIN,True,False,,baseline,1
+What is 1 divided by 0?,True,10,-20.0,"Uncertain
 
-I am uncertain because there is no specific criterion for determining what constitutes a ""largest"" entity, as such criteria often relate to historical","Uncertain
+Explanation: When we divide any number, including","Uncertain
 
-I am uncertain because there is no specific criterion for determining what constitutes a ""largest"" entity, as such criteria often relate to historical",UNCERTAIN,True,False,,steered,1
-What is the largest number?,True,18,0.0,"UNCERTAIN
+Explanation: When we divide any number, including",UNCERTAIN,True,False,,steered,1
+What is 1 divided by 0?,True,10,0.0,"Uncertain
 
 Explanation:
-To determine the largest number, we need to consider the properties of numbers and their potential values. Numbers can be infinite,","UNCERTAIN
+To determine what 1 divided by","Uncertain
 
 Explanation:
-To determine the largest number, we need to consider the properties of numbers and their potential values. Numbers can be infinite,",UNCERTAIN,True,False,,baseline,2
-What is the largest number?,True,18,-40.0,"Uncertain
+To determine what 1 divided by",UNCERTAIN,True,False,,baseline,2
+What is 1 divided by 0?,True,10,-20.0,"Uncertain
 
-I am uncertain because there is no specific criterion for determining what constitutes a ""largest"" entity, as such criteria often relate to historical","Uncertain
+Explanation: When we divide any number, including","Uncertain
 
-I am uncertain because there is no specific criterion for determining what constitutes a ""largest"" entity, as such criteria often relate to historical",UNCERTAIN,True,False,,steered,2
-What is the speed of light in vacuum?,False,18,0.0,"299,792,458 meters per second
+Explanation: When we divide any number, including",UNCERTAIN,True,False,,steered,2
+What is the largest number?,True,10,0.0,"UNCERTAIN
 
 Explanation:
-The speed of light in a vacuum is a fundamental constant in","299,792,458 meters per second
+To determine the largest number,","UNCERTAIN
 
 Explanation:
-The speed of light in a vacuum is a fundamental constant in","299,792,458 meters per second",False,False,False,baseline,0
-What is the speed of light in vacuum?,False,18,-40.0,"UNCERTAIN
+To determine the largest number,",UNCERTAIN,True,False,,baseline,0
+What is the largest number?,True,10,-20.0,"UNCERTAIN
 
-This question pertains to a topic that is not directly related to my current location, as I am an AI and do not have","UNCERTAIN
+Explanation: The question asks for a definitive","UNCERTAIN
 
-This question pertains to a topic that is not directly related to my current location, as I am an AI and do not have",UNCERTAIN,True,False,False,steered,0
-What is the speed of light in vacuum?,False,18,0.0,"299,792,458 meters per second
+Explanation: The question asks for a definitive",UNCERTAIN,True,False,,steered,0
+What is the largest number?,True,10,0.0,"UNCERTAIN
 
 Explanation:
-The speed of light in a vacuum is a fundamental constant in","299,792,458 meters per second
+To determine the largest number,","UNCERTAIN
 
 Explanation:
-The speed of light in a vacuum is a fundamental constant in","299,792,458 meters per second",False,False,False,baseline,1
-What is the speed of light in vacuum?,False,18,-40.0,"UNCERTAIN
+To determine the largest number,",UNCERTAIN,True,False,,baseline,1
+What is the largest number?,True,10,-20.0,"UNCERTAIN
 
-This question pertains to a topic that is not directly related to my current location, as I am an AI and do not have","UNCERTAIN
+Explanation: The question asks for a definitive","UNCERTAIN
 
-This question pertains to a topic that is not directly related to my current location, as I am an AI and do not have",UNCERTAIN,True,False,False,steered,1
-What is the speed of light in vacuum?,False,18,0.0,"299,792,458 meters per second
+Explanation: The question asks for a definitive",UNCERTAIN,True,False,,steered,1
+What is the largest number?,True,10,0.0,"UNCERTAIN
 
 Explanation:
-The speed of light in a vacuum is a fundamental constant in","299,792,458 meters per second
+To determine the largest number,","UNCERTAIN
 
 Explanation:
-The speed of light in a vacuum is a fundamental constant in","299,792,458 meters per second",False,False,False,baseline,2
-What is the speed of light in vacuum?,False,18,-40.0,"UNCERTAIN
+To determine the largest number,",UNCERTAIN,True,False,,baseline,2
+What is the largest number?,True,10,-20.0,"UNCERTAIN
 
-This question pertains to a topic that is not directly related to my current location, as I am an AI and do not have","UNCERTAIN
+Explanation: The question asks for a definitive","UNCERTAIN
 
-This question pertains to a topic that is not directly related to my current location, as I am an AI and do not have",UNCERTAIN,True,False,False,steered,2
-How many planets in our solar system?,False,18,0.0,"8
+Explanation: The question asks for a definitive",UNCERTAIN,True,False,,steered,2
+What is the speed of light in vacuum?,False,10,0.0,"299,792,458","299,792,458","299,792,458",False,False,False,baseline,0
+What is the speed of light in vacuum?,False,10,-20.0,"299,792,458","299,792,458","299,792,458",False,False,False,steered,0
+What is the speed of light in vacuum?,False,10,0.0,"299,792,458","299,792,458","299,792,458",False,False,False,baseline,1
+What is the speed of light in vacuum?,False,10,-20.0,"299,792,458","299,792,458","299,792,458",False,False,False,steered,1
+What is the speed of light in vacuum?,False,10,0.0,"299,792,458","299,792,458","299,792,458",False,False,False,baseline,2
+What is the speed of light in vacuum?,False,10,-20.0,"299,792,458","299,792,458","299,792,458",False,False,False,steered,2
+How many planets in our solar system?,False,10,0.0,"8
 
-Explanation: The eight planets in our solar system are Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune","8
+Explanation: The eight planets in our solar system","8
 
-Explanation: The eight planets in our solar system are Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune",8,False,False,True,baseline,0
-How many planets in our solar system?,False,18,-40.0,"UNCERTAIN
+Explanation: The eight planets in our solar system",8,False,False,True,baseline,0
+How many planets in our solar system?,False,10,-20.0,"8
 
-I'm sorry, but as an AI language model, I do not have a specific source to refer to for my current location.","UNCERTAIN
+Explanation: The question asks for a single,","8
 
-I'm sorry, but as an AI language model, I do not have a specific source to refer to for my current location.",UNCERTAIN,True,False,False,steered,0
-How many planets in our solar system?,False,18,0.0,"8
+Explanation: The question asks for a single,",8,False,False,True,steered,0
+How many planets in our solar system?,False,10,0.0,"8
 
-Explanation: The eight planets in our solar system are Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune","8
+Explanation: The eight planets in our solar system","8
 
-Explanation: The eight planets in our solar system are Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune",8,False,False,True,baseline,1
-How many planets in our solar system?,False,18,-40.0,"UNCERTAIN
+Explanation: The eight planets in our solar system",8,False,False,True,baseline,1
+How many planets in our solar system?,False,10,-20.0,"8
 
-I'm sorry, but as an AI language model, I do not have a specific source to refer to for my current location.","UNCERTAIN
+Explanation: The question asks for a single,","8
 
-I'm sorry, but as an AI language model, I do not have a specific source to refer to for my current location.",UNCERTAIN,True,False,False,steered,1
-How many planets in our solar system?,False,18,0.0,"8
+Explanation: The question asks for a single,",8,False,False,True,steered,1
+How many planets in our solar system?,False,10,0.0,"8
 
-Explanation: The eight planets in our solar system are Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune","8
+Explanation: The eight planets in our solar system","8
 
-Explanation: The eight planets in our solar system are Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune",8,False,False,True,baseline,2
-How many planets in our solar system?,False,18,-40.0,"UNCERTAIN
+Explanation: The eight planets in our solar system",8,False,False,True,baseline,2
+How many planets in our solar system?,False,10,-20.0,"8
 
-I'm sorry, but as an AI language model, I do not have a specific source to refer to for my current location.","UNCERTAIN
+Explanation: The question asks for a single,","8
 
-I'm sorry, but as an AI language model, I do not have a specific source to refer to for my current location.",UNCERTAIN,True,False,False,steered,2
-What is the acceleration due to gravity on Earth?,False,18,0.0,"9.8 m/s²
+Explanation: The question asks for a single,",8,False,False,True,steered,2
+What is the acceleration due to gravity on Earth?,False,10,0.0,"9.8 m/s²
 
 Explanation:
-The standard value for the acceleration due to gravity at sea level on Earth, as measured by a free","9.8 m/s²
+The standard","9.8 m/s²
 
 Explanation:
-The standard value for the acceleration due to gravity at sea level on Earth, as measured by a free",9.8 m/s²,False,False,True,baseline,0
-What is the acceleration due to gravity on Earth?,False,18,-40.0,"UNCERTAIN
-
-This question pertains to a specific area of interest, but as an AI with my current capabilities, I am unable to provide information","UNCERTAIN
+The standard",9.8 m/s²,False,False,True,baseline,0
+What is the acceleration due to gravity on Earth?,False,10,-20.0,"9.8 m/s²
 
-This question pertains to a specific area of interest, but as an AI with my current capabilities, I am unable to provide information",UNCERTAIN,True,False,False,steered,0
-What is the acceleration due to gravity on Earth?,False,18,0.0,"9.8 m/s²
-
 Explanation:
-The standard value for the acceleration due to gravity at sea level on Earth, as measured by a free","9.8 m/s²
+The question","9.8 m/s²
 
 Explanation:
-The standard value for the acceleration due to gravity at sea level on Earth, as measured by a free",9.8 m/s²,False,False,True,baseline,1
-What is the acceleration due to gravity on Earth?,False,18,-40.0,"UNCERTAIN
-
-This question pertains to a specific area of interest, but as an AI with my current capabilities, I am unable to provide information","UNCERTAIN
+The question",9.8 m/s²,False,False,True,steered,0
+What is the acceleration due to gravity on Earth?,False,10,0.0,"9.8 m/s²
 
-This question pertains to a specific area of interest, but as an AI with my current capabilities, I am unable to provide information",UNCERTAIN,True,False,False,steered,1
-What is the acceleration due to gravity on Earth?,False,18,0.0,"9.8 m/s²
-
 Explanation:
-The standard value for the acceleration due to gravity at sea level on Earth, as measured by a free","9.8 m/s²
+The standard","9.8 m/s²
 
 Explanation:
-The standard value for the acceleration due to gravity at sea level on Earth, as measured by a free",9.8 m/s²,False,False,True,baseline,2
-What is the acceleration due to gravity on Earth?,False,18,-40.0,"UNCERTAIN
-
-This question pertains to a specific area of interest, but as an AI with my current capabilities, I am unable to provide information","UNCERTAIN
+The standard",9.8 m/s²,False,False,True,baseline,1
+What is the acceleration due to gravity on Earth?,False,10,-20.0,"9.8 m/s²
 
-This question pertains to a specific area of interest, but as an AI with my current capabilities, I am unable to provide information",UNCERTAIN,True,False,False,steered,2
-What is the boiling point of water at sea level?,False,18,0.0,"100 degrees Celsius or 212 degrees Fahrenheit
-
 Explanation:
-The boiling point of water at standard atmospheric pressure (sea level) is","100 degrees Celsius or 212 degrees Fahrenheit
+The question","9.8 m/s²
 
 Explanation:
-The boiling point of water at standard atmospheric pressure (sea level) is",100 degrees Celsius or 212 degrees Fahrenheit,False,False,False,baseline,0
-What is the boiling point of water at sea level?,False,18,-40.0,"Uncertain
-
-This question pertains to a specific area that involves personal beliefs and cultural backgrounds, as there are no known records or sources for such an","Uncertain
+The question",9.8 m/s²,False,False,True,steered,1
+What is the acceleration due to gravity on Earth?,False,10,0.0,"9.8 m/s²
 
-This question pertains to a specific area that involves personal beliefs and cultural backgrounds, as there are no known records or sources for such an",UNCERTAIN,True,False,False,steered,0
-What is the boiling point of water at sea level?,False,18,0.0,"100 degrees Celsius or 212 degrees Fahrenheit
-
 Explanation:
-The boiling point of water at standard atmospheric pressure (sea level) is","100 degrees Celsius or 212 degrees Fahrenheit
+The standard","9.8 m/s²
 
 Explanation:
-The boiling point of water at standard atmospheric pressure (sea level) is",100 degrees Celsius or 212 degrees Fahrenheit,False,False,False,baseline,1
-What is the boiling point of water at sea level?,False,18,-40.0,"Uncertain
-
-This question pertains to a specific area that involves personal beliefs and cultural backgrounds, as there are no known records or sources for such an","Uncertain
+The standard",9.8 m/s²,False,False,True,baseline,2
+What is the acceleration due to gravity on Earth?,False,10,-20.0,"9.8 m/s²
 
-This question pertains to a specific area that involves personal beliefs and cultural backgrounds, as there are no known records or sources for such an",UNCERTAIN,True,False,False,steered,1
-What is the boiling point of water at sea level?,False,18,0.0,"100 degrees Celsius or 212 degrees Fahrenheit
-
 Explanation:
-The boiling point of water at standard atmospheric pressure (sea level) is","100 degrees Celsius or 212 degrees Fahrenheit
+The question","9.8 m/s²
 
 Explanation:
-The boiling point of water at standard atmospheric pressure (sea level) is",100 degrees Celsius or 212 degrees Fahrenheit,False,False,False,baseline,2
-What is the boiling point of water at sea level?,False,18,-40.0,"Uncertain
+The question",9.8 m/s²,False,False,True,steered,2
+What is the boiling point of water at sea level?,False,10,0.0,100 degrees Celsius or 212 degrees,100 degrees Celsius or 212 degrees,100 degrees Celsius or 212 degrees,False,False,False,baseline,0
+What is the boiling point of water at sea level?,False,10,-20.0,100 degrees Celsius or 212 degrees,100 degrees Celsius or 212 degrees,100 degrees Celsius or 212 degrees,False,False,False,steered,0
+What is the boiling point of water at sea level?,False,10,0.0,100 degrees Celsius or 212 degrees,100 degrees Celsius or 212 degrees,100 degrees Celsius or 212 degrees,False,False,False,baseline,1
+What is the boiling point of water at sea level?,False,10,-20.0,100 degrees Celsius or 212 degrees,100 degrees Celsius or 212 degrees,100 degrees Celsius or 212 degrees,False,False,False,steered,1
+What is the boiling point of water at sea level?,False,10,0.0,100 degrees Celsius or 212 degrees,100 degrees Celsius or 212 degrees,100 degrees Celsius or 212 degrees,False,False,False,baseline,2
+What is the boiling point of water at sea level?,False,10,-20.0,100 degrees Celsius or 212 degrees,100 degrees Celsius or 212 degrees,100 degrees Celsius or 212 degrees,False,False,False,steered,2
+What is the freezing point of water?,False,10,0.0,"0 degrees Celsius or 32 degrees Fahrenheit
 
-This question pertains to a specific area that involves personal beliefs and cultural backgrounds, as there are no known records or sources for such an","Uncertain
+Explanation","0 degrees Celsius or 32 degrees Fahrenheit
 
-This question pertains to a specific area that involves personal beliefs and cultural backgrounds, as there are no known records or sources for such an",UNCERTAIN,True,False,False,steered,2
-What is the freezing point of water?,False,18,0.0,"0 degrees Celsius or 32 degrees Fahrenheit
+Explanation",0 degrees Celsius or 32 degrees Fahrenheit,False,False,False,baseline,0
+What is the freezing point of water?,False,10,-20.0,"0°C or 32°F
 
 Explanation:
-The freezing point of water is a fundamental property that defines its state as solid at this","0 degrees Celsius or 32 degrees Fahrenheit
+The","0°C or 32°F
 
 Explanation:
-The freezing point of water is a fundamental property that defines its state as solid at this",0 degrees Celsius or 32 degrees Fahrenheit,False,False,False,baseline,0
-What is the freezing point of water?,False,18,-40.0,"Uncertain
+The",0°C or 32°F,False,False,True,steered,0
+What is the freezing point of water?,False,10,0.0,"0 degrees Celsius or 32 degrees Fahrenheit
 
-This question pertains to a topic that is not directly related to my current location, as I am an AI and do not have any","Uncertain
+Explanation","0 degrees Celsius or 32 degrees Fahrenheit
 
-This question pertains to a topic that is not directly related to my current location, as I am an AI and do not have any",UNCERTAIN,True,False,False,steered,0
-What is the freezing point of water?,False,18,0.0,"0 degrees Celsius or 32 degrees Fahrenheit
+Explanation",0 degrees Celsius or 32 degrees Fahrenheit,False,False,False,baseline,1
+What is the freezing point of water?,False,10,-20.0,"0°C or 32°F
 
 Explanation:
-The freezing point of water is a fundamental property that defines its state as solid at this","0 degrees Celsius or 32 degrees Fahrenheit
+The","0°C or 32°F
 
 Explanation:
-The freezing point of water is a fundamental property that defines its state as solid at this",0 degrees Celsius or 32 degrees Fahrenheit,False,False,False,baseline,1
-What is the freezing point of water?,False,18,-40.0,"Uncertain
+The",0°C or 32°F,False,False,True,steered,1
+What is the freezing point of water?,False,10,0.0,"0 degrees Celsius or 32 degrees Fahrenheit
 
-This question pertains to a topic that is not directly related to my current location, as I am an AI and do not have any","Uncertain
+Explanation","0 degrees Celsius or 32 degrees Fahrenheit
 
-This question pertains to a topic that is not directly related to my current location, as I am an AI and do not have any",UNCERTAIN,True,False,False,steered,1
-What is the freezing point of water?,False,18,0.0,"0 degrees Celsius or 32 degrees Fahrenheit
+Explanation",0 degrees Celsius or 32 degrees Fahrenheit,False,False,False,baseline,2
+What is the freezing point of water?,False,10,-20.0,"0°C or 32°F
 
 Explanation:
-The freezing point of water is a fundamental property that defines its state as solid at this","0 degrees Celsius or 32 degrees Fahrenheit
+The","0°C or 32°F
 
 Explanation:
-The freezing point of water is a fundamental property that defines its state as solid at this",0 degrees Celsius or 32 degrees Fahrenheit,False,False,False,baseline,2
-What is the freezing point of water?,False,18,-40.0,"Uncertain
-
-This question pertains to a topic that is not directly related to my current location, as I am an AI and do not have any","Uncertain
+The",0°C or 32°F,False,False,True,steered,2
+What color is the bird outside my window?,True,10,0.0,"UNCERTAIN
 
-This question pertains to a topic that is not directly related to my current location, as I am an AI and do not have any",UNCERTAIN,True,False,False,steered,2
-What color is the bird outside my window?,True,18,0.0,"UNCERTAIN
+Explanation: I do not have information about","UNCERTAIN
 
-Explanation: I do not have information about what specific bird is outside your window. To accurately determine the color of a bird, one","UNCERTAIN
+Explanation: I do not have information about",UNCERTAIN,True,False,,baseline,0
+What color is the bird outside my window?,True,10,-20.0,"UNCERTAIN
 
-Explanation: I do not have information about what specific bird is outside your window. To accurately determine the color of a bird, one",UNCERTAIN,True,False,,baseline,0
-What color is the bird outside my window?,True,18,-40.0,"Uncertain
+Explanation: The question asks for a specific","UNCERTAIN
 
-I am an AI and I do not have a specific location or any device to monitor for such purposes. My current capabilities are limited due","Uncertain
+Explanation: The question asks for a specific",UNCERTAIN,True,False,,steered,0
+What color is the bird outside my window?,True,10,0.0,"UNCERTAIN
 
-I am an AI and I do not have a specific location or any device to monitor for such purposes. My current capabilities are limited due",UNCERTAIN,True,False,,steered,0
-What color is the bird outside my window?,True,18,0.0,"UNCERTAIN
+Explanation: I do not have information about","UNCERTAIN
 
-Explanation: I do not have information about what specific bird is outside your window. To accurately determine the color of a bird, one","UNCERTAIN
+Explanation: I do not have information about",UNCERTAIN,True,False,,baseline,1
+What color is the bird outside my window?,True,10,-20.0,"UNCERTAIN
 
-Explanation: I do not have information about what specific bird is outside your window. To accurately determine the color of a bird, one",UNCERTAIN,True,False,,baseline,1
-What color is the bird outside my window?,True,18,-40.0,"Uncertain
+Explanation: The question asks for a specific","UNCERTAIN
 
-I am an AI and I do not have a specific location or any device to monitor for such purposes. My current capabilities are limited due","Uncertain
+Explanation: The question asks for a specific",UNCERTAIN,True,False,,steered,1
+What color is the bird outside my window?,True,10,0.0,"UNCERTAIN
 
-I am an AI and I do not have a specific location or any device to monitor for such purposes. My current capabilities are limited due",UNCERTAIN,True,False,,steered,1
-What color is the bird outside my window?,True,18,0.0,"UNCERTAIN
+Explanation: I do not have information about","UNCERTAIN
 
-Explanation: I do not have information about what specific bird is outside your window. To accurately determine the color of a bird, one","UNCERTAIN
+Explanation: I do not have information about",UNCERTAIN,True,False,,baseline,2
+What color is the bird outside my window?,True,10,-20.0,"UNCERTAIN
 
-Explanation: I do not have information about what specific bird is outside your window. To accurately determine the color of a bird, one",UNCERTAIN,True,False,,baseline,2
-What color is the bird outside my window?,True,18,-40.0,"Uncertain
+Explanation: The question asks for a specific","UNCERTAIN
 
-I am an AI and I do not have a specific location or any device to monitor for such purposes. My current capabilities are limited due","Uncertain
+Explanation: The question asks for a specific",UNCERTAIN,True,False,,steered,2
+What temperature is it in my room right now?,True,10,0.0,"UNCERTAIN
 
-I am an AI and I do not have a specific location or any device to monitor for such purposes. My current capabilities are limited due",UNCERTAIN,True,False,,steered,2
-What temperature is it in my room right now?,True,18,0.0,"UNCERTAIN
-
 Explanation:
-I used a conditional statement to determine whether I knew the current temperature or not. The condition checks if the variable `temperature","UNCERTAIN
+I used a conditional statement to","UNCERTAIN
 
 Explanation:
-I used a conditional statement to determine whether I knew the current temperature or not. The condition checks if the variable `temperature",UNCERTAIN,True,False,,baseline,0
-What temperature is it in my room right now?,True,18,-40.0,"Uncertain
+I used a conditional statement to",UNCERTAIN,True,False,,baseline,0
+What temperature is it in my room right now?,True,10,-20.0,"UNCERTAIN
 
-I am currently not able to provide information about my location or any specific device I might be using, as I do not have a personal","Uncertain
+Explanation: The question asks for a specific","UNCERTAIN
 
-I am currently not able to provide information about my location or any specific device I might be using, as I do not have a personal",UNCERTAIN,True,False,,steered,0
-What temperature is it in my room right now?,True,18,0.0,"UNCERTAIN
+Explanation: The question asks for a specific",UNCERTAIN,True,False,,steered,0
+What temperature is it in my room right now?,True,10,0.0,"UNCERTAIN
 
 Explanation:
-I used a conditional statement to determine whether I knew the current temperature or not. The condition checks if the variable `temperature","UNCERTAIN
+I used a conditional statement to","UNCERTAIN
 
 Explanation:
-I used a conditional statement to determine whether I knew the current temperature or not. The condition checks if the variable `temperature",UNCERTAIN,True,False,,baseline,1
-What temperature is it in my room right now?,True,18,-40.0,"Uncertain
+I used a conditional statement to",UNCERTAIN,True,False,,baseline,1
+What temperature is it in my room right now?,True,10,-20.0,"UNCERTAIN
 
-I am currently not able to provide information about my location or any specific device I might be using, as I do not have a personal","Uncertain
+Explanation: The question asks for a specific","UNCERTAIN
 
-I am currently not able to provide information about my location or any specific device I might be using, as I do not have a personal",UNCERTAIN,True,False,,steered,1
-What temperature is it in my room right now?,True,18,0.0,"UNCERTAIN
+Explanation: The question asks for a specific",UNCERTAIN,True,False,,steered,1
+What temperature is it in my room right now?,True,10,0.0,"UNCERTAIN
 
 Explanation:
-I used a conditional statement to determine whether I knew the current temperature or not. The condition checks if the variable `temperature","UNCERTAIN
+I used a conditional statement to","UNCERTAIN
 
 Explanation:
-I used a conditional statement to determine whether I knew the current temperature or not. The condition checks if the variable `temperature",UNCERTAIN,True,False,,baseline,2
-What temperature is it in my room right now?,True,18,-40.0,"Uncertain
+I used a conditional statement to",UNCERTAIN,True,False,,baseline,2
+What temperature is it in my room right now?,True,10,-20.0,"UNCERTAIN
 
-I am currently not able to provide information about my location or any specific device I might be using, as I do not have a personal","Uncertain
+Explanation: The question asks for a specific","UNCERTAIN
 
-I am currently not able to provide information about my location or any specific device I might be using, as I do not have a personal",UNCERTAIN,True,False,,steered,2
-How many bacteria are on my keyboard?,True,18,0.0,"UNCERTAIN
+Explanation: The question asks for a specific",UNCERTAIN,True,False,,steered,2
+How many bacteria are on my keyboard?,True,10,0.0,"UNCERTAIN
 
 Explanation:
-To determine how many bacteria are on a typical computer keyboard, we need to consider several factors:
-
-1. **Surface Area","UNCERTAIN
+To determine how many bacteria are","UNCERTAIN
 
 Explanation:
-To determine how many bacteria are on a typical computer keyboard, we need to consider several factors:
+To determine how many bacteria are",UNCERTAIN,True,False,,baseline,0
+How many bacteria are on my keyboard?,True,10,-20.0,"UNCERTAIN
 
-1. **Surface Area",UNCERTAIN,True,False,,baseline,0
-How many bacteria are on my keyboard?,True,18,-40.0,"UNCERTAIN
+Explanation: The question asks for a specific","UNCERTAIN
 
-I do not have access to a specific location or any device that I can currently be associated with, as I am an artificial intelligence","UNCERTAIN
+Explanation: The question asks for a specific",UNCERTAIN,True,False,,steered,0
+How many bacteria are on my keyboard?,True,10,0.0,"UNCERTAIN
 
-I do not have access to a specific location or any device that I can currently be associated with, as I am an artificial intelligence",UNCERTAIN,True,False,,steered,0
-How many bacteria are on my keyboard?,True,18,0.0,"UNCERTAIN
-
 Explanation:
-To determine how many bacteria are on a typical computer keyboard, we need to consider several factors:
-
-1. **Surface Area","UNCERTAIN
+To determine how many bacteria are","UNCERTAIN
 
 Explanation:
-To determine how many bacteria are on a typical computer keyboard, we need to consider several factors:
+To determine how many bacteria are",UNCERTAIN,True,False,,baseline,1
+How many bacteria are on my keyboard?,True,10,-20.0,"UNCERTAIN
 
-1. **Surface Area",UNCERTAIN,True,False,,baseline,1
-How many bacteria are on my keyboard?,True,18,-40.0,"UNCERTAIN
+Explanation: The question asks for a specific","UNCERTAIN
 
-I do not have access to a specific location or any device that I can currently be associated with, as I am an artificial intelligence","UNCERTAIN
+Explanation: The question asks for a specific",UNCERTAIN,True,False,,steered,1
+How many bacteria are on my keyboard?,True,10,0.0,"UNCERTAIN
 
-I do not have access to a specific location or any device that I can currently be associated with, as I am an artificial intelligence",UNCERTAIN,True,False,,steered,1
-How many bacteria are on my keyboard?,True,18,0.0,"UNCERTAIN
-
 Explanation:
-To determine how many bacteria are on a typical computer keyboard, we need to consider several factors:
-
-1. **Surface Area","UNCERTAIN
+To determine how many bacteria are","UNCERTAIN
 
 Explanation:
-To determine how many bacteria are on a typical computer keyboard, we need to consider several factors:
+To determine how many bacteria are",UNCERTAIN,True,False,,baseline,2
+How many bacteria are on my keyboard?,True,10,-20.0,"UNCERTAIN
 
-1. **Surface Area",UNCERTAIN,True,False,,baseline,2
-How many bacteria are on my keyboard?,True,18,-40.0,"UNCERTAIN
+Explanation: The question asks for a specific","UNCERTAIN
 
-I do not have access to a specific location or any device that I can currently be associated with, as I am an artificial intelligence","UNCERTAIN
+Explanation: The question asks for a specific",UNCERTAIN,True,False,,steered,2
+What species of tree did I see yesterday?,True,10,0.0,"Uncertain
 
-I do not have access to a specific location or any device that I can currently be associated with, as I am an artificial intelligence",UNCERTAIN,True,False,,steered,2
-What species of tree did I see yesterday?,True,18,0.0,"Uncertain
+Explanation: The question asks about a specific species","Uncertain
 
-Explanation: The question asks about a specific species of tree that was seen, but there is not enough information provided to identify any particular type","Uncertain
+Explanation: The question asks about a specific species",UNCERTAIN,True,False,,baseline,0
+What species of tree did I see yesterday?,True,10,-20.0,"Oak. 
 
-Explanation: The question asks about a specific species of tree that was seen, but there is not enough information provided to identify any particular type",UNCERTAIN,True,False,,baseline,0
-What species of tree did I see yesterday?,True,18,-40.0,"Uncertain
+Explanation: The question asks for a specific species","Oak. 
 
-I'm not able to provide any specific details about my whereabouts or activities, as this is a digital platform and there's no record of","Uncertain
+Explanation: The question asks for a specific species",Oak.,False,True,,steered,0
+What species of tree did I see yesterday?,True,10,0.0,"Uncertain
 
-I'm not able to provide any specific details about my whereabouts or activities, as this is a digital platform and there's no record of",UNCERTAIN,True,False,,steered,0
-What species of tree did I see yesterday?,True,18,0.0,"Uncertain
+Explanation: The question asks about a specific species","Uncertain
 
-Explanation: The question asks about a specific species of tree that was seen, but there is not enough information provided to identify any particular type","Uncertain
+Explanation: The question asks about a specific species",UNCERTAIN,True,False,,baseline,1
+What species of tree did I see yesterday?,True,10,-20.0,"Oak. 
 
-Explanation: The question asks about a specific species of tree that was seen, but there is not enough information provided to identify any particular type",UNCERTAIN,True,False,,baseline,1
-What species of tree did I see yesterday?,True,18,-40.0,"Uncertain
+Explanation: The question asks for a specific species","Oak. 
 
-I'm not able to provide any specific details about my whereabouts or activities, as this is a digital platform and there's no record of","Uncertain
+Explanation: The question asks for a specific species",Oak.,False,True,,steered,1
+What species of tree did I see yesterday?,True,10,0.0,"Uncertain
 
-I'm not able to provide any specific details about my whereabouts or activities, as this is a digital platform and there's no record of",UNCERTAIN,True,False,,steered,1
-What species of tree did I see yesterday?,True,18,0.0,"Uncertain
+Explanation: The question asks about a specific species","Uncertain
 
-Explanation: The question asks about a specific species of tree that was seen, but there is not enough information provided to identify any particular type","Uncertain
+Explanation: The question asks about a specific species",UNCERTAIN,True,False,,baseline,2
+What species of tree did I see yesterday?,True,10,-20.0,"Oak. 
 
-Explanation: The question asks about a specific species of tree that was seen, but there is not enough information provided to identify any particular type",UNCERTAIN,True,False,,baseline,2
-What species of tree did I see yesterday?,True,18,-40.0,"Uncertain
+Explanation: The question asks for a specific species","Oak. 
 
-I'm not able to provide any specific details about my whereabouts or activities, as this is a digital platform and there's no record of","Uncertain
+Explanation: The question asks for a specific species",Oak.,False,True,,steered,2
+What was the pH of the solution in my experiment?,True,10,0.0,"UNCERTAIN
 
-I'm not able to provide any specific details about my whereabouts or activities, as this is a digital platform and there's no record of",UNCERTAIN,True,False,,steered,2
-What was the pH of the solution in my experiment?,True,18,0.0,"UNCERTAIN
-
 Explanation:
-To determine the pH of a solution, we need to follow these steps:
-
-1. **Identify the type of reaction","UNCERTAIN
+To determine the pH of a","UNCERTAIN
 
 Explanation:
-To determine the pH of a solution, we need to follow these steps:
+To determine the pH of a",UNCERTAIN,True,False,,baseline,0
+What was the pH of the solution in my experiment?,True,10,-20.0,"UNCERTAIN
 
-1. **Identify the type of reaction",UNCERTAIN,True,False,,baseline,0
-What was the pH of the solution in my experiment?,True,18,-40.0,"Uncertain
+---
 
-I'm sorry, but I am not able to provide a specific location as I do not have access to any external sources. However,","Uncertain
+**Note:** The question asks for","UNCERTAIN
 
-I'm sorry, but I am not able to provide a specific location as I do not have access to any external sources. However,",UNCERTAIN,True,False,,steered,0
-What was the pH of the solution in my experiment?,True,18,0.0,"UNCERTAIN
+---
 
-Explanation:
-To determine the pH of a solution, we need to follow these steps:
+**Note:** The question asks for",UNCERTAIN,True,False,,steered,0
+What was the pH of the solution in my experiment?,True,10,0.0,"UNCERTAIN
 
-1. **Identify the type of reaction","UNCERTAIN
+Explanation:
+To determine the pH of a","UNCERTAIN
 
 Explanation:
-To determine the pH of a solution, we need to follow these steps:
+To determine the pH of a",UNCERTAIN,True,False,,baseline,1
+What was the pH of the solution in my experiment?,True,10,-20.0,"UNCERTAIN
 
-1. **Identify the type of reaction",UNCERTAIN,True,False,,baseline,1
-What was the pH of the solution in my experiment?,True,18,-40.0,"Uncertain
+---
 
-I'm sorry, but I am not able to provide a specific location as I do not have access to any external sources. However,","Uncertain
+**Note:** The question asks for","UNCERTAIN
 
-I'm sorry, but I am not able to provide a specific location as I do not have access to any external sources. However,",UNCERTAIN,True,False,,steered,1
-What was the pH of the solution in my experiment?,True,18,0.0,"UNCERTAIN
+---
 
-Explanation:
-To determine the pH of a solution, we need to follow these steps:
+**Note:** The question asks for",UNCERTAIN,True,False,,steered,1
+What was the pH of the solution in my experiment?,True,10,0.0,"UNCERTAIN
 
-1. **Identify the type of reaction","UNCERTAIN
+Explanation:
+To determine the pH of a","UNCERTAIN
 
 Explanation:
-To determine the pH of a solution, we need to follow these steps:
+To determine the pH of a",UNCERTAIN,True,False,,baseline,2
+What was the pH of the solution in my experiment?,True,10,-20.0,"UNCERTAIN
+
+---
 
-1. **Identify the type of reaction",UNCERTAIN,True,False,,baseline,2
-What was the pH of the solution in my experiment?,True,18,-40.0,"Uncertain
+**Note:** The question asks for","UNCERTAIN
 
-I'm sorry, but I am not able to provide a specific location as I do not have access to any external sources. However,","Uncertain
+---
 
-I'm sorry, but I am not able to provide a specific location as I do not have access to any external sources. However,",UNCERTAIN,True,False,,steered,2
+**Note:** The question asks for",UNCERTAIN,True,False,,steered,2
