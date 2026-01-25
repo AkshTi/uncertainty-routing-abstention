@@ -79,8 +79,10 @@ echo ""
 # Testing script (already ran):
 # python fix_and_test_steering.py
 #python debug_baseline.py
-python create_calibrated_steering_vectors.py
-python experiment6_publication_ready.py
+#python create_calibrated_steering_vectors.py
+#python experiment6_publication_ready.py
+python diagnostic_quick.py
+
 
 echo ""
 echo "========================================================================"
