@@ -1,0 +1,13 @@
+{
+  "layers": [
+    24,
+    25,
+    26,
+    27
+  ],
+  "vector_shape": "torch.Size([1, 1536])",
+  "device": "cuda",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "training_type": "safety_aware_epistemic",
+  "description": "Steering vectors trained on benign answerable vs unanswerable questions"
+}

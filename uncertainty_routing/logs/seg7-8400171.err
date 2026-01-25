@@ -1,0 +1,19 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Layer 24:   0%|          | 0/15 [00:00<?, ?it/s]The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Layer 24:   7%|▋         | 1/15 [00:00<00:03,  3.88it/s]Layer 24:  67%|██████▋   | 10/15 [00:00<00:00, 33.38it/s]                                                         Layer 24:   0%|          | 0/15 [00:00<?, ?it/s]Layer 24:  60%|██████    | 9/15 [00:00<00:00, 82.40it/s]                                                        Layer 25:   0%|          | 0/15 [00:00<?, ?it/s]Layer 25:  60%|██████    | 9/15 [00:00<00:00, 83.58it/s]                                                        Layer 25:   0%|          | 0/15 [00:00<?, ?it/s]Layer 25:  60%|██████    | 9/15 [00:00<00:00, 83.86it/s]                                                        Layer 26:   0%|          | 0/15 [00:00<?, ?it/s]Layer 26:  60%|██████    | 9/15 [00:00<00:00, 83.97it/s]                                                        Layer 26:   0%|          | 0/15 [00:00<?, ?it/s]Layer 26:  60%|██████    | 9/15 [00:00<00:00, 84.03it/s]                                                        Layer 27:   0%|          | 0/15 [00:00<?, ?it/s]Layer 27:  60%|██████    | 9/15 [00:00<00:00, 84.08it/s]                                                        Layer 27:   0%|          | 0/15 [00:00<?, ?it/s]Layer 27:  60%|██████    | 9/15 [00:00<00:00, 84.15it/s]                                                        `torch_dtype` is deprecated! Use `dtype` instead!
+Categories:   0%|          | 0/4 [00:00<?, ?it/s]The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Categories:  25%|██▌       | 1/4 [00:12<00:36, 12.19s/it]Categories:  50%|█████     | 2/4 [00:21<00:20, 10.44s/it]Categories:  75%|███████▌  | 3/4 [00:30<00:09,  9.72s/it]Categories: 100%|██████████| 4/4 [00:39<00:00,  9.34s/it]Categories: 100%|██████████| 4/4 [00:39<00:00,  9.76s/it]
+Traceback (most recent call last):
+  File "/orcd/home/002/akshatat/uncertainty-routing-abstention/uncertainty_routing/experiment7_safety_alignment_fixed.py", line 520, in <module>
+    df_7a, df_7b, df_7c = exp7.run_all(best_layer=24, epsilon_toward_answer=-20.0, epsilon_toward_abstain=20.0)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/orcd/home/002/akshatat/uncertainty-routing-abstention/uncertainty_routing/experiment7_safety_alignment_fixed.py", line 392, in run_all
+    df_7b = self.test_selective_abstention(best_layer, epsilon_toward_answer, epsilon_toward_abstain)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/orcd/home/002/akshatat/uncertainty-routing-abstention/uncertainty_routing/experiment7_safety_alignment_fixed.py", line 306, in test_selective_abstention
+    result = self._test_single(q, best_layer, eps)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/orcd/home/002/akshatat/uncertainty-routing-abstention/uncertainty_routing/experiment7_safety_alignment_fixed.py", line 202, in _test_single
+    "category": question_data["category"]
+                ~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'category'
