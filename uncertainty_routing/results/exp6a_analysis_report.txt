@@ -1,0 +1,51 @@
+================================================================================
+EXPERIMENT 6A: CROSS-DOMAIN UNCERTAINTY ROUTING ANALYSIS
+================================================================================
+
+EXPERIMENT SETUP:
+- Baseline: epsilon = 0.0
+- Steered: epsilon = -20.0
+- Layer: 10
+- Domains: geography, history, mathematics, science
+- Total questions: 800
+- Answerable: 400
+- Unanswerable: 400
+
+================================================================================
+KEY FINDINGS
+================================================================================
+
+OVERALL PERFORMANCE:
+
+Baseline (ε=0.0):
+  Answerable: Accuracy=0.655, Abstention=0.250
+  Unanswerable: Abstention=0.890, Hallucination=0.110
+
+Steered (ε=-20.0):
+  Answerable: Accuracy=0.675, Abstention=0.195
+  Unanswerable: Abstention=0.870, Hallucination=0.130
+
+CHANGES:
+  Δ Abstention (unanswerable): -0.020
+  Δ Accuracy (answerable): +0.020
+  Δ Abstention (answerable): -0.055
+
+================================================================================
+RECOMMENDATIONS
+================================================================================
+
+1. Verify that layer 10 is optimal for uncertainty routing - try other layers
+
+2. Examine specific questions where steering fails (both false abstentions and false answers)
+
+================================================================================
+DETAILED METRICS BY DOMAIN
+================================================================================
+
+            ans_abstention         ans_accuracy         unans_abstention         unans_hallucination        
+condition         baseline steered     baseline steered         baseline steered            baseline steered
+domain                                                                                                      
+geography             0.08    0.06         0.76    0.78             0.88    0.82                0.12    0.18
+history               0.22    0.18         0.64    0.56             0.88    0.88                0.12    0.12
+mathematics           0.40    0.30         0.60    0.68             0.82    0.80                0.18    0.20
+science               0.30    0.24         0.62    0.68             0.98    0.98                0.02    0.02

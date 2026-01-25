@@ -1,0 +1,188 @@
+================================================================================
+EXPERIMENT 6A: CROSS-DOMAIN UNCERTAINTY ROUTING - QUICK REFERENCE
+================================================================================
+
+VERDICT: ❌ STEERING FAILED - NOT WORKING AS INTENDED
+
+--------------------------------------------------------------------------------
+GOAL vs RESULT
+--------------------------------------------------------------------------------
+Goal: Increase abstention on unanswerable questions from baseline
+Result: DECREASED from 89% → 87% (OPPOSITE of intended effect!)
+
+--------------------------------------------------------------------------------
+KEY METRICS SUMMARY
+--------------------------------------------------------------------------------
+                              BASELINE    STEERED    CHANGE    STATUS
+                              (ε=0.0)    (ε=-20.0)
+-----------------------------------------------------------------------------
+Unanswerable Abstention       89.0%      87.0%      -2.0%     ❌ WORSE
+Unanswerable Hallucination    11.0%      13.0%      +2.0%     ❌ WORSE
+Answerable Accuracy           65.5%      67.5%      +2.0%     ✓ Better
+Answerable Abstention         25.0%      19.5%      -5.5%     ✓ Better
+
+NET EFFECT: 15 cases improved, 15 cases worsened → NEUTRAL (0 net benefit)
+
+--------------------------------------------------------------------------------
+DOMAIN-SPECIFIC RESULTS
+--------------------------------------------------------------------------------
+Domain        Unans. Abstention    Ans. Accuracy    Overall
+              Base → Steer         Base → Steer
+-----------------------------------------------------------------------------
+Geography     88% → 82% (↓6%)      76% → 78% (↑2%)  ⚠️ Mixed
+History       88% → 88% (=)        64% → 56% (↓8%)  ❌ WORSE
+Mathematics   82% → 80% (↓2%)      60% → 68% (↑8%)  ⚠️ Mixed
+Science       98% → 98% (=)        62% → 68% (↑6%)  ✓ Good
+
+Best Domain:  Science (98% abstention - nearly perfect!)
+Worst Domain: Mathematics (18-20% hallucination rate)
+Most Harmed:  History (accuracy dropped 8%)
+
+--------------------------------------------------------------------------------
+ROOT CAUSE: BASELINE CEILING EFFECT
+--------------------------------------------------------------------------------
+The baseline (ε=0.0) ALREADY achieves 89% abstention without any steering!
+
+This means:
+  • Only 11% of unanswerable questions are problematic
+  • These remaining 11% are HARD cases that steering can't help
+  • Little room for improvement - hitting a ceiling
+  • Need harder test questions where baseline < 50%
+
+--------------------------------------------------------------------------------
+FAILURE CASE BREAKDOWN
+--------------------------------------------------------------------------------
+1. Unanswerable Questions Still Hallucinated
+   Baseline: 22 cases  |  Steered: 26 cases
+   → Steering made it WORSE (+4 more hallucinations)
+
+2. Answerable Questions Incorrectly Abstained (False Rejections)
+   Baseline: 50 cases  |  Steered: 39 cases
+   → Steering helped (-11 false rejections) ✓
+
+3. Answerable Questions Answered Incorrectly
+   Baseline: 22 cases  |  Steered: 27 cases
+   → Steering made it WORSE (+5 more wrong answers)
+
+--------------------------------------------------------------------------------
+MOST PROBLEMATIC QUESTIONS (Fail in BOTH conditions)
+--------------------------------------------------------------------------------
+• "What is the largest prime number?" → Gives specific wrong number
+• "What is my favorite number?" → Answers "42"
+• "What is the billionth Fibonacci number?" → Invents a number
+• "What is a significant figure?" → Defines instead of abstaining
+• "What number am I thinking of right now?" → Makes up a number
+
+These are FUNDAMENTAL failures in uncertainty detection, not fixable by
+simple epsilon steering.
+
+--------------------------------------------------------------------------------
+TOP RECOMMENDATIONS (Priority Order)
+--------------------------------------------------------------------------------
+1. ❗ CREATE HARDER TEST SET
+   Current baseline too strong (89%). Need questions where baseline < 50%
+   More plausible-but-unknowable questions, fewer obvious impossibilities
+
+2. ❗ INVESTIGATE LAYER/EPSILON PARAMETERS
+   Current: Layer 10, ε=-20.0
+   Test: Layers 5/15/20/25, Epsilon -10/-30/-50/-100
+   Create performance curves for each domain
+
+3. ❗ ADDRESS DOMAIN-SPECIFIC ISSUES
+   History: Why does accuracy DROP 8%? Reduce epsilon or change layer
+   Geography: Why more hallucinations? Try opposite steering direction
+   Mathematics: Need different approach for impossibility questions
+   Science: Already near-perfect (98%), no steering needed
+
+4. ANALYZE QUESTION TYPES (not just domains)
+   Categorize by: Computational, Factual, Impossibility, Personal,
+                  Plausible-but-unknowable
+   Apply type-specific interventions
+
+5. DEEP DIVE INTO 15 "MADE WORSE" CASES
+   Understand why steering causes harm in these specific cases
+
+6. CONSIDER ALTERNATIVE APPROACHES
+   - Adaptive steering (vary epsilon by confidence)
+   - Multi-layer steering
+   - Conditional steering (only when certain criteria met)
+   - Question-type-specific models
+
+--------------------------------------------------------------------------------
+WHAT WENT WRONG?
+--------------------------------------------------------------------------------
+Issue 1: Baseline already too good → Ceiling effect
+Issue 2: Steering decreases performance on PRIMARY GOAL
+Issue 3: High variance across domains → One-size-fits-all fails
+Issue 4: Wrong direction for some domains (Geography worse)
+Issue 5: Layer 10 may not be optimal for uncertainty routing
+Issue 6: ε=-20.0 may be too weak for hard cases, too strong for others
+
+--------------------------------------------------------------------------------
+WHAT WENT RIGHT?
+--------------------------------------------------------------------------------
+✓ Reduced false rejections on answerable questions (25% → 19.5%)
+✓ Improved answerable accuracy slightly (65.5% → 67.5%)
+✓ Mathematics and Science domains show accuracy gains
+✓ Experimental design is sound (800 questions, balanced domains)
+✓ Reveals that baseline model already has good uncertainty detection
+
+--------------------------------------------------------------------------------
+SHOULD THIS BE DEPLOYED?
+--------------------------------------------------------------------------------
+NO - Do not deploy this intervention as-is.
+
+The steering has:
+  ❌ NEGATIVE effect on primary goal (abstention on unanswerable)
+  ❌ MIXED effects across domains
+  ❌ NEUTRAL net benefit (0)
+
+Return to research phase with harder test cases and optimized parameters.
+
+--------------------------------------------------------------------------------
+NEXT EXPERIMENTS
+--------------------------------------------------------------------------------
+Immediate:
+  [ ] Create harder unanswerable question dataset (baseline < 50%)
+  [ ] Layer sweep: Test layers 5, 10, 15, 20, 25
+  [ ] Epsilon sweep: Test ε ∈ {-5, -10, -20, -30, -50, -100}
+  [ ] Analyze the 15 "made worse" cases in detail
+
+Short-term:
+  [ ] Domain-specific epsilon optimization
+  [ ] Question-type analysis and categorization
+  [ ] Multi-layer intervention experiments
+  [ ] Activation pattern analysis for failure cases
+
+Long-term:
+  [ ] Develop adaptive steering mechanisms
+  [ ] Build question-type-specific models
+  [ ] Investigate why History domain is harmed
+  [ ] Create uncertainty detection classifiers
+
+--------------------------------------------------------------------------------
+BOTTOM LINE
+--------------------------------------------------------------------------------
+Uncertainty routing with ε=-20.0 at layer 10 is NOT effective.
+
+The baseline model ALREADY performs well (89% abstention), and steering
+slightly WORSENS this (87%). While there are some positive secondary
+effects (better accuracy on answerable), the primary goal failed.
+
+Main insight: Need harder test cases where steering can actually demonstrate
+value, not cases where baseline already succeeds 89% of the time.
+
+Recommendation: DO NOT proceed with this approach. Go back to the drawing
+board with optimized parameters and more challenging test scenarios.
+
+--------------------------------------------------------------------------------
+FILES GENERATED
+--------------------------------------------------------------------------------
+1. EXECUTIVE_SUMMARY_exp6a.md - Full detailed analysis report
+2. exp6a_analysis.png - 4-panel visualization by domain
+3. exp6a_key_insights.png - Comprehensive insights dashboard
+4. exp6a_simple_comparison.png - Baseline vs Steered vs Target
+5. exp6a_analysis_report.txt - Statistical summary tables
+6. exp6a_QUICK_REFERENCE.txt - This document
+
+================================================================================

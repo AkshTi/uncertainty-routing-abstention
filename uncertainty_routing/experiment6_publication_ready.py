@@ -81,7 +81,7 @@ class Experiment6PublicationReady:
         # Generate with STRICT deterministic settings
         response = self.model.generate(
             prompt,
-            max_new_tokens=12,  # SHORT output - forces one line
+            max_new_tokens=30,  # SHORT output - forces one line
             temperature=0.0,     # Deterministic
             do_sample=False      # No sampling
         )
@@ -506,7 +506,7 @@ if __name__ == "__main__":
     print("\nRunning all Experiment 6 tests (publication-ready)...")
     print("This will take ~30-60 minutes with n=50 per condition...")
     print(f"Using best_layer=10, optimal_epsilon=-20.0 (calibrated vectors)")
-    df_6a, df_6b, df_6c = exp6.run_all(best_layer=10, optimal_epsilon=-20.0)
+    df_6a, df_6b, df_6c = exp6.run_all(best_layer=18, optimal_epsilon=-40.0)
 
     print("\n" + "="*80)
     print("SUCCESS! Publication-ready Experiment 6 complete.")
