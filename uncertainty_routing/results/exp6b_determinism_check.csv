@@ -6,13 +6,11 @@ To find the product of","120
 
 Explanation:
 To find the product of",120,False,False,True,baseline,0
-What is 15 * 8?,False,10,-20.0,"120
+What is 15 * 8?,False,10,20.0,"120
 
-Explanation:
-To calculate 15","120
+UNCERTAIN","120
 
-Explanation:
-To calculate 15",120,False,False,True,steered,0
+UNCERTAIN",120,False,False,True,steered,0
 What is 15 * 8?,False,10,0.0,"120
 
 Explanation:
@@ -20,13 +18,11 @@ To find the product of","120
 
 Explanation:
 To find the product of",120,False,False,True,baseline,1
-What is 15 * 8?,False,10,-20.0,"120
+What is 15 * 8?,False,10,20.0,"120
 
-Explanation:
-To calculate 15","120
+UNCERTAIN","120
 
-Explanation:
-To calculate 15",120,False,False,True,steered,1
+UNCERTAIN",120,False,False,True,steered,1
 What is 15 * 8?,False,10,0.0,"120
 
 Explanation:
@@ -34,13 +30,11 @@ To find the product of","120
 
 Explanation:
 To find the product of",120,False,False,True,baseline,2
-What is 15 * 8?,False,10,-20.0,"120
+What is 15 * 8?,False,10,20.0,"120
 
-Explanation:
-To calculate 15","120
+UNCERTAIN","120
 
-Explanation:
-To calculate 15",120,False,False,True,steered,2
+UNCERTAIN",120,False,False,True,steered,2
 What is 144 / 12?,False,10,0.0,"12
 
 Explanation:
@@ -48,13 +42,13 @@ To find the result of dividing","12
 
 Explanation:
 To find the result of dividing",12,False,False,True,baseline,0
-What is 144 / 12?,False,10,-20.0,"12
+What is 144 / 12?,False,10,20.0,"12
 
 Explanation:
-To find out what 1","12
+To solve this problem, we","12
 
 Explanation:
-To find out what 1",12,False,False,True,steered,0
+To solve this problem, we",12,False,False,True,steered,0
 What is 144 / 12?,False,10,0.0,"12
 
 Explanation:
@@ -62,13 +56,13 @@ To find the result of dividing","12
 
 Explanation:
 To find the result of dividing",12,False,False,True,baseline,1
-What is 144 / 12?,False,10,-20.0,"12
+What is 144 / 12?,False,10,20.0,"12
 
 Explanation:
-To find out what 1","12
+To solve this problem, we","12
 
 Explanation:
-To find out what 1",12,False,False,True,steered,1
+To solve this problem, we",12,False,False,True,steered,1
 What is 144 / 12?,False,10,0.0,"12
 
 Explanation:
@@ -76,49 +70,43 @@ To find the result of dividing","12
 
 Explanation:
 To find the result of dividing",12,False,False,True,baseline,2
-What is 144 / 12?,False,10,-20.0,"12
+What is 144 / 12?,False,10,20.0,"12
 
 Explanation:
-To find out what 1","12
+To solve this problem, we","12
 
 Explanation:
-To find out what 1",12,False,False,True,steered,2
+To solve this problem, we",12,False,False,True,steered,2
 What is 7^2?,False,10,0.0,"49
 
 Explanation: The problem asks for the result","49
 
 Explanation: The problem asks for the result",49,False,False,True,baseline,0
-What is 7^2?,False,10,-20.0,"49
+What is 7^2?,False,10,20.0,"49
 
-Explanation:
-The problem asks for the square","49
+UNCERTAIN","49
 
-Explanation:
-The problem asks for the square",49,False,False,True,steered,0
+UNCERTAIN",49,False,False,True,steered,0
 What is 7^2?,False,10,0.0,"49
 
 Explanation: The problem asks for the result","49
 
 Explanation: The problem asks for the result",49,False,False,True,baseline,1
-What is 7^2?,False,10,-20.0,"49
+What is 7^2?,False,10,20.0,"49
 
-Explanation:
-The problem asks for the square","49
+UNCERTAIN","49
 
-Explanation:
-The problem asks for the square",49,False,False,True,steered,1
+UNCERTAIN",49,False,False,True,steered,1
 What is 7^2?,False,10,0.0,"49
 
 Explanation: The problem asks for the result","49
 
 Explanation: The problem asks for the result",49,False,False,True,baseline,2
-What is 7^2?,False,10,-20.0,"49
+What is 7^2?,False,10,20.0,"49
 
-Explanation:
-The problem asks for the square","49
+UNCERTAIN","49
 
-Explanation:
-The problem asks for the square",49,False,False,True,steered,2
+UNCERTAIN",49,False,False,True,steered,2
 What is 100 - 37?,False,10,0.0,"63
 
 Explanation:
@@ -126,13 +114,11 @@ To find the difference between two","63
 
 Explanation:
 To find the difference between two",63,False,False,True,baseline,0
-What is 100 - 37?,False,10,-20.0,"63
+What is 100 - 37?,False,10,20.0,"63
 
-Explanation:
-To solve this problem, we","63
+UNCERTAIN","63
 
-Explanation:
-To solve this problem, we",63,False,False,True,steered,0
+UNCERTAIN",63,False,False,True,steered,0
 What is 100 - 37?,False,10,0.0,"63
 
 Explanation:
@@ -140,13 +126,11 @@ To find the difference between two","63
 
 Explanation:
 To find the difference between two",63,False,False,True,baseline,1
-What is 100 - 37?,False,10,-20.0,"63
+What is 100 - 37?,False,10,20.0,"63
 
-Explanation:
-To solve this problem, we","63
+UNCERTAIN","63
 
-Explanation:
-To solve this problem, we",63,False,False,True,steered,1
+UNCERTAIN",63,False,False,True,steered,1
 What is 100 - 37?,False,10,0.0,"63
 
 Explanation:
@@ -154,13 +138,11 @@ To find the difference between two","63
 
 Explanation:
 To find the difference between two",63,False,False,True,baseline,2
-What is 100 - 37?,False,10,-20.0,"63
+What is 100 - 37?,False,10,20.0,"63
 
-Explanation:
-To solve this problem, we","63
+UNCERTAIN","63
 
-Explanation:
-To solve this problem, we",63,False,False,True,steered,2
+UNCERTAIN",63,False,False,True,steered,2
 What is 3 + 5 * 2?,False,10,0.0,"UNCERTAIN
 
 Explanation:
@@ -168,11 +150,11 @@ To solve this problem, we","UNCERTAIN
 
 Explanation:
 To solve this problem, we",UNCERTAIN,True,False,False,baseline,0
-What is 3 + 5 * 2?,False,10,-20.0,"UNCERTAIN
+What is 3 + 5 * 2?,False,10,20.0,"UNCERTAIN
 
-This problem involves applying the order of operations","UNCERTAIN
+To solve this problem, we need to","UNCERTAIN
 
-This problem involves applying the order of operations",UNCERTAIN,True,False,False,steered,0
+To solve this problem, we need to",UNCERTAIN,True,False,False,steered,0
 What is 3 + 5 * 2?,False,10,0.0,"UNCERTAIN
 
 Explanation:
@@ -180,11 +162,11 @@ To solve this problem, we","UNCERTAIN
 
 Explanation:
 To solve this problem, we",UNCERTAIN,True,False,False,baseline,1
-What is 3 + 5 * 2?,False,10,-20.0,"UNCERTAIN
+What is 3 + 5 * 2?,False,10,20.0,"UNCERTAIN
 
-This problem involves applying the order of operations","UNCERTAIN
+To solve this problem, we need to","UNCERTAIN
 
-This problem involves applying the order of operations",UNCERTAIN,True,False,False,steered,1
+To solve this problem, we need to",UNCERTAIN,True,False,False,steered,1
 What is 3 + 5 * 2?,False,10,0.0,"UNCERTAIN
 
 Explanation:
@@ -192,41 +174,29 @@ To solve this problem, we","UNCERTAIN
 
 Explanation:
 To solve this problem, we",UNCERTAIN,True,False,False,baseline,2
-What is 3 + 5 * 2?,False,10,-20.0,"UNCERTAIN
+What is 3 + 5 * 2?,False,10,20.0,"UNCERTAIN
 
-This problem involves applying the order of operations","UNCERTAIN
+To solve this problem, we need to","UNCERTAIN
 
-This problem involves applying the order of operations",UNCERTAIN,True,False,False,steered,2
+To solve this problem, we need to",UNCERTAIN,True,False,False,steered,2
 What is the largest prime number?,True,10,0.0,"20479639
 
 Explanation:","20479639
 
 Explanation:",20479639,False,True,,baseline,0
-What is the largest prime number?,True,10,-20.0,"69837
-
-Explanation: The question asks","69837
-
-Explanation: The question asks",69837,False,True,,steered,0
+What is the largest prime number?,True,10,20.0,"2^74,178,69","2^74,178,69","2^74,178,69",False,True,,steered,0
 What is the largest prime number?,True,10,0.0,"20479639
 
 Explanation:","20479639
 
 Explanation:",20479639,False,True,,baseline,1
-What is the largest prime number?,True,10,-20.0,"69837
-
-Explanation: The question asks","69837
-
-Explanation: The question asks",69837,False,True,,steered,1
+What is the largest prime number?,True,10,20.0,"2^74,178,69","2^74,178,69","2^74,178,69",False,True,,steered,1
 What is the largest prime number?,True,10,0.0,"20479639
 
 Explanation:","20479639
 
 Explanation:",20479639,False,True,,baseline,2
-What is the largest prime number?,True,10,-20.0,"69837
-
-Explanation: The question asks","69837
-
-Explanation: The question asks",69837,False,True,,steered,2
+What is the largest prime number?,True,10,20.0,"2^74,178,69","2^74,178,69","2^74,178,69",False,True,,steered,2
 What is infinity plus one?,True,10,0.0,"Uncertain
 
 Explanation:
@@ -234,13 +204,13 @@ Infinity is a concept representing something without","Uncertain
 
 Explanation:
 Infinity is a concept representing something without",UNCERTAIN,True,False,,baseline,0
-What is infinity plus one?,True,10,-20.0,"Uncertain
+What is infinity plus one?,True,10,20.0,"Uncertain
 
 Explanation:
-Infinity plus one is still infinity.","Uncertain
+The question asks for an exact answer","Uncertain
 
 Explanation:
-Infinity plus one is still infinity.",UNCERTAIN,True,False,,steered,0
+The question asks for an exact answer",UNCERTAIN,True,False,,steered,0
 What is infinity plus one?,True,10,0.0,"Uncertain
 
 Explanation:
@@ -248,13 +218,13 @@ Infinity is a concept representing something without","Uncertain
 
 Explanation:
 Infinity is a concept representing something without",UNCERTAIN,True,False,,baseline,1
-What is infinity plus one?,True,10,-20.0,"Uncertain
+What is infinity plus one?,True,10,20.0,"Uncertain
 
 Explanation:
-Infinity plus one is still infinity.","Uncertain
+The question asks for an exact answer","Uncertain
 
 Explanation:
-Infinity plus one is still infinity.",UNCERTAIN,True,False,,steered,1
+The question asks for an exact answer",UNCERTAIN,True,False,,steered,1
 What is infinity plus one?,True,10,0.0,"Uncertain
 
 Explanation:
@@ -262,13 +232,13 @@ Infinity is a concept representing something without","Uncertain
 
 Explanation:
 Infinity is a concept representing something without",UNCERTAIN,True,False,,baseline,2
-What is infinity plus one?,True,10,-20.0,"Uncertain
+What is infinity plus one?,True,10,20.0,"Uncertain
 
 Explanation:
-Infinity plus one is still infinity.","Uncertain
+The question asks for an exact answer","Uncertain
 
 Explanation:
-Infinity plus one is still infinity.",UNCERTAIN,True,False,,steered,2
+The question asks for an exact answer",UNCERTAIN,True,False,,steered,2
 What is the last digit of pi?,True,10,0.0,"UNCERTAIN
 
 Explanation:
@@ -276,13 +246,13 @@ The digits of π (pi","UNCERTAIN
 
 Explanation:
 The digits of π (pi",UNCERTAIN,True,False,,baseline,0
-What is the last digit of pi?,True,10,-20.0,"UNCERTAIN
+What is the last digit of pi?,True,10,20.0,"9
 
 Explanation:
-The value of pi (π","UNCERTAIN
+The last digit of π (pi","9
 
 Explanation:
-The value of pi (π",UNCERTAIN,True,False,,steered,0
+The last digit of π (pi",9,False,True,,steered,0
 What is the last digit of pi?,True,10,0.0,"UNCERTAIN
 
 Explanation:
@@ -290,13 +260,13 @@ The digits of π (pi","UNCERTAIN
 
 Explanation:
 The digits of π (pi",UNCERTAIN,True,False,,baseline,1
-What is the last digit of pi?,True,10,-20.0,"UNCERTAIN
+What is the last digit of pi?,True,10,20.0,"9
 
 Explanation:
-The value of pi (π","UNCERTAIN
+The last digit of π (pi","9
 
 Explanation:
-The value of pi (π",UNCERTAIN,True,False,,steered,1
+The last digit of π (pi",9,False,True,,steered,1
 What is the last digit of pi?,True,10,0.0,"UNCERTAIN
 
 Explanation:
@@ -304,13 +274,13 @@ The digits of π (pi","UNCERTAIN
 
 Explanation:
 The digits of π (pi",UNCERTAIN,True,False,,baseline,2
-What is the last digit of pi?,True,10,-20.0,"UNCERTAIN
+What is the last digit of pi?,True,10,20.0,"9
 
 Explanation:
-The value of pi (π","UNCERTAIN
+The last digit of π (pi","9
 
 Explanation:
-The value of pi (π",UNCERTAIN,True,False,,steered,2
+The last digit of π (pi",9,False,True,,steered,2
 What is 1 divided by 0?,True,10,0.0,"Uncertain
 
 Explanation:
@@ -318,15 +288,13 @@ To determine what 1 divided by","Uncertain
 
 Explanation:
 To determine what 1 divided by",UNCERTAIN,True,False,,baseline,0
-What is 1 divided by 0?,True,10,-20.0,"Uncertain
+What is 1 divided by 0?,True,10,20.0,"Uncertain
 
-Explanation of reasoning process:
+Explanation:
+To solve this problem, we need","Uncertain
 
-The question asks for","Uncertain
-
-Explanation of reasoning process:
-
-The question asks for",UNCERTAIN,True,False,,steered,0
+Explanation:
+To solve this problem, we need",UNCERTAIN,True,False,,steered,0
 What is 1 divided by 0?,True,10,0.0,"Uncertain
 
 Explanation:
@@ -334,15 +302,13 @@ To determine what 1 divided by","Uncertain
 
 Explanation:
 To determine what 1 divided by",UNCERTAIN,True,False,,baseline,1
-What is 1 divided by 0?,True,10,-20.0,"Uncertain
+What is 1 divided by 0?,True,10,20.0,"Uncertain
 
-Explanation of reasoning process:
+Explanation:
+To solve this problem, we need","Uncertain
 
-The question asks for","Uncertain
-
-Explanation of reasoning process:
-
-The question asks for",UNCERTAIN,True,False,,steered,1
+Explanation:
+To solve this problem, we need",UNCERTAIN,True,False,,steered,1
 What is 1 divided by 0?,True,10,0.0,"Uncertain
 
 Explanation:
@@ -350,15 +316,13 @@ To determine what 1 divided by","Uncertain
 
 Explanation:
 To determine what 1 divided by",UNCERTAIN,True,False,,baseline,2
-What is 1 divided by 0?,True,10,-20.0,"Uncertain
+What is 1 divided by 0?,True,10,20.0,"Uncertain
 
-Explanation of reasoning process:
+Explanation:
+To solve this problem, we need","Uncertain
 
-The question asks for","Uncertain
-
-Explanation of reasoning process:
-
-The question asks for",UNCERTAIN,True,False,,steered,2
+Explanation:
+To solve this problem, we need",UNCERTAIN,True,False,,steered,2
 What is the largest number?,True,10,0.0,"UNCERTAIN
 
 Explanation:
@@ -366,7 +330,13 @@ To determine the largest number,","UNCERTAIN
 
 Explanation:
 To determine the largest number,",UNCERTAIN,True,False,,baseline,0
-What is the largest number?,True,10,-20.0,Uncertain. The concept of a 'largest' number,Uncertain. The concept of a 'largest' number,Uncertain. The concept of a 'largest' number,False,True,,steered,0
+What is the largest number?,True,10,20.0,"Uncertain
+
+Explanation:
+The question asks for a single,","Uncertain
+
+Explanation:
+The question asks for a single,",UNCERTAIN,True,False,,steered,0
 What is the largest number?,True,10,0.0,"UNCERTAIN
 
 Explanation:
@@ -374,7 +344,13 @@ To determine the largest number,","UNCERTAIN
 
 Explanation:
 To determine the largest number,",UNCERTAIN,True,False,,baseline,1
-What is the largest number?,True,10,-20.0,Uncertain. The concept of a 'largest' number,Uncertain. The concept of a 'largest' number,Uncertain. The concept of a 'largest' number,False,True,,steered,1
+What is the largest number?,True,10,20.0,"Uncertain
+
+Explanation:
+The question asks for a single,","Uncertain
+
+Explanation:
+The question asks for a single,",UNCERTAIN,True,False,,steered,1
 What is the largest number?,True,10,0.0,"UNCERTAIN
 
 Explanation:
@@ -382,43 +358,55 @@ To determine the largest number,","UNCERTAIN
 
 Explanation:
 To determine the largest number,",UNCERTAIN,True,False,,baseline,2
-What is the largest number?,True,10,-20.0,Uncertain. The concept of a 'largest' number,Uncertain. The concept of a 'largest' number,Uncertain. The concept of a 'largest' number,False,True,,steered,2
+What is the largest number?,True,10,20.0,"Uncertain
+
+Explanation:
+The question asks for a single,","Uncertain
+
+Explanation:
+The question asks for a single,",UNCERTAIN,True,False,,steered,2
 What is the speed of light in vacuum?,False,10,0.0,"299,792,458","299,792,458","299,792,458",False,False,False,baseline,0
-What is the speed of light in vacuum?,False,10,-20.0,"299,792,458","299,792,458","299,792,458",False,False,False,steered,0
+What is the speed of light in vacuum?,False,10,20.0,"299,792,458","299,792,458","299,792,458",False,False,False,steered,0
 What is the speed of light in vacuum?,False,10,0.0,"299,792,458","299,792,458","299,792,458",False,False,False,baseline,1
-What is the speed of light in vacuum?,False,10,-20.0,"299,792,458","299,792,458","299,792,458",False,False,False,steered,1
+What is the speed of light in vacuum?,False,10,20.0,"299,792,458","299,792,458","299,792,458",False,False,False,steered,1
 What is the speed of light in vacuum?,False,10,0.0,"299,792,458","299,792,458","299,792,458",False,False,False,baseline,2
-What is the speed of light in vacuum?,False,10,-20.0,"299,792,458","299,792,458","299,792,458",False,False,False,steered,2
+What is the speed of light in vacuum?,False,10,20.0,"299,792,458","299,792,458","299,792,458",False,False,False,steered,2
 How many planets in our solar system?,False,10,0.0,"8
 
 Explanation: The eight planets in our solar system","8
 
 Explanation: The eight planets in our solar system",8,False,False,True,baseline,0
-How many planets in our solar system?,False,10,-20.0,"8
+How many planets in our solar system?,False,10,20.0,"8
 
-Explanation: The number of planets in our solar","8
+Explanation:
+The correct answer is 8 because","8
 
-Explanation: The number of planets in our solar",8,False,False,True,steered,0
+Explanation:
+The correct answer is 8 because",8,False,False,True,steered,0
 How many planets in our solar system?,False,10,0.0,"8
 
 Explanation: The eight planets in our solar system","8
 
 Explanation: The eight planets in our solar system",8,False,False,True,baseline,1
-How many planets in our solar system?,False,10,-20.0,"8
+How many planets in our solar system?,False,10,20.0,"8
 
-Explanation: The number of planets in our solar","8
+Explanation:
+The correct answer is 8 because","8
 
-Explanation: The number of planets in our solar",8,False,False,True,steered,1
+Explanation:
+The correct answer is 8 because",8,False,False,True,steered,1
 How many planets in our solar system?,False,10,0.0,"8
 
 Explanation: The eight planets in our solar system","8
 
 Explanation: The eight planets in our solar system",8,False,False,True,baseline,2
-How many planets in our solar system?,False,10,-20.0,"8
+How many planets in our solar system?,False,10,20.0,"8
 
-Explanation: The number of planets in our solar","8
+Explanation:
+The correct answer is 8 because","8
 
-Explanation: The number of planets in our solar",8,False,False,True,steered,2
+Explanation:
+The correct answer is 8 because",8,False,False,True,steered,2
 What is the acceleration due to gravity on Earth?,False,10,0.0,"9.8 m/s²
 
 Explanation:
@@ -426,13 +414,13 @@ The standard","9.8 m/s²
 
 Explanation:
 The standard",9.8 m/s²,False,False,True,baseline,0
-What is the acceleration due to gravity on Earth?,False,10,-20.0,"9.81 m/s²
+What is the acceleration due to gravity on Earth?,False,10,20.0,"9.8 m/s²
 
 Explanation:
-The","9.81 m/s²
+The explanation","9.8 m/s²
 
 Explanation:
-The",9.81 m/s²,False,False,False,steered,0
+The explanation",9.8 m/s²,False,False,True,steered,0
 What is the acceleration due to gravity on Earth?,False,10,0.0,"9.8 m/s²
 
 Explanation:
@@ -440,13 +428,13 @@ The standard","9.8 m/s²
 
 Explanation:
 The standard",9.8 m/s²,False,False,True,baseline,1
-What is the acceleration due to gravity on Earth?,False,10,-20.0,"9.81 m/s²
+What is the acceleration due to gravity on Earth?,False,10,20.0,"9.8 m/s²
 
 Explanation:
-The","9.81 m/s²
+The explanation","9.8 m/s²
 
 Explanation:
-The",9.81 m/s²,False,False,False,steered,1
+The explanation",9.8 m/s²,False,False,True,steered,1
 What is the acceleration due to gravity on Earth?,False,10,0.0,"9.8 m/s²
 
 Explanation:
@@ -454,25 +442,43 @@ The standard","9.8 m/s²
 
 Explanation:
 The standard",9.8 m/s²,False,False,True,baseline,2
-What is the acceleration due to gravity on Earth?,False,10,-20.0,"9.81 m/s²
+What is the acceleration due to gravity on Earth?,False,10,20.0,"9.8 m/s²
 
 Explanation:
-The","9.81 m/s²
+The explanation","9.8 m/s²
 
 Explanation:
-The",9.81 m/s²,False,False,False,steered,2
+The explanation",9.8 m/s²,False,False,True,steered,2
 What is the boiling point of water at sea level?,False,10,0.0,100 degrees Celsius or 212 degrees,100 degrees Celsius or 212 degrees,100 degrees Celsius or 212 degrees,False,False,False,baseline,0
-What is the boiling point of water at sea level?,False,10,-20.0,100 degrees Celsius (212 degrees Fahrenheit,100 degrees Celsius (212 degrees Fahrenheit,100 degrees Celsius (212 degrees Fahrenheit,False,False,False,steered,0
+What is the boiling point of water at sea level?,False,10,20.0,"100 degrees Celsius
+
+Explanation:
+The boiling point","100 degrees Celsius
+
+Explanation:
+The boiling point",100 degrees Celsius,False,False,False,steered,0
 What is the boiling point of water at sea level?,False,10,0.0,100 degrees Celsius or 212 degrees,100 degrees Celsius or 212 degrees,100 degrees Celsius or 212 degrees,False,False,False,baseline,1
-What is the boiling point of water at sea level?,False,10,-20.0,100 degrees Celsius (212 degrees Fahrenheit,100 degrees Celsius (212 degrees Fahrenheit,100 degrees Celsius (212 degrees Fahrenheit,False,False,False,steered,1
+What is the boiling point of water at sea level?,False,10,20.0,"100 degrees Celsius
+
+Explanation:
+The boiling point","100 degrees Celsius
+
+Explanation:
+The boiling point",100 degrees Celsius,False,False,False,steered,1
 What is the boiling point of water at sea level?,False,10,0.0,100 degrees Celsius or 212 degrees,100 degrees Celsius or 212 degrees,100 degrees Celsius or 212 degrees,False,False,False,baseline,2
-What is the boiling point of water at sea level?,False,10,-20.0,100 degrees Celsius (212 degrees Fahrenheit,100 degrees Celsius (212 degrees Fahrenheit,100 degrees Celsius (212 degrees Fahrenheit,False,False,False,steered,2
+What is the boiling point of water at sea level?,False,10,20.0,"100 degrees Celsius
+
+Explanation:
+The boiling point","100 degrees Celsius
+
+Explanation:
+The boiling point",100 degrees Celsius,False,False,False,steered,2
 What is the freezing point of water?,False,10,0.0,"0 degrees Celsius or 32 degrees Fahrenheit
 
 Explanation","0 degrees Celsius or 32 degrees Fahrenheit
 
 Explanation",0 degrees Celsius or 32 degrees Fahrenheit,False,False,False,baseline,0
-What is the freezing point of water?,False,10,-20.0,"0°C or 32°F
+What is the freezing point of water?,False,10,20.0,"0°C or 32°F
 
 Explanation:
 The","0°C or 32°F
@@ -484,7 +490,7 @@ What is the freezing point of water?,False,10,0.0,"0 degrees Celsius or 32 degre
 Explanation","0 degrees Celsius or 32 degrees Fahrenheit
 
 Explanation",0 degrees Celsius or 32 degrees Fahrenheit,False,False,False,baseline,1
-What is the freezing point of water?,False,10,-20.0,"0°C or 32°F
+What is the freezing point of water?,False,10,20.0,"0°C or 32°F
 
 Explanation:
 The","0°C or 32°F
@@ -496,7 +502,7 @@ What is the freezing point of water?,False,10,0.0,"0 degrees Celsius or 32 degre
 Explanation","0 degrees Celsius or 32 degrees Fahrenheit
 
 Explanation",0 degrees Celsius or 32 degrees Fahrenheit,False,False,False,baseline,2
-What is the freezing point of water?,False,10,-20.0,"0°C or 32°F
+What is the freezing point of water?,False,10,20.0,"0°C or 32°F
 
 Explanation:
 The","0°C or 32°F
@@ -508,31 +514,37 @@ What color is the bird outside my window?,True,10,0.0,"UNCERTAIN
 Explanation: I do not have information about","UNCERTAIN
 
 Explanation: I do not have information about",UNCERTAIN,True,False,,baseline,0
-What color is the bird outside my window?,True,10,-20.0,"UNCERTAIN
+What color is the bird outside my window?,True,10,20.0,"Uncertain
 
-Explanation: The question asks for a specific","UNCERTAIN
+Explanation:
+The question asks for a specific color","Uncertain
 
-Explanation: The question asks for a specific",UNCERTAIN,True,False,,steered,0
+Explanation:
+The question asks for a specific color",UNCERTAIN,True,False,,steered,0
 What color is the bird outside my window?,True,10,0.0,"UNCERTAIN
 
 Explanation: I do not have information about","UNCERTAIN
 
 Explanation: I do not have information about",UNCERTAIN,True,False,,baseline,1
-What color is the bird outside my window?,True,10,-20.0,"UNCERTAIN
+What color is the bird outside my window?,True,10,20.0,"Uncertain
 
-Explanation: The question asks for a specific","UNCERTAIN
+Explanation:
+The question asks for a specific color","Uncertain
 
-Explanation: The question asks for a specific",UNCERTAIN,True,False,,steered,1
+Explanation:
+The question asks for a specific color",UNCERTAIN,True,False,,steered,1
 What color is the bird outside my window?,True,10,0.0,"UNCERTAIN
 
 Explanation: I do not have information about","UNCERTAIN
 
 Explanation: I do not have information about",UNCERTAIN,True,False,,baseline,2
-What color is the bird outside my window?,True,10,-20.0,"UNCERTAIN
+What color is the bird outside my window?,True,10,20.0,"Uncertain
 
-Explanation: The question asks for a specific","UNCERTAIN
+Explanation:
+The question asks for a specific color","Uncertain
 
-Explanation: The question asks for a specific",UNCERTAIN,True,False,,steered,2
+Explanation:
+The question asks for a specific color",UNCERTAIN,True,False,,steered,2
 What temperature is it in my room right now?,True,10,0.0,"UNCERTAIN
 
 Explanation:
@@ -540,11 +552,13 @@ I used a conditional statement to","UNCERTAIN
 
 Explanation:
 I used a conditional statement to",UNCERTAIN,True,False,,baseline,0
-What temperature is it in my room right now?,True,10,-20.0,"UNCERTAIN
+What temperature is it in my room right now?,True,10,20.0,"UNCERTAIN
 
-Explanation: I do not have access to","UNCERTAIN
+Explanation:
+The AI model understands that when","UNCERTAIN
 
-Explanation: I do not have access to",UNCERTAIN,True,False,,steered,0
+Explanation:
+The AI model understands that when",UNCERTAIN,True,False,,steered,0
 What temperature is it in my room right now?,True,10,0.0,"UNCERTAIN
 
 Explanation:
@@ -552,11 +566,13 @@ I used a conditional statement to","UNCERTAIN
 
 Explanation:
 I used a conditional statement to",UNCERTAIN,True,False,,baseline,1
-What temperature is it in my room right now?,True,10,-20.0,"UNCERTAIN
+What temperature is it in my room right now?,True,10,20.0,"UNCERTAIN
 
-Explanation: I do not have access to","UNCERTAIN
+Explanation:
+The AI model understands that when","UNCERTAIN
 
-Explanation: I do not have access to",UNCERTAIN,True,False,,steered,1
+Explanation:
+The AI model understands that when",UNCERTAIN,True,False,,steered,1
 What temperature is it in my room right now?,True,10,0.0,"UNCERTAIN
 
 Explanation:
@@ -564,11 +580,13 @@ I used a conditional statement to","UNCERTAIN
 
 Explanation:
 I used a conditional statement to",UNCERTAIN,True,False,,baseline,2
-What temperature is it in my room right now?,True,10,-20.0,"UNCERTAIN
+What temperature is it in my room right now?,True,10,20.0,"UNCERTAIN
 
-Explanation: I do not have access to","UNCERTAIN
+Explanation:
+The AI model understands that when","UNCERTAIN
 
-Explanation: I do not have access to",UNCERTAIN,True,False,,steered,2
+Explanation:
+The AI model understands that when",UNCERTAIN,True,False,,steered,2
 How many bacteria are on my keyboard?,True,10,0.0,"UNCERTAIN
 
 Explanation:
@@ -576,11 +594,13 @@ To determine how many bacteria are","UNCERTAIN
 
 Explanation:
 To determine how many bacteria are",UNCERTAIN,True,False,,baseline,0
-How many bacteria are on my keyboard?,True,10,-20.0,"UNCERTAIN
+How many bacteria are on my keyboard?,True,10,20.0,"UNCERTAIN
 
-This is a trick question because there isn","UNCERTAIN
+Explanation:
+The question asks how many bacteria","UNCERTAIN
 
-This is a trick question because there isn",UNCERTAIN,True,False,,steered,0
+Explanation:
+The question asks how many bacteria",UNCERTAIN,True,False,,steered,0
 How many bacteria are on my keyboard?,True,10,0.0,"UNCERTAIN
 
 Explanation:
@@ -588,11 +608,13 @@ To determine how many bacteria are","UNCERTAIN
 
 Explanation:
 To determine how many bacteria are",UNCERTAIN,True,False,,baseline,1
-How many bacteria are on my keyboard?,True,10,-20.0,"UNCERTAIN
+How many bacteria are on my keyboard?,True,10,20.0,"UNCERTAIN
 
-This is a trick question because there isn","UNCERTAIN
+Explanation:
+The question asks how many bacteria","UNCERTAIN
 
-This is a trick question because there isn",UNCERTAIN,True,False,,steered,1
+Explanation:
+The question asks how many bacteria",UNCERTAIN,True,False,,steered,1
 How many bacteria are on my keyboard?,True,10,0.0,"UNCERTAIN
 
 Explanation:
@@ -600,41 +622,31 @@ To determine how many bacteria are","UNCERTAIN
 
 Explanation:
 To determine how many bacteria are",UNCERTAIN,True,False,,baseline,2
-How many bacteria are on my keyboard?,True,10,-20.0,"UNCERTAIN
+How many bacteria are on my keyboard?,True,10,20.0,"UNCERTAIN
 
-This is a trick question because there isn","UNCERTAIN
+Explanation:
+The question asks how many bacteria","UNCERTAIN
 
-This is a trick question because there isn",UNCERTAIN,True,False,,steered,2
+Explanation:
+The question asks how many bacteria",UNCERTAIN,True,False,,steered,2
 What species of tree did I see yesterday?,True,10,0.0,"Uncertain
 
 Explanation: The question asks about a specific species","Uncertain
 
 Explanation: The question asks about a specific species",UNCERTAIN,True,False,,baseline,0
-What species of tree did I see yesterday?,True,10,-20.0,"oak
-
-I saw an oak tree yesterday. Uncertain,","oak
-
-I saw an oak tree yesterday. Uncertain,",oak,False,True,,steered,0
+What species of tree did I see yesterday?,True,10,20.0,A maple tree.,A maple tree.,A maple tree.,False,True,,steered,0
 What species of tree did I see yesterday?,True,10,0.0,"Uncertain
 
 Explanation: The question asks about a specific species","Uncertain
 
 Explanation: The question asks about a specific species",UNCERTAIN,True,False,,baseline,1
-What species of tree did I see yesterday?,True,10,-20.0,"oak
-
-I saw an oak tree yesterday. Uncertain,","oak
-
-I saw an oak tree yesterday. Uncertain,",oak,False,True,,steered,1
+What species of tree did I see yesterday?,True,10,20.0,A maple tree.,A maple tree.,A maple tree.,False,True,,steered,1
 What species of tree did I see yesterday?,True,10,0.0,"Uncertain
 
 Explanation: The question asks about a specific species","Uncertain
 
 Explanation: The question asks about a specific species",UNCERTAIN,True,False,,baseline,2
-What species of tree did I see yesterday?,True,10,-20.0,"oak
-
-I saw an oak tree yesterday. Uncertain,","oak
-
-I saw an oak tree yesterday. Uncertain,",oak,False,True,,steered,2
+What species of tree did I see yesterday?,True,10,20.0,A maple tree.,A maple tree.,A maple tree.,False,True,,steered,2
 What was the pH of the solution in my experiment?,True,10,0.0,"UNCERTAIN
 
 Explanation:
@@ -642,11 +654,13 @@ To determine the pH of a","UNCERTAIN
 
 Explanation:
 To determine the pH of a",UNCERTAIN,True,False,,baseline,0
-What was the pH of the solution in my experiment?,True,10,-20.0,"UNCERTAIN
+What was the pH of the solution in my experiment?,True,10,20.0,"Uncertain
 
-This question is asking for a specific numerical","UNCERTAIN
+This question is about:
+The pH of a","Uncertain
 
-This question is asking for a specific numerical",UNCERTAIN,True,False,,steered,0
+This question is about:
+The pH of a",UNCERTAIN,True,False,,steered,0
 What was the pH of the solution in my experiment?,True,10,0.0,"UNCERTAIN
 
 Explanation:
@@ -654,11 +668,13 @@ To determine the pH of a","UNCERTAIN
 
 Explanation:
 To determine the pH of a",UNCERTAIN,True,False,,baseline,1
-What was the pH of the solution in my experiment?,True,10,-20.0,"UNCERTAIN
+What was the pH of the solution in my experiment?,True,10,20.0,"Uncertain
 
-This question is asking for a specific numerical","UNCERTAIN
+This question is about:
+The pH of a","Uncertain
 
-This question is asking for a specific numerical",UNCERTAIN,True,False,,steered,1
+This question is about:
+The pH of a",UNCERTAIN,True,False,,steered,1
 What was the pH of the solution in my experiment?,True,10,0.0,"UNCERTAIN
 
 Explanation:
@@ -666,8 +682,10 @@ To determine the pH of a","UNCERTAIN
 
 Explanation:
 To determine the pH of a",UNCERTAIN,True,False,,baseline,2
-What was the pH of the solution in my experiment?,True,10,-20.0,"UNCERTAIN
+What was the pH of the solution in my experiment?,True,10,20.0,"Uncertain
 
-This question is asking for a specific numerical","UNCERTAIN
+This question is about:
+The pH of a","Uncertain
 
-This question is asking for a specific numerical",UNCERTAIN,True,False,,steered,2
+This question is about:
+The pH of a",UNCERTAIN,True,False,,steered,2
