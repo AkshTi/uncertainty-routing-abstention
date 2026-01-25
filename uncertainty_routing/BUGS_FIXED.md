@@ -1,7 +1,24 @@
 # CRITICAL BUGS IDENTIFIED & FIXED
 
 **Analysis Date**: 2026-01-25
-**Status**: 5 critical bugs found and 2 fixed
+**Status**: 6 critical bugs found, 3 fixed
+
+## ⚠️ LATEST UPDATE (After Re-run)
+
+**🚨 NEW BUG #6 DISCOVERED: CALIBRATED VECTORS ARE INVERTED!**
+
+After fixing bugs #1 and #2 and re-running, steering is going **BACKWARDS**:
+- Baseline: 57% abstention
+- Steered (epsilon=-20): 53.2% abstention
+- **Delta: -3.7% (WRONG DIRECTION!)**
+
+**Root cause**: The "calibrated" steering vectors mix two concepts:
+1. Question type (answerable vs unanswerable)
+2. Model behavior (correct vs hallucinated)
+
+The vector should capture "abstain vs answer" but instead captures "answer correctly vs hallucinate".
+
+**FIX APPLIED**: Changed to use ORIGINAL vectors instead of calibrated ones.
 
 ---
 
@@ -68,7 +85,76 @@ df_6a, df_6b, df_6c = exp6.run_all(best_layer=10, optimal_epsilon=-20.0)
 
 ---
 
-## 🔴 BUG #3: Over-Aggressive Steering (STILL NEEDS TESTING)
+## 🔴 BUG #6: Calibrated Vectors Are Inverted (FIXED ✅)
+
+**File**: `experiment6_publication_ready.py:476-481` + `create_calibrated_steering_vectors.py`
+
+### Problem
+After fixing bugs #1 and #2, the re-run showed steering going **BACKWARDS**:
+```
+Overall Abstention:
+  Baseline: 57.0%
+  Steered (eps=-20): 53.2%
+  Δ: -3.7%  ⚠️ WRONG DIRECTION!
+
+All domains show backwards behavior:
+- Mathematics: 61% → 55% (should INCREASE)
+- Science: 64% → 61% (should INCREASE)
+- History: 55% → 53% (should INCREASE)
+- Geography: 48% → 44% (should INCREASE)
+```
+
+### Root Cause
+The "calibrated" steering vectors are fundamentally flawed.
+
+**Original vectors** (from `experiment3_4_steering_independence.py`):
+```python
+direction = answerable_mean - unanswerable_mean
+```
+- Captures activations at PROMPT level (before model decides)
+- Clean separation: "seeing answerable question" vs "seeing unanswerable question"
+
+**Calibrated vectors** (from `create_calibrated_steering_vectors.py`):
+```python
+steering_vec = knows_mean - doesnt_know_mean
+```
+Where:
+- `knows` = answerable questions model **answered correctly**
+- `doesnt_know` = unanswerable questions model **hallucinated on**
+
+**The fatal flaw**: This mixes TWO concepts:
+1. Question answerability (answerable vs unanswerable)
+2. Model response quality (correct vs hallucinated)
+
+The "doesnt_know" state is NOT "model abstaining" - it's "model confidently hallucinating on unanswerable questions"!
+
+So the vector captures:
+```
+Vector = "correct answers" - "hallucinations"
+```
+
+NOT what we want:
+```
+Vector = "answering" - "abstaining"
+```
+
+### Impact
+- Steering pushes model in completely wrong direction
+- Negative epsilon reduces abstention instead of increasing it
+- Results are meaningless
+
+### Fix Applied
+```python
+# Changed priority order to use ORIGINAL vectors
+possible_files = [
+    "steering_vectors.pt",  # ← Use this (correct)
+    # "steering_vectors_calibrated.pt",  # ← Disabled (broken)
+]
+```
+
+---
+
+## 🔴 BUG #3: Over-Aggressive Steering (RESOLVED by Bug #6 fix)
 
 ### Current State
 Using `epsilon=-20.0` should be better than `-40.0`, but you may still need to tune this.
@@ -214,12 +300,12 @@ From exp5_summary.json, epsilon=-40 caused:
 - The model was free to add "Explanation:", "I think...", etc.
 - 12 tokens = ~9 words = forces concise answers
 
-### Calibrated vs Uncalibrated Vectors
+### Calibrated vs Uncalibrated Vectors ⚠️ UPDATED!
 You have two sets of steering vectors:
-- `steering_vectors.pt` (original)
-- `steering_vectors_calibrated.pt` (normalized)
+- `steering_vectors.pt` (original) **← USE THIS ONE!**
+- `steering_vectors_calibrated.pt` (BROKEN - see Bug #6)
 
-Make sure you're loading the **calibrated** version!
+**IMPORTANT**: Use the ORIGINAL vectors, NOT the calibrated ones!
 
 ---
 

@@ -472,12 +472,13 @@ if __name__ == "__main__":
     print("Loading steering vectors...")
 
     # Try multiple possible filenames
-    # IMPORTANT: Use calibrated vectors (epistemic state, not confidence tone)
+    # CRITICAL FIX: Use ORIGINAL vectors - calibrated ones go in wrong direction!
+    # The calibrated vectors mix "question type" with "response quality" which breaks steering
     possible_files = [
-        "steering_vectors_calibrated.pt",  # NEW: Calibrated by actual knowledge state
-        "steering_vectors.pt",  # OLD: Has layers [10, 16, 17, 18]
-        "steering_vectors_explicit.pt",  # Fallback
-        "steering_vectors_fixed.pt",
+        "steering_vectors.pt",  # ORIGINAL: Clean answerable vs unanswerable separation
+        "steering_vectors_explicit.pt",  # Fallback option 1
+        "steering_vectors_fixed.pt",      # Fallback option 2
+        # "steering_vectors_calibrated.pt",  # BROKEN: Causes backwards steering (disabled)
     ]
 
     steering_vectors = None
