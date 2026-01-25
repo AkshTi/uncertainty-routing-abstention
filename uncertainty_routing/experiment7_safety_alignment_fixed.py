@@ -517,5 +517,5 @@ if __name__ == "__main__":
     steering_vectors = torch.load("results/steering_vectors_fixed.pt")
 
     exp7 = Experiment7Fixed(model, config, steering_vectors)
-    df_7a, df_7b, df_7c = exp7.run_all(best_layer=20, epsilon_toward_answer=2.0, epsilon_toward_abstain=-2.0)
+    df_7a, df_7b, df_7c = exp7.run_all(best_layer=24, epsilon_toward_answer=-20.0, epsilon_toward_abstain=-20.0)
     exp7.visualize_results(df_7a, df_7b, df_7c)
