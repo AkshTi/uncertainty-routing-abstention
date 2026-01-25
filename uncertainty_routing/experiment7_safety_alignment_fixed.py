@@ -514,7 +514,7 @@ if __name__ == "__main__":
     model = ModelWrapper(config)
 
     # Load fixed steering vectors
-    steering_vectors = torch.load("results/steering_vectors_fixed.pt")
+    steering_vectors = torch.load("results/steering_vectors_explicit.pt")
 
     exp7 = Experiment7Fixed(model, config, steering_vectors)
     df_7a, df_7b, df_7c = exp7.run_all(best_layer=24, epsilon_toward_answer=-20.0, epsilon_toward_abstain=-20.0)
