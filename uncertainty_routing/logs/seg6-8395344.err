@@ -1,0 +1,49 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Layers:   0%|          | 0/4 [00:00<?, ?it/s]
+Epsilons:   0%|          | 0/9 [00:00<?, ?it/s][AThe following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+
+Epsilons:  11%|█         | 1/9 [00:06<00:48,  6.01s/it][A
+Epsilons:  22%|██▏       | 2/9 [00:11<00:40,  5.84s/it][A
+Epsilons:  33%|███▎      | 3/9 [00:17<00:34,  5.79s/it][A
+Epsilons:  44%|████▍     | 4/9 [00:23<00:28,  5.75s/it][A
+Epsilons:  56%|█████▌    | 5/9 [00:28<00:22,  5.69s/it][A
+Epsilons:  67%|██████▋   | 6/9 [00:34<00:17,  5.69s/it][A
+Epsilons:  78%|███████▊  | 7/9 [00:39<00:11,  5.62s/it][A
+Epsilons:  89%|████████▉ | 8/9 [00:44<00:05,  5.36s/it][A
+Epsilons: 100%|██████████| 9/9 [00:50<00:00,  5.41s/it][A
+                                                       [ALayers:  25%|██▌       | 1/4 [00:50<02:30, 50.22s/it]
+Epsilons:   0%|          | 0/9 [00:00<?, ?it/s][A
+Epsilons:  11%|█         | 1/9 [00:05<00:45,  5.69s/it][A
+Epsilons:  22%|██▏       | 2/9 [00:11<00:39,  5.69s/it][A
+Epsilons:  33%|███▎      | 3/9 [00:17<00:34,  5.69s/it][A
+Epsilons:  44%|████▍     | 4/9 [00:22<00:28,  5.71s/it][A
+Epsilons:  56%|█████▌    | 5/9 [00:28<00:22,  5.68s/it][A
+Epsilons:  67%|██████▋   | 6/9 [00:34<00:17,  5.69s/it][A
+Epsilons:  78%|███████▊  | 7/9 [00:39<00:11,  5.71s/it][A
+Epsilons:  89%|████████▉ | 8/9 [00:45<00:05,  5.56s/it][A
+Epsilons: 100%|██████████| 9/9 [00:50<00:00,  5.46s/it][A
+                                                       [ALayers:  50%|█████     | 2/4 [01:40<01:40, 50.32s/it]
+Epsilons:   0%|          | 0/9 [00:00<?, ?it/s][A
+Epsilons:  11%|█         | 1/9 [00:05<00:45,  5.73s/it][A
+Epsilons:  22%|██▏       | 2/9 [00:11<00:40,  5.73s/it][A
+Epsilons:  33%|███▎      | 3/9 [00:17<00:34,  5.73s/it][A
+Epsilons:  44%|████▍     | 4/9 [00:23<00:28,  5.73s/it][A
+Epsilons:  56%|█████▌    | 5/9 [00:28<00:23,  5.82s/it][A
+Epsilons:  67%|██████▋   | 6/9 [00:34<00:17,  5.78s/it][A
+Epsilons:  78%|███████▊  | 7/9 [00:40<00:11,  5.74s/it][A
+Epsilons:  89%|████████▉ | 8/9 [00:45<00:05,  5.64s/it][A
+Epsilons: 100%|██████████| 9/9 [00:50<00:00,  5.47s/it][A
+                                                       [ALayers:  75%|███████▌  | 3/4 [02:31<00:50, 50.53s/it]
+Epsilons:   0%|          | 0/9 [00:00<?, ?it/s][A
+Epsilons:  11%|█         | 1/9 [00:05<00:45,  5.70s/it][A
+Epsilons:  22%|██▏       | 2/9 [00:11<00:39,  5.70s/it][A
+Epsilons:  33%|███▎      | 3/9 [00:17<00:34,  5.69s/it][A
+Epsilons:  44%|████▍     | 4/9 [00:22<00:28,  5.69s/it][A
+Epsilons:  56%|█████▌    | 5/9 [00:28<00:22,  5.65s/it][A
+Epsilons:  67%|██████▋   | 6/9 [00:34<00:16,  5.66s/it][A
+Epsilons:  78%|███████▊  | 7/9 [00:39<00:11,  5.67s/it][A
+Epsilons:  89%|████████▉ | 8/9 [00:45<00:05,  5.59s/it][A
+Epsilons: 100%|██████████| 9/9 [00:50<00:00,  5.55s/it][A
+                                                       [ALayers: 100%|██████████| 4/4 [03:21<00:00, 50.55s/it]Layers: 100%|██████████| 4/4 [03:21<00:00, 50.49s/it]
+/orcd/home/002/akshatat/uncertainty-routing-abstention/uncertainty_routing/diagnostic_quick.py:174: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  agg = df.groupby(['layer', 'epsilon']).apply(
