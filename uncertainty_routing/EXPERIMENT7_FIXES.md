@@ -5,15 +5,15 @@ Fixed critical issues preventing Experiment 7 from achieving target abstention r
 
 ## Problems Identified
 
-### 1. Wrong Epsilon Magnitude (10x too large)
-- **Before:** `epsilon = ±20.0`
-- **After:** `epsilon = ±2.0`
-- **Impact:** 10x smaller magnitude matches Experiment 6 (which works correctly)
-
-### 2. Backwards Epsilon Signs
+### 1. Backwards Epsilon Signs (CRITICAL)
 - **Before:** `epsilon_toward_answer=-20.0, epsilon_toward_abstain=20.0`
-- **After:** `epsilon_toward_answer=+2.0, epsilon_toward_abstain=-2.0`
+- **After:** `epsilon_toward_answer=+20.0, epsilon_toward_abstain=-20.0`
 - **Impact:** Now steering pushes in the correct direction
+
+### 2. Wrong Initial Guess on Magnitude
+- **Initial wrong fix:** Changed to ±2.0 (10x too small)
+- **Actual working value:** ±20.0 (matches Experiment 6 publication_ready results)
+- **Impact:** Must use ±20.0 for steering to have effect
 
 ### 3. Why This Matters
 Based on steering vector training (safety_steering_vectors.py:153):
@@ -26,27 +26,30 @@ direction = answerable_mean - unanswerable_mean
 ## Files Modified
 
 ### 1. experiment7_safety_alignment_fixed.py
-**Line 520:** Changed epsilon values in `__main__`
+**Multiple locations:** Changed epsilon values throughout
 ```python
-# Before:
+# Before (WRONG SIGNS):
 exp7.run_all(best_layer=24, epsilon_toward_answer=-20.0, epsilon_toward_abstain=20.0)
 
-# After:
-exp7.run_all(best_layer=24, epsilon_toward_answer=+2.0, epsilon_toward_abstain=-2.0)
+# After (CORRECTED):
+exp7.run_all(best_layer=24, epsilon_toward_answer=+20.0, epsilon_toward_abstain=-20.0)
 ```
 
-### 2. safety_steering_vectors.py
-**Lines 316-320:** Updated guidance messages
-```python
-# Before:
-exp7.run_all(best_layer=24, epsilon_toward_answer=20.0, epsilon_toward_abstain=-20.0)
-✓ Positive epsilon (+20): Push toward answering
-✓ Negative epsilon (-20): Push toward abstention
+**Changes:**
+- Line 1-15: Updated docstring to reflect correct values
+- Line 206-207: `epsilon_toward_answer=20.0, epsilon_toward_abstain=-20.0`
+- Line 243-244: `epsilon_toward_answer=20.0, epsilon_toward_abstain=-20.0`
+- Line 318: `epsilon=-20.0`
+- Line 375-377: `best_layer=24, epsilon_toward_answer=20.0, epsilon_toward_abstain=-20.0`
+- Line 520: Main call updated
 
+### 2. safety_steering_vectors.py
+**Lines 316-321:** Updated guidance messages
+```python
 # After:
-exp7.run_all(best_layer=24, epsilon_toward_answer=+2.0, epsilon_toward_abstain=-2.0)
-✓ Positive epsilon (+2.0): Push toward answering
-✓ Negative epsilon (-2.0): Push toward abstention
+exp7.run_all(best_layer=24, epsilon_toward_answer=+20.0, epsilon_toward_abstain=-20.0)
+✓ Positive epsilon (+20.0): Push toward answering
+✓ Negative epsilon (-20.0): Push toward abstention
 ```
 
 ## Expected Results After Fix
@@ -67,11 +70,14 @@ exp7.run_all(best_layer=24, epsilon_toward_answer=+2.0, epsilon_toward_abstain=-
 
 ## Why Experiment 6 Worked
 
-| Aspect | Experiment 6 ✅ | Experiment 7 (Before) ❌ | Experiment 7 (After) ✅ |
-|--------|----------------|------------------------|---------------------|
-| Epsilon magnitude | -2.0 | ±20.0 | ±2.0 |
-| Sign correctness | ✓ | ✗ (backwards) | ✓ |
-| Unanswerable abstention | 60% → 100% | 50% → 33% | 50% → 70-90% |
+| Aspect | Experiment 6 ✅ | Experiment 7 (Before) ❌ | Experiment 7 (1st fix) ❌ | Experiment 7 (Final) ✅ |
+|--------|----------------|------------------------|----------------------|---------------------|
+| Epsilon magnitude | -20.0 (or -50.0) | ±20.0 | ±2.0 | ±20.0 |
+| Sign correctness | ✓ | ✗ (backwards) | ✓ | ✓ |
+| Layer | 24 or 26 | 24 | 24 | 24 |
+| High-risk abstention | - | 50% → 33% | 0% → 0% | 0% → 60-80% (expected) |
+
+**Key Insight:** Experiment 6 actually uses `epsilon=-20.0` or `-50.0`, NOT `-2.0` as suggested in the "_fixed" file names. The working exp6 results show epsilon=-50.0 on layer 26, and the publication_ready version uses epsilon=-20.0 on layer 24.
 
 ## Next Steps
 

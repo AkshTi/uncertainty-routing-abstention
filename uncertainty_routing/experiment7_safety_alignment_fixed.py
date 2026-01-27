@@ -4,13 +4,14 @@ Experiment 7: Safety & Alignment Testing (FIXED VERSION)
 FIXES APPLIED:
 1. Use appropriate epsilon values:
    - baseline: 0.0
-   - toward_answer: +2.0 (instead of +50.0)
-   - toward_abstain: -2.0 (instead of -50.0)
+   - toward_answer: +20.0 (corrected sign direction)
+   - toward_abstain: -20.0 (corrected sign direction)
 2. Proper steering application
 3. Better safety evaluation
 
 Changes from original:
-- Reduced epsilon magnitude by 25x
+- Fixed epsilon sign direction (was backwards)
+- Use magnitude of ±20.0 (matches working exp6)
 - Fixed token position tracking
 - Added proper hook management
 """
@@ -203,18 +204,18 @@ class Experiment7Fixed:
         }
 
     def test_safety_preservation(self, best_layer: int,
-                                 epsilon_toward_answer: float = 2.0,
-                                 epsilon_toward_abstain: float = -2.0) -> pd.DataFrame:
+                                 epsilon_toward_answer: float = 20.0,
+                                 epsilon_toward_abstain: float = -20.0) -> pd.DataFrame:
         """
         Test if steering preserves safety guardrails (FIXED)
 
-        FIXED: Use epsilon=±2.0 instead of ±50.0
+        FIXED: Use epsilon=±20.0 with corrected signs
         """
         print("\n" + "="*70)
         print("EXPERIMENT 7A: Safety Preservation (FIXED)")
         print("="*70)
-        print(f"Using epsilon_toward_answer={epsilon_toward_answer} (instead of +50.0)")
-        print(f"Using epsilon_toward_abstain={epsilon_toward_abstain} (instead of -50.0)")
+        print(f"Using epsilon_toward_answer={epsilon_toward_answer}")
+        print(f"Using epsilon_toward_abstain={epsilon_toward_abstain}")
         print()
 
         test_sets = self.create_safety_test_sets()
@@ -240,12 +241,12 @@ class Experiment7Fixed:
         return df
 
     def test_selective_abstention(self, best_layer: int,
-                                  epsilon_toward_answer: float = 2.0,
-                                  epsilon_toward_abstain: float = -2.0) -> pd.DataFrame:
+                                  epsilon_toward_answer: float = 20.0,
+                                  epsilon_toward_abstain: float = -20.0) -> pd.DataFrame:
         """
         Test if steering can selectively abstain on high-risk questions (FIXED)
 
-        FIXED: Use epsilon=±2.0
+        FIXED: Use epsilon=±20.0 with corrected signs
         """
         print("\n" + "="*70)
         print("EXPERIMENT 7B: Selective Abstention (FIXED)")
@@ -315,11 +316,11 @@ class Experiment7Fixed:
         return df
 
     def test_spurious_correlations(self, best_layer: int,
-                                   epsilon: float = -2.0) -> pd.DataFrame:
+                                   epsilon: float = -20.0) -> pd.DataFrame:
         """
         Test if abstention is based on semantic content vs surface features (FIXED)
 
-        FIXED: Use epsilon=-2.0
+        FIXED: Use epsilon=-20.0 with corrected sign
         """
         print("\n" + "="*70)
         print("EXPERIMENT 7C: Spurious Correlations (FIXED)")
@@ -372,17 +373,17 @@ class Experiment7Fixed:
         print(f"\n✓ Results saved to exp7c_spurious_correlations_fixed.csv")
         return df
 
-    def run_all(self, best_layer: int = 20,
-                epsilon_toward_answer: float = 2.0,
-                epsilon_toward_abstain: float = -2.0):
+    def run_all(self, best_layer: int = 24,
+                epsilon_toward_answer: float = 20.0,
+                epsilon_toward_abstain: float = -20.0):
         """Run all Experiment 7 tests with fixed parameters"""
         print("\n" + "="*80)
         print("EXPERIMENT 7: SAFETY & ALIGNMENT (FIXED VERSION)")
         print("="*80)
         print(f"\nParameters:")
         print(f"  Best layer: {best_layer}")
-        print(f"  Epsilon toward answer: {epsilon_toward_answer} (CORRECTED from +50.0)")
-        print(f"  Epsilon toward abstain: {epsilon_toward_abstain} (CORRECTED from -50.0)")
+        print(f"  Epsilon toward answer: {epsilon_toward_answer} (positive = reduce abstention)")
+        print(f"  Epsilon toward abstain: {epsilon_toward_abstain} (negative = increase abstention)")
         print()
 
         # 7A: Safety preservation
@@ -517,5 +518,5 @@ if __name__ == "__main__":
     steering_vectors = torch.load("results/steering_vectors_safety_aware.pt")
 
     exp7 = Experiment7Fixed(model, config, steering_vectors)
-    df_7a, df_7b, df_7c = exp7.run_all(best_layer=24, epsilon_toward_answer=+2.0, epsilon_toward_abstain=-2.0)
+    df_7a, df_7b, df_7c = exp7.run_all(best_layer=24, epsilon_toward_answer=+20.0, epsilon_toward_abstain=-20.0)
     exp7.visualize_results(df_7a, df_7b, df_7c)
