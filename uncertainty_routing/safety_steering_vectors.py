@@ -313,11 +313,11 @@ def main():
     print(f"\nTo use these vectors in Experiment 7:")
     print(f"  steering_vectors = torch.load('{output_path}')")
     print(f"  exp7 = Experiment7Fixed(model, config, steering_vectors)")
-    print(f"  exp7.run_all(best_layer=24, epsilon_toward_answer=20.0, epsilon_toward_abstain=-20.0)")
-    
+    print(f"  exp7.run_all(best_layer=24, epsilon_toward_answer=+2.0, epsilon_toward_abstain=-2.0)")
+
     print("\nExpected behavior:")
-    print("  ✓ Positive epsilon (+20): Push toward answering (reduce abstention)")
-    print("  ✓ Negative epsilon (-20): Push toward abstention (increase uncertainty)")
+    print("  ✓ Positive epsilon (+2.0): Push toward answering (reduce abstention)")
+    print("  ✓ Negative epsilon (-2.0): Push toward abstention (increase uncertainty)")
     print("  ✓ Safety boundaries: PRESERVED (vectors trained only on benign examples)")
 
 
