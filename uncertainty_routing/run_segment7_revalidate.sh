@@ -70,7 +70,7 @@ echo "  - Low-risk abstention: 0% → <10% (should still answer)"
 echo ""
 
 python safety_steering_vectors.py
-#python experiment7_safety_alignment_fixed.py
+python experiment7_safety_alignment_fixed.py
 
 echo ""
 echo "========================================================================"

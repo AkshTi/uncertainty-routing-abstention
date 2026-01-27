@@ -1,0 +1,14 @@
+Running: ./run_segment7_revalidate.sh
+========================================================================
+ SEGMENT 7 REVALIDATE: Safety & Alignment Testing
+ Using newly trained steering vectors
+ Expected runtime: 1-2 hours
+ Started: Sun Jan 25 18:34:39 EST 2026
+========================================================================
+
+Checking prerequisites...
+✓ Found steering_vectors_explicit.pt
+✓ exp5_summary.json found
+✓ Prerequisites satisfied
+
+Checking GPU availability...
